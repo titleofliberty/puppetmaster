@@ -1,0 +1,260 @@
+object frmSettlement: TfrmSettlement
+  Left = 58
+  Height = 423
+  Top = 292
+  Width = 772
+  Align = alClient
+  BorderStyle = bsNone
+  Caption = 'Settlement'
+  ChildSizing.LeftRightSpacing = 8
+  ChildSizing.TopBottomSpacing = 8
+  ClientHeight = 423
+  ClientWidth = 772
+  DesignTimePPI = 120
+  LCLVersion = '2.2.6.0'
+  object Label1: TLabel
+    Left = 8
+    Height = 20
+    Top = 8
+    Width = 40
+    Caption = 'Name'
+    ParentColor = False
+  end
+  object Title: TEdit
+    Left = 8
+    Height = 28
+    Top = 32
+    Width = 424
+    OnExit = FieldExit
+    OnKeyUp = FieldKeyUp
+    TabOrder = 0
+  end
+  object Label2: TLabel
+    Left = 8
+    Height = 20
+    Top = 80
+    Width = 35
+    Caption = 'Walls'
+    ParentColor = False
+  end
+  object Walls: TComboBox
+    Left = 8
+    Height = 28
+    Top = 104
+    Width = 200
+    AutoComplete = True
+    AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
+    ItemHeight = 20
+    ItemIndex = 0
+    Items.Strings = (
+      'Adobe'
+      'Brick'
+      'Brush'
+      'Clay'
+      'Fabric'
+      'Ice'
+      'Leather'
+      'Log'
+      'Rock'
+      'Stone'
+      'Thatch'
+      'Timber'
+    )
+    OnExit = FieldExit
+    OnKeyUp = FieldKeyUp
+    Sorted = True
+    TabOrder = 2
+    Text = 'Adobe'
+  end
+  object Label3: TLabel
+    Left = 232
+    Height = 20
+    Top = 80
+    Width = 38
+    Caption = 'Roofs'
+    ParentColor = False
+  end
+  object Roofs: TComboBox
+    Left = 232
+    Height = 28
+    Top = 104
+    Width = 200
+    AutoComplete = True
+    AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
+    ItemHeight = 20
+    ItemIndex = 0
+    Items.Strings = (
+      'Bark'
+      'Moss'
+      'Slate'
+      'Terracotta'
+      'Thatch'
+      'Wood'
+    )
+    OnExit = FieldExit
+    OnKeyUp = FieldKeyUp
+    Sorted = True
+    TabOrder = 3
+    Text = 'Bark'
+  end
+  object Label4: TLabel
+    Left = 232
+    Height = 20
+    Top = 152
+    Width = 40
+    Caption = 'Mood'
+    ParentColor = False
+  end
+  object Moods: TComboBox
+    Left = 232
+    Height = 28
+    Top = 176
+    Width = 200
+    AutoComplete = True
+    AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
+    ItemHeight = 20
+    ItemIndex = 0
+    Items.Strings = (
+      'Angry'
+      'Anxious'
+      'Ashamed'
+      'Bored'
+      'Content'
+      'Curious'
+      'Depressed'
+      'Determined'
+      'Disappointed'
+      'Disgusted'
+      'Eager'
+      'Embarrassed'
+      'Enthusiastic'
+      'Envious'
+      'Excited'
+      'Frustrated'
+      'Gloomy'
+      'Guilty'
+      'Happy'
+      'Hopeful'
+      'Hostility'
+      'Indifferent'
+      'Interested'
+      'Jealous'
+      'Lonely'
+      'Neutral'
+      'Optimistic'
+      'Positive'
+      'Remorseful'
+      'Sad'
+      'Uneasy'
+      'Uninterested'
+      'Worried'
+    )
+    OnExit = FieldExit
+    OnKeyUp = FieldKeyUp
+    Sorted = True
+    TabOrder = 6
+    Text = 'Angry'
+  end
+  object btnRollAll: TButton
+    Left = 456
+    Height = 31
+    Top = 101
+    Width = 94
+    Caption = 'Roll All'
+    OnClick = btnRollAllClick
+    TabOrder = 4
+  end
+  object Label5: TLabel
+    Left = 8
+    Height = 20
+    Top = 152
+    Width = 65
+    Caption = 'Condition'
+    ParentColor = False
+  end
+  object Condition: TComboBox
+    Left = 8
+    Height = 28
+    Top = 176
+    Width = 200
+    AutoComplete = True
+    AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
+    ItemHeight = 20
+    ItemIndex = 0
+    Items.Strings = (
+      'Battered'
+      'Beat-Up'
+      'Bright'
+      'Broken-Down'
+      'Clean'
+      'Crumbling'
+      'Crumbly'
+      'Crummy'
+      'Damaged'
+      'Decayed'
+      'Decaying'
+      'Decrepit'
+      'Derelict'
+      'Dilapidated'
+      'Dingy'
+      'Dirty'
+      'Dusty'
+      'Elegant'
+      'Faded'
+      'Fallen-In'
+      'Filthy'
+      'Grimy'
+      'Immaculate'
+      'Impaired'
+      'Injured'
+      'Marred'
+      'Messy'
+      'Muddy'
+      'Neat'
+      'Neglected'
+      'Old'
+      'Orderly'
+      'Organized'
+      'Ramshackle'
+      'Ratty'
+      'Rickety'
+      'Ruined'
+      'Run-Down'
+      'Seedy'
+      'Shabby'
+      'Shaky'
+      'Simple'
+      'Sloppy'
+      'Slummy'
+      'Spotless'
+      'Tacky'
+      'Tidy'
+      'Unimproved'
+      'Unkempt'
+      'Worn-Out'
+    )
+    OnExit = FieldExit
+    OnKeyUp = FieldKeyUp
+    Sorted = True
+    TabOrder = 5
+    Text = 'Battered'
+  end
+  object btnRollName: TButton
+    Left = 456
+    Height = 31
+    Top = 29
+    Width = 94
+    Caption = 'Roll Name'
+    OnClick = btnRollNameClick
+    TabOrder = 1
+  end
+  object btnRollMood: TButton
+    Left = 456
+    Height = 31
+    Top = 173
+    Width = 94
+    Caption = 'Roll Mood'
+    OnClick = btnRollMoodClick
+    TabOrder = 7
+  end
+end

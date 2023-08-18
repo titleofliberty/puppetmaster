@@ -1,0 +1,682 @@
+object frmChamber: TfrmChamber
+  Left = 446
+  Height = 721
+  Top = 172
+  Width = 1040
+  Align = alClient
+  BorderStyle = bsNone
+  Caption = 'Chamber'
+  ChildSizing.LeftRightSpacing = 16
+  ChildSizing.TopBottomSpacing = 16
+  ChildSizing.VerticalSpacing = 8
+  ClientHeight = 721
+  ClientWidth = 1040
+  DesignTimePPI = 120
+  LCLVersion = '2.2.6.0'
+  object Label1: TLabel
+    Left = 16
+    Height = 54
+    Top = 16
+    Width = 1008
+    Align = alTop
+    Caption = 'Chamber'
+    Font.Height = -40
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 16
+    Height = 20
+    Top = 88
+    Width = 29
+    Caption = 'Title'
+    Layout = tlCenter
+    ParentColor = False
+  end
+  object txtTitle: TEdit
+    Left = 16
+    Height = 28
+    Top = 112
+    Width = 344
+    TabOrder = 0
+  end
+  object Label3: TLabel
+    Left = 16
+    Height = 20
+    Top = 160
+    Width = 33
+    Caption = 'Class'
+    ParentColor = False
+  end
+  object txtClass: TComboBox
+    Left = 16
+    Height = 28
+    Top = 184
+    Width = 160
+    ItemHeight = 20
+    ItemIndex = 0
+    Items.Strings = (
+      'Alter'
+      'Anteroom'
+      'Armoury'
+      'Barrack'
+      'Bedroom'
+      'Bedroom (Master)'
+      'Bottlery'
+      'Bower'
+      'Buttery'
+      'Cell'
+      'Cellar (Wine)'
+      'Chapel'
+      'Closet'
+      'Conservatory'
+      'Crypt'
+      'Den'
+      'Dormitory'
+      'Font'
+      'Gallery'
+      'Gallery (Minstrel)'
+      'Greenhouse'
+      'Hall (Banquet)'
+      'Hall (Court)'
+      'Hall (Dance)'
+      'Hall (Dining)'
+      'Hall (Drinking)'
+      'Hall (Great)'
+      'Hall (Guild)'
+      'Hall (Mess)'
+      'Hallway'
+      'Kitchen'
+      'Laboratory'
+      'Laundry'
+      'Library'
+      'Lobby'
+      'Loft'
+      'Map'
+      'Maze'
+      'Obelisk'
+      'Obervatory'
+      'Office'
+      'Oratory'
+      'Pantry'
+      'Parlor (Game)'
+      'Parlor (Sitting)'
+      'Parlor (Trophy)'
+      'Patio'
+      'Portico'
+      'Reception'
+      'Room (Storage)'
+      'Room (Throne)'
+      'Room (War)'
+      'Salon'
+      'Sanctum'
+      'Shop'
+      'Statue'
+      'Storeroom'
+      'Studio (Musician)'
+      'Studio (Painter)'
+      'Studio (Sculpter)'
+      'Study'
+      'Treasury'
+      'Vault'
+      'Ward (Hospital)'
+      'Wardrobe'
+    )
+    TabOrder = 1
+    Text = 'Alter'
+  end
+  object Label4: TLabel
+    Left = 192
+    Height = 20
+    Top = 160
+    Width = 29
+    Caption = 'Tool'
+    ParentColor = False
+  end
+  object txtTool: TComboBox
+    Left = 192
+    Height = 28
+    Top = 184
+    Width = 160
+    ItemHeight = 20
+    ItemIndex = 0
+    Items.Strings = (
+      ''
+      'Abacus'
+      'Ball Bearings'
+      'Bedroll'
+      'Blanket'
+      'Book'
+      'Bridle'
+      'Candle'
+      'Censar'
+      'Chain'
+      'Chalk'
+      'Compass'
+      'Cup'
+      'Fork'
+      'Grappling Hook'
+      'Hammer'
+      'Hammer, Sledge'
+      'Handaxe'
+      'Hourglass'
+      'Hunting Trap'
+      'Ink'
+      'Ink Pen'
+      'Jug'
+      'Key'
+      'Knife'
+      'Ladder'
+      'Lamp'
+      'Lantern'
+      'Lock'
+      'Magnifying Glass'
+      'Manacles'
+      'Map'
+      'Mirror, Steel'
+      'Net'
+      'Oil'
+      'Paper'
+      'Parchment'
+      'Pick, Miner'
+      'Pitcher'
+      'Piton'
+      'Plate'
+      'Playing Cards'
+      'Pot'
+      'Pot, Iron'
+      'Potion'
+      'Pulley'
+      'Rope, Hempen'
+      'Rope, Silk'
+      'Saddle, Exotic'
+      'Saddle, Military'
+      'Saddle, Pack'
+      'Saddle, Riding'
+      'Scales (Weights)'
+      'Scroll'
+      'Sealing Wax'
+      'Sexton'
+      'Shovel'
+      'Sickle'
+      'Spikes, Iron'
+      'Spoon'
+      'Spyglass'
+      'Staff'
+      'Stake (Wooden)'
+      'String'
+      'Tent'
+      'Torch'
+      'Wargong'
+      'Watch, Pocket'
+      'Waterskin'
+      'Whetstone'
+      'Whip'
+      'Whistle'
+    )
+    ParentFont = False
+    TabOrder = 2
+  end
+  object Label5: TLabel
+    Left = 368
+    Height = 20
+    Top = 160
+    Width = 56
+    Caption = 'Clothing'
+    ParentColor = False
+  end
+  object txtClothing: TComboBox
+    Left = 368
+    Height = 28
+    Top = 184
+    Width = 160
+    ItemHeight = 20
+    ItemIndex = 0
+    Items.Strings = (
+      ''
+      'Bandana'
+      'Belt'
+      'Bonnet'
+      'Boots'
+      'Bowtie'
+      'Britches'
+      'Cap'
+      'Cape'
+      'Cloak, Fur'
+      'Cloak, Wool'
+      'Coat, Fur'
+      'Coat, Wool'
+      'Dress'
+      'Girdle'
+      'Gloves'
+      'Gown'
+      'Hat'
+      'Hood'
+      'Hose'
+      'Jacket'
+      'Kilt'
+      'Leggings'
+      'Long Coat'
+      'Mantle'
+      'Neckerchief'
+      'Necktie'
+      'Poncho'
+      'Robes'
+      'Sandles'
+      'Scarf'
+      'Shaw'
+      'Skirt'
+      'Smock'
+      'Surcoat'
+      'Sweater'
+      'Trousers'
+      'Tunic'
+      'Vest'
+      'Vestments'
+      'Waistcoat'
+    )
+    TabOrder = 3
+  end
+  object Label6: TLabel
+    Left = 544
+    Height = 20
+    Top = 160
+    Width = 70
+    Caption = 'Instrument'
+    ParentColor = False
+  end
+  object txtInstrument: TComboBox
+    Left = 544
+    Height = 28
+    Top = 184
+    Width = 160
+    ItemHeight = 20
+    ItemIndex = 0
+    Items.Strings = (
+      ''
+      'Bagpipes'
+      'Bell'
+      'Citole'
+      'Drum'
+      'Drum, Hand'
+      'Drum, War'
+      'Dulcimer'
+      'Fiddle'
+      'Flute'
+      'Gittern'
+      'Guitar'
+      'Harp'
+      'Horn'
+      'Horn'
+      'Hurdy-Gurdy'
+      'Lute'
+      'Lyre'
+      'Mandolin'
+      'Recorder'
+      'Shawm'
+      'Tambourine'
+      'Trumpet'
+      'Viol'
+    )
+    TabOrder = 4
+  end
+  object Label7: TLabel
+    Left = 16
+    Height = 20
+    Top = 232
+    Width = 18
+    Caption = 'Kit'
+    ParentColor = False
+  end
+  object txtKit: TComboBox
+    Left = 16
+    Height = 28
+    Top = 256
+    Width = 160
+    ItemHeight = 20
+    ItemIndex = 0
+    Items.Strings = (
+      ''
+      'Brewer'
+      'Burglar'
+      'Calligrapher'
+      'Carpenter'
+      'Cartographer'
+      'Climber'
+      'Cobbler'
+      'Cooking'
+      'Fishing'
+      'Forgery'
+      'Glassblower'
+      'Healer'
+      'Herbalism'
+      'Jeweler'
+      'Leather'
+      'Mason'
+      'Mess'
+      'Navigator'
+      'Painter'
+      'Potter'
+      'Smith'
+      'Snowshoes'
+      'Soap'
+      'Thieves'
+      'Tinger'
+      'Tingerbox'
+      'Weaver'
+      'Woodcarver'
+    )
+    TabOrder = 5
+  end
+  object Label8: TLabel
+    Left = 192
+    Height = 20
+    Top = 232
+    Width = 64
+    Caption = 'Container'
+    ParentColor = False
+  end
+  object txtContainer: TComboBox
+    Left = 192
+    Height = 28
+    Top = 256
+    Width = 160
+    ItemHeight = 20
+    ItemIndex = 0
+    Items.Strings = (
+      ''
+      'Backpack'
+      'Bag'
+      'Barrel'
+      'Basket'
+      'Bow, Jewelry'
+      'Box, Strong'
+      'Box, Wood'
+      'Bucket'
+      'Chest'
+      'Coffin'
+      'Crate'
+      'Pouch'
+      'Purse'
+      'Sack'
+      'Saddlebags'
+    )
+    TabOrder = 6
+  end
+  object Label9: TLabel
+    Left = 368
+    Height = 20
+    Top = 232
+    Width = 55
+    Caption = 'Weapon'
+    ParentColor = False
+  end
+  object txtWeapon: TComboBox
+    Left = 368
+    Height = 28
+    Top = 256
+    Width = 160
+    ItemHeight = 20
+    ItemIndex = 0
+    Items.Strings = (
+      ''
+      'Axe'
+      'Balista'
+      'Battleaxe'
+      'Blowgun'
+      'Boomerang'
+      'Caltrops'
+      'Catapult'
+      'Club'
+      'Flail'
+      'Glaive'
+      'Greataxe'
+      'Greatclub'
+      'Greatswort'
+      'Halberd'
+      'Hammer'
+      'Javelin'
+      'Knife'
+      'Lance'
+      'Light Hammer'
+      'Longbow'
+      'Longsword'
+      'Mace'
+      'Maul'
+      'Morningstar'
+      'Needles'
+      'Net'
+      'Pike'
+      'Quarterstaff'
+      'Ram'
+      'Rapier'
+      'Scimitar'
+      'Shortbow'
+      'Shortsword'
+      'Sickle'
+      'Sling'
+      'Spear'
+      'Sword'
+      'Trident'
+      'War Pick'
+      'Whip'
+    )
+    TabOrder = 7
+  end
+  object Label10: TLabel
+    Left = 544
+    Height = 20
+    Top = 232
+    Width = 50
+    Caption = 'Armour'
+    ParentColor = False
+  end
+  object txtArmour: TComboBox
+    Left = 544
+    Height = 28
+    Top = 256
+    Width = 160
+    ItemHeight = 20
+    ItemIndex = 0
+    Items.Strings = (
+      ''
+      'Breastplate'
+      'Chain Mail'
+      'Chain Shirt'
+      'Half Plate'
+      'Helm'
+      'Hide'
+      'Leather'
+      'Padded'
+      'Plate'
+      'Ring Mail'
+      'Scale Mail'
+      'Shield'
+      'Splint'
+      'Studded'
+    )
+    TabOrder = 8
+  end
+  object Label11: TLabel
+    Left = 16
+    Height = 20
+    Top = 304
+    Width = 47
+    Caption = 'Vehicle'
+    ParentColor = False
+  end
+  object txtVehicle: TComboBox
+    Left = 16
+    Height = 28
+    Top = 328
+    Width = 160
+    ItemHeight = 20
+    ItemIndex = 0
+    Items.Strings = (
+      ''
+      'Canoe'
+      'Carriage'
+      'Cart'
+      'Chariot'
+      'Galley'
+      'Rowboat'
+      'Sailboat'
+      'Sailing Ship'
+      'Sled'
+      'Wagon, Covered'
+      'Wagon, Open'
+      'Wagon, Vardo'
+    )
+    TabOrder = 9
+  end
+  object Label12: TLabel
+    Left = 192
+    Height = 20
+    Top = 304
+    Width = 48
+    Caption = 'Jewelry'
+    ParentColor = False
+  end
+  object txtJewelry: TComboBox
+    Left = 192
+    Height = 28
+    Top = 328
+    Width = 160
+    ItemHeight = 20
+    ItemIndex = 0
+    Items.Strings = (
+      ''
+      'Amulet'
+      'Anklet'
+      'Armlet'
+      'Bangle, Glass'
+      'Bangle, Metal'
+      'Bangle, Wood'
+      'Beads, Prayer'
+      'Beads, Rosary'
+      'Bracelet'
+      'Bracelet, Charm'
+      'Bracelets'
+      'Brooche'
+      'Cameo'
+      'Chain, Belly'
+      'Chatelaine'
+      'Choker'
+      'Crown'
+      'Cuff Links'
+      'Dog Tags'
+      'Earring'
+      'Hair Pin'
+      'Necklace, Beads'
+      'Necklace, Chain'
+      'Necklace, Locket'
+      'Necklace, Medallion'
+      'Necklace, Pearls'
+      'Pendant'
+      'Pin'
+      'Ring, Finger'
+      'Ring, Puzzle'
+      'Ring, Signet'
+      'Ring, Thumb'
+      'Ring, Toe'
+      'Rope, Prayer'
+      'Tiara'
+      'Tie, Bolo'
+      'Torc (Torq)'
+    )
+    TabOrder = 10
+  end
+  object Label16: TLabel
+    Left = 368
+    Height = 20
+    Top = 304
+    Width = 56
+    Caption = 'Remains'
+    ParentColor = False
+  end
+  object txtRemains: TComboBox
+    Left = 368
+    Height = 28
+    Top = 328
+    Width = 160
+    ItemHeight = 20
+    ItemIndex = 0
+    Items.Strings = (
+      ''
+      'Arm'
+      'Blood'
+      'Brain'
+      'Entrails'
+      'Head'
+      'Heart'
+      'Leg'
+      'Liver'
+      'Skeleton'
+      'Skull'
+      'Teeth'
+    )
+    TabOrder = 11
+  end
+  object btnRollAll: TButton
+    Left = 610
+    Height = 31
+    Top = 384
+    Width = 94
+    Caption = 'Roll All'
+    OnClick = btnRollAllClick
+    TabOrder = 13
+  end
+  object Label13: TLabel
+    Left = 544
+    Height = 20
+    Top = 304
+    Width = 29
+    Caption = 'Trap'
+    ParentColor = False
+  end
+  object txtTrap: TComboBox
+    Left = 544
+    Height = 28
+    Top = 328
+    Width = 160
+    ItemHeight = 20
+    ItemIndex = 0
+    Items.Strings = (
+      ''
+      'Acid'
+      'Arrows'
+      'Automiton'
+      'Autonomous Sentry'
+      'Blades'
+      'Compactor'
+      'Darkness'
+      'Darts'
+      'Doppelganger'
+      'Fire Blasts'
+      'Fog'
+      'Frost'
+      'Illusion'
+      'Invisible Bridge'
+      'Laval'
+      'Lightening'
+      'Locked Doors'
+      'Magnets'
+      'Neddle'
+      'Pit'
+      'Pit, Attack'
+      'Poison'
+      'Pressure Plate'
+      'Rust'
+      'Sand'
+      'Slide'
+      'Snare'
+      'Spikes'
+      'Teleport'
+      'Time Warp'
+      'Toxic Gas'
+      'Water'
+      'Tumble'
+    )
+    TabOrder = 12
+  end
+end

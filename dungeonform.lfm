@@ -1,0 +1,66 @@
+object frmDungeon: TfrmDungeon
+  Left = 311
+  Height = 437
+  Top = 313
+  Width = 667
+  Align = alClient
+  BorderStyle = bsNone
+  Caption = 'Dungeon'
+  ClientHeight = 437
+  ClientWidth = 667
+  DesignTimePPI = 120
+  LCLVersion = '2.2.6.0'
+  object Label1: TLabel
+    Left = 24
+    Height = 54
+    Top = 16
+    Width = 165
+    Caption = 'Dungeon'
+    Font.Height = -40
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 24
+    Height = 20
+    Top = 80
+    Width = 29
+    Caption = 'Title'
+    ParentColor = False
+  end
+  object txtTitle: TEdit
+    Left = 24
+    Height = 28
+    Top = 104
+    Width = 300
+    TabOrder = 0
+  end
+  object Label3: TLabel
+    Left = 24
+    Height = 20
+    Top = 152
+    Width = 33
+    Caption = 'Class'
+    ParentColor = False
+  end
+  object txtClass: TComboBox
+    Left = 24
+    Height = 28
+    Top = 176
+    Width = 140
+    ItemHeight = 20
+    ItemIndex = 0
+    Items.Strings = (
+      'Cavern'
+      'Crypt'
+      'Dungeon'
+      'Sewer'
+      'Tumb'
+    )
+    OnExit = txtClassExit
+    OnKeyUp = txtClassKeyUp
+    OnSelect = txtClassSelect
+    TabOrder = 1
+    Text = 'Cavern'
+  end
+end

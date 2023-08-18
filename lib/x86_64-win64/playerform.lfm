@@ -1,0 +1,91 @@
+object frmPlayer: TfrmPlayer
+  Left = 386
+  Height = 476
+  Top = 171
+  Width = 931
+  Align = alClient
+  BorderStyle = bsNone
+  Caption = 'Player'
+  ClientHeight = 476
+  ClientWidth = 931
+  DesignTimePPI = 120
+  LCLVersion = '2.2.6.0'
+  object Label1: TLabel
+    Left = 24
+    Height = 20
+    Top = 80
+    Width = 40
+    Caption = 'Player'
+    ParentColor = False
+  end
+  object txtPlayer: TEdit
+    Left = 24
+    Height = 28
+    Top = 104
+    Width = 200
+    OnExit = txtPlayerExit
+    OnKeyUp = txtPlayerKeyUp
+    TabOrder = 0
+  end
+  object Label2: TLabel
+    Left = 248
+    Height = 20
+    Top = 80
+    Width = 63
+    Caption = 'Character'
+    ParentColor = False
+  end
+  object txtCharacter: TEdit
+    Left = 248
+    Height = 28
+    Top = 104
+    Width = 200
+    OnExit = txtCharacterExit
+    OnKeyUp = txtCharacterKeyUp
+    TabOrder = 1
+  end
+  object Label3: TLabel
+    Left = 24
+    Height = 54
+    Top = 16
+    Width = 106
+    Caption = 'Player'
+    Font.Height = -40
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 472
+    Height = 20
+    Top = 80
+    Width = 32
+    Caption = 'Race'
+    ParentColor = False
+  end
+  object txtRace: TEdit
+    Left = 472
+    Height = 28
+    Top = 104
+    Width = 200
+    OnExit = txtCharacterExit
+    OnKeyUp = txtCharacterKeyUp
+    TabOrder = 2
+  end
+  object Label5: TLabel
+    Left = 696
+    Height = 20
+    Top = 80
+    Width = 33
+    Caption = 'Class'
+    ParentColor = False
+  end
+  object txtClass: TEdit
+    Left = 696
+    Height = 28
+    Top = 104
+    Width = 200
+    OnExit = txtCharacterExit
+    OnKeyUp = txtCharacterKeyUp
+    TabOrder = 3
+  end
+end

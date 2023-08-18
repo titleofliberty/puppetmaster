@@ -1,0 +1,179 @@
+object frmRoom: TfrmRoom
+  Left = 392
+  Height = 487
+  Top = 405
+  Width = 823
+  Align = alClient
+  BorderStyle = bsNone
+  Caption = 'Room'
+  ClientHeight = 487
+  ClientWidth = 823
+  DesignTimePPI = 120
+  LCLVersion = '2.2.6.0'
+  object Label1: TLabel
+    Left = 24
+    Height = 20
+    Top = 80
+    Width = 29
+    Caption = 'Title'
+    ParentColor = False
+  end
+  object txtTitle: TEdit
+    Left = 24
+    Height = 28
+    Top = 104
+    Width = 300
+    OnExit = txtTitleExit
+    OnKeyUp = txtTitleKeyUp
+    TabOrder = 0
+  end
+  object Label2: TLabel
+    Left = 24
+    Height = 20
+    Top = 152
+    Width = 33
+    Caption = 'Class'
+    ParentColor = False
+  end
+  object txtClass: TComboBox
+    Left = 24
+    Height = 28
+    Top = 176
+    Width = 200
+    ItemHeight = 20
+    ItemIndex = 2
+    Items.Strings = (
+      'Anteroom'
+      'Attic'
+      'Barrack'
+      'Basement'
+      'Bedroom'
+      'Bedroom (Master)'
+      'Bottlery'
+      'Bower'
+      'Buttery'
+      'Cell'
+      'Cellar'
+      'Cellar (Wine)'
+      'Chapel'
+      'Closet'
+      'Conservatory'
+      'Den'
+      'Dormitory'
+      'Entry'
+      'Foyer'
+      'Gallery'
+      'Gallery (Minstrel)'
+      'Greenhouse'
+      'Hall (Banquet)'
+      'Hall (Court)'
+      'Hall (Dance)'
+      'Hall (Dining)'
+      'Hall (Drinking)'
+      'Hall (Great)'
+      'Hall (Guild)'
+      'Hall (Mess)'
+      'Hallway'
+      'Kitchen'
+      'Laboratory'
+      'Laundry'
+      'Library'
+      'Lobby'
+      'Loft'
+      'Obervatory'
+      'Office'
+      'Oratory'
+      'Pantry'
+      'Parlor (Game)'
+      'Parlor (Sitting)'
+      'Parlor (Trophy)'
+      'Patio'
+      'Porch'
+      'Portico'
+      'Reception'
+      'Room (Storage)'
+      'Room (Throne)'
+      'Room (War)'
+      'Salon'
+      'Sanctum'
+      'Shop'
+      'Storeroom'
+      'Studio (Musician)'
+      'Studio (Painter)'
+      'Studio (Sculpter)'
+      'Study'
+      'Treasury'
+      'Vault'
+      'Ward (Hospital)'
+      'Wardrobe'
+    )
+    OnEnter = txtClassEnter
+    OnKeyUp = txtClassKeyUp
+    OnSelect = txtClassSelect
+    TabOrder = 1
+    Text = 'Barrack'
+  end
+  object Label3: TLabel
+    Left = 248
+    Height = 20
+    Top = 152
+    Width = 65
+    Caption = 'Condition'
+    ParentColor = False
+  end
+  object txtCondition: TComboBox
+    Left = 248
+    Height = 28
+    Top = 176
+    Width = 200
+    ItemHeight = 20
+    ItemIndex = 0
+    Items.Strings = (
+      'Arranged'
+      'Clean'
+      'Cluttered'
+      'Dirty'
+      'Disarranged'
+      'Disarrayed'
+      'Dishevelled'
+      'Disordered'
+      'Dusty'
+      'Elegant'
+      'Hygienic'
+      'Immaculate'
+      'Messy'
+      'Neat'
+      'Orderly'
+      'Organized'
+      'Piled'
+      'Pillaged'
+      'Plundered'
+      'Prefect'
+      'Pristine'
+      'Ransacked'
+      'Robed'
+      'Ruffled'
+      'Simple'
+      'Spotless'
+      'Strewn'
+      'Tidy'
+      'Unkempt'
+      'Untidy'
+    )
+    OnExit = txtConditionExit
+    OnKeyUp = txtConditionKeyUp
+    OnSelect = txtConditionSelect
+    TabOrder = 2
+    Text = 'Arranged'
+  end
+  object Label4: TLabel
+    Left = 24
+    Height = 54
+    Top = 16
+    Width = 103
+    Caption = 'Room'
+    Font.Height = -40
+    ParentColor = False
+    ParentFont = False
+  end
+end

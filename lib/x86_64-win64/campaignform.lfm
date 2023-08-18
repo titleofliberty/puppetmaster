@@ -1,0 +1,30 @@
+object frmCampaign: TfrmCampaign
+  Left = 699
+  Height = 381
+  Top = 292
+  Width = 583
+  Align = alClient
+  BorderStyle = bsNone
+  Caption = 'Campaign'
+  ClientHeight = 381
+  ClientWidth = 583
+  DesignTimePPI = 120
+  LCLVersion = '2.2.6.0'
+  object Label1: TLabel
+    Left = 24
+    Height = 20
+    Top = 16
+    Width = 40
+    Caption = 'Name'
+    ParentColor = False
+  end
+  object txtName: TEdit
+    Left = 24
+    Height = 28
+    Top = 48
+    Width = 300
+    OnExit = txtNameExit
+    OnKeyUp = txtNameKeyUp
+    TabOrder = 0
+  end
+end

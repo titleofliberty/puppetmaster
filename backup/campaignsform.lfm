@@ -1,0 +1,102 @@
+object frmCampaigns: TfrmCampaigns
+  Left = 707
+  Height = 600
+  Top = 262
+  Width = 400
+  BorderStyle = bsDialog
+  Caption = 'Campaigns'
+  ChildSizing.LeftRightSpacing = 32
+  ChildSizing.VerticalSpacing = 8
+  ClientHeight = 600
+  ClientWidth = 400
+  DesignTimePPI = 120
+  OnCreate = FormCreate
+  Position = poMainFormCenter
+  LCLVersion = '2.2.6.0'
+  object Label1: TLabel
+    Left = 32
+    Height = 20
+    Top = 32
+    Width = 336
+    Align = alTop
+    BorderSpacing.Top = 32
+    Caption = 'New campaign name'
+    ParentColor = False
+  end
+  object txtNew: TEdit
+    Left = 32
+    Height = 28
+    Top = 60
+    Width = 336
+    Align = alTop
+    OnChange = txtNewChange
+    TabOrder = 0
+  end
+  object btnNew: TButton
+    Left = 32
+    Height = 40
+    Top = 96
+    Width = 336
+    Align = alTop
+    Caption = 'New'
+    Enabled = False
+    OnClick = btnNewClick
+    TabOrder = 1
+  end
+  object Label2: TLabel
+    Left = 32
+    Height = 20
+    Top = 168
+    Width = 336
+    Align = alTop
+    BorderSpacing.Top = 32
+    Caption = 'Existing campaign(s)'
+    ParentColor = False
+  end
+  object lstCampaigns: TListBox
+    Left = 32
+    Height = 204
+    Top = 196
+    Width = 336
+    Align = alTop
+    ItemHeight = 0
+    OnClick = lstCampaignsClick
+    Sorted = True
+    TabOrder = 2
+  end
+  object btnOpen: TButton
+    Left = 32
+    Height = 40
+    Top = 408
+    Width = 336
+    Align = alTop
+    Caption = 'Open'
+    Enabled = False
+    OnClick = btnOpenClick
+    TabOrder = 3
+  end
+  object btnDelete: TButton
+    Left = 32
+    Height = 40
+    Top = 456
+    Width = 336
+    Align = alTop
+    Caption = 'Delete'
+    Enabled = False
+    OnClick = btnDeleteClick
+    TabOrder = 4
+  end
+  object btnCancel: TButton
+    Left = 32
+    Height = 40
+    Top = 528
+    Width = 336
+    Align = alTop
+    BorderSpacing.Top = 32
+    Cancel = True
+    Caption = 'Cancel'
+    Enabled = False
+    ModalResult = 2
+    TabOrder = 5
+  end
+end

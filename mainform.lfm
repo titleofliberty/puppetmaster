@@ -1,0 +1,633 @@
+object frmMain: TfrmMain
+  Left = 372
+  Height = 680
+  Top = 165
+  Width = 1024
+  Caption = 'Puppetmaster'
+  ChildSizing.LeftRightSpacing = 8
+  ChildSizing.TopBottomSpacing = 8
+  ChildSizing.VerticalSpacing = 8
+  ClientHeight = 655
+  ClientWidth = 1024
+  Constraints.MinHeight = 680
+  Constraints.MinWidth = 1024
+  DesignTimePPI = 120
+  Icon.Data = {
+    BE1000000000010001002020000001002000A810000016000000280000002000
+    0000400000000100200000000000001000006400000064000000000000000000
+    0000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00471CAA121B006E431A00706D19006F97190070C11900
+    70EB190070F3190070DA190070C1190070981800704924006D07FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+    FF007139E3095B3AD37B2A0E88FB190070FF190070FF190070FF190070FF1900
+    70FF190070FF190070FF190070FF190070FF190070FF190070F219006F971400
+    7019FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF006633CC05643F
+    DF69603CDAE62B0F8AFF190070FF190070FF190070FF190070FF190070FF1900
+    70FF190070FF190070FF190070FF190070FF190070FF190070FF190070FF1900
+    70F51900708420008008FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF005E43E413653FE0D0603C
+    DBFF2B0F8AFF190070FF190070FF190070FF190070FF190070FF190070FF1900
+    70FF190070FF190070FF190070FF190070FF190070FF190070FF190070FF1900
+    70FF190070FF1A0070C815007518FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF006339E312643FE0CF603CDBFF2B0F
+    8AFF190070FF190070FF190070FF190070FF190070FF190070FF190070FF1900
+    70FF190070FF190070FF190070FF190070FF190070FF190070FF190070FF1900
+    70FF190070FF190070FF190070E31700712DFFFFFF00FFFFFF00FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00FFFFFF006040DF10643FE0CC643FE0FF4158C4FF3A5C
+    B7FF4B72C0FF4B72C0FF4B72C0FF4B72C0FF4B72C0FF4B72C0FF4B72C0FF4D78
+    C5FF3A65C1FF3A65C1FF3A65C1FF3A65C1FF3A65C1FF3A65C1FF3A65C1FF3A65
+    C1FF3650B7FF3242ADFF190070FF190070E315007518FFFFFF00FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF006633CC05643FE1C9643FE0FF643FE0FF4B8BE4FF4D94
+    E3FF72CAFEFF7ED0FEFF7ED1FEFF7ED1FEFF7ED1FEFF7ED1FEFF7ED1FEFF7ED1
+    FEFF5FBCFEFF5FBCFEFF5FBCFEFF5FBCFEFF5FBCFEFF5FBCFEFF5FBBFEFF54B3
+    FFFF4880E3FF4575DCFF190070FF190070FF1A0070C820008008FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00633EDF67643FE0FF643FE0FF643FE0FF4B8CE5FF5099
+    E7FF72CAFEFFB1ECFFFFB3EDFFFFB3EDFFFFB3EDFFFFB3EDFFFFB3EDFFFFB3ED
+    FFFF90E1FCFF90E1FCFF90E1FCFF90E1FCFF90E1FCFF90E1FCFF8EE0FCFF54B3
+    FFFF4A86E7FF4575DCFF190070FF190070FF190070FF19007084FFFFFF00FFFF
+    FF00FFFFFF006D49DB07643FE0E3643FE0FF643FE0FF643FE0FF4C8CE6FF529F
+    EBFF72CAFEFFB1ECFFFFB3EDFFFFB3EDFFFFB3EDFFFFB3EDFFFFB3EDFFFFB3ED
+    FFFF90E1FCFF90E1FCFF90E1FCFF90E1FCFF90E1FCFF90E1FCFF8EE0FCFF54B3
+    FFFF4C8BEBFF4575DCFF190070FF190070FF190070FF190070F514007019FFFF
+    FF00FFFFFF00643FE16E643FE0FF643FE0FF643FE0FF643FE0FF4D8DE7FF54A5
+    EFFF72CAFEFFB1ECFFFFB3EDFFFFB3EDFFFFB3EDFFFFB3EDFFFFB3EDFFFFB3ED
+    FFFF90E1FCFF90E1FCFF90E1FCFF90E1FCFF90E1FCFF90E1FCFF8EE0FCFF54B3
+    FFFF4E8FEFFF4575DCFF190070FF190070FF190070FF190070FF19006F97FFFF
+    FF006633E60A643FE0E7643FE0FF643FE0FF643FE0FF643FE0FF4E8EE8FF57AA
+    F3FF72CAFEFFB1ECFFFFB3EDFFFFB3EDFFFFB3EDFFFFB3EDFFFFB3EDFFFFB3ED
+    FFFF90E1FCFF90E1FCFF90E1FCFF90E1FCFF90E1FCFF90E1FCFF8EE0FCFF54B3
+    FFFF4F95F3FF4575DCFF190070FF190070FF190070FF190070FF190070F22400
+    6D07643FE145643FE0FF643FE0FF643FE0FF643FE0FF643FE0FF4F8FEAFF5EB9
+    FDFF72CAFEFFB1ECFFFFB3EDFFFFB3EDFFFFB3EDFFFFB3EDFFFFB3EDFFFFB3ED
+    FFFF90E1FCFF90E1FCFF90E1FCFF90E1FCFF90E1FCFF90E1FCFF8EE0FCFF54B3
+    FFFF54A1FDFF4676DCFF190070FF190070FF190070FF190070FF190070FF1800
+    7049653EE16F643FE0FF643FE0FF643FE0FF643FE0FF643FE0FF5090EBFF5FBC
+    FFFF72CAFEFF8AD7FEFF8AD7FEFF8AD7FEFF8AD7FEFF8AD7FEFF8AD7FEFF8BD8
+    FEFF6BC4FEFF6BC4FEFF6BC4FEFF6BC4FEFF6BC4FEFF6BC4FEFF6AC4FEFF54B3
+    FFFF55A4FFFF4676DDFF190070FF190070FF190070FF190070FF190070FF1900
+    70986540E198643FE0FF643FE0FF643FE0FF643FE0FF643FE0FF5091EBFF61BD
+    FFFF7CC7FEFF78CEFEFF78C3FEFF78CDFEFF7BC9FEFF79CDFEFF78CFFEFF77CD
+    FEFF5AB8FFFF5AB8FFFF5BB5FFFF5DB0FFFF5AB6FEFF5BADFCFF5AB7FFFF5DAE
+    FFFF56A5FFFF4676DDFF190070FF190070FF190070FF190070FF190070FF1900
+    70C1643FE1C1643FE0FF643FE0FF643FE0FF643FE0FF643FE0FF5191ECFF69BC
+    FEFF9C7FFEFF969FFDFF7B56FEFF827FFDFF9C83FEFF9997FEFF90E1FCFF90E1
+    FCFF72CAFEFF72CAFEFF7971FEFF7B59FEFF6969EAFF6441E0FF777CFCFF7B54
+    FEFF5FA3FFFF4676DDFF190070FF190070FF190070FF190070FF190070FF1900
+    70DA643FE0EB643FE0FF643FE0FF643FE0FF643FE0FF643FE0FF5191EDFF5790
+    E8FF9C7FFEFF876DEBFF7B54FEFF7350EEFF9C7FFEFF9277F3FF2C2386FF2D25
+    87FF272086FF272086FF734FF3FF7B54FEFF5D3CD6FF643FE0FF6C4AE8FF7B54
+    FEFF5279E8FF4575DCFF190070FF190070FF190070FF190070FF190070FF1900
+    70F3643FE0F3643FE0FF643FE0FF643FE0FF643FE0FF643FE0FF5291EEFF5B90
+    EBFF9C7FFEFF886AEDFF7B54FEFF744FEFFF9C7FFEFF9074F1FF190070FF1900
+    70FF190070FF190070FF724CF1FF7B54FEFF5E3AD7FF643FE0FF6C47E9FF7B54
+    FEFF5477EBFF4575DCFF190070FF190070FF190070FF190070FF190070FF1900
+    70EB633FDFDA643FE0FF643FE0FF643FE0FF643FE0FF643FE0FF5392EFFF6297
+    F3FF9C7FFEFF8C6EF3FF7B54FEFF7753F3FF9C7FFEFF9074F1FF190070FF1900
+    70FF190070FF190070FF724CF1FF7B54FEFF613DDBFF643FE0FF6F4AEEFF7B54
+    FEFF597CF3FF4575DCFF190070FF190070FF190070FF190070FF190070FF1900
+    70C1643FE1C1643FE0FF643FE0FF643FE0FF643FE0FF643FE0FF5392F0FF689E
+    FAFF9C7FFEFF9071F8FF7B54FEFF7B56F8FF9C7FFEFF9074F1FF190070FF1900
+    70FF190070FF190070FF724CF1FF7B54FEFF643FDFFF643FE0FF724CF2FF7B54
+    FEFF5E80FAFF4575DCFF190070FF190070FF190070FF190070FF190070FF1900
+    6F976540E198643FE0FF643FE0FF643FE0FF643FE0FF643FE0FF5493F1FF6BA0
+    FDFF9C7FFEFF9172FBFF7B54FEFF7D58F9FF9C7FFEFF9073F1FF190070FF1900
+    70FF190070FF190070FF724CF1FF7B54FEFF6540E1FF643FE0FF744DF4FF7B54
+    FEFF6082FDFF4575DCFF190070FF190070FF190070FF190070FF190070FF1A00
+    706D653FE049643FE0FF643FE0FF643FE0FF643FE0FF643FE0FF5494F2FF6297
+    F3FF9C7FFEFF8C6EF3FF7B54FEFF7853F4FF9C7FFEFF9074F1FF190070FF1900
+    70FF190070FF190070FF724CF1FF7B54FEFF613DDBFF643FE0FF704AEEFF7B54
+    FEFF597CF3FF4575DCFF190070FF190070FF190070FF190070FF190070FF1B00
+    6E436D49DB07643FE0F2643FE0FF643FE0FF643FE0FF643FE0FF5594F3FF64A0
+    F4FF9C7FFEFF9A86FDFF7B54FEFF8468FEFF9C7FFEFF9E89FEFFB3EDFFFFB3ED
+    FFFF90E1FCFF90E1FCFF7D61FEFF7B54FEFF6B53E5FF643FE0FF7A62F9FF7B54
+    FEFF5C87F3FF4575DCFF190070FF190070FF190070FF190070FF2A0E88FB471C
+    AA12FFFFFF00643EE197643FE0FF643FE0FF643FE0FF643FE0FF5695F4FF477D
+    D6FF4E34AAFF492EA7FF4426ACFF4F38B4FF6657BFFF6D65C5FF5862ABFF6881
+    BEFF4A5CA9FF4A5CA9FF5852C5FF5343BFFF422EAAFF3A1EA0FF3D1FA4FF4122
+    AAFF456BD6FF4575DCFF190070FF190070FF190070FF2B0F8AFF5B3AD37BFFFF
+    FF00FFFFFF00663DE019643FE0F5643FE0FF643FE0FF643FE0FF5795F6FF4B87
+    D9FF3B348FFF3B348FFF3B348FFF3B348FFF3B348FFF3B348FFF3B348FFF3E3A
+    93FF33318FFF33318FFF33318FFF33318FFF33318FFF33318FFF33318FFF3331
+    8FFF4977D8FF4575DCFF190070FF190070FF2B0F8AFF603CDAE67139E309FFFF
+    FF00FFFFFF00FFFFFF006440E084643FE0FF643FE0FF643FE0FF5896F7FF6EBD
+    FBFFB3EDFFFFB3EDFFFFB3EDFFFFB3EDFFFFB3EDFFFFB3EDFFFFB3EDFFFFB3ED
+    FFFF90E1FCFF90E1FCFF90E1FCFF90E1FCFF90E1FCFF90E1FCFF90E1FCFF90E1
+    FCFF63A8F7FF4575DCFF190070FF2B0F8AFF603CDBFF643FDF69FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF006040DF08633EE0C8643FE0FF643FE0FF5896F7FF6AB0
+    FBFFB3EDFFFFB3EDFFFFB3EDFFFFB3EDFFFFB3EDFFFFB3EDFFFFB3EDFFFFB3ED
+    FFFF90E1FCFF90E1FCFF90E1FCFF90E1FCFF90E1FCFF90E1FCFF90E1FCFF90E1
+    FCFF5895EBFF4575DCFF2B0F8AFF603CDBFF653FE0D06633CC05FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00FFFFFF006040DF18643FE0E3643FE0FF5D70EDFF6983
+    F0FF91A1F2FF91A1F2FF91A1F2FF91A1F2FF91A1F2FF91A1F2FF91A1F2FF95B2
+    F5FF7D9AF0FF7D9AF0FF7D9AF0FF7D9AF0FF7D9AF0FF7A98EBFF7695E6FF7292
+    E1FF556CD8FF4754CDFF603CDBFF643FE0CF5E43E413FFFFFF00FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00663EE32D643FE0E3643FE0FF643F
+    E0FF643FE0FF643FE0FF643FE0FF643FE0FF643FE0FF643FE0FF643FE0FF643F
+    E0FF643FE0FF643FE0FF643FE0FF643FE0FF643FE0FF643FE0FF643FE0FF643F
+    E0FF643FE0FF643FE0FF643FE0CC6339E312FFFFFF00FFFFFF00FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF006040DF18633EE0C8643F
+    E0FF643FE0FF643FE0FF643FE0FF643FE0FF643FE0FF643FE0FF643FE0FF643F
+    E0FF643FE0FF643FE0FF643FE0FF643FE0FF643FE0FF643FE0FF643FE0FF643F
+    E0FF643FE0FF643FE1C96040DF10FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF006040DF086440
+    E084643FE0F5643FE0FF643FE0FF643FE0FF643FE0FF643FE0FF643FE0FF643F
+    E0FF643FE0FF643FE0FF643FE0FF643FE0FF643FE0FF643FE0FF643FE0FF643F
+    E0E3633EDF676633CC05FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+    FF00663DE019643EE197643FE0F2643FE0FF643FE0FF643FE0FF643FE0FF643F
+    E0FF643FE0FF643FE0FF643FE0FF643FE0FF643FE0FF643FE0E7643FE16E6D49
+    DB07FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF006D49DB07653FE0496540E198643FE1C1633FDFDA643F
+    E0F3643FE0EB643FE1C16540E198653EE16F643FE1456633E60AFFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+    FF00000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000
+  }
+  Menu = mnuMain
+  OnCreate = FormCreate
+  Position = poDesktopCenter
+  LCLVersion = '2.2.6.0'
+  WindowState = wsMaximized
+  object pnlTop: TPanel
+    Left = 8
+    Height = 40
+    Top = 8
+    Width = 1008
+    Align = alTop
+    BevelOuter = bvNone
+    ChildSizing.HorizontalSpacing = 8
+    ClientHeight = 40
+    ClientWidth = 1008
+    TabOrder = 0
+    object btnEightBall: TButton
+      Left = 0
+      Height = 40
+      Top = 0
+      Width = 94
+      Align = alLeft
+      Caption = 'Eight Ball'
+      OnClick = btnEightBallClick
+      TabOrder = 0
+    end
+    object btnHazard: TButton
+      Left = 102
+      Height = 40
+      Top = 0
+      Width = 94
+      Align = alLeft
+      Caption = 'Hazard'
+      TabOrder = 1
+    end
+    object btnLoot: TButton
+      Left = 204
+      Height = 40
+      Top = 0
+      Width = 94
+      Align = alLeft
+      Caption = 'Loot'
+      TabOrder = 2
+    end
+    object btnClue: TButton
+      Left = 306
+      Height = 40
+      Top = 0
+      Width = 94
+      Align = alLeft
+      Caption = 'Clue'
+      TabOrder = 3
+    end
+    object btnWares: TButton
+      Left = 408
+      Height = 40
+      Top = 0
+      Width = 94
+      Align = alLeft
+      Caption = 'Wares'
+      TabOrder = 4
+    end
+    object btnRumor: TButton
+      Left = 510
+      Height = 40
+      Top = 0
+      Width = 94
+      Align = alLeft
+      Caption = 'Rumor'
+      TabOrder = 5
+    end
+    object btnMood: TButton
+      Left = 612
+      Height = 40
+      Top = 0
+      Width = 94
+      Align = alLeft
+      Caption = 'Mood'
+      TabOrder = 6
+    end
+  end
+  object pnlClient: TPanel
+    Left = 8
+    Height = 543
+    Top = 56
+    Width = 1008
+    Align = alClient
+    BevelOuter = bvNone
+    ClientHeight = 543
+    ClientWidth = 1008
+    TabOrder = 1
+    object pnlLeft: TPanel
+      Left = 0
+      Height = 543
+      Top = 0
+      Width = 300
+      Align = alLeft
+      BevelOuter = bvNone
+      ChildSizing.VerticalSpacing = 8
+      ClientHeight = 543
+      ClientWidth = 300
+      Constraints.MaxWidth = 600
+      Constraints.MinHeight = 300
+      Constraints.MinWidth = 300
+      TabOrder = 0
+      object txtFilterCampaign: TTreeFilterEdit
+        Left = 0
+        Height = 28
+        Top = 0
+        Width = 300
+        ButtonWidth = 29
+        Align = alTop
+        NumGlyphs = 1
+        MaxLength = 0
+        TabOrder = 0
+        FilteredTreeview = tvwCampaign
+      end
+      object tvwCampaign: TTreeView
+        Left = 0
+        Height = 507
+        Top = 36
+        Width = 300
+        Align = alClient
+        AutoExpand = True
+        ReadOnly = True
+        RightClickSelect = True
+        RowSelect = True
+        TabOrder = 1
+        OnDragDrop = tvwCampaignDragDrop
+        OnDragOver = tvwCampaignDragOver
+        OnMouseDown = tvwCampaignMouseDown
+        OnSelectionChanged = tvwCampaignSelectionChanged
+        Options = [tvoAutoExpand, tvoAutoItemHeight, tvoHideSelection, tvoKeepCollapsedNodes, tvoReadOnly, tvoRightClickSelect, tvoRowSelect, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips, tvoThemedDraw]
+      end
+    end
+    object sprMain: TSplitter
+      Left = 300
+      Height = 543
+      Top = 0
+      Width = 6
+    end
+    object pnlWorkspace: TPanel
+      Left = 306
+      Height = 543
+      Top = 0
+      Width = 702
+      Align = alClient
+      BevelOuter = bvNone
+      ClientHeight = 543
+      ClientWidth = 702
+      TabOrder = 2
+      object pnlWorkspaceBottom: TPanel
+        Left = 0
+        Height = 200
+        Top = 343
+        Width = 702
+        Align = alBottom
+        BevelOuter = bvNone
+        ChildSizing.VerticalSpacing = 8
+        ClientHeight = 200
+        ClientWidth = 702
+        Constraints.MaxHeight = 400
+        Constraints.MinHeight = 200
+        Constraints.MinWidth = 200
+        TabOrder = 0
+        object pnlWorkspaceBottomTop: TPanel
+          Left = 0
+          Height = 40
+          Top = 0
+          Width = 702
+          Align = alTop
+          Alignment = taLeftJustify
+          BevelOuter = bvNone
+          Caption = 'Output'
+          ClientHeight = 40
+          ClientWidth = 702
+          TabOrder = 0
+          object btnOutputClear: TButton
+            Left = 608
+            Height = 40
+            Top = 0
+            Width = 94
+            Align = alRight
+            Caption = 'Clear'
+            OnClick = btnOutputClearClick
+            TabOrder = 0
+          end
+        end
+        object pnlOutput: TScrollBox
+          Left = 0
+          Height = 152
+          Top = 48
+          Width = 702
+          HorzScrollBar.Page = 1
+          HorzScrollBar.Visible = False
+          VertScrollBar.Page = 63
+          Align = alClient
+          ClientHeight = 148
+          ClientWidth = 698
+          TabOrder = 1
+          object pnlOutputFooter: TPanel
+            Left = 0
+            Height = 63
+            Top = 0
+            Width = 698
+            Align = alTop
+            BevelOuter = bvNone
+            TabOrder = 0
+          end
+          object pnlOutputData: TPanel
+            Left = 0
+            Height = 0
+            Top = 0
+            Width = 698
+            Align = alTop
+            AutoSize = True
+            BevelOuter = bvNone
+            TabOrder = 1
+          end
+        end
+      end
+      object sprWorkspace: TSplitter
+        Cursor = crVSplit
+        Left = 0
+        Height = 6
+        Top = 337
+        Width = 702
+        Align = alBottom
+        ResizeAnchor = akBottom
+      end
+      object pnlWorkspaceClient: TScrollBox
+        Left = 0
+        Height = 337
+        Top = 0
+        Width = 702
+        HorzScrollBar.Page = 1
+        VertScrollBar.Page = 1
+        Align = alClient
+        TabOrder = 2
+      end
+    end
+  end
+  object pnlBottom: TPanel
+    Left = 8
+    Height = 40
+    Top = 607
+    Width = 1008
+    Align = alBottom
+    BevelOuter = bvNone
+    ChildSizing.HorizontalSpacing = 8
+    ClientHeight = 40
+    ClientWidth = 1008
+    TabOrder = 2
+    object btnDiceFour: TButton
+      Left = 0
+      Height = 40
+      Top = 0
+      Width = 94
+      Align = alLeft
+      Caption = 'd4'
+      TabOrder = 0
+    end
+    object btnDiceSix: TButton
+      Left = 102
+      Height = 40
+      Top = 0
+      Width = 94
+      Align = alLeft
+      Caption = 'd6'
+      TabOrder = 1
+    end
+    object btnDiceEight: TButton
+      Left = 204
+      Height = 40
+      Top = 0
+      Width = 94
+      Align = alLeft
+      Caption = 'd8'
+      TabOrder = 2
+    end
+    object btnDiceTen: TButton
+      Left = 306
+      Height = 40
+      Top = 0
+      Width = 94
+      Align = alLeft
+      Caption = 'd10'
+      TabOrder = 3
+    end
+    object btnDiceTwelve: TButton
+      Left = 408
+      Height = 40
+      Top = 0
+      Width = 94
+      Align = alLeft
+      Caption = 'd12'
+      TabOrder = 4
+    end
+    object btnDiceTwenty: TButton
+      Left = 510
+      Height = 40
+      Top = 0
+      Width = 94
+      Align = alLeft
+      Caption = 'd20'
+      TabOrder = 5
+    end
+    object btnDiceHundred: TButton
+      Left = 612
+      Height = 40
+      Top = 0
+      Width = 94
+      Align = alLeft
+      Caption = 'd100'
+      TabOrder = 6
+    end
+  end
+  object mnuMain: TMainMenu
+    Left = 368
+    Top = 88
+    object mnuMainCampaigns: TMenuItem
+      Caption = '&Campaigns'
+      object mnuMainCampaignsNew: TMenuItem
+        Caption = '&New'
+        ShortCut = 16462
+        OnClick = mnuMainCampaignsNewClick
+      end
+      object mnuMainCampaignsOpen: TMenuItem
+        Caption = '&Open'
+        ShortCut = 16463
+        OnClick = mnuMainCampaignsOpenClick
+      end
+      object Separator1: TMenuItem
+        Caption = '-'
+      end
+      object mnuMainCampaignsSaveAs: TMenuItem
+        Caption = 'Save As'
+      end
+      object Separator2: TMenuItem
+        Caption = '-'
+      end
+      object mnuMainCampaignsExit: TMenuItem
+        Caption = 'E&xit'
+        OnClick = mnuMainCampaignsExitClick
+      end
+    end
+    object mnuMainEdit: TMenuItem
+      Caption = '&Edit'
+      object mnuMainEditCut: TMenuItem
+        Caption = 'Cu&t'
+        ShortCut = 16472
+      end
+      object mnuMainEditCopy: TMenuItem
+        Caption = '&Copy'
+        ShortCut = 16451
+      end
+      object mnuMainEditPaste: TMenuItem
+        Caption = '&Paste'
+        ShortCut = 16470
+      end
+      object Separator4: TMenuItem
+        Caption = '-'
+      end
+      object mnuMainEditDelete: TMenuItem
+        Caption = '&Delete'
+        ShortCut = 46
+        OnClick = mnuMainEditDeleteClick
+      end
+    end
+    object mnuMainInsert: TMenuItem
+      Caption = '&Insert'
+      OnClick = mnuMainInsertClick
+      object mnuMainInsertDungeon: TMenuItem
+        Caption = '&Dungeon'
+        ShortCut = 49220
+        OnClick = mnuMainInsertDungeonClick
+      end
+      object mnuMainInsertChamber: TMenuItem
+        Caption = '&Chamber'
+        ShortCut = 49219
+        OnClick = mnuMainInsertChamberClick
+      end
+      object Separator6: TMenuItem
+        Caption = '-'
+      end
+      object mnuMainInsertWilderness: TMenuItem
+        Caption = '&Wilderness'
+        ShortCut = 49239
+        OnClick = mnuMainInsertWildernessClick
+      end
+      object mnuMainInsertTract: TMenuItem
+        Caption = '&Tract'
+        ShortCut = 49236
+        OnClick = mnuMainInsertTractClick
+      end
+      object Separator5: TMenuItem
+        Caption = '-'
+      end
+      object mnuMainInsertSettlement: TMenuItem
+        Caption = '&Settlement'
+        ShortCut = 49235
+        OnClick = mnuMainInsertSettlementClick
+      end
+      object mnuMainInsertVenue: TMenuItem
+        Caption = '&Venue'
+        ShortCut = 49238
+        OnClick = mnuMainInsertVenueClick
+      end
+      object mnuMainInsertRoom: TMenuItem
+        Caption = '&Room'
+        ShortCut = 49234
+        OnClick = mnuMainInsertRoomClick
+      end
+      object Separator3: TMenuItem
+        Caption = '-'
+      end
+      object mnuMainInsertMonster: TMenuItem
+        Caption = '&Monster'
+        ShortCut = 49229
+      end
+      object mnuMainInsertBeast: TMenuItem
+        Caption = '&Beast'
+        ShortCut = 49218
+      end
+      object mnuMainInsertPuppet: TMenuItem
+        Caption = '&Puppet'
+        ShortCut = 49232
+        OnClick = mnuMainInsertPuppetClick
+      end
+      object mnuMainInsertPlayer: TMenuItem
+        Caption = 'Pla&yer'
+        OnClick = mnuMainInsertPlayerClick
+      end
+      object Separator7: TMenuItem
+        Caption = '-'
+      end
+      object mnuMainInsertDiceRoll: TMenuItem
+        Caption = 'Dice R&oll'
+        OnClick = mnuMainInsertDiceRollClick
+      end
+    end
+    object mnuMainRandom: TMenuItem
+      Caption = '&Random'
+      object mnuMainRandomGem: TMenuItem
+        Caption = '&Gem'
+      end
+      object mnuMainRandomKit: TMenuItem
+        Caption = '&Kit'
+      end
+      object mnuMainRandomInstrument: TMenuItem
+        Caption = '&Musical Instrument'
+      end
+      object mnuMainRandomPotion: TMenuItem
+        Caption = '&Potion'
+      end
+      object mnuMainRandomTool: TMenuItem
+        Caption = 'T&ool'
+      end
+      object mnuMainRandomTrap: TMenuItem
+        Caption = '&Trap'
+      end
+      object mnuMainRandomWeapon: TMenuItem
+        Caption = '&Weapon'
+      end
+    end
+    object mnuMainHelp: TMenuItem
+      Caption = '&Help'
+      object mnuMainHelpAbout: TMenuItem
+        Caption = '&About Puppetmaster'
+        OnClick = mnuMainHelpAboutClick
+      end
+    end
+  end
+  object dlgOpen: TOpenDialog
+    Left = 464
+    Top = 88
+  end
+  object dlgSave: TSaveDialog
+    Left = 552
+    Top = 88
+  end
+end

@@ -1,0 +1,13 @@
+timber
+stone
+rock
+adobe
+lrick
+leather
+clay
+fabric
+thatch
+brush
+ice
+lumber
+log

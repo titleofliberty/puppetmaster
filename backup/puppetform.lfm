@@ -1,0 +1,1803 @@
+object frmPuppet: TfrmPuppet
+  Left = 391
+  Height = 693
+  Top = 213
+  Width = 1357
+  Align = alClient
+  BorderStyle = bsNone
+  Caption = 'Puppet'
+  ChildSizing.LeftRightSpacing = 16
+  ChildSizing.TopBottomSpacing = 16
+  ClientHeight = 693
+  ClientWidth = 1357
+  DesignTimePPI = 120
+  LCLVersion = '2.2.6.0'
+  object Label1: TLabel
+    Left = 16
+    Height = 20
+    Top = 80
+    Width = 71
+    Caption = 'First Name'
+    ParentColor = False
+  end
+  object btnRollName: TButton
+    Left = 504
+    Height = 31
+    Top = 101
+    Width = 94
+    Caption = 'Roll Name'
+    OnClick = btnRollNameClick
+    TabOrder = 2
+  end
+  object Label10: TLabel
+    Left = 256
+    Height = 20
+    Top = 80
+    Width = 70
+    Caption = 'Last Name'
+    ParentColor = False
+  end
+  object txtFirstName: TComboBox
+    Left = 16
+    Height = 28
+    Top = 104
+    Width = 220
+    ItemHeight = 20
+    ItemIndex = 0
+    Items.Strings = (
+      'Abbott'
+      'Adair'
+      'Aero'
+      'Aio'
+      'Akari'
+      'Alaska'
+      'Ali'
+      'Amani'
+      'Amari'
+      'Amen'
+      'Arrow'
+      'Asa'
+      'Asani'
+      'Ash'
+      'Aspen'
+      'Austen'
+      'Averill'
+      'Azari'
+      'Azaria'
+      'Bailey'
+      'Baldwin'
+      'Bayou'
+      'Berlin'
+      'Billie'
+      'Blessing'
+      'Blue'
+      'Bowie'
+      'Bryn'
+      'Callaway'
+      'Campbell'
+      'Carden'
+      'Celyn'
+      'Christmas'
+      'Ciel'
+      'Crimson'
+      'Cypress'
+      'Denali'
+      'Derin'
+      'Domino'
+      'Dune'
+      'Echo'
+      'Eleven'
+      'Elixir'
+      'Ellington'
+      'Endellion'
+      'Epic'
+      'Ever'
+      'Fable'
+      'Fallon'
+      'Farrell'
+      'Fifer'
+      'Florian'
+      'Gardener'
+      'Grey'
+      'Guthrie'
+      'Halcyon'
+      'Hale'
+      'Halo'
+      'Harbor'
+      'Havana'
+      'Hazen'
+      'Hero'
+      'Hollis'
+      'Honor'
+      'Hopper'
+      'Houston'
+      'Indiana'
+      'Indica'
+      'Indigo'
+      'Irie'
+      'Jagger'
+      'Jericho'
+      'Jesiah'
+      'Jet'
+      'Jubilee'
+      'Jules'
+      'Jupiter'
+      'Kamari'
+      'Kayra'
+      'Kazumi'
+      'Keaton'
+      'Kehinde'
+      'Kendry'
+      'Khari'
+      'Kit'
+      'Koda'
+      'Koi'
+      'Kona'
+      'Kosma'
+      'Kree'
+      'Laken'
+      'Lakota'
+      'Langley'
+      'Laramie'
+      'Larkin'
+      'Lazuli'
+      'Leith'
+      'Lexington'
+      'Lior'
+      'Lowry'
+      'Lux'
+      'Lyle'
+      'Lynx'
+      'Mako'
+      'Manzie'
+      'Maple'
+      'March'
+      'Mavi'
+      'Memphis'
+      'Mercer'
+      'Meridian'
+      'Merit'
+      'Merkaba'
+      'Milan'
+      'Montana'
+      'Munro'
+      'Nairobi'
+      'Naz'
+      'Neo'
+      'Nike'
+      'Nile'
+      'Noble'
+      'Oak'
+      'Ollie'
+      'Onyx'
+      'Painter'
+      'Panda'
+      'Pax'
+      'Peace'
+      'Perrin'
+      'Perry'
+      'Pim'
+      'Poe'
+      'Poet'
+      'Portland'
+      'Psalm'
+      'Puck'
+      'Quarry'
+      'Quincy'
+      'Raleigh'
+      'Ramsey'
+      'Rebel'
+      'Reign'
+      'Reynolds'
+      'Rhymer'
+      'Ridley'
+      'Ripley'
+      'Riven'
+      'Romary'
+      'Rome'
+      'Romilly'
+      'Royal'
+      'Rumi'
+      'Sacha'
+      'Scout'
+      'Seneca'
+      'Senna'
+      'Sequoia'
+      'Seraph'
+      'Shai'
+      'Shea'
+      'Snow'
+      'Solace'
+      'Solar'
+      'Solaris'
+      'Special'
+      'Story'
+      'Tai'
+      'Tamari'
+      'Tarian'
+      'Tavi'
+      'Tay'
+      'Tennessee'
+      'True'
+      'Viper'
+      'Wallis'
+      'Wrigley'
+      'Wynn'
+      'Yarden'
+      'Zen'
+      'Zephyr'
+      'Zeren'
+    )
+    OnExit = FieldExit
+    OnKeyUp = FieldKeyUp
+    OnSelect = FieldSelect
+    TabOrder = 0
+    Text = 'Abbott'
+  end
+  object txtLastName: TComboBox
+    Left = 256
+    Height = 28
+    Top = 104
+    Width = 220
+    ItemHeight = 20
+    ItemIndex = 0
+    Items.Strings = (
+      'Abram'
+      'Amberoak'
+      'Amberspirit'
+      'Astley'
+      'Autumnblow'
+      'Autumnforest'
+      'Autumnmight'
+      'Autumnstar'
+      'Autumnstriker'
+      'Autumnwatcher'
+      'Barney'
+      'Bearbough'
+      'Bearleaf'
+      'Bearstalker'
+      'Bearstriker'
+      'Bentley'
+      'Blackdew'
+      'Blackfire'
+      'Blackheart'
+      'Blackseeker'
+      'Blacksnow'
+      'Blacksong'
+      'Blackspyre'
+      'Blackwing'
+      'Bladebloom'
+      'Bladeshadow'
+      'Bladesky'
+      'Bladetree'
+      'Bladewatcher'
+      'Blakemore'
+      'Blankcave'
+      'Blankfavor'
+      'Blankley'
+      'Bluesword'
+      'Boldfury'
+      'Bonemantle'
+      'Boneshout'
+      'Boulderarm'
+      'Bouldergame'
+      'Bourne'
+      'Brent'
+      'Broadbottom'
+      'Broadrest'
+      'Carlyle'
+      'Clifford'
+      'Cliffsong'
+      'Coarserest'
+      'Colby'
+      'Coolpride'
+      'Cooper'
+      'Courseore'
+      'Cragbrew'
+      'Cragrest'
+      'Cromwell'
+      'Crowder'
+      'Crystalpond'
+      'Currington'
+      'Dawson'
+      'Denholm'
+      'Dewbough'
+      'Dewbreeze'
+      'Dewgazer'
+      'Dewshot'
+      'Dimbottom'
+      'Doomtale'
+      'Dragonslayer'
+      'Drunknight'
+      'Duskarrow'
+      'Duskbough'
+      'Duskcrest'
+      'Duskfire'
+      'Duskhelm'
+      'Duskrunner'
+      'Duskswift'
+      'Dusksword'
+      'Eagerbelcher'
+      'Eagleeye'
+      'Eaglefeather'
+      'Eaglerock'
+      'Evencrest'
+      'Evengrove'
+      'Evenstar'
+      'Farcaller'
+      'Farheart'
+      'Farrunner'
+      'Farwalker'
+      'Featherclouds'
+      'Feathershot'
+      'Feathersnow'
+      'Featherspirit'
+      'Featherstriker'
+      'Flintbrow'
+      'Fogdew'
+      'Fogsky'
+      'Forestbow'
+      'Forestoak'
+      'Forestrage'
+      'Forestspear'
+      'Forestwalker'
+      'Foy'
+      'Fusepike'
+      'Garrick'
+      'Garthside'
+      'Gartside'
+      'Godwin'
+      'Goodbear'
+      'Graham'
+      'Greencrest'
+      'Greendew'
+      'Greenlance'
+      'Greenshade'
+      'Greensky'
+      'Halfstand'
+      'Hamilton'
+      'Harley'
+      'Hayhurst'
+      'Hayley'
+      'Hildom'
+      'Icebeer'
+      'Icecrage'
+      'Ironbrow'
+      'Ironfist'
+      'Ironhammer'
+      'Ironsword'
+      'Knottley'
+      'Leafarrow'
+      'Leafheart'
+      'Leafhelm'
+      'Leaflance'
+      'Leafmoon'
+      'Lightdew'
+      'Lightforest'
+      'Lightlance'
+      'Longhandle'
+      'Loundmantle'
+      'Lunabloom'
+      'Lunahelm'
+      'Lunaoak'
+      'Lunaspyre'
+      'Lunastrike'
+      'Lunasword'
+      'Mabbott'
+      'Marbleriver'
+      'Marbleshout'
+      'Marblestand'
+      'Marlowe'
+      'Mistrunner'
+      'Mistsong'
+      'Miststalker'
+      'Mistswift'
+      'Mistwater'
+      'Moltengame'
+      'Moltenore'
+      'Moonlance'
+      'Moonsky'
+      'Moonstriker'
+      'Mossblade'
+      'Mossbloom'
+      'Mossdew'
+      'Mossfire'
+      'Mosslance'
+      'Mossstriker'
+      'Mossthorn'
+      'Mossweaver'
+      'Newberry'
+      'Nibley'
+      'Nightbow'
+      'Nightcaller'
+      'Nightlight'
+      'Nightoak'
+      'Oakenhammer'
+      'Oakensword'
+      'Oceanbreeze'
+      'Oceanfire'
+      'Oddboots'
+      'Paddle'
+      'Palebeer'
+      'Pickering'
+      'Presley'
+      'Quickkind'
+      'Quickriver'
+      'Rainblower'
+      'Rainbranch'
+      'Rainclouds'
+      'Rainlance'
+      'Rainlight'
+      'Rainmane'
+      'Rainrunner'
+      'Rainscribe'
+      'Rainsong'
+      'Rapidflower'
+      'Rapidoak'
+      'Rapidseeker'
+      'Rapidtree'
+      'Ravenarrow'
+      'Ravencaller'
+      'Ravenstalker'
+      'Ravenwhisper'
+      'Reid'
+      'Rodney'
+      'Rutherford'
+      'Sagebreeze'
+      'Sagedew'
+      'Sageoak'
+      'Sagetree'
+      'Sagewater'
+      'Seadancer'
+      'Seaforest'
+      'Seahelm'
+      'Sealight'
+      'Seaoak'
+      'Seawhisper'
+      'Shadebreeze'
+      'Shadelance'
+      'Shadesinger'
+      'Shadewalker'
+      'Shadowmight'
+      'Shadowmountain'
+      'Shadowpeak'
+      'Shadowslayer'
+      'Shadowwatcher'
+      'Shelley'
+      'Shieldbranch'
+      'Shieldbreeze'
+      'Shieldclounds'
+      'Shieldforest'
+      'Shieldheart'
+      'Shieldlance'
+      'Shieldmane'
+      'Shieldshot'
+      'Shieldstrike'
+      'Shieldwalker'
+      'Shieldwing'
+      'Shortflow'
+      'Silentgazer'
+      'Silentgrove'
+      'Silentstalker'
+      'Silentstriker'
+      'Silentthorn'
+      'Silentwatcher'
+      'Silverrage'
+      'Silvershot'
+      'Silversong'
+      'Silverstrike'
+      'Skybough'
+      'Skycloud'
+      'Skyheart'
+      'Smithe'
+      'Smithies'
+      'Snape'
+      'Snowfavor'
+      'Snowshaper'
+      'Spiritbough'
+      'Spiritcloud'
+      'Spiritlance'
+      'Spiritmight'
+      'Spiritstrike'
+      'Spiritweaver'
+      'Spiritwind'
+      'Stagedew'
+      'Stanton'
+      'Starbranch'
+      'Starsong'
+      'Starweaver'
+      'Steelfall'
+      'Steeltoe'
+      'Stillbloom'
+      'Stillclouds'
+      'Stillforest'
+      'Stilloak'
+      'Stillshot'
+      'Stonearm'
+      'Stonebrow'
+      'Stonedancer'
+      'Stoneeye'
+      'Stonefist'
+      'Stonehammer'
+      'Stoneheart'
+      'Stonehorn'
+      'Stonepeak'
+      'Stonetooth'
+      'Stonewhisper'
+      'Stormbloom'
+      'Stormbreath'
+      'Stormbrow'
+      'Stormfist'
+      'Stormhammer'
+      'Stormleaf'
+      'Stormlight'
+      'Stormmountain'
+      'Stormpeak'
+      'Stormweaver'
+      'Strongbreaker'
+      'Strongmane'
+      'Strongnight'
+      'Strongrage'
+      'Strongscribe'
+      'Strongsnow'
+      'Strongsong'
+      'Strongwater'
+      'Strowmweaver'
+      'Summerblade'
+      'Summerstalker'
+      'Summerstar'
+      'Suncaller'
+      'Sungazer'
+      'Swiftmane'
+      'Swiftmight'
+      'Swiftstriker'
+      'Swifttask'
+      'Thunderbreath'
+      'Thunderbrow'
+      'Thunderfist'
+      'Thunderhammer'
+      'Thunderheart'
+      'Thundermane'
+      'Thundermountain'
+      'Thunderpeak'
+      'Thunderstalker'
+      'Thunderstriker'
+      'Townend'
+      'Treecloud'
+      'Treeflower'
+      'Treeshot'
+      'Trueboots'
+      'Trueweaver'
+      'Vastore'
+      'Warhammer'
+      'Wildmight'
+      'Wildore'
+      'Wildsky'
+      'Wildstrike'
+      'Wildwater'
+      'Winddancer'
+      'Windeye'
+      'Windfire'
+      'Windflower'
+      'Windgrove'
+      'Windshade'
+      'Windwing'
+      'Winterbloom'
+      'Wintercaller'
+      'Winterdancer'
+      'Winterfire'
+      'Winterstar'
+      'Winterweaver'
+      'Wither'
+      'Woodbranch'
+      'Woodrage'
+      'Woodthorn'
+      'Woodwhisper'
+    )
+    OnExit = FieldExit
+    OnKeyUp = FieldKeyUp
+    OnSelect = FieldSelect
+    TabOrder = 1
+    Text = 'Abram'
+  end
+  object Shape1: TShape
+    Left = 16
+    Height = 1
+    Top = 379
+    Width = 780
+  end
+  object Label19: TLabel
+    Left = 27
+    Height = 20
+    Top = 368
+    Width = 104
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'Ability Scores'
+    Color = clForm
+    ParentColor = False
+    Transparent = False
+  end
+  object txtAbilityRollMethod: TComboBox
+    Left = 16
+    Height = 28
+    Top = 403
+    Width = 140
+    ItemHeight = 20
+    ItemIndex = 0
+    Items.Strings = (
+      'Random Roll'
+      'Standard Array'
+      'Level Array'
+      'High-Low Array'
+    )
+    Style = csDropDownList
+    TabOrder = 14
+    Text = 'Random Roll'
+  end
+  object Label18: TLabel
+    Left = 616
+    Height = 20
+    Top = 451
+    Width = 100
+    AutoSize = False
+    Caption = 'Charisma'
+    ParentColor = False
+  end
+  object txtCharisma: TComboBox
+    Left = 616
+    Height = 28
+    Top = 475
+    Width = 100
+    ItemHeight = 20
+    ItemIndex = 5
+    Items.Strings = (
+      '-5'
+      '-4'
+      '-3'
+      '-2'
+      '-1'
+      '0'
+      '+1'
+      '+2'
+      '+3'
+      '+4'
+      '+5'
+      '+6'
+      '+7'
+      '+8'
+      '+9'
+      '+10'
+    )
+    OnExit = FieldExit
+    OnKeyUp = FieldKeyUp
+    OnSelect = FieldSelect
+    TabOrder = 21
+    Text = '0'
+  end
+  object Label17: TLabel
+    Left = 496
+    Height = 20
+    Top = 451
+    Width = 100
+    AutoSize = False
+    Caption = 'Wisdom'
+    ParentColor = False
+  end
+  object txtWisdom: TComboBox
+    Left = 496
+    Height = 28
+    Top = 475
+    Width = 100
+    ItemHeight = 20
+    ItemIndex = 5
+    Items.Strings = (
+      '-5'
+      '-4'
+      '-3'
+      '-2'
+      '-1'
+      '0'
+      '+1'
+      '+2'
+      '+3'
+      '+4'
+      '+5'
+      '+6'
+      '+7'
+      '+8'
+      '+9'
+      '+10'
+    )
+    OnExit = FieldExit
+    OnKeyUp = FieldKeyUp
+    OnSelect = FieldSelect
+    TabOrder = 20
+    Text = '0'
+  end
+  object Label16: TLabel
+    Left = 376
+    Height = 20
+    Top = 451
+    Width = 100
+    AutoSize = False
+    Caption = 'Intelligence'
+    ParentColor = False
+  end
+  object txtIntelligence: TComboBox
+    Left = 376
+    Height = 28
+    Top = 475
+    Width = 100
+    ItemHeight = 20
+    ItemIndex = 5
+    Items.Strings = (
+      '-5'
+      '-4'
+      '-3'
+      '-2'
+      '-1'
+      '0'
+      '+1'
+      '+2'
+      '+3'
+      '+4'
+      '+5'
+      '+6'
+      '+7'
+      '+8'
+      '+9'
+      '+10'
+    )
+    OnExit = FieldExit
+    OnKeyUp = FieldKeyUp
+    OnSelect = FieldSelect
+    TabOrder = 19
+    Text = '0'
+  end
+  object Label15: TLabel
+    Left = 256
+    Height = 20
+    Top = 451
+    Width = 100
+    AutoSize = False
+    Caption = 'Constitution'
+    ParentColor = False
+  end
+  object txtConstitution: TComboBox
+    Left = 256
+    Height = 28
+    Top = 475
+    Width = 100
+    ItemHeight = 20
+    ItemIndex = 5
+    Items.Strings = (
+      '-5'
+      '-4'
+      '-3'
+      '-2'
+      '-1'
+      '0'
+      '+1'
+      '+2'
+      '+3'
+      '+4'
+      '+5'
+      '+6'
+      '+7'
+      '+8'
+      '+9'
+      '+10'
+    )
+    OnExit = FieldExit
+    OnKeyUp = FieldKeyUp
+    OnSelect = FieldSelect
+    TabOrder = 18
+    Text = '0'
+  end
+  object Label14: TLabel
+    Left = 136
+    Height = 20
+    Top = 451
+    Width = 100
+    AutoSize = False
+    Caption = 'Dexterity'
+    ParentColor = False
+  end
+  object txtDexterity: TComboBox
+    Left = 136
+    Height = 28
+    Top = 475
+    Width = 100
+    ItemHeight = 20
+    ItemIndex = 5
+    Items.Strings = (
+      '-5'
+      '-4'
+      '-3'
+      '-2'
+      '-1'
+      '0'
+      '+1'
+      '+2'
+      '+3'
+      '+4'
+      '+5'
+      '+6'
+      '+7'
+      '+8'
+      '+9'
+      '+10'
+    )
+    OnExit = FieldExit
+    OnKeyUp = FieldKeyUp
+    OnSelect = FieldSelect
+    TabOrder = 17
+    Text = '0'
+  end
+  object Label13: TLabel
+    Left = 16
+    Height = 20
+    Top = 451
+    Width = 100
+    AutoSize = False
+    Caption = 'Strength'
+    ParentColor = False
+  end
+  object txtStrength: TComboBox
+    Left = 16
+    Height = 28
+    Top = 475
+    Width = 100
+    ItemHeight = 20
+    ItemIndex = 5
+    Items.Strings = (
+      '-5'
+      '-4'
+      '-3'
+      '-2'
+      '-1'
+      '0'
+      '+1'
+      '+2'
+      '+3'
+      '+4'
+      '+5'
+      '+6'
+      '+7'
+      '+8'
+      '+9'
+      '+10'
+    )
+    OnExit = FieldExit
+    OnKeyUp = FieldKeyUp
+    OnSelect = FieldSelect
+    TabOrder = 16
+    Text = '0'
+  end
+  object btnRollStats: TButton
+    Left = 176
+    Height = 31
+    Top = 400
+    Width = 94
+    Caption = 'Roll Stats'
+    OnClick = btnRollStatsClick
+    TabOrder = 15
+  end
+  object Label2: TLabel
+    Left = 176
+    Height = 20
+    Top = 224
+    Width = 32
+    Caption = 'Race'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 336
+    Height = 20
+    Top = 224
+    Width = 33
+    Caption = 'Class'
+    ParentColor = False
+  end
+  object txtClass: TComboBox
+    Left = 336
+    Height = 28
+    Top = 248
+    Width = 140
+    ItemHeight = 20
+    ItemIndex = 0
+    Items.Strings = (
+      'Barbarian'
+      'Bard'
+      'Cleric'
+      'Druid'
+      'Fighter'
+      'Monk'
+      'Paladin'
+      'Ranger'
+      'Rogue'
+      'Sorcerer'
+      'Warlock'
+      'Wizard'
+    )
+    OnExit = FieldExit
+    OnKeyUp = FieldKeyUp
+    OnSelect = FieldSelect
+    TabOrder = 6
+    Text = 'Barbarian'
+  end
+  object txtRace: TComboBox
+    Left = 176
+    Height = 28
+    Top = 248
+    Width = 140
+    ItemHeight = 20
+    ItemIndex = 4
+    Items.Strings = (
+      'Dwarf'
+      'Elf'
+      'Gnome'
+      'Goblin'
+      'Human'
+      'Ogre'
+      'Orc'
+      'Troll'
+    )
+    OnExit = FieldExit
+    OnKeyUp = FieldKeyUp
+    OnSelect = FieldSelect
+    TabOrder = 5
+    Text = 'Human'
+  end
+  object Label4: TLabel
+    Left = 16
+    Height = 20
+    Top = 296
+    Width = 69
+    Caption = 'Alignment'
+    ParentColor = False
+  end
+  object txtAlignment: TComboBox
+    Left = 16
+    Height = 28
+    Top = 320
+    Width = 140
+    ItemHeight = 20
+    ItemIndex = 4
+    Items.Strings = (
+      'Lawful Good'
+      'Neutral Good'
+      'Chaotic Good'
+      'Lawful Neutral'
+      'True Neutral'
+      'Chaotic Neutral'
+      'Lawful Evil'
+      'Neutral Evil'
+      'Chaotic Evil'
+    )
+    OnExit = FieldExit
+    OnKeyUp = FieldKeyUp
+    OnSelect = FieldSelect
+    TabOrder = 9
+    Text = 'True Neutral'
+  end
+  object Label5: TLabel
+    Left = 176
+    Height = 20
+    Top = 296
+    Width = 71
+    Caption = 'Corruption'
+    ParentColor = False
+  end
+  object txtCorruption: TComboBox
+    Left = 176
+    Height = 28
+    Top = 320
+    Width = 140
+    ItemHeight = 20
+    ItemIndex = 5
+    Items.Strings = (
+      '-5 - Evil'
+      '-4'
+      '-3'
+      '-2'
+      '-1'
+      '0 - Neutral'
+      '+1'
+      '+2'
+      '+3'
+      '+4'
+      '+5 - Good'
+    )
+    OnExit = FieldExit
+    OnKeyUp = FieldKeyUp
+    OnSelect = FieldSelect
+    TabOrder = 10
+    Text = '0 - Neutral'
+  end
+  object Label6: TLabel
+    Left = 336
+    Height = 20
+    Top = 296
+    Width = 68
+    Caption = 'Profession'
+    ParentColor = False
+  end
+  object txtProfession: TComboBox
+    Left = 336
+    Height = 28
+    Top = 320
+    Width = 140
+    ItemHeight = 20
+    ItemIndex = 0
+    Items.Strings = (
+      'Apothecary'
+      'Armourer'
+      'Artist'
+      'Baker'
+      'Banker'
+      'Blacksmith'
+      'Boatbuilder'
+      'Butcher'
+      'Butler'
+      'Carpenter'
+      'Cartwright'
+      'Cheesemaker'
+      'Clerk'
+      'Conman'
+      'Cook'
+      'Cooper'
+      'Courier'
+      'Cultist'
+      'Dungmonger'
+      'Engineer'
+      'Entertainer'
+      'Executioner'
+      'Farmer'
+      'Ferryman'
+      'Finesmith'
+      'Fishmonger'
+      'Fletcher'
+      'Fortune Teller'
+      'Fruiterer'
+      'Gravedigger'
+      'Handmaiden'
+      'Healer'
+      'Herbalist'
+      'Horse Trainer'
+      'Innkeeper'
+      'Jeweller'
+      'Locksmith'
+      'Miller'
+      'Petty thief'
+      'Priest'
+      'Restauranteur'
+      'Ropemaker'
+      'Scribe'
+      'Ship Captain'
+      'Soldier'
+      'Tailor'
+      'Tax Collector'
+      'Teacher'
+      'Undertaker'
+      'Winemaker'
+      'Woodcutter'
+    )
+    OnExit = FieldExit
+    OnKeyUp = FieldKeyUp
+    OnSelect = FieldSelect
+    TabOrder = 11
+    Text = 'Apothecary'
+  end
+  object Label7: TLabel
+    Left = 16
+    Height = 20
+    Top = 224
+    Width = 23
+    Caption = 'Sex'
+    ParentColor = False
+  end
+  object txtSex: TComboBox
+    Left = 16
+    Height = 28
+    Top = 248
+    Width = 140
+    ItemHeight = 20
+    ItemIndex = 0
+    Items.Strings = (
+      'Male'
+      'Female'
+    )
+    OnExit = FieldExit
+    OnKeyUp = FieldKeyUp
+    OnSelect = FieldSelect
+    TabOrder = 4
+    Text = 'Male'
+  end
+  object Label8: TLabel
+    Left = 496
+    Height = 20
+    Top = 224
+    Width = 71
+    Caption = 'Personality'
+    ParentColor = False
+  end
+  object txtPersonality: TComboBox
+    Left = 496
+    Height = 28
+    Top = 248
+    Width = 140
+    ItemHeight = 20
+    ItemIndex = 0
+    Items.Strings = (
+      'Abrupt'
+      'Afraid'
+      'Airy'
+      'Aloof'
+      'Amused'
+      'Angry'
+      'Arrogant'
+      'Cagy'
+      'Cocky'
+      'Determined'
+      'Disdain'
+      'Disgusted'
+      'Disoriented'
+      'Distracted'
+      'Envious'
+      'Foolish'
+      'Frivolous'
+      'Frustrated'
+      'Grumpy'
+      'Hopelessness'
+      'Idiotic'
+      'Indifferent'
+      'Insane'
+      'Joking'
+      'Joyous'
+      'Lonely'
+      'Malicious'
+      'Melancholic'
+      'Mischievous'
+      'Mysterious'
+      'Nostalgic'
+      'Peaceful'
+      'Pity'
+      'Playful'
+      'Reckless'
+      'Resignation'
+      'Romantic'
+      'Sad'
+      'Serene'
+      'Shy'
+      'Single-Minded'
+      'Stressed'
+      'Superior'
+      'Unpredictable'
+      'Vengeful'
+      'Weird'
+    )
+    OnExit = FieldExit
+    OnKeyUp = FieldKeyUp
+    OnSelect = FieldSelect
+    TabOrder = 7
+    Text = 'Abrupt'
+  end
+  object Label9: TLabel
+    Left = 496
+    Height = 20
+    Top = 296
+    Width = 71
+    Caption = 'Economics'
+    ParentColor = False
+  end
+  object txtEconomics: TComboBox
+    Left = 496
+    Height = 28
+    Top = 320
+    Width = 140
+    ItemHeight = 20
+    ItemIndex = 8
+    Items.Strings = (
+      'Destitute'
+      'Impoverished'
+      'Needy'
+      'Poor'
+      'Struggling'
+      'Surviving'
+      'Working'
+      'Comfortable'
+      'Affluent'
+      'Wealthy'
+    )
+    OnExit = FieldExit
+    OnKeyUp = FieldKeyUp
+    OnSelect = FieldSelect
+    TabOrder = 12
+    Text = 'Affluent'
+  end
+  object btnRollDetails: TButton
+    Left = 16
+    Height = 31
+    Top = 184
+    Width = 94
+    Caption = 'Roll Details'
+    OnClick = btnRollDetailsClick
+    TabOrder = 3
+  end
+  object txtClothingCondition: TComboBox
+    Left = 656
+    Height = 28
+    Top = 320
+    Width = 140
+    ItemHeight = 20
+    ItemIndex = 0
+    Items.Strings = (
+      'Baggy'
+      'Casual'
+      'Clean'
+      'Colorful'
+      'Comfortable'
+      'Common'
+      'Cool'
+      'Dapper'
+      'Dirty'
+      'Disty'
+      'Drab'
+      'Durable'
+      'Fadded'
+      'Fancy'
+      'Festive'
+      'Flowing'
+      'Formal'
+      'Grimy'
+      'Improvised'
+      'Layered'
+      'Neat'
+      'New'
+      'Outdated'
+      'Patched'
+      'Practical'
+      'Pristine'
+      'Quality'
+      'Relaxed'
+      'Ruggied'
+      'Slim'
+      'Smart'
+      'Stained'
+      'Stylish'
+      'Tattered'
+      'Tight'
+      'Torn'
+      'Unique'
+      'Warm'
+      'Warn'
+    )
+    OnExit = FieldExit
+    OnKeyUp = FieldKeyUp
+    OnSelect = FieldSelect
+    TabOrder = 13
+    Text = 'Baggy'
+  end
+  object Label11: TLabel
+    Left = 656
+    Height = 20
+    Top = 296
+    Width = 125
+    Caption = 'Clothing Condition'
+    ParentColor = False
+  end
+  object txtClothingType: TComboBox
+    Left = 656
+    Height = 28
+    Top = 248
+    Width = 140
+    ItemHeight = 20
+    ItemIndex = 0
+    Items.Strings = (
+      'Brigandine'
+      'Chain'
+      'Cloak'
+      'Dress'
+      'Gambeson'
+      'Hosen'
+      'Jacket'
+      'Kilt'
+      'Leathers'
+      'Plate, Full'
+      'Plate, Half'
+      'Robe'
+      'Suit'
+      'Tabard'
+      'Tunic'
+      'Uniform'
+      'Vest'
+    )
+    OnExit = FieldExit
+    OnKeyUp = FieldKeyUp
+    OnSelect = FieldSelect
+    TabOrder = 8
+    Text = 'Brigandine'
+  end
+  object Label12: TLabel
+    Left = 656
+    Height = 20
+    Top = 225
+    Width = 91
+    Caption = 'Clothing Type'
+    ParentColor = False
+  end
+  object Shape2: TShape
+    Left = 16
+    Height = 1
+    Top = 164
+    Width = 780
+  end
+  object Label20: TLabel
+    Left = 27
+    Height = 20
+    Top = 152
+    Width = 59
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'Details'
+    Color = clForm
+    ParentColor = False
+    Transparent = False
+  end
+  object Label21: TLabel
+    Left = 16
+    Height = 54
+    Top = 16
+    Width = 1325
+    Align = alTop
+    Caption = 'Puppet'
+    Font.Height = -40
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label22: TLabel
+    Left = 16
+    Height = 20
+    Top = 520
+    Width = 100
+    AutoSize = False
+    Caption = 'Armor Class'
+    ParentColor = False
+  end
+  object txtArmorClass: TComboBox
+    Left = 16
+    Height = 28
+    Top = 544
+    Width = 100
+    ItemHeight = 20
+    ItemIndex = 0
+    Items.Strings = (
+      '11'
+      '12'
+      '13'
+      '14'
+      '15'
+      '16'
+      '17'
+      '18'
+      '19'
+      '20'
+      '21'
+    )
+    OnExit = FieldExit
+    OnKeyUp = FieldKeyUp
+    OnSelect = FieldSelect
+    TabOrder = 22
+    Text = '11'
+  end
+  object Shape3: TShape
+    Left = 824
+    Height = 1
+    Top = 164
+    Width = 460
+  end
+  object Label23: TLabel
+    Left = 835
+    Height = 20
+    Top = 152
+    Width = 85
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'Personality'
+    Color = clForm
+    ParentColor = False
+    Transparent = False
+  end
+  object txtDesire: TComboBox
+    Left = 824
+    Height = 28
+    Top = 247
+    Width = 140
+    ItemHeight = 20
+    OnExit = FieldExit
+    OnKeyUp = FieldKeyUp
+    OnSelect = FieldSelect
+    TabOrder = 25
+  end
+  object Label24: TLabel
+    Left = 824
+    Height = 20
+    Top = 224
+    Width = 42
+    Caption = 'Desire'
+    ParentColor = False
+  end
+  object txtFear: TComboBox
+    Left = 984
+    Height = 28
+    Top = 247
+    Width = 140
+    ItemHeight = 20
+    OnExit = FieldExit
+    OnKeyUp = FieldKeyUp
+    OnSelect = FieldSelect
+    TabOrder = 26
+  end
+  object Label25: TLabel
+    Left = 984
+    Height = 20
+    Top = 224
+    Width = 28
+    Caption = 'Fear'
+    ParentColor = False
+  end
+  object txtLike: TComboBox
+    Left = 824
+    Height = 28
+    Top = 319
+    Width = 140
+    ItemHeight = 20
+    OnExit = FieldExit
+    OnKeyUp = FieldKeyUp
+    OnSelect = FieldSelect
+    TabOrder = 28
+  end
+  object Label26: TLabel
+    Left = 824
+    Height = 20
+    Top = 296
+    Width = 26
+    Caption = 'Like'
+    ParentColor = False
+  end
+  object txtDislike: TComboBox
+    Left = 984
+    Height = 28
+    Top = 319
+    Width = 140
+    ItemHeight = 20
+    OnExit = FieldExit
+    OnKeyUp = FieldKeyUp
+    OnSelect = FieldSelect
+    TabOrder = 29
+  end
+  object Label27: TLabel
+    Left = 984
+    Height = 20
+    Top = 296
+    Width = 44
+    Caption = 'Dislike'
+    ParentColor = False
+  end
+  object txtQuirk: TComboBox
+    Left = 1144
+    Height = 28
+    Top = 319
+    Width = 140
+    ItemHeight = 20
+    OnExit = FieldExit
+    OnKeyUp = FieldKeyUp
+    OnSelect = FieldSelect
+    TabOrder = 30
+  end
+  object Label28: TLabel
+    Left = 1144
+    Height = 20
+    Top = 296
+    Width = 35
+    Caption = 'Quirk'
+    ParentColor = False
+  end
+  object txtExpression: TComboBox
+    Left = 1144
+    Height = 28
+    Top = 248
+    Width = 140
+    ItemHeight = 20
+    OnExit = FieldExit
+    OnKeyUp = FieldKeyUp
+    OnSelect = FieldSelect
+    TabOrder = 27
+  end
+  object Label29: TLabel
+    Left = 1144
+    Height = 20
+    Top = 225
+    Width = 70
+    Caption = 'Expression'
+    ParentColor = False
+  end
+  object txtSocialStanding: TComboBox
+    Left = 824
+    Height = 28
+    Top = 391
+    Width = 140
+    ItemHeight = 20
+    OnExit = FieldExit
+    OnKeyUp = FieldKeyUp
+    OnSelect = FieldSelect
+    TabOrder = 31
+  end
+  object Label30: TLabel
+    Left = 824
+    Height = 20
+    Top = 368
+    Width = 103
+    Caption = 'Social Standing'
+    ParentColor = False
+  end
+  object txtActivity: TComboBox
+    Left = 984
+    Height = 28
+    Top = 391
+    Width = 140
+    ItemHeight = 20
+    OnExit = FieldExit
+    OnKeyUp = FieldKeyUp
+    OnSelect = FieldSelect
+    TabOrder = 32
+  end
+  object Label31: TLabel
+    Left = 984
+    Height = 20
+    Top = 368
+    Width = 49
+    Caption = 'Activity'
+    ParentColor = False
+  end
+  object txtLimit: TComboBox
+    Left = 1144
+    Height = 28
+    Top = 391
+    Width = 140
+    ItemHeight = 20
+    OnExit = FieldExit
+    OnKeyUp = FieldKeyUp
+    OnSelect = FieldSelect
+    TabOrder = 33
+  end
+  object Label32: TLabel
+    Left = 1144
+    Height = 20
+    Top = 368
+    Width = 33
+    Caption = 'Limit'
+    ParentColor = False
+  end
+  object Label33: TLabel
+    Left = 824
+    Height = 20
+    Top = 440
+    Width = 55
+    Caption = 'Relation'
+    ParentColor = False
+  end
+  object txtRelation: TEdit
+    Left = 824
+    Height = 28
+    Top = 463
+    Width = 300
+    OnExit = FieldExit
+    OnKeyUp = FieldKeyUp
+    TabOrder = 34
+  end
+  object btnRollPersonality: TButton
+    Left = 824
+    Height = 31
+    Top = 184
+    Width = 140
+    Caption = 'Roll Personality'
+    TabOrder = 35
+  end
+  object Label34: TLabel
+    Left = 136
+    Height = 20
+    Top = 520
+    Width = 100
+    AutoSize = False
+    Caption = 'Max HP'
+    ParentColor = False
+  end
+  object txtHPMax: TComboBox
+    Left = 136
+    Height = 28
+    Top = 544
+    Width = 100
+    ItemHeight = 20
+    ItemIndex = 11
+    Items.Strings = (
+      '-3'
+      '-2'
+      '-1'
+      '0'
+      '1'
+      '2'
+      '3'
+      '4'
+      '5'
+      '6'
+      '7'
+      '8'
+      '9'
+      '10'
+      '11'
+      '12'
+      '13'
+      '14'
+      '15'
+      '16'
+      '17'
+      '18'
+      '19'
+      '20'
+      '21'
+      '22'
+      '23'
+      '24'
+      '25'
+      '26'
+      '27'
+      '28'
+      '29'
+      '30'
+      '31'
+      '32'
+      '33'
+      '34'
+      '35'
+      '36'
+      '37'
+      '38'
+      '39'
+      '40'
+      '41'
+      '42'
+      '43'
+      '44'
+      '45'
+      '46'
+      '47'
+      '48'
+      '49'
+      '50'
+      '51'
+      '52'
+      '53'
+      '54'
+      '55'
+      '56'
+      '57'
+      '58'
+      '59'
+      '60'
+      '61'
+      '62'
+      '63'
+      '64'
+      '65'
+      '66'
+      '67'
+      '68'
+      '69'
+    )
+    OnExit = FieldExit
+    OnKeyUp = FieldKeyUp
+    OnSelect = FieldSelect
+    TabOrder = 23
+    Text = '8'
+  end
+  object Label35: TLabel
+    Left = 256
+    Height = 20
+    Top = 520
+    Width = 100
+    AutoSize = False
+    Caption = 'Current HP'
+    ParentColor = False
+  end
+  object txtHPCurrent: TComboBox
+    Left = 256
+    Height = 28
+    Top = 544
+    Width = 100
+    ItemHeight = 20
+    ItemIndex = 11
+    Items.Strings = (
+      '-3'
+      '-2'
+      '-1'
+      '0'
+      '1'
+      '2'
+      '3'
+      '4'
+      '5'
+      '6'
+      '7'
+      '8'
+      '9'
+      '10'
+      '11'
+      '12'
+      '13'
+      '14'
+      '15'
+      '16'
+      '17'
+      '18'
+      '19'
+      '20'
+      '21'
+      '22'
+      '23'
+      '24'
+      '25'
+      '26'
+      '27'
+      '28'
+      '29'
+      '30'
+      '31'
+      '32'
+      '33'
+      '34'
+      '35'
+      '36'
+      '37'
+      '38'
+      '39'
+      '40'
+      '41'
+      '42'
+      '43'
+      '44'
+      '45'
+      '46'
+      '47'
+      '48'
+      '49'
+      '50'
+      '51'
+      '52'
+      '53'
+      '54'
+      '55'
+      '56'
+      '57'
+      '58'
+      '59'
+      '60'
+      '61'
+      '62'
+      '63'
+      '64'
+      '65'
+      '66'
+      '67'
+      '68'
+      '69'
+    )
+    OnExit = FieldExit
+    OnKeyUp = FieldKeyUp
+    OnSelect = FieldSelect
+    TabOrder = 24
+    Text = '8'
+  end
+end
