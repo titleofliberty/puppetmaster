@@ -14,24 +14,35 @@ type
 
   TfrmSettlement = class(TForm)
     btnRollAll: TButton;
-    btnRollName: TButton;
     btnRollMood: TButton;
+    btnRollName: TButton;
+    Condition: TComboBox;
+    Label1: TLabel;
+    Label10: TLabel;
+    Label11: TLabel;
+    Label12: TLabel;
     Label3: TLabel;
     Label4: TLabel;
     Label5: TLabel;
-    Condition: TComboBox;
     Label6: TLabel;
-    Walls: TComboBox;
-    Label2: TLabel;
-    Title: TEdit;
-    Label1: TLabel;
-    Roofs: TComboBox;
+    Label7: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
     Moods: TComboBox;
+    Panel1: TPanel;
+    Panel2: TPanel;
+    Panel3: TPanel;
+    Roofs: TComboBox;
+    Title: TEdit;
+    Walls: TComboBox;
     procedure btnRollMoodClick(Sender: TObject);
     procedure btnRollNameClick(Sender: TObject);
-    procedure FieldExit(Sender: TObject);
-    procedure FieldKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure btnRollAllClick(Sender: TObject);
+    procedure TitleExit(Sender: TObject);
+    procedure TitleKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure WallsExit(Sender: TObject);
+    procedure WallsKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure WallsSelect(Sender: TObject);
   private
     FSettlement: TPMLeaf;
     procedure SetSettlement(AValue: TPMLeaf);
@@ -48,22 +59,6 @@ implementation
 
 { TfrmSettlement }
 
-procedure TfrmSettlement.FieldExit(Sender: TObject);
-var
-  txt : TEdit;
-  cbo : TComboBox;
-begin
-  if Sender is TEdit then
-    txt := TEdit(Sender)
-  else if Sender is TComboBox then
-    cbo := TComboBox(Sender);
-
-  if Assigned(txt) then
-    FSettlement.SetTrait(txt.Name, txt.Text)
-  else if Assigned(cbo) then
-    FSettlement.SetTrait(cbo.Name, cbo.Text);
-end;
-
 procedure TfrmSettlement.btnRollNameClick(Sender: TObject);
 begin
   FSettlement.SetTrait('Title', Title.Text);
@@ -73,26 +68,6 @@ procedure TfrmSettlement.btnRollMoodClick(Sender: TObject);
 begin
   Moods.ItemIndex := Random(Moods.Items.Count);
   FSettlement.SetTrait('Moods', Moods.Text);
-end;
-
-procedure TfrmSettlement.FieldKeyUp(Sender: TObject; var Key: Word;
-  Shift: TShiftState);
-var
-  txt : TEdit;
-  cbo : TComboBox;
-begin
-  if Sender is TEdit then
-    txt := TEdit(Sender)
-  else if Sender is TComboBox then
-    cbo := TComboBox(Sender);
-
-  if Key = VK_RETURN then
-  begin
-    if Assigned(txt) then
-      FSettlement.SetTrait(txt.Name, txt.Text)
-    else if Assigned(cbo) then
-      FSettlement.SetTrait(cbo.Name, cbo.Text);
-  end;
 end;
 
 procedure TfrmSettlement.btnRollAllClick(Sender: TObject);
@@ -110,11 +85,48 @@ begin
   FSettlement.SetTrait('Condition', Condition.Text);
 end;
 
+procedure TfrmSettlement.TitleExit(Sender: TObject);
+begin
+  FSettlement.SetTrait('Title', Title.Text);
+end;
+
+procedure TfrmSettlement.TitleKeyUp(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  FSettlement.SetTrait('Title', Title.Text);
+end;
+
+procedure TfrmSettlement.WallsExit(Sender: TObject);
+var
+  cbo: TComboBox;
+begin
+  cbo := TComboBox(Sender);
+  FSettlement.SetTrait(cbo.Name, cbo.Text);
+end;
+
+procedure TfrmSettlement.WallsKeyUp(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+var
+  cbo: TComboBox;
+begin
+  cbo := TComboBox(Sender);
+  FSettlement.SetTrait(cbo.Name, cbo.Text);
+end;
+
+procedure TfrmSettlement.WallsSelect(Sender: TObject);
+var
+  cbo: TComboBox;
+begin
+  cbo := TComboBox(Sender);
+  FSettlement.SetTrait(cbo.Name, cbo.Text);
+end;
+
 procedure TfrmSettlement.SetSettlement(AValue: TPMLeaf);
 begin
   if AValue.Category <> 'Settlement' then Exit;
   if FSettlement = AValue then Exit;
   FSettlement := AValue;
+
   Title.Text := FSettlement.GetTrait('Title');
   Walls.Text := FSettlement.GetTrait('Walls');
   Roofs.Text := FSettlement.GetTrait('Roofs');

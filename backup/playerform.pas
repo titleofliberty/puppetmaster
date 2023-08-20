@@ -15,9 +15,13 @@ type
   TfrmPlayer = class(TForm)
     Label2: TLabel;
     Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    txtRace: TEdit;
     txtPlayer: TEdit;
     Label1: TLabel;
     txtCharacter: TEdit;
+    txtClass: TEdit;
     procedure txtCharacterExit(Sender: TObject);
     procedure txtCharacterKeyUp(Sender: TObject; var Key: Word;
       Shift: TShiftState);

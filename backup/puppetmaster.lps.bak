@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="puppetmaster.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="4"/>
+        <CursorPos X="51" Y="15"/>
+        <UsageCount Value="201"/>
+      </Unit>
+      <Unit>
+        <Filename Value="mainform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmMain"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="810"/>
+        <CursorPos X="3" Y="817"/>
+        <FoldState Value=" T8je21 T3kU04316 pjFk20D7]97ja0:3 pkAle072]IXk30L01]m1kV031341822 PkOvI0 T0qg4362B Pj7ob2 T6lR02C13 PUtg0*"/>
+        <UsageCount Value="201"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="puppetmasterlib.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="180"/>
+        <CursorPos X="3" Y="185"/>
+        <FoldState Value=" T4601 T3iD0P1 piajM07]H6iE012 T1iG0M[P4Z]P4]P0iJ2AG Pi3jB2K"/>
+        <UsageCount Value="201"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="settlementform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmSettlement"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="59"/>
+        <CursorPos Y="107"/>
+        <FoldState Value=" T4602 T7EJa T8i2221 T3iI038 PiBiJ0 T1]62]Fa[E56iU013}"/>
+        <UsageCount Value="200"/>
+      </Unit>
+      <Unit>
+        <Filename Value="venueform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmVenue"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="42"/>
+        <CursorPos X="26" Y="46"/>
+        <FoldState Value=" T4602 T7EEN T8W221 T3i5036 PRZ0 T1i]X]DJZ0F"/>
+        <UsageCount Value="201"/>
+      </Unit>
+      <Unit>
+        <Filename Value="puppetform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmPuppet"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="256"/>
+        <CursorPos X="21" Y="259"/>
+        <FoldState Value=" T4602 T7EF{A T8jE221 T3jU06013 PYic0 T1jV05[G5Qj0]G6jd[E4T0kH235 PiAj24."/>
+        <UsageCount Value="182"/>
+      </Unit>
+      <Unit>
+        <Filename Value="diceform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmDice"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3"/>
+        <CursorPos X="7" Y="12"/>
+        <FoldState Value=" T4602 T7EDO T8X221 T3i6038 PWg0 T1i702]DNg0+"/>
+        <UsageCount Value="171"/>
+      </Unit>
+      <Unit>
+        <Filename Value="playerform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmPlayer"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="15"/>
+        <CursorPos X="18" Y="53"/>
+        <FoldState Value=" T4602 T7EFM T8V221 T3i4034 PKO0 T1i502]DEO0H"/>
+        <UsageCount Value="131"/>
+      </Unit>
+      <Unit>
+        <Filename Value="roomform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmRoom"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="49"/>
+        <CursorPos X="43" Y="74"/>
+        <FoldState Value=" T4602 T7EDQ T8Y231 T3i8038 PYi30 T1i902]EN]Ef"/>
+        <UsageCount Value="107"/>
+      </Unit>
+      <Unit>
+        <Filename Value="aboutform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmAbout"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="10"/>
+        <CursorPos X="3" Y="30"/>
+        <UsageCount Value="100"/>
+      </Unit>
+      <Unit>
+        <Filename Value="dungeonform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmDungeon"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="13"/>
+        <CursorPos X="34" Y="39"/>
+        <FoldState Value=" T4602 T7EGH T8P231 T3g033 PEH0 T1i0023h"/>
+        <UsageCount Value="98"/>
+      </Unit>
+      <Unit>
+        <Filename Value="wildernessform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmWilderness"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="7"/>
+        <CursorPos Y="41"/>
+        <FoldState Value=" T4602 T7EJF T8N231 T3e0[741f021:"/>
+        <UsageCount Value="92"/>
+      </Unit>
+      <Unit>
+        <Filename Value="tractform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmTract"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="49"/>
+        <CursorPos X="27" Y="64"/>
+        <FoldState Value=" T4602 T7EEU T8d221 T3iR065 PWc0 T1iU03]DLa]D6iS012-"/>
+        <UsageCount Value="87"/>
+      </Unit>
+      <Unit>
+        <Filename Value="chamberform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmChamber"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="85"/>
+        <CursorPos X="38" Y="105"/>
+        <FoldState Value=" T7EGo T8iE231 T4iU0]73kH06]81kI05]86kQ01h"/>
+        <UsageCount Value="85"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\gizmos\htmlcolors.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="44"/>
+      </Unit>
+      <Unit>
+        <Filename Value="traitframe.pas"/>
+        <ComponentName Value="fraTrait"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="16"/>
+      </Unit>
+      <Unit>
+        <Filename Value="settlement-walls.txt"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="39" Y="13"/>
+        <UsageCount Value="25"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="settlement-roofs.txt"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="25"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="settlement-condition.txt"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="28"/>
+        <CursorPos X="9" Y="50"/>
+        <UsageCount Value="24"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="settlement-moods.txt"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="11"/>
+        <CursorPos X="30" Y="17"/>
+        <UsageCount Value="11"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="venue-ceilings.txt"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="7"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="settlement-mood.txt"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="7" Y="33"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="campaignform.pas"/>
+        <ComponentName Value="frmCampaign"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="5"/>
+        <CursorPos X="14" Y="16"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="campaignsform.pas"/>
+        <ComponentName Value="frmCampaigns"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="77"/>
+        <CursorPos Y="89"/>
+        <UsageCount Value="18"/>
+      </Unit>
+      <Unit>
+        <Filename Value="architecture.txt"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="16" Y="4"/>
+        <UsageCount Value="18"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="settlement-adjectives.txt"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="22" Y="4"/>
+        <UsageCount Value="17"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\include\treeview.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2292"/>
+        <CursorPos Y="2298"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\include\control.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3582"/>
+        <CursorPos X="42" Y="3590"/>
+        <UsageCount Value="8"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\comctrls.pp"/>
+        <UnitName Value="ComCtrls"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3113"/>
+        <CursorPos X="15" Y="3108"/>
+        <UsageCount Value="7"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\rtl\objpas\fgl.pp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1651"/>
+        <CursorPos Y="1677"/>
+        <UsageCount Value="2"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\stdctrls.pp"/>
+        <UnitName Value="StdCtrls"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="275"/>
+        <CursorPos X="3" Y="289"/>
+        <UsageCount Value="1"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\controls.pp"/>
+        <UnitName Value="Controls"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2047"/>
+        <CursorPos X="3" Y="2007"/>
+        <UsageCount Value="1"/>
+      </Unit>
+      <Unit>
+        <Filename Value="dicetrayform.pas"/>
+        <ComponentName Value="frmDiceTray"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="16"/>
+        <CursorPos X="50" Y="35"/>
+        <UsageCount Value="23"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\grids.pas"/>
+        <UnitName Value="Grids"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="10118"/>
+        <CursorPos Y="10130"/>
+        <UsageCount Value="10"/>
+      </Unit>
+    </Units>
+    <Debugger>
+      <Backend Value="{46F8D863-C46A-4513-87F7-05B4F05262FC}"/>
+    </Debugger>
+    <JumpHistory HistoryIndex="29">
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="802" TopLine="784"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="803" TopLine="784"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="804" TopLine="784"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="799" TopLine="784"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="801" TopLine="784"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="802" TopLine="784"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="803" TopLine="784"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="804" TopLine="784"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="799" TopLine="784"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="801" TopLine="784"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="802" TopLine="784"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="803" TopLine="784"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="804" TopLine="784"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="823" Column="56" TopLine="805"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="196" Column="16" TopLine="193"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="824" Column="24" TopLine="808"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="817" TopLine="808"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="818" TopLine="808"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="819" TopLine="808"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="820" TopLine="808"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="822" TopLine="808"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="823" TopLine="808"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="824" TopLine="808"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="195" Column="15" TopLine="181"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="821" Column="28" TopLine="810"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="837" Column="89" TopLine="823"/>
+      </Position>
+      <Position>
+        <Filename Value="puppetmasterlib.pas"/>
+        <Caret Line="193" Column="7" TopLine="172"/>
+      </Position>
+      <Position>
+        <Filename Value="puppetmasterlib.pas"/>
+        <Caret Line="30" Column="50" TopLine="14"/>
+      </Position>
+      <Position>
+        <Filename Value="puppetmasterlib.pas"/>
+        <Caret Line="185" Column="3" TopLine="180"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="831" Column="9" TopLine="816"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

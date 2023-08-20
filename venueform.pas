@@ -6,20 +6,24 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, LCLType,
-  puppetmasterlib;
+  ExtCtrls, puppetmasterlib;
 
 type
 
   { TfrmVenue }
 
   TfrmVenue = class(TForm)
-    btnRollName: TButton;
     btnRollClass: TButton;
-    Label3: TLabel;
-    txtClass: TComboBox;
-    Label2: TLabel;
-    txtName: TEdit;
+    btnRollName: TButton;
     Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Panel1: TPanel;
+    Panel2: TPanel;
+    txtClass: TComboBox;
+    txtName: TEdit;
     procedure btnRollClassClick(Sender: TObject);
     procedure txtClassExit(Sender: TObject);
     procedure txtClassKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);

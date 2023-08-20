@@ -13,15 +13,16 @@ type
   { TfrmDice }
 
   TfrmDice = class(TForm)
-    Label5: TLabel;
-    txtCount: TComboBox;
-    txtDie: TComboBox;
-    txtModifier: TComboBox;
+    Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
+    Label5: TLabel;
+    pnlClient: TPanel;
+    txtCount: TComboBox;
+    txtDie: TComboBox;
+    txtModifier: TComboBox;
     txtTitle: TEdit;
-    Label1: TLabel;
     procedure txtCountExit(Sender: TObject);
     procedure txtCountSelect(Sender: TObject);
     procedure txtDieExit(Sender: TObject);

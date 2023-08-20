@@ -58,29 +58,24 @@ var
   str: string;
 begin
 
-  case FCategory of
-    'Settlement': str := GetTrait('Title');
-    'Player':
-    begin
-      if GetTrait('Character') <> '' then
-        str := GetTrait('Character')
-      else
-        str := 'Untitled';
+  if FCategory = 'Player' then
+  begin
+    if GetTrait('Character') <> '' then
+      str := GetTrait('Character')
+    else
+      str := 'Untitled';
 
-      if GetTrait('Player') <> '' then
-        str := str + ' [' + GetTrait('Player') + ']'
-      else
-        str := str + ' [Player Name]';
-    end;
-    'Dice': str := GetTrait('Title');
-    'Venue': str := GetTrait('Title');
-    'Room': str := GetTrait('Title');
-    'Puppet': str := Trim(GetTrait('FirstName') + ' ' + GetTrait('LastName'));
-    'Dungeon': str := GetTrait('Title');
-    'Wilderness': str := GetTrait('Title');
-    'Tract': str := GetTrait('Title');
-    'Chamber': str := GetTrait('Title');
-  end;
+    if GetTrait('Player') <> '' then
+      str := str + ' [' + GetTrait('Player') + ']'
+    else
+      str := str + ' [Player Name]';
+  end
+  else if FCategory = 'Puppet' then
+  begin
+    str := Trim(GetTrait('FirstName') + ' ' + GetTrait('LastName'));
+  end
+  else
+    str := GetTrait('Title');
 
   result := str;
 end;
@@ -143,6 +138,26 @@ begin
   else if FCategory = 'Chamber' then
   begin
     FTraits.AddOrSetData('Title', 'Untitled Chamber');
+  end
+  else if FCategory = 'Campaign' then
+  begin
+    FTraits.AddOrSetData('Title', 'Campaign');
+  end
+  else if FCategory = 'Dungeons' then
+  begin
+    FTraits.AddOrSetData('Title', 'Dungeons');
+  end
+  else if FCategory = 'Wildernesses' then
+  begin
+    FTraits.AddOrSetData('Title', 'Wildernessess');
+  end
+  else if FCategory = 'Settlements' then
+  begin
+    FTraits.AddOrSetData('Title', 'Settlements');
+  end
+  else if FCategory = 'DiceTray' then
+  begin
+    FTraits.AddOrSetData('Title', 'Dice Tray');
   end;
 end;
 
@@ -159,6 +174,17 @@ procedure TPMLeaf.SetTrait(AKey, AValue: string);
 begin
   FTraits.AddOrSetData(AKey, AValue);
   if Assigned(FOnChange) then FOnChange(Self);
+end;
+
+procedure TPMLeaf.SetTrait(AKeyValue: string);
+var
+  sa: TStringArray;
+  key, val: string;
+begin
+  sa := AKeyValue.Split(':');
+  key := sa[0];
+  val := sa[1];
+  SetTrait(key, val);
 end;
 
 initialization

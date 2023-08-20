@@ -26,7 +26,8 @@ type
     property Traits: TPMTraits read FTraits write FTraits;
     property OnChange: TNotifyEvent read FOnChange write FOnChange;
     function  GetTrait(AKey: string): string;
-    procedure SetTrait(AKey, AValue: string);
+    procedure SetTrait(AKey, AValue: string); overload;
+    procedure SetTrait(AKeyValue: string); overload;
   end;
 
 var
@@ -138,6 +139,26 @@ begin
   else if FCategory = 'Chamber' then
   begin
     FTraits.AddOrSetData('Title', 'Untitled Chamber');
+  end
+  else if FCategory = 'Campaign' then
+  begin
+    FTraits.AddOrSetData('Title', 'Campaign');
+  end
+  else if FCategory = 'Dungeons' then
+  begin
+    FTraits.AddOrSetData('Title', 'Dungeons');
+  end
+  else if FCategory = 'Wildernesses' then
+  begin
+    FTraits.AddOrSetData('Title', 'Wildernessess');
+  end
+  else if FCategory = 'Settlements' then
+  begin
+    FTraits.AddOrSetData('Title', 'Settlements');
+  end
+  else if FCategory = 'DiceTray' then
+  begin
+    FTraits.AddOrSetData('Title', 'Dice Tray');
   end;
 end;
 
@@ -154,6 +175,17 @@ procedure TPMLeaf.SetTrait(AKey, AValue: string);
 begin
   FTraits.AddOrSetData(AKey, AValue);
   if Assigned(FOnChange) then FOnChange(Self);
+end;
+
+procedure TPMLeaf.SetTrait(AKeyValue: string);
+var
+  sa: TStringArray;
+  key, val: string;
+begin
+  sa := AKeyValue.Split(':');
+  key := sa[0];
+  val := sa[1];
+  SetTrait(key, val);
 end;
 
 initialization

@@ -1,0 +1,175 @@
+object frmDice: TfrmDice
+  Left = 386
+  Height = 505
+  Top = 171
+  Width = 785
+  Align = alClient
+  AutoSize = True
+  BorderStyle = bsNone
+  Caption = 'Dice'
+  ChildSizing.LeftRightSpacing = 16
+  ChildSizing.TopBottomSpacing = 16
+  ChildSizing.VerticalSpacing = 8
+  ClientHeight = 505
+  ClientWidth = 785
+  DesignTimePPI = 120
+  Font.CharSet = ANSI_CHARSET
+  Font.Height = -20
+  Font.Name = 'Courier New'
+  Font.Pitch = fpFixed
+  Font.Quality = fqDraft
+  LCLVersion = '2.2.6.0'
+  object Label1: TLabel
+    Left = 16
+    Height = 22
+    Top = 66
+    Width = 60
+    Caption = 'Title'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 16
+    Height = 22
+    Top = 134
+    Width = 200
+    AutoSize = False
+    Caption = 'Count'
+    ParentColor = False
+  end
+  object txtTitle: TEdit
+    Left = 16
+    Height = 30
+    Top = 96
+    Width = 200
+    OnExit = txtTitleExit
+    OnKeyUp = txtTitleKeyUp
+    TabOrder = 0
+  end
+  object txtCount: TComboBox
+    Left = 16
+    Height = 30
+    Top = 164
+    Width = 200
+    AutoSize = False
+    ItemHeight = 22
+    ItemIndex = 0
+    Items.Strings = (
+      '1'
+      '2'
+      '3'
+      '4'
+      '5'
+      '6'
+      '7'
+      '8'
+      '9'
+      '10'
+      '11'
+      '12'
+      '13'
+      '14'
+      '15'
+      '16'
+      '17'
+      '18'
+      '19'
+      '20'
+    )
+    OnExit = txtCountExit
+    OnSelect = txtCountSelect
+    Style = csDropDownList
+    TabOrder = 1
+    Text = '1'
+  end
+  object Label3: TLabel
+    Left = 16
+    Height = 22
+    Top = 202
+    Width = 200
+    AutoSize = False
+    Caption = 'Die'
+    ParentColor = False
+  end
+  object txtDie: TComboBox
+    Left = 16
+    Height = 30
+    Top = 232
+    Width = 200
+    AutoSize = False
+    ItemHeight = 22
+    ItemIndex = 5
+    Items.Strings = (
+      'd4'
+      'd6'
+      'd8'
+      'd10'
+      'd12'
+      'd20'
+      'd100'
+    )
+    OnExit = txtDieExit
+    OnSelect = txtDieSelect
+    Style = csDropDownList
+    TabOrder = 2
+    Text = 'd20'
+  end
+  object Label4: TLabel
+    Left = 16
+    Height = 22
+    Top = 270
+    Width = 200
+    AutoSize = False
+    Caption = 'Modifier'
+    ParentColor = False
+  end
+  object txtModifier: TComboBox
+    Left = 16
+    Height = 30
+    Top = 300
+    Width = 200
+    AutoSize = False
+    ItemHeight = 22
+    ItemIndex = 9
+    Items.Strings = (
+      '-9'
+      '-8'
+      '-7'
+      '-6'
+      '-5'
+      '-4'
+      '-3'
+      '-2'
+      '-1'
+      '0'
+      '+1'
+      '+2'
+      '+3'
+      '+4'
+      '+5'
+      '+6'
+      '+7'
+      '+8'
+      '+9'
+    )
+    OnExit = txtModifierExit
+    OnSelect = txtModifierSelect
+    Style = csDropDownList
+    TabOrder = 3
+    Text = '0'
+  end
+  object Label5: TLabel
+    Left = 16
+    Height = 42
+    Top = 16
+    Width = 753
+    Align = alTop
+    Caption = 'Dice Roll'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -40
+    Font.Name = 'Courier New'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+end

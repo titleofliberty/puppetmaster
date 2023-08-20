@@ -6,19 +6,20 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, LCLType,
-  puppetmasterlib;
+  ExtCtrls, puppetmasterlib;
 
 type
 
   { TfrmWilderness }
 
   TfrmWilderness = class(TForm)
-    btnRollAll: TButton;
-    txtClass: TComboBox;
-    Label3: TLabel;
-    txtTitle: TEdit;
-    Label1: TLabel;
     Label2: TLabel;
+    Label3: TLabel;
+    Panel1: TPanel;
+    Label1: TLabel;
+    Panel2: TPanel;
+    txtClass: TComboBox;
+    txtTitle: TEdit;
     procedure btnRollAllClick(Sender: TObject);
   private
     FWilderness: TPMLeaf;

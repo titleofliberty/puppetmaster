@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, LCLType,
-  puppetmasterlib;
+  ExtCtrls, puppetmasterlib;
 
 type
 
@@ -14,11 +14,12 @@ type
 
   TfrmWilderness = class(TForm)
     btnRollAll: TButton;
-    txtClass: TComboBox;
-    Label3: TLabel;
-    txtTitle: TEdit;
-    Label1: TLabel;
     Label2: TLabel;
+    Label3: TLabel;
+    Panel1: TPanel;
+    Label1: TLabel;
+    txtClass: TComboBox;
+    txtTitle: TEdit;
     procedure btnRollAllClick(Sender: TObject);
   private
     FWilderness: TPMLeaf;
@@ -44,6 +45,7 @@ end;
 
 procedure TfrmWilderness.SetWilderness(AValue: TPMLeaf);
 begin
+  if AValue.Category <> 'Wilderness' then Exit;
   if FWilderness = AValue then Exit;
   FWilderness := AValue;
   txtTitle.Text := FWilderness.GetTrait('Title');

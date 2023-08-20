@@ -6,18 +6,20 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, LCLType,
-  puppetmasterlib;
+  ExtCtrls, puppetmasterlib;
 
 type
 
   { TfrmDungeon }
 
   TfrmDungeon = class(TForm)
-    txtClass: TComboBox;
-    Label3: TLabel;
-    txtTitle: TEdit;
-    Label1: TLabel;
     Label2: TLabel;
+    Label3: TLabel;
+    Panel1: TPanel;
+    pnlClient: TPanel;
+    Label1: TLabel;
+    txtClass: TComboBox;
+    txtTitle: TEdit;
     procedure txtClassExit(Sender: TObject);
     procedure txtClassKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure txtClassSelect(Sender: TObject);

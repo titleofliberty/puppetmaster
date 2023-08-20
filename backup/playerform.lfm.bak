@@ -1,0 +1,111 @@
+object frmPlayer: TfrmPlayer
+  Left = 386
+  Height = 476
+  Top = 171
+  Width = 931
+  Align = alClient
+  BorderStyle = bsNone
+  Caption = 'Player'
+  ChildSizing.LeftRightSpacing = 16
+  ChildSizing.TopBottomSpacing = 16
+  ClientHeight = 476
+  ClientWidth = 931
+  DesignTimePPI = 120
+  Font.CharSet = ANSI_CHARSET
+  Font.Height = -20
+  Font.Name = 'Courier New'
+  Font.Pitch = fpFixed
+  Font.Quality = fqDraft
+  LCLVersion = '2.2.6.0'
+  object Label1: TLabel
+    Left = 16
+    Height = 22
+    Top = 72
+    Width = 200
+    AutoSize = False
+    Caption = 'Player'
+    ParentColor = False
+  end
+  object txtPlayer: TEdit
+    Left = 16
+    Height = 30
+    Top = 96
+    Width = 200
+    AutoSize = False
+    OnExit = txtPlayerExit
+    OnKeyUp = txtPlayerKeyUp
+    TabOrder = 0
+  end
+  object Label2: TLabel
+    Left = 232
+    Height = 22
+    Top = 72
+    Width = 200
+    AutoSize = False
+    Caption = 'Character'
+    ParentColor = False
+  end
+  object txtCharacter: TEdit
+    Left = 232
+    Height = 30
+    Top = 96
+    Width = 200
+    AutoSize = False
+    OnExit = txtCharacterExit
+    OnKeyUp = txtCharacterKeyUp
+    TabOrder = 1
+  end
+  object Label3: TLabel
+    Left = 16
+    Height = 42
+    Top = 16
+    Width = 899
+    Align = alTop
+    Caption = 'Player'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -40
+    Font.Name = 'Courier New'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 448
+    Height = 22
+    Top = 72
+    Width = 200
+    AutoSize = False
+    Caption = 'Race'
+    ParentColor = False
+  end
+  object txtRace: TEdit
+    Left = 448
+    Height = 30
+    Top = 96
+    Width = 200
+    AutoSize = False
+    OnExit = txtCharacterExit
+    OnKeyUp = txtCharacterKeyUp
+    TabOrder = 2
+  end
+  object Label5: TLabel
+    Left = 664
+    Height = 22
+    Top = 72
+    Width = 200
+    AutoSize = False
+    Caption = 'Class'
+    ParentColor = False
+  end
+  object txtClass: TEdit
+    Left = 664
+    Height = 30
+    Top = 96
+    Width = 200
+    AutoSize = False
+    OnExit = txtCharacterExit
+    OnKeyUp = txtCharacterKeyUp
+    TabOrder = 3
+  end
+end

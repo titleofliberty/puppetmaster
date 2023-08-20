@@ -12,6 +12,11 @@ object frmMain: TfrmMain
   Constraints.MinHeight = 680
   Constraints.MinWidth = 1024
   DesignTimePPI = 120
+  Font.CharSet = ANSI_CHARSET
+  Font.Height = -20
+  Font.Name = 'Courier New'
+  Font.Pitch = fpFixed
+  Font.Quality = fqDraft
   Icon.Data = {
     BE1000000000010001002020000001002000A810000016000000280000002000
     0000400000000100200000000000001000006400000064000000000000000000
@@ -161,73 +166,94 @@ object frmMain: TfrmMain
     Width = 1008
     Align = alTop
     BevelOuter = bvNone
-    ChildSizing.HorizontalSpacing = 8
+    ChildSizing.HorizontalSpacing = 16
     ClientHeight = 40
     ClientWidth = 1008
     TabOrder = 0
-    object btnEightBall: TButton
+    object lblEightBall: TLabel
+      Cursor = crHandPoint
       Left = 0
       Height = 40
       Top = 0
-      Width = 94
+      Width = 120
       Align = alLeft
-      Caption = 'Eight Ball'
-      OnClick = btnEightBallClick
-      TabOrder = 0
+      Alignment = taCenter
+      Caption = '&Eight Ball'
+      Layout = tlCenter
+      ParentColor = False
+      OnClick = mnuMainToolsEightClick
     end
-    object btnHazard: TButton
-      Left = 102
+    object lblHazard: TLabel
+      Cursor = crHandPoint
+      Left = 136
       Height = 40
       Top = 0
-      Width = 94
+      Width = 72
       Align = alLeft
-      Caption = 'Hazard'
-      TabOrder = 1
+      Alignment = taCenter
+      Caption = '&Hazard'
+      Layout = tlCenter
+      ParentColor = False
     end
-    object btnLoot: TButton
-      Left = 204
+    object lblLoot: TLabel
+      Cursor = crHandPoint
+      Left = 224
       Height = 40
       Top = 0
-      Width = 94
+      Width = 48
       Align = alLeft
-      Caption = 'Loot'
-      TabOrder = 2
+      Alignment = taCenter
+      Caption = '&Loot'
+      Layout = tlCenter
+      ParentColor = False
     end
-    object btnClue: TButton
-      Left = 306
+    object lblClue: TLabel
+      Cursor = crHandPoint
+      Left = 288
       Height = 40
       Top = 0
-      Width = 94
+      Width = 48
       Align = alLeft
-      Caption = 'Clue'
-      TabOrder = 3
+      Alignment = taCenter
+      Caption = '&Clue'
+      Layout = tlCenter
+      ParentColor = False
     end
-    object btnWares: TButton
-      Left = 408
+    object lblWares: TLabel
+      Cursor = crHandPoint
+      Left = 352
       Height = 40
       Top = 0
-      Width = 94
+      Width = 60
       Align = alLeft
-      Caption = 'Wares'
-      TabOrder = 4
+      Alignment = taCenter
+      Caption = '&Wares'
+      Layout = tlCenter
+      ParentColor = False
     end
-    object btnRumor: TButton
-      Left = 510
+    object lblRumor: TLabel
+      Cursor = crHandPoint
+      Left = 428
       Height = 40
       Top = 0
-      Width = 94
+      Width = 60
       Align = alLeft
-      Caption = 'Rumor'
-      TabOrder = 5
+      Alignment = taCenter
+      Caption = '&Rumor'
+      Layout = tlCenter
+      ParentColor = False
     end
-    object btnMood: TButton
-      Left = 612
+    object lblMood: TLabel
+      Cursor = crHandPoint
+      Left = 504
       Height = 40
       Top = 0
-      Width = 94
+      Width = 48
       Align = alLeft
-      Caption = 'Mood'
-      TabOrder = 6
+      Alignment = taCenter
+      Caption = '&Mood'
+      Layout = tlCenter
+      ParentColor = False
     end
   end
   object pnlClient: TPanel
@@ -256,7 +282,7 @@ object frmMain: TfrmMain
       TabOrder = 0
       object txtFilterCampaign: TTreeFilterEdit
         Left = 0
-        Height = 28
+        Height = 30
         Top = 0
         Width = 300
         ButtonWidth = 29
@@ -268,11 +294,10 @@ object frmMain: TfrmMain
       end
       object tvwCampaign: TTreeView
         Left = 0
-        Height = 507
-        Top = 36
+        Height = 505
+        Top = 38
         Width = 300
         Align = alClient
-        AutoExpand = True
         ReadOnly = True
         RightClickSelect = True
         RowSelect = True
@@ -281,7 +306,7 @@ object frmMain: TfrmMain
         OnDragOver = tvwCampaignDragOver
         OnMouseDown = tvwCampaignMouseDown
         OnSelectionChanged = tvwCampaignSelectionChanged
-        Options = [tvoAutoExpand, tvoAutoItemHeight, tvoHideSelection, tvoKeepCollapsedNodes, tvoReadOnly, tvoRightClickSelect, tvoRowSelect, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips, tvoThemedDraw]
+        Options = [tvoAutoItemHeight, tvoHideSelection, tvoKeepCollapsedNodes, tvoReadOnly, tvoRightClickSelect, tvoRowSelect, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips, tvoThemedDraw]
       end
     end
     object sprMain: TSplitter
@@ -384,10 +409,24 @@ object frmMain: TfrmMain
         Height = 337
         Top = 0
         Width = 702
-        HorzScrollBar.Page = 1
-        VertScrollBar.Page = 1
+        HorzScrollBar.Page = 94
+        VertScrollBar.Page = 63
         Align = alClient
+        ClientHeight = 333
+        ClientWidth = 698
         TabOrder = 2
+        object grdData: TStringGrid
+          Left = 0
+          Height = 333
+          Top = 0
+          Width = 698
+          Align = alClient
+          ColCount = 24
+          DefaultColWidth = 200
+          FixedCols = 0
+          FixedRows = 0
+          TabOrder = 0
+        end
       end
     end
   end
@@ -399,72 +438,7 @@ object frmMain: TfrmMain
     Align = alBottom
     BevelOuter = bvNone
     ChildSizing.HorizontalSpacing = 8
-    ClientHeight = 40
-    ClientWidth = 1008
     TabOrder = 2
-    object btnDiceFour: TButton
-      Left = 0
-      Height = 40
-      Top = 0
-      Width = 94
-      Align = alLeft
-      Caption = 'd4'
-      TabOrder = 0
-    end
-    object btnDiceSix: TButton
-      Left = 102
-      Height = 40
-      Top = 0
-      Width = 94
-      Align = alLeft
-      Caption = 'd6'
-      TabOrder = 1
-    end
-    object btnDiceEight: TButton
-      Left = 204
-      Height = 40
-      Top = 0
-      Width = 94
-      Align = alLeft
-      Caption = 'd8'
-      TabOrder = 2
-    end
-    object btnDiceTen: TButton
-      Left = 306
-      Height = 40
-      Top = 0
-      Width = 94
-      Align = alLeft
-      Caption = 'd10'
-      TabOrder = 3
-    end
-    object btnDiceTwelve: TButton
-      Left = 408
-      Height = 40
-      Top = 0
-      Width = 94
-      Align = alLeft
-      Caption = 'd12'
-      TabOrder = 4
-    end
-    object btnDiceTwenty: TButton
-      Left = 510
-      Height = 40
-      Top = 0
-      Width = 94
-      Align = alLeft
-      Caption = 'd20'
-      TabOrder = 5
-    end
-    object btnDiceHundred: TButton
-      Left = 612
-      Height = 40
-      Top = 0
-      Width = 94
-      Align = alLeft
-      Caption = 'd100'
-      TabOrder = 6
-    end
   end
   object mnuMain: TMainMenu
     Left = 368
@@ -486,6 +460,7 @@ object frmMain: TfrmMain
       end
       object mnuMainCampaignsSaveAs: TMenuItem
         Caption = 'Save As'
+        OnClick = mnuMainCampaignsSaveAsClick
       end
       object Separator2: TMenuItem
         Caption = '-'
@@ -612,6 +587,38 @@ object frmMain: TfrmMain
       end
       object mnuMainRandomWeapon: TMenuItem
         Caption = '&Weapon'
+      end
+    end
+    object mnuMainTools: TMenuItem
+      Caption = '&Tools'
+      object mnuMainToolsEight: TMenuItem
+        Caption = '&Eight Ball'
+        ShortCut = 16453
+        OnClick = mnuMainToolsEightClick
+      end
+      object mnuMainToolsHazard: TMenuItem
+        Caption = '&Hazard'
+        ShortCut = 16456
+      end
+      object mnuMainToolsLoot: TMenuItem
+        Caption = '&Loot'
+        ShortCut = 16460
+      end
+      object mnuMainToolsClue: TMenuItem
+        Caption = '&Clue'
+        ShortCut = 16451
+      end
+      object mnuMainToolsWares: TMenuItem
+        Caption = '&Wares'
+        ShortCut = 16471
+      end
+      object mnuMainToolsRumor: TMenuItem
+        Caption = '&Rumor'
+        ShortCut = 16466
+      end
+      object mnuMainToolsMood: TMenuItem
+        Caption = '&Mood'
+        ShortCut = 16461
       end
     end
     object mnuMainHelp: TMenuItem

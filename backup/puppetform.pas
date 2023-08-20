@@ -13,10 +13,12 @@ type
   { TfrmPuppet }
 
   TfrmPuppet = class(TForm)
-    btnRollStats: TButton;
     btnRollDetails: TButton;
     btnRollName: TButton;
     btnRollPersonality: TButton;
+    btnRollStats: TButton;
+    Label1: TLabel;
+    Label10: TLabel;
     Label11: TLabel;
     Label12: TLabel;
     Label13: TLabel;
@@ -44,47 +46,50 @@ type
     Label33: TLabel;
     Label34: TLabel;
     Label35: TLabel;
+    Label36: TLabel;
+    Label37: TLabel;
+    Label38: TLabel;
     Label4: TLabel;
     Label5: TLabel;
     Label6: TLabel;
     Label7: TLabel;
     Label8: TLabel;
     Label9: TLabel;
-    Shape1: TShape;
-    Shape2: TShape;
-    Shape3: TShape;
+    Panel1: TPanel;
+    Panel2: TPanel;
+    Panel3: TPanel;
+    Panel4: TPanel;
+    Panel5: TPanel;
     txtAbilityRollMethod: TComboBox;
+    txtActivity: TComboBox;
     txtAlignment: TComboBox;
-    txtHPMax: TComboBox;
-    txtHPCurrent: TComboBox;
-    txtCharisma: TComboBox;
-    Label1: TLabel;
-    Label10: TLabel;
     txtArmorClass: TComboBox;
+    txtCharisma: TComboBox;
     txtClass: TComboBox;
     txtClothingCondition: TComboBox;
-    txtDesire: TComboBox;
-    txtRelation: TEdit;
-    txtFear: TComboBox;
-    txtLike: TComboBox;
-    txtDislike: TComboBox;
-    txtQuirk: TComboBox;
-    txtExpression: TComboBox;
-    txtSocialStanding: TComboBox;
-    txtActivity: TComboBox;
-    txtLimit: TComboBox;
+    txtClothingType: TComboBox;
     txtConstitution: TComboBox;
     txtCorruption: TComboBox;
+    txtDesire: TComboBox;
     txtDexterity: TComboBox;
+    txtDislike: TComboBox;
     txtEconomics: TComboBox;
-    txtClothingType: TComboBox;
+    txtExpression: TComboBox;
+    txtFear: TComboBox;
     txtFirstName: TComboBox;
+    txtHPCurrent: TComboBox;
+    txtHPMax: TComboBox;
     txtIntelligence: TComboBox;
     txtLastName: TComboBox;
+    txtLike: TComboBox;
+    txtLimit: TComboBox;
     txtPersonality: TComboBox;
     txtProfession: TComboBox;
+    txtQuirk: TComboBox;
     txtRace: TComboBox;
+    txtRelation: TEdit;
     txtSex: TComboBox;
+    txtSocialStanding: TComboBox;
     txtStrength: TComboBox;
     txtWisdom: TComboBox;
     procedure btnRollStatsClick(Sender: TObject);
@@ -151,6 +156,18 @@ begin
   FPuppet := AValue;
   txtFirstName.Text := FPuppet.GetTrait('FirstName');
   txtLastName.Text := FPuppet.GetTrait('LastName');
+
+  txtSex.Text := FPuppet.GetTrait('Sex');
+  txtRace.Text := FPuppet.GetTrait('Race');
+  txtClass.Text := FPuppet.GetTrait('Class');
+  txtAlignment.Text := FPuppet.GetTrait('Alignment');
+  txtCorruption.Text := FPuppet.GetTrait('Corruption');
+  txtProfession.Text := FPuppet.GetTrait('Profession');
+  txtPersonality.Text := FPuppet.GetTrait('Personality');
+  txtEconomics.Text := FPuppet.GetTrait('Economics');
+  txtClothingType.Text := FPuppet.GetTrait('ClothingType');
+  txtClothingCondition.Text := FPuppet.GetTrait('ClothingCondition');
+
 end;
 
 procedure TfrmPuppet.btnRollDetailsClick(Sender: TObject);
@@ -165,6 +182,17 @@ begin
   txtEconomics.ItemIndex := Random(txtEconomics.Items.Count);
   txtClothingType.ItemIndex := Random(txtClothingType.Items.Count);
   txtClothingCondition.ItemIndex := Random(txtClothingCondition.Items.Count);
+
+  FPuppet.SetTrait('Sex', txtSex.Text);
+  FPuppet.SetTrait('Race', txtRace.Text);
+  FPuppet.SetTrait('Class', txtClass.Text);
+  FPuppet.SetTrait('Alignment', txtAlignment.Text);
+  FPuppet.SetTrait('Corruption', txtCorruption.Text);
+  FPuppet.SetTrait('Profession', txtProfession.Text);
+  FPuppet.SetTrait('Personality', txtPersonality.Text);
+  FPuppet.SetTrait('Economics', txtEconomics.Text);
+  FPuppet.SetTrait('ClothingType', txtClothingType.Text);
+  FPuppet.SetTrait('ClothingCondition', txtClothingCondition.Text);
 end;
 
 procedure TfrmPuppet.btnRollStatsClick(Sender: TObject);
@@ -233,6 +261,16 @@ begin
   end;
 
   txtArmorClass.ItemIndex := Random(txtArmorClass.Items.Count);
+
+  FPuppet.SetTrait('Strength', txtStrength.Text);
+  FPuppet.SetTrait('Dexterity', txtDexterity.Text);
+  FPuppet.SetTrait('Constitution', txtConstitution.Text);
+  FPuppet.SetTrait('Intelligence', txtIntelligence.Text);
+  FPuppet.SetTrait('Wisdom', txtWisdom.Text);
+  FPuppet.SetTrait('Charisma', txtCharisma.Text);
+  FPuppet.SetTrait('ArmorClass', txtArmorClass.Text);
+  FPuppet.SetTrait('HPMax', txtHPMax);
+  FPuppet.SetTrait('HPCurrent', txtHPCurrent);
 end;
 
 end.

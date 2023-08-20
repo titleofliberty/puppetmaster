@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, LCLType,
-  puppetmasterlib;
+  ExtCtrls, puppetmasterlib;
 
 type
 
@@ -16,14 +16,19 @@ type
     btnRollAll: TButton;
     Label1: TLabel;
     Label2: TLabel;
+    Label3: TLabel;
     Label4: TLabel;
     Label5: TLabel;
     Label6: TLabel;
     Label7: TLabel;
+    Panel1: TPanel;
+    Panel2: TPanel;
+    Panel3: TPanel;
     txtFauna: TComboBox;
     txtFlora: TComboBox;
     txtManufactured: TComboBox;
     txtNatural: TComboBox;
+    txtClass: TComboBox;
     txtTitle: TEdit;
     procedure btnRollAllClick(Sender: TObject);
     procedure txtNaturalExit(Sender: TObject);
@@ -50,11 +55,13 @@ implementation
 
 procedure TfrmTract.btnRollAllClick(Sender: TObject);
 begin
+  txtClass.ItemIndex := Random(txtClass.Items.Count);
   txtNatural.ItemIndex := Random(txtNatural.Items.Count);
   txtManufactured.ItemIndex := Random(txtManufactured.Items.Count);
   txtFlora.ItemIndex := Random(txtFlora.Items.Count);
   txtFauna.ItemIndex := Random(txtFauna.Items.Count);
 
+  FTract.SetTrait('Class', txtClass.Text);
   FTract.SetTrait('Natural', txtNatural.Text);
   FTract.SetTrait('Manufactured', txtManufactured.Text);
   FTract.SetTrait('Flora', txtFlora.Text);

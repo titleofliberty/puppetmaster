@@ -384,8 +384,9 @@ object frmMain: TfrmMain
         Height = 337
         Top = 0
         Width = 702
+        HorzScrollBar.Page = 1
+        VertScrollBar.Page = 1
         Align = alClient
-        AutoScroll = False
         TabOrder = 2
       end
     end
