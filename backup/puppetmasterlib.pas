@@ -28,6 +28,7 @@ type
     property Traits: TPMTraits read FTraits write FTraits;
     property OnChange: TNotifyEvent read FOnChange write FOnChange;
     function  GetTrait(AKey: string): string;
+    function  GetTrait(AIndex: integer): string;
     procedure SetTrait(AKey, AValue: string); overload;
     procedure SetTrait(AKeyValue: string); overload;
   end;
@@ -152,7 +153,7 @@ begin
   end
   else if FCategory = 'Wildernesses' then
   begin
-    FTraits.AddOrSetData('Title', 'Wildernessess');
+    FTraits.AddOrSetData('Title', 'Wildernesses');
   end
   else if FCategory = 'Settlements' then
   begin
@@ -171,6 +172,15 @@ begin
   val := '';
   FTraits.TryGetData(AKey, val);
   result := val;
+end;
+
+function TPMLeaf.GetTrait(AIndex: integer): string;
+var
+  str: string;
+begin
+  str := Trim(Format('%s:%s', [FTraits.Keys[AIndex], FTraits.Data[AIndex]]));
+  if str = ':' then str := '';
+  result := str;
 end;
 
 procedure TPMLeaf.SetTrait(AKey, AValue: string);

@@ -12,7 +12,7 @@ uses
   Interfaces, // this includes the LCL widgetset
   Forms, lazcontrols, mainform, puppetmasterlib, settlementform, venueform,
   puppetform, diceform, playerform, roomform, aboutform, dungeonform, 
-wildernessform, tractform, chamberform, htmlcolors;
+wildernessform, tractform, chamberform, htmlcolors, hazardform;
 
 {$R *.res}
 
@@ -22,6 +22,7 @@ begin
   Application.Scaled:=True;
   Application.Initialize;
   Application.CreateForm(TfrmMain, frmMain);
+  Application.CreateForm(TfrmHazard, frmHazard);
   Application.Run;
 end.
 

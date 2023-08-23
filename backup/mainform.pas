@@ -886,15 +886,19 @@ begin
   for r := 0 to tvwCampaign.Items.Count - 1 do
   begin
     leaf := TPMLeaf(tvwCampaign.Items[r].Data);
+
     while grdData.ColCount < (leaf.Traits.Count + 2) do
       grdData.ColCount := grdData.ColCount + 1;
+
     grdData.Cells[0, r] := leaf.Category;
+
     if r = 0 then
       grdData.Cells[1, r] := '-1'
     else
       grdData.Cells[1, r] := tvwCampaign.Items[r].Parent.AbsoluteIndex.ToString;
+
     for c := 0 to leaf.Traits.Count - 1 do
-      grdData.Cells[c + 2, r] := Format('%s:%s', [leaf.Traits.Keys[c], leaf.Traits.Data[c]]);
+      grdData.Cells[c + 2, r] := leaf.GetTrait(c);
   end;
   grdData.SaveToCSVFile(FFileName);
 end;

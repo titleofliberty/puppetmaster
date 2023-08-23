@@ -132,6 +132,12 @@
         <Filename Value="..\gizmos\htmlcolors.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
+      <Unit>
+        <Filename Value="hazardform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmHazard"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

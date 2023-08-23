@@ -427,6 +427,7 @@ object frmMain: TfrmMain
           FixedCols = 0
           FixedRows = 0
           TabOrder = 0
+          Visible = False
         end
       end
     end

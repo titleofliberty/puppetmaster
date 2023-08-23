@@ -28,6 +28,7 @@ type
     property Traits: TPMTraits read FTraits write FTraits;
     property OnChange: TNotifyEvent read FOnChange write FOnChange;
     function  GetTrait(AKey: string): string;
+    function  GetTrait(AIndex: integer): string;
     procedure SetTrait(AKey, AValue: string); overload;
     procedure SetTrait(AKeyValue: string); overload;
   end;
@@ -39,17 +40,6 @@ var
 
   TPMNamesLast: TStringList;
   TPMNamesFirst: TStringList;
-
-  TPMMusicalInstrument: TStringList;
-  TPMWeapon: TStringList;
-  TPMArmor: TStringList;
-  TPMGem: TStringList;
-  TPMKit: TStringList;
-  TPMPoison: TStringList;
-  TPMTool: TStringList;
-  TPMTrap: TStringList;
-
-  TPMSettlementVenues: TCSVDocument;
 
 
 implementation
@@ -171,6 +161,15 @@ begin
   val := '';
   FTraits.TryGetData(AKey, val);
   result := val;
+end;
+
+function TPMLeaf.GetTrait(AIndex: integer): string;
+var
+  str: string;
+begin
+  str := Trim(Format('%s:%s', [FTraits.Keys[AIndex], FTraits.Data[AIndex]]));
+  if str = ':' then str := '';
+  result := str;
 end;
 
 procedure TPMLeaf.SetTrait(AKey, AValue: string);
@@ -795,27 +794,6 @@ TPMSituationVerbs.Add('write');
 TPMSituationVerbs.Add('yell');
 TPMSituationVerbs.Add('yield');
 
-
-TPMMusicalInstrument := TStringList.Create;
-TPMMusicalInstrument.Sorted := true;
-TPMMusicalInstrument.Duplicates:= dupIgnore;
-TPMMusicalInstrument.Add('Bagpipes');
-TPMMusicalInstrument.Add('');
-TPMMusicalInstrument.Add('');
-TPMMusicalInstrument.Add('');
-TPMMusicalInstrument.Add('');
-TPMMusicalInstrument.Add('');
-TPMMusicalInstrument.Add('');
-TPMMusicalInstrument.Add('');
-TPMMusicalInstrument.Add('');
-TPMMusicalInstrument.Add('');
-TPMMusicalInstrument.Add('');
-TPMMusicalInstrument.Add('');
-TPMMusicalInstrument.Add('');
-TPMMusicalInstrument.Add('');
-TPMMusicalInstrument.Add('');
-TPMMusicalInstrument.Add('');
-TPMMusicalInstrument.Add('');
 
 
 end.
