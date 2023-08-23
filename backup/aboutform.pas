@@ -5,7 +5,7 @@ unit aboutform;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, lclintf;
 
 type
 
@@ -17,6 +17,8 @@ type
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
+    Label5: TLabel;
+    procedure Label2Click(Sender: TObject);
   private
 
   public
@@ -29,6 +31,13 @@ var
 implementation
 
 {$R *.lfm}
+
+{ TfrmAbout }
+
+procedure TfrmAbout.Label2Click(Sender: TObject);
+begin
+  OpenURL('https://www.necropraxis.com');
+end;
 
 end.
 

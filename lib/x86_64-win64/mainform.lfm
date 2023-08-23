@@ -197,7 +197,7 @@ object frmMain: TfrmMain
     end
     object lblLoot: TLabel
       Cursor = crHandPoint
-      Left = 224
+      Left = 348
       Height = 40
       Top = 0
       Width = 48
@@ -209,7 +209,7 @@ object frmMain: TfrmMain
     end
     object lblClue: TLabel
       Cursor = crHandPoint
-      Left = 288
+      Left = 412
       Height = 40
       Top = 0
       Width = 48
@@ -221,7 +221,7 @@ object frmMain: TfrmMain
     end
     object lblWares: TLabel
       Cursor = crHandPoint
-      Left = 352
+      Left = 476
       Height = 40
       Top = 0
       Width = 60
@@ -233,7 +233,7 @@ object frmMain: TfrmMain
     end
     object lblRumor: TLabel
       Cursor = crHandPoint
-      Left = 428
+      Left = 552
       Height = 40
       Top = 0
       Width = 60
@@ -245,7 +245,7 @@ object frmMain: TfrmMain
     end
     object lblMood: TLabel
       Cursor = crHandPoint
-      Left = 504
+      Left = 628
       Height = 40
       Top = 0
       Width = 48
@@ -255,6 +255,18 @@ object frmMain: TfrmMain
       Layout = tlCenter
       ParentColor = False
       OnClick = mnuMainToolsMoodClick
+    end
+    object lblEncounter: TLabel
+      Cursor = crHandPoint
+      Left = 224
+      Height = 40
+      Top = 0
+      Width = 108
+      Align = alLeft
+      Alignment = taCenter
+      Caption = 'Enco&unter'
+      Layout = tlCenter
+      ParentColor = False
     end
   end
   object pnlClient: TPanel
@@ -614,6 +626,10 @@ object frmMain: TfrmMain
       object mnuMainToolsHazard: TMenuItem
         Caption = '&Hazard'
         ShortCut = 16456
+      end
+      object mnuMainToolsEncounter: TMenuItem
+        Caption = 'Enco&unter'
+        ShortCut = 16469
       end
       object mnuMainToolsLoot: TMenuItem
         Caption = '&Loot'

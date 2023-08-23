@@ -13,14 +13,17 @@ type
   { TfrmMain }
 
   TfrmMain = class(TForm)
+    btnEightBall1: TButton;
+    btnEvent: TButton;
+    btnWares: TButton;
+    btnLoot: TButton;
+    btnMood: TButton;
+    btnEncounter: TButton;
     btnOutputClear: TButton;
-    lblMood: TLabel;
-    lblWares: TLabel;
-    lblEightBall: TLabel;
-    lblHazard: TLabel;
-    lblLoot: TLabel;
-    lblClue: TLabel;
-    lblRumor: TLabel;
+    btnEightBall: TButton;
+    btnRumor: TButton;
+    mnuMainToolsEvent: TMenuItem;
+    mnuMainToolsEncounter: TMenuItem;
     mnuMainViewExpand: TMenuItem;
     mnuMainViewCollapse: TMenuItem;
     mnuMainView: TMenuItem;
@@ -29,7 +32,6 @@ type
     mnuMainToolsWares: TMenuItem;
     mnuMainToolsClue: TMenuItem;
     mnuMainToolsLoot: TMenuItem;
-    mnuMainToolsHazard: TMenuItem;
     mnuMainToolsEight: TMenuItem;
     mnuMainTools: TMenuItem;
     mnuMainRandomTool: TMenuItem;

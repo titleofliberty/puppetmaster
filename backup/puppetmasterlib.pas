@@ -41,17 +41,6 @@ var
   TPMNamesLast: TStringList;
   TPMNamesFirst: TStringList;
 
-  TPMMusicalInstrument: TStringList;
-  TPMWeapon: TStringList;
-  TPMArmor: TStringList;
-  TPMGem: TStringList;
-  TPMKit: TStringList;
-  TPMPoison: TStringList;
-  TPMTool: TStringList;
-  TPMTrap: TStringList;
-
-  TPMSettlementVenues: TCSVDocument;
-
 
 implementation
 
@@ -253,7 +242,6 @@ TPMSettlementEvents.Add('traffic accident');
 TPMSettlementEvents.Add('warrior exhibition');
 TPMSettlementEvents.Add('wedding');
 TPMSettlementEvents.Add('wild magic eruption');
-TPMSettlementEvents.Add('yearly local festival');
 
 TPMWildernessEvents := TStringList.Create;
 TPMWildernessEvents.Sorted := true;
@@ -805,27 +793,6 @@ TPMSituationVerbs.Add('write');
 TPMSituationVerbs.Add('yell');
 TPMSituationVerbs.Add('yield');
 
-
-TPMMusicalInstrument := TStringList.Create;
-TPMMusicalInstrument.Sorted := true;
-TPMMusicalInstrument.Duplicates:= dupIgnore;
-TPMMusicalInstrument.Add('Bagpipes');
-TPMMusicalInstrument.Add('');
-TPMMusicalInstrument.Add('');
-TPMMusicalInstrument.Add('');
-TPMMusicalInstrument.Add('');
-TPMMusicalInstrument.Add('');
-TPMMusicalInstrument.Add('');
-TPMMusicalInstrument.Add('');
-TPMMusicalInstrument.Add('');
-TPMMusicalInstrument.Add('');
-TPMMusicalInstrument.Add('');
-TPMMusicalInstrument.Add('');
-TPMMusicalInstrument.Add('');
-TPMMusicalInstrument.Add('');
-TPMMusicalInstrument.Add('');
-TPMMusicalInstrument.Add('');
-TPMMusicalInstrument.Add('');
 
 
 end.

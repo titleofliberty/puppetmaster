@@ -14,6 +14,7 @@ type
 
   TfrmMain = class(TForm)
     btnOutputClear: TButton;
+    lblEncounter: TLabel;
     lblMood: TLabel;
     lblWares: TLabel;
     lblEightBall: TLabel;
@@ -21,6 +22,7 @@ type
     lblLoot: TLabel;
     lblClue: TLabel;
     lblRumor: TLabel;
+    mnuMainToolsEncounter: TMenuItem;
     mnuMainViewExpand: TMenuItem;
     mnuMainViewCollapse: TMenuItem;
     mnuMainView: TMenuItem;

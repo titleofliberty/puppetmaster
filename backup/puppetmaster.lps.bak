@@ -19,9 +19,10 @@
         <ComponentName Value="frmMain"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <TopLine Value="424"/>
-        <CursorPos Y="424"/>
-        <FoldState Value=" T46021 T7ED{d T8jc27]F3kP099 pj6jZ0B6 piXjF0E3]9cjH033]RZk3051]94jD072]9X]IL4 PiQiK0 T1kQ08A]pbk8058]9Y]9m4]gPlC03[y40jC06[y4Mk70G211 Pb[z50l7257]qXof43B[z5925812 PiQn34 T6la02M]F7xA0e"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="406"/>
+        <CursorPos Y="428"/>
+        <FoldState Value=" T46021 T7ED{g T8jf27]F3kS099 pj6jZ0B6 piXjF0E214 pkRlG0n2]T9kL07[94Xk30L4 PiQiK0 T1kT08A]rbk8058[r4lLnK0h[i43kG06[94Mk70G211 Pb[s50lA257]sXp243B]9Yk92]+2 PiQn34 T6ld02M]F7xE0o"/>
         <UsageCount Value="201"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -29,9 +30,9 @@
       <Unit>
         <Filename Value="puppetmasterlib.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="2"/>
-        <TopLine Value="24"/>
-        <CursorPos Y="43"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="174"/>
+        <CursorPos X="19" Y="195"/>
         <FoldState Value=" T4601 T3i50P1 piajM073 PKO0 T6i]T11]W1i80M[W4Z]W4012 T0iB2AG Pi3jB2:"/>
         <UsageCount Value="201"/>
         <Loaded Value="True"/>
@@ -82,7 +83,7 @@
         <TopLine Value="3"/>
         <CursorPos X="7" Y="12"/>
         <FoldState Value=" T4602 T7EDO T8X221 T3i6038 PWg0 T1i702]DNg0+"/>
-        <UsageCount Value="195"/>
+        <UsageCount Value="198"/>
       </Unit>
       <Unit>
         <Filename Value="playerform.pas"/>
@@ -94,7 +95,7 @@
         <TopLine Value="49"/>
         <CursorPos X="44" Y="70"/>
         <FoldState Value=" T4602 T8S22z"/>
-        <UsageCount Value="155"/>
+        <UsageCount Value="158"/>
       </Unit>
       <Unit>
         <Filename Value="roomform.pas"/>
@@ -106,7 +107,7 @@
         <TopLine Value="49"/>
         <CursorPos X="43" Y="74"/>
         <FoldState Value=" T4602 T7EDQ T8Y231 T3i8038 PYi30 T1i902]EN]Ef"/>
-        <UsageCount Value="131"/>
+        <UsageCount Value="134"/>
       </Unit>
       <Unit>
         <Filename Value="aboutform.pas"/>
@@ -115,9 +116,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="10"/>
-        <CursorPos X="3" Y="32"/>
-        <UsageCount Value="124"/>
+        <TopLine Value="21"/>
+        <CursorPos X="20" Y="43"/>
+        <UsageCount Value="127"/>
       </Unit>
       <Unit>
         <Filename Value="dungeonform.pas"/>
@@ -129,7 +130,7 @@
         <TopLine Value="13"/>
         <CursorPos X="34" Y="39"/>
         <FoldState Value=" T4602 T7EGH T8P231 T3g033 PEH0 T1i0023h"/>
-        <UsageCount Value="122"/>
+        <UsageCount Value="125"/>
       </Unit>
       <Unit>
         <Filename Value="wildernessform.pas"/>
@@ -141,7 +142,7 @@
         <TopLine Value="7"/>
         <CursorPos X="12" Y="39"/>
         <FoldState Value=" T4602 T7EJF T8N231 T3e0[741f021:"/>
-        <UsageCount Value="116"/>
+        <UsageCount Value="119"/>
       </Unit>
       <Unit>
         <Filename Value="tractform.pas"/>
@@ -153,7 +154,7 @@
         <TopLine Value="49"/>
         <CursorPos Y="56"/>
         <FoldState Value=" T4602 T7EEU T8d221 T3iC0D6 PdiA0 T1iD0C]EP[E56iS012j"/>
-        <UsageCount Value="111"/>
+        <UsageCount Value="114"/>
       </Unit>
       <Unit>
         <Filename Value="chamberform.pas"/>
@@ -165,7 +166,7 @@
         <TopLine Value="4"/>
         <CursorPos X="23" Y="69"/>
         <FoldState Value=" T46021 T7EGk T8iB2[E43jI036 Pi8iF0 T1jJ02]FZiH]E6jV013~"/>
-        <UsageCount Value="109"/>
+        <UsageCount Value="112"/>
       </Unit>
       <Unit>
         <Filename Value="..\gizmos\htmlcolors.pas"/>
@@ -174,7 +175,17 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="68"/>
+        <UsageCount Value="71"/>
+      </Unit>
+      <Unit>
+        <Filename Value="hazardform.pas"/>
+        <ComponentName Value="frmHazard"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="39"/>
+        <CursorPos X="17" Y="47"/>
+        <UsageCount Value="21"/>
       </Unit>
       <Unit>
         <Filename Value="traitframe.pas"/>
@@ -329,24 +340,11 @@
         <CursorPos Y="170"/>
         <UsageCount Value="10"/>
       </Unit>
-      <Unit>
-        <Filename Value="hazardform.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="frmHazard"/>
-        <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="1"/>
-        <TopLine Value="39"/>
-        <CursorPos X="50" Y="42"/>
-        <UsageCount Value="21"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
-      </Unit>
     </Units>
     <Debugger>
       <Backend Value="{46F8D863-C46A-4513-87F7-05B4F05262FC}"/>
     </Debugger>
-    <JumpHistory HistoryIndex="17">
+    <JumpHistory HistoryIndex="18">
       <Position>
         <Filename Value="mainform.pas"/>
         <Caret Line="822" Column="46" TopLine="805"/>
@@ -408,15 +406,20 @@
         <Caret Line="885" TopLine="491"/>
       </Position>
       <Position>
-        <Filename Value="hazardform.pas"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="424" TopLine="424"/>
       </Position>
       <Position>
-        <Filename Value="hazardform.pas"/>
-        <Caret Line="21" Column="27" TopLine="11"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="425" TopLine="425"/>
       </Position>
       <Position>
-        <Filename Value="hazardform.pas"/>
-        <Caret Line="41" Column="50" TopLine="38"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="432" TopLine="428"/>
+      </Position>
+      <Position>
+        <Filename Value="puppetmasterlib.pas"/>
+        <Caret Line="195" Column="19" TopLine="174"/>
       </Position>
     </JumpHistory>
     <RunParams>
