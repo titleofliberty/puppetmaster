@@ -21,7 +21,7 @@
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
         <TopLine Value="462"/>
-        <CursorPos X="29" Y="476"/>
+        <CursorPos X="13" Y="471"/>
         <FoldState Value=" T46021 T7ED{d T8jc27]F3kP095161524 pnfrR051 pj4jD072]9Xk30L4 PiMiG0 T1kQ08[m622]Wm6te06[f4Mk70G2 T0l72]T7112D PjHwT]L6la02C26 PevX0l"/>
         <UsageCount Value="201"/>
         <Loaded Value="True"/>
@@ -82,7 +82,7 @@
         <TopLine Value="3"/>
         <CursorPos X="7" Y="12"/>
         <FoldState Value=" T4602 T7EDO T8X221 T3i6038 PWg0 T1i702]DNg0+"/>
-        <UsageCount Value="191"/>
+        <UsageCount Value="192"/>
       </Unit>
       <Unit>
         <Filename Value="playerform.pas"/>
@@ -94,7 +94,7 @@
         <TopLine Value="49"/>
         <CursorPos X="44" Y="70"/>
         <FoldState Value=" T4602 T8S22z"/>
-        <UsageCount Value="151"/>
+        <UsageCount Value="152"/>
       </Unit>
       <Unit>
         <Filename Value="roomform.pas"/>
@@ -106,7 +106,7 @@
         <TopLine Value="49"/>
         <CursorPos X="43" Y="74"/>
         <FoldState Value=" T4602 T7EDQ T8Y231 T3i8038 PYi30 T1i902]EN]Ef"/>
-        <UsageCount Value="127"/>
+        <UsageCount Value="128"/>
       </Unit>
       <Unit>
         <Filename Value="aboutform.pas"/>
@@ -117,7 +117,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="10"/>
         <CursorPos X="3" Y="30"/>
-        <UsageCount Value="120"/>
+        <UsageCount Value="121"/>
       </Unit>
       <Unit>
         <Filename Value="dungeonform.pas"/>
@@ -129,7 +129,7 @@
         <TopLine Value="13"/>
         <CursorPos X="34" Y="39"/>
         <FoldState Value=" T4602 T7EGH T8P231 T3g033 PEH0 T1i0023h"/>
-        <UsageCount Value="118"/>
+        <UsageCount Value="119"/>
       </Unit>
       <Unit>
         <Filename Value="wildernessform.pas"/>
@@ -141,7 +141,7 @@
         <TopLine Value="7"/>
         <CursorPos X="12" Y="39"/>
         <FoldState Value=" T4602 T7EJF T8N231 T3e0[741f021:"/>
-        <UsageCount Value="112"/>
+        <UsageCount Value="113"/>
       </Unit>
       <Unit>
         <Filename Value="tractform.pas"/>
@@ -153,7 +153,7 @@
         <TopLine Value="49"/>
         <CursorPos Y="56"/>
         <FoldState Value=" T4602 T7EEU T8d221 T3iC0D6 PdiA0 T1iD0C]EP[E56iS012j"/>
-        <UsageCount Value="107"/>
+        <UsageCount Value="108"/>
       </Unit>
       <Unit>
         <Filename Value="chamberform.pas"/>
@@ -165,7 +165,7 @@
         <TopLine Value="4"/>
         <CursorPos X="23" Y="69"/>
         <FoldState Value=" T46021 T7EGk T8iB2[E43jI036 Pi8iF0 T1jJ02]FZiH]E6jV013~"/>
-        <UsageCount Value="105"/>
+        <UsageCount Value="106"/>
       </Unit>
       <Unit>
         <Filename Value="..\gizmos\htmlcolors.pas"/>
@@ -174,7 +174,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="64"/>
+        <UsageCount Value="65"/>
       </Unit>
       <Unit>
         <Filename Value="traitframe.pas"/>

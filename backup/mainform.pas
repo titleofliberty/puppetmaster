@@ -473,7 +473,7 @@ begin
   lbl.BorderSpacing.Left := 8;
   lbl.BorderSpacing.Right := 8;
   lbl.BorderSpacing.Bottom := 16;
-  lbl.Caption := moods.Strings[i];
+  lbl.Caption := 'Mood: ' + moods.Strings[i];
 
 end;
 

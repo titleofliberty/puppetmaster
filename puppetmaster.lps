@@ -20,9 +20,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="462"/>
-        <CursorPos X="13" Y="471"/>
-        <FoldState Value=" T46021 T7ED{d T8jc27]F3kP095161524 pnfrR051 pj4jD072]9Xk30L4 PiMiG0 T1kQ08[m622]Wm6te06[f4Mk70G2 T0l72]T7112D PjHwT]L6la02C26 PevX0l"/>
+        <TopLine Value="424"/>
+        <CursorPos Y="425"/>
+        <FoldState Value=" T46021 T7ED{d T8jc27]F3kP099 pj6jZ0B6 piXjF0E3]9cjH033]RZk3051]94jD072]9X]IL4 PiMiG0 T1kQ08A]pbk8058]9Y]9m4]gPlC03[y40jC06[y4Mk70G[y4B[y50l7257]pXof43B[y5925[)4Zmg42 T6la02M]n7x60E"/>
         <UsageCount Value="201"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -333,7 +333,7 @@
     <Debugger>
       <Backend Value="{46F8D863-C46A-4513-87F7-05B4F05262FC}"/>
     </Debugger>
-    <JumpHistory HistoryIndex="8">
+    <JumpHistory HistoryIndex="11">
       <Position>
         <Filename Value="mainform.pas"/>
         <Caret Line="822" Column="46" TopLine="805"/>
@@ -369,6 +369,18 @@
       <Position>
         <Filename Value="mainform.pas"/>
         <Caret Line="477" TopLine="462"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="425" TopLine="425"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="426" TopLine="426"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="425" TopLine="424"/>
       </Position>
     </JumpHistory>
     <RunParams>
