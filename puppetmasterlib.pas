@@ -16,12 +16,14 @@ type
   TPMLeaf = class(TObject)
   private
     FCategory: string;
+    FParent: string;
     FOnChange: TNotifyEvent;
     FTraits: TPMTraits;
     function GetTitle: string;
   public
     constructor Create(ACategory: string);
     property Title: string read GetTitle;
+    property Parent: string read FParent write FParent;
     property Category: string read FCategory;
     property Traits: TPMTraits read FTraits write FTraits;
     property OnChange: TNotifyEvent read FOnChange write FOnChange;
@@ -150,7 +152,7 @@ begin
   end
   else if FCategory = 'Wildernesses' then
   begin
-    FTraits.AddOrSetData('Title', 'Wildernessess');
+    FTraits.AddOrSetData('Title', 'Wildernesses');
   end
   else if FCategory = 'Settlements' then
   begin

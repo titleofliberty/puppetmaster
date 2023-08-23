@@ -83,8 +83,8 @@ object frmPlayer: TfrmPlayer
       Top = 30
       Width = 449
       AutoSize = False
-      OnExit = txtCharacterExit
-      OnKeyUp = txtCharacterKeyUp
+      OnExit = txtPlayerExit
+      OnKeyUp = txtPlayerKeyUp
       TabOrder = 1
     end
     object Label4: TLabel
@@ -111,8 +111,8 @@ object frmPlayer: TfrmPlayer
       Top = 98
       Width = 442
       AutoSize = False
-      OnExit = txtCharacterExit
-      OnKeyUp = txtCharacterKeyUp
+      OnExit = txtPlayerExit
+      OnKeyUp = txtPlayerKeyUp
       TabOrder = 2
     end
     object txtClass: TEdit
@@ -121,8 +121,8 @@ object frmPlayer: TfrmPlayer
       Top = 98
       Width = 449
       AutoSize = False
-      OnExit = txtCharacterExit
-      OnKeyUp = txtCharacterKeyUp
+      OnExit = txtPlayerExit
+      OnKeyUp = txtPlayerKeyUp
       TabOrder = 3
     end
   end

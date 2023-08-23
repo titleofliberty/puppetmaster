@@ -1,7 +1,7 @@
 object frmChamber: TfrmChamber
-  Left = 446
+  Left = 790
   Height = 546
-  Top = 172
+  Top = 254
   Width = 830
   Align = alClient
   BorderStyle = bsNone
@@ -235,11 +235,16 @@ object frmChamber: TfrmChamber
     end
     object txtTool: TComboBox
       Left = 0
-      Height = 28
+      Height = 30
       Top = 30
       Width = 261
       AutoSize = False
-      ItemHeight = 20
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -20
+      Font.Name = 'Courier New'
+      Font.Pitch = fpFixed
+      Font.Quality = fqDraft
+      ItemHeight = 22
       ItemIndex = 0
       Items.Strings = (
         ''

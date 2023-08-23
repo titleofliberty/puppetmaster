@@ -112,6 +112,7 @@ begin
   if FTract = AValue then Exit;
   FTract := AValue;
   txtTitle.Text := FTract.GetTrait('Title');
+  txtClass.Text := FTract.GetTrait('Class');
   txtNatural.Text := FTract.GetTrait('Natural');
   txtManufactured.Text := FTract.GetTrait('Manufactured');
   txtFlora.Text := FTract.GetTrait('Flora');

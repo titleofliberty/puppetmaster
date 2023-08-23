@@ -21,6 +21,9 @@ type
     lblLoot: TLabel;
     lblClue: TLabel;
     lblRumor: TLabel;
+    mnuMainViewExpand: TMenuItem;
+    mnuMainViewCollapse: TMenuItem;
+    mnuMainView: TMenuItem;
     mnuMainToolsMood: TMenuItem;
     mnuMainToolsRumor: TMenuItem;
     mnuMainToolsWares: TMenuItem;
@@ -108,6 +111,9 @@ type
     procedure mnuMainInsertVenueClick(Sender: TObject);
     procedure mnuMainInsertWildernessClick(Sender: TObject);
     procedure mnuMainToolsEightClick(Sender: TObject);
+    procedure mnuMainToolsMoodClick(Sender: TObject);
+    procedure mnuMainViewCollapseClick(Sender: TObject);
+    procedure mnuMainViewExpandClick(Sender: TObject);
     procedure tvwCampaignDragDrop(Sender, Source: TObject; X, Y: Integer);
     procedure tvwCampaignDragOver(Sender, Source: TObject; X, Y: Integer;
       State: TDragState; var Accept: Boolean);
@@ -192,8 +198,11 @@ end;
 
 procedure TfrmMain.mnuMainCampaignsSaveAsClick(Sender: TObject);
 begin
-  //SaveCampaign;
-  LoadCampaign;
+  if dlgSave.Execute then
+  begin
+    FFileName := dlgSave.FileName;
+    SaveCampaign;
+  end;
 end;
 
 procedure TfrmMain.mnuMainEditDeleteClick(Sender: TObject);
@@ -203,12 +212,12 @@ var
 begin
   node := tvwCampaign.Selected;
   leaf := TPMLeaf(node.Data);
-  if leaf.Category = 'Settlement' then node.Delete;
-  if leaf.Category = 'Venue' then node.Delete;
-  if leaf.Category = 'Room' then node.Delete;
-  if leaf.Category = 'Puppet' then node.Delete;
-  if leaf.Category = 'Player' then node.Delete;
-  if leaf.Category = 'Dice' then node.Delete;
+  if node.Level > 1 then
+    if MessageDlg('Delete Item', 'Do you want to delete ' + node.Text + '?', mtConfirmation, [mbYes, mbNo], 0) = mrYes then
+    begin
+      node.Delete;
+      SaveCampaign;
+    end;
 end;
 
 procedure TfrmMain.mnuMainHelpAboutClick(Sender: TObject);
@@ -295,12 +304,15 @@ var
 begin
   leaf := TPMLeaf.Create('Player');
   leaf.OnChange := @LeafChange;
-  if TPMLeaf(tvwCampaign.Selected.Data).Category = 'Room' then
+  if (TPMLeaf(tvwCampaign.Selected.Data).Category = 'Room') or (TPMLeaf(tvwCampaign.Selected.Data).Category = 'Chamber') or (TPMLeaf(tvwCampaign.Selected.Data).Category = 'Tract') then
     node := tvwCampaign.Items.AddChildObject(tvwCampaign.Selected, leaf.Title, leaf)
   else if (TPMLeaf(tvwCampaign.Selected.Data).Category = 'Puppet') or (TPMLeaf(tvwCampaign.Selected.Data).Category = 'Player') then
     node := tvwCampaign.Items.AddObject(tvwCampaign.Selected, leaf.Title, leaf);
-  node.Selected := true;
-  //SaveCampaign(FFileName);
+
+  if Assigned(node) then
+    node.Selected := true;
+
+  SaveCampaign;
 end;
 
 procedure TfrmMain.mnuMainInsertPuppetClick(Sender: TObject);
@@ -312,7 +324,7 @@ begin
   leaf.OnChange := @LeafChange;
   if (TPMLeaf(tvwCampaign.Selected.Data).Category = 'Chamber') or (TPMLeaf(tvwCampaign.Selected.Data).Category = 'Tract') or (TPMLeaf(tvwCampaign.Selected.Data).Category = 'Room') then
     node := tvwCampaign.items.AddChildObject(tvwCampaign.Selected, leaf.Title, leaf)
-  else if TPMLeaf(tvwCampaign.Selected.Data).Category = 'Puppet' then
+  else if (TPMLeaf(tvwCampaign.Selected.Data).Category = 'Puppet') or (TPMLeaf(tvwCampaign.Selected.Data).Category = 'Player') then
     node := tvwCampaign.items.AddObject(tvwCampaign.Selected, leaf.Title, leaf)
   else
     Exit;
@@ -410,6 +422,71 @@ begin
     lbl.Caption := 'Eight Ball: Yes';
 end;
 
+procedure TfrmMain.mnuMainToolsMoodClick(Sender: TObject);
+var
+  i : integer;
+  moods: TStringList;
+  lbl  : TLabel;
+begin
+
+  moods := TStringList.Create;
+  moods.Sorted := true;
+  moods.Add('Angry');
+  moods.Add('Anxious');
+  moods.Add('Ashamed');
+  moods.Add('Bored');
+  moods.Add('Content');
+  moods.Add('Curious');
+  moods.Add('Depressed');
+  moods.Add('Determined');
+  moods.Add('Disappointed');
+  moods.Add('Disgusted');
+  moods.Add('Eager');
+  moods.Add('Embarrassed');
+  moods.Add('Enthusiastic');
+  moods.Add('Envious');
+  moods.Add('Excited');
+  moods.Add('Frustrated');
+  moods.Add('Gloomy');
+  moods.Add('Guilty');
+  moods.Add('Happy');
+  moods.Add('Hopeful');
+  moods.Add('Hostility');
+  moods.Add('Indifferent');
+  moods.Add('Interested');
+  moods.Add('Jealous');
+  moods.Add('Lonely');
+  moods.Add('Neutral');
+  moods.Add('Optimistic');
+  moods.Add('Positive');
+  moods.Add('Remorseful');
+  moods.Add('Sad');
+  moods.Add('Uneasy');
+  moods.Add('Uninterested');
+  moods.Add('Worried');
+
+  i := Random(moods.Count);
+  lbl := TLabel.Create(pnlOutputData);
+  lbl.Parent := pnlOutputData;
+  lbl.Align := alTop;
+  lbl.Font.Color := htmlcolors.clHTMLForestGreen;
+  lbl.BorderSpacing.Left := 8;
+  lbl.BorderSpacing.Right := 8;
+  lbl.BorderSpacing.Bottom := 16;
+  lbl.Caption := moods.Strings[i];
+
+end;
+
+procedure TfrmMain.mnuMainViewCollapseClick(Sender: TObject);
+begin
+  tvwCampaign.FullCollapse;
+end;
+
+procedure TfrmMain.mnuMainViewExpandClick(Sender: TObject);
+begin
+  tvwCampaign.FullExpand;
+end;
+
 procedure TfrmMain.tvwCampaignDragDrop(Sender, Source: TObject; X, Y: Integer);
 var
   tree : TTreeView;
@@ -461,10 +538,12 @@ begin
       if (leaf1.Category = 'Room') or (leaf1.Category = 'Venue') then
         tree.Selected.MoveTo(node, naAddChildFirst);
     end
-    else if (leaf2.Category = 'Puppet') then
+    else if (leaf2.Category = 'Puppet') or (leaf2.Category = 'Player') then
     begin
       if (leaf1.Category = 'Chamber') or (leaf1.Category = 'Tract') or (leaf1.Category = 'Room') then
-        tree.Selected.MoveTo(node, naAddChildFirst);
+        tree.Selected.MoveTo(node, naAddChildFirst)
+      else if (leaf1.Category = 'Puppet') or (leaf1.Category = 'Player') then
+        tree.Selected.MoveTo(node, naInsertBehind);
     end
     else if (leaf2.Category = 'Dice') then
     begin
@@ -475,6 +554,8 @@ begin
       PopulateDiceTray;
     end;
   end;
+
+  SaveCampaign;
 end;
 
 procedure TfrmMain.tvwCampaignDragOver(Sender, Source: TObject; X, Y: Integer;
@@ -508,10 +589,15 @@ begin
       Accept := true
     else if (leaf2.Category = 'Room') and ((leaf1.Category = 'Venue') or (leaf1.Category = 'Room')) then
       Accept := true
-    else if (leaf2.Category = 'Puppet') and ((leaf1.Category = 'Chamber') or (leaf1.Category = 'Tract') or (leaf1.Category = 'Room')) then
-      Accept := true
-    else if (leaf2.Category = 'Player') and ((leaf1.Category = 'Chamber') or (leaf1.Category = 'Tract') or (leaf1.Category = 'Room')) then
-      Accept := true
+    else if (leaf2.Category = 'Puppet') or (leaf2.Category = 'Player') then
+    begin
+      if (leaf1.Category = 'Chamber') or
+         (leaf1.Category = 'Tract') or
+         (leaf1.Category = 'Room') or
+         (leaf1.Category = 'Puppet') or
+         (leaf1.Category = 'Player') then
+        Accept := true;
+    end
     else if (leaf2.Category = 'Beast') and ((leaf1.Category = 'Chamber') or (leaf1.Category = 'Tract') or (leaf1.Category = 'Room')) then
       Accept := true
     else if (leaf2.Category = 'Monster') and ((leaf1.Category = 'Chamber') or (leaf1.Category = 'Tract') or (leaf1.Category = 'Room')) then
@@ -628,7 +714,7 @@ begin
 
   if TPMLeaf(Sender).Category = 'Dice' then PopulateDiceTray;
 
-  //SaveCampaign(FFileName);
+  SaveCampaign;
 end;
 
 procedure TfrmMain.DiceClick(Sender: TObject);
@@ -800,54 +886,53 @@ begin
   for r := 0 to tvwCampaign.Items.Count - 1 do
   begin
     leaf := TPMLeaf(tvwCampaign.Items[r].Data);
+    while grdData.ColCount < (leaf.Traits.Count + 2) do
+      grdData.ColCount := grdData.ColCount + 1;
     grdData.Cells[0, r] := leaf.Category;
-    grdData.Cells[1, r] := tvwCampaign.Items[r].Level.ToString;
-    grdData.Cells[2, r] := tvwCampaign.Items[r].Count.ToString;
+    if r = 0 then
+      grdData.Cells[1, r] := '-1'
+    else
+      grdData.Cells[1, r] := tvwCampaign.Items[r].Parent.AbsoluteIndex.ToString;
     for c := 0 to leaf.Traits.Count - 1 do
-      grdData.Cells[c + 3, r] := Format('%s:%s', [leaf.Traits.Keys[c], leaf.Traits.Data[c]]);
+      grdData.Cells[c + 2, r] := Format('%s:%s', [leaf.Traits.Keys[c], leaf.Traits.Data[c]]);
   end;
   grdData.SaveToCSVFile(FFileName);
 end;
 
 procedure TfrmMain.LoadCampaign;
 var
-  r, c, lvl: integer;
+  r, c: integer;
   leaf: TPMLeaf;
-  last, this: TTreeNode;
-
+  node: TTreeNode;
 begin
   tvwCampaign.Items.Clear;
-  last := nil;
   grdData.Clear;
   grdData.LoadFromCSVFile(FFileName);
-  for r := 0 to grdData.RowCount - 1 do
+
+  for r := 0 to grdData.RowCount -1 do
   begin
     leaf := TPMLeaf.Create(grdData.Cells[0, r]);
-    lvl := grdData.Cells[1, r].ToInteger;
-
-    for c := 3 to grdData.ColCount - 1 do
-      if grdData.Cells[c, r] <> '' then
-        leaf.SetTrait(grdData.Cells[c, r]);
-
-    if lvl = 0 then
-      nodeCampaign := tvwCampaign.Items.AddObject(nil, leaf.Title, leaf)
-    else
+    leaf.Parent := grdData.Cells[1, r];
+    for c := 2 to grdData.ColCount - 1 do
     begin
-      if leaf.Category = 'Dungeons' then
-        nodeDungeons := tvwCampaign.Items.AddChildObject(nodeCampaign, leaf.Title, leaf)
-      else if leaf.Category = 'Settlements' then
-        nodeSettlements := tvwCampaign.Items.AddChildObject(nodeCampaign, leaf.Title, leaf)
-      else if leaf.Category = 'Wildernesses' then
-        nodeWildernesses := tvwCampaign.Items.AddChildObject(nodeCampaign, leaf.Title, leaf)
-      else if leaf.Category = 'DiceTray' then
-        nodeDiceTray := tvwCampaign.Items.AddChildObject(nodeCampaign, leaf.Title, leaf)
-      else if leaf.Category = 'Dice' then
-      begin
-        tvwCampaign.Items.AddChildObject(nodeDiceTray, leaf.Title, leaf);
-        PopulateDiceTray;
-      end;
+      leaf.SetTrait(grdData.Cells[c, r]);
     end;
+    leaf.OnChange := @LeafChange;
+
+    if leaf.Parent = '-1' then
+      nodeCampaign := tvwCampaign.Items.AddObject(nil, leaf.Title, leaf)
+    else if leaf.Category = 'Dungeons' then
+      nodeDungeons := tvwCampaign.Items.AddChildObject(nodeCampaign, leaf.Title, leaf)
+    else if leaf.Category = 'Wildernesses' then
+      nodeWildernesses := tvwCampaign.Items.AddChildObject(nodeCampaign, leaf.Title, leaf)
+    else if leaf.Category = 'Settlements' then
+      nodeSettlements := tvwCampaign.Items.AddChildObject(nodeCampaign, leaf.Title, leaf)
+    else if leaf.Category = 'DiceTray' then
+      nodeDiceTray := tvwCampaign.Items.AddChildObject(nodeCampaign, leaf.Title, leaf)
+    else
+      tvwCampaign.Items.AddChildObject(tvwCampaign.Items[leaf.Parent.ToInteger], leaf.Title, leaf);
   end;
+
   nodeCampaign.Expand(false);
 end;
 

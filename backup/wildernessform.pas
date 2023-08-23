@@ -13,11 +13,11 @@ type
   { TfrmWilderness }
 
   TfrmWilderness = class(TForm)
-    btnRollAll: TButton;
     Label2: TLabel;
     Label3: TLabel;
     Panel1: TPanel;
     Label1: TLabel;
+    Panel2: TPanel;
     txtClass: TComboBox;
     txtTitle: TEdit;
     procedure btnRollAllClick(Sender: TObject);

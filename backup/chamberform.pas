@@ -91,6 +91,19 @@ begin
   RollCbo(txtRemains, 9);
   RollCbo(txtTrap, 8);
 
+  FChamber.SetTrait('Class', txtClass.Text);
+  FChamber.SetTrait('Tool', txtTool.Text);
+  FChamber.SetTrait('Clothing', txtClothing.Text);
+  FChamber.SetTrait('Kit', txtKit.Text);
+  FChamber.SetTrait('Container', txtContainer.Text);
+  FChamber.SetTrait('Weapon', txtWeapon.Text);
+  FChamber.SetTrait('Vehicle', txtVehicle.Text);
+  FChamber.SetTrait('Jewelry', txtJewelry.Text);
+  FChamber.SetTrait('Remains', txtRemains.Text);
+  FChamber.SetTrait('Instrument', txtInstrument.Text);
+  FChamber.SetTrait('Armour', txtArmour.Text);
+  FChamber.SetTrait('Trap', txtTrap.Text);
+
 end;
 
 procedure TfrmChamber.txtTitle1Exit(Sender: TObject);

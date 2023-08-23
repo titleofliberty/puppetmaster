@@ -82,7 +82,7 @@ type
     txtIntelligence: TComboBox;
     txtLastName: TComboBox;
     txtLike: TComboBox;
-    txtLimit: TComboBox;
+    txtDistraction: TComboBox;
     txtPersonality: TComboBox;
     txtProfession: TComboBox;
     txtQuirk: TComboBox;
@@ -92,6 +92,7 @@ type
     txtSocialStanding: TComboBox;
     txtStrength: TComboBox;
     txtWisdom: TComboBox;
+    procedure btnRollPersonalityClick(Sender: TObject);
     procedure btnRollStatsClick(Sender: TObject);
     procedure btnRollDetailsClick(Sender: TObject);
     procedure btnRollNameClick(Sender: TObject);
@@ -167,6 +168,27 @@ begin
   txtEconomics.Text := FPuppet.GetTrait('Economics');
   txtClothingType.Text := FPuppet.GetTrait('ClothingType');
   txtClothingCondition.Text := FPuppet.GetTrait('ClothingCondition');
+
+  txtStrength.Text := FPuppet.GetTrait('Strength');
+  txtDexterity.Text := FPuppet.GetTrait('Dexterity');
+  txtConstitution.Text := FPuppet.GetTrait('Constitution');
+  txtIntelligence.Text := FPuppet.GetTrait('Intelligence');
+  txtWisdom.Text := FPuppet.GetTrait('Wisdom');
+  txtCharisma.Text := FPuppet.GetTrait('Charisma');
+  txtArmorClass.Text := FPuppet.GetTrait('ArmorClass');
+  txtHPMax.Text := FPuppet.GetTrait('HPMax');
+  txtHPCurrent.Text := FPuppet.GetTrait('HPCurrent');
+
+  txtDesire.Text := FPuppet.GetTrait('Desire');
+  txtFear.Text := FPuppet.GetTrait('Fear');
+  txtExpression.Text := FPuppet.GetTrait('Expression');
+  txtLike.Text := FPuppet.GetTrait('Like');
+  txtDislike.Text := FPuppet.GetTrait('Dislike');
+  txtQuirk.Text := FPuppet.GetTrait('Quirk');
+  txtSocialStanding.Text := FPuppet.GetTrait('SocialStanding');
+  txtActivity.Text := FPuppet.GetTrait('Activity');
+  txtDistraction.Text := FPuppet.GetTrait('Distraction');
+  txtRelation.Text := FPuppet.GetTrait('Relation');
 
 end;
 
@@ -261,6 +283,8 @@ begin
   end;
 
   txtArmorClass.ItemIndex := Random(txtArmorClass.Items.Count);
+  txtHPMax.ItemIndex := Random(txtHPMax.Items.Count);
+  txtHPCurrent.ItemIndex := Random(txtHPCurrent.Items.Count);
 
   FPuppet.SetTrait('Strength', txtStrength.Text);
   FPuppet.SetTrait('Dexterity', txtDexterity.Text);
@@ -271,6 +295,31 @@ begin
   FPuppet.SetTrait('ArmorClass', txtArmorClass.Text);
   FPuppet.SetTrait('HPMax', txtHPMax.Text);
   FPuppet.SetTrait('HPCurrent', txtHPCurrent.Text);
+end;
+
+procedure TfrmPuppet.btnRollPersonalityClick(Sender: TObject);
+begin
+  txtDesire.ItemIndex := Random(txtDesire.Items.Count);
+  txtFear.ItemIndex := Random(txtFear.Items.Count);
+  txtExpression.ItemIndex := Random(txtExpression.Items.Count);
+  txtLike.ItemIndex := Random(txtLike.Items.Count);
+  txtDislike.ItemIndex := Random(txtDislike.Items.Count);
+  txtQuirk.ItemIndex := Random(txtQuirk.Items.Count);
+  txtSocialStanding.ItemIndex := Random(txtSocialStanding.Items.Count);
+  txtActivity.ItemIndex := Random(txtActivity.Items.Count);
+  txtDistraction.ItemIndex := Random(txtDistraction.Items.Count);
+
+  FPuppet.SetTrait('Desire', txtDesire.Text);
+  FPuppet.SetTrait('Fear', txtFear.Text);
+  FPuppet.SetTrait('Expression', txtExpression.Text);
+  FPuppet.SetTrait('Like', txtLike.Text);
+  FPuppet.SetTrait('Dislike', txtDislike.Text);
+  FPuppet.SetTrait('Quirk', txtQuirk.Text);
+  FPuppet.SetTrait('SocialStanding', txtSocialStanding.Text);
+  FPuppet.SetTrait('Activity', txtActivity.Text);
+  FPuppet.SetTrait('Distraction', txtDistraction.Text);
+
+
 end;
 
 end.

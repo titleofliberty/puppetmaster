@@ -23,9 +23,6 @@ type
     txtClass: TEdit;
     txtPlayer: TEdit;
     txtRace: TEdit;
-    procedure txtCharacterExit(Sender: TObject);
-    procedure txtCharacterKeyUp(Sender: TObject; var Key: Word;
-      Shift: TShiftState);
     procedure txtPlayerExit(Sender: TObject);
     procedure txtPlayerKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState
       );
@@ -46,37 +43,33 @@ implementation
 { TfrmPlayer }
 
 procedure TfrmPlayer.txtPlayerExit(Sender: TObject);
+var
+  txt: TEdit;
 begin
-  FPlayer.SetTrait('Player', txtPlayer.Text);
+  txt := TEdit(Sender);
+  FPlayer.SetTrait(txt.Name.Replace('txt', ''), txt.Text);
 end;
 
 procedure TfrmPlayer.txtPlayerKeyUp(Sender: TObject; var Key: Word;
   Shift: TShiftState);
+var
+  txt: TEdit;
 begin
+  txt := TEdit(Sender);
   if Key = VK_RETURN then
-    FPlayer.SetTrait('Player', txtPlayer.Text);
-end;
-
-procedure TfrmPlayer.txtCharacterExit(Sender: TObject);
-begin
-  FPlayer.SetTrait('Character', txtCharacter.Text);
-end;
-
-procedure TfrmPlayer.txtCharacterKeyUp(Sender: TObject; var Key: Word;
-  Shift: TShiftState);
-begin
-  if Key = VK_RETURN then
-    FPlayer.SetTrait('Character', txtCharacter.Text);
+    FPlayer.SetTrait(txt.Name.Replace('txt', ''), txt.Text);
 end;
 
 procedure TfrmPlayer.SetPlayer(AValue: TPMLeaf);
 begin
-  if AValue.Category <> 'Player' then Exit;
-  if FPlayer = AValue then Exit;
+  if FPlayer = AValue then exit;
   FPlayer := AValue;
   txtPlayer.Text := FPlayer.GetTrait('Player');
   txtCharacter.Text := FPlayer.GetTrait('Character');
+  txtRace.Text := FPlayer.GetTrait('Race');
+  txtClass.Text := FPlayer.GetTrait('Class');
 end;
+
 
 end.
 

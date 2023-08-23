@@ -99,7 +99,7 @@ object frmSettlement: TfrmSettlement
   end
   object Panel2: TPanel
     Left = 16
-    Height = 132
+    Height = 100
     Top = 136
     Width = 1201
     Align = alTop
@@ -110,37 +110,38 @@ object frmSettlement: TfrmSettlement
     ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
     ChildSizing.Layout = cclLeftToRightThenTopToBottom
     ChildSizing.ControlsPerLine = 3
-    ClientHeight = 132
+    ClientHeight = 100
     ClientWidth = 1201
     TabOrder = 1
     object Label8: TLabel
       Left = 0
       Height = 22
       Top = 0
-      Width = 392
+      Width = 395
       Caption = 'Walls'
       ParentColor = False
     end
     object Label3: TLabel
-      Left = 400
+      Left = 403
       Height = 22
       Top = 0
-      Width = 392
+      Width = 395
       Caption = 'Roofs'
       ParentColor = False
     end
-    object Label10: TLabel
-      Left = 800
+    object Label5: TLabel
+      Left = 806
       Height = 22
       Top = 0
-      Width = 401
+      Width = 395
+      Caption = 'Condition'
       ParentColor = False
     end
     object Walls: TComboBox
       Left = 0
       Height = 30
       Top = 30
-      Width = 392
+      Width = 395
       AutoComplete = True
       AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
       ItemHeight = 22
@@ -167,10 +168,10 @@ object frmSettlement: TfrmSettlement
       Text = 'Adobe'
     end
     object Roofs: TComboBox
-      Left = 400
+      Left = 403
       Height = 30
       Top = 30
-      Width = 392
+      Width = 395
       AutoComplete = True
       AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
       ItemHeight = 22
@@ -190,43 +191,11 @@ object frmSettlement: TfrmSettlement
       TabOrder = 1
       Text = 'Bark'
     end
-    object btnRollAll: TButton
-      Left = 800
-      Height = 32
-      Top = 30
-      Width = 401
-      Caption = 'Roll All'
-      OnClick = btnRollAllClick
-      TabOrder = 2
-    end
-    object Label5: TLabel
-      Left = 0
-      Height = 22
-      Top = 70
-      Width = 392
-      Caption = 'Condition'
-      ParentColor = False
-    end
-    object Label4: TLabel
-      Left = 400
-      Height = 22
-      Top = 70
-      Width = 392
-      Caption = 'Mood'
-      ParentColor = False
-    end
-    object Label11: TLabel
-      Left = 800
-      Height = 22
-      Top = 70
-      Width = 401
-      ParentColor = False
-    end
     object Condition: TComboBox
-      Left = 0
+      Left = 806
       Height = 30
-      Top = 100
-      Width = 392
+      Top = 30
+      Width = 395
       AutoComplete = True
       AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
       ItemHeight = 22
@@ -290,65 +259,23 @@ object frmSettlement: TfrmSettlement
       TabOrder = 3
       Text = 'Battered'
     end
-    object Moods: TComboBox
-      Left = 400
-      Height = 30
-      Top = 100
-      Width = 392
-      AutoComplete = True
-      AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
-      ItemHeight = 22
-      ItemIndex = 0
-      Items.Strings = (
-        'Angry'
-        'Anxious'
-        'Ashamed'
-        'Bored'
-        'Content'
-        'Curious'
-        'Depressed'
-        'Determined'
-        'Disappointed'
-        'Disgusted'
-        'Eager'
-        'Embarrassed'
-        'Enthusiastic'
-        'Envious'
-        'Excited'
-        'Frustrated'
-        'Gloomy'
-        'Guilty'
-        'Happy'
-        'Hopeful'
-        'Hostility'
-        'Indifferent'
-        'Interested'
-        'Jealous'
-        'Lonely'
-        'Neutral'
-        'Optimistic'
-        'Positive'
-        'Remorseful'
-        'Sad'
-        'Uneasy'
-        'Uninterested'
-        'Worried'
-      )
-      OnExit = WallsExit
-      OnKeyUp = WallsKeyUp
-      OnSelect = WallsSelect
-      Sorted = True
-      TabOrder = 4
-      Text = 'Angry'
-    end
-    object btnRollMood: TButton
-      Left = 800
+    object btnRollAll: TButton
+      Left = 0
       Height = 32
-      Top = 100
-      Width = 401
-      Caption = 'Roll Mood'
-      OnClick = btnRollMoodClick
-      TabOrder = 5
+      Top = 68
+      Width = 395
+      Caption = 'Roll All'
+      OnClick = btnRollAllClick
+      TabOrder = 2
     end
+  end
+  object Panel3: TPanel
+    Left = 16
+    Height = 63
+    Top = 244
+    Width = 1201
+    Align = alTop
+    BevelOuter = bvNone
+    TabOrder = 2
   end
 end

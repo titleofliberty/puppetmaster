@@ -1,7 +1,7 @@
 object frmMain: TfrmMain
-  Left = 372
+  Left = 384
   Height = 680
-  Top = 165
+  Top = 203
   Width = 1024
   Caption = 'Puppetmaster'
   ChildSizing.LeftRightSpacing = 8
@@ -254,6 +254,7 @@ object frmMain: TfrmMain
       Caption = '&Mood'
       Layout = tlCenter
       ParentColor = False
+      OnClick = mnuMainToolsMoodClick
     end
   end
   object pnlClient: TPanel
@@ -421,7 +422,7 @@ object frmMain: TfrmMain
           Top = 0
           Width = 698
           Align = alClient
-          ColCount = 24
+          ColCount = 30
           DefaultColWidth = 200
           FixedCols = 0
           FixedRows = 0
@@ -491,6 +492,19 @@ object frmMain: TfrmMain
         Caption = '&Delete'
         ShortCut = 46
         OnClick = mnuMainEditDeleteClick
+      end
+    end
+    object mnuMainView: TMenuItem
+      Caption = '&View'
+      object mnuMainViewCollapse: TMenuItem
+        Caption = '&Collapse All'
+        ShortCut = 16575
+        OnClick = mnuMainViewCollapseClick
+      end
+      object mnuMainViewExpand: TMenuItem
+        Caption = 'E&xpand All'
+        ShortCut = 16574
+        OnClick = mnuMainViewExpandClick
       end
     end
     object mnuMainInsert: TMenuItem
@@ -619,6 +633,7 @@ object frmMain: TfrmMain
       object mnuMainToolsMood: TMenuItem
         Caption = '&Mood'
         ShortCut = 16461
+        OnClick = mnuMainToolsMoodClick
       end
     end
     object mnuMainHelp: TMenuItem

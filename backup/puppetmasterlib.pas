@@ -16,17 +16,20 @@ type
   TPMLeaf = class(TObject)
   private
     FCategory: string;
+    FParent: string;
     FOnChange: TNotifyEvent;
     FTraits: TPMTraits;
     function GetTitle: string;
   public
     constructor Create(ACategory: string);
     property Title: string read GetTitle;
+    property Parent: string read FParent write FParent;
     property Category: string read FCategory;
     property Traits: TPMTraits read FTraits write FTraits;
     property OnChange: TNotifyEvent read FOnChange write FOnChange;
     function  GetTrait(AKey: string): string;
-    procedure SetTrait(AKey, AValue: string);
+    procedure SetTrait(AKey, AValue: string); overload;
+    procedure SetTrait(AKeyValue: string); overload;
   end;
 
 var

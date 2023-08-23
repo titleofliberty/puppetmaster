@@ -33,16 +33,6 @@ object frmWilderness: TfrmWilderness
     ParentColor = False
     ParentFont = False
   end
-  object btnRollAll: TButton
-    Left = 611
-    Height = 31
-    Top = 144
-    Width = 120
-    Anchors = [akTop, akRight]
-    Caption = 'Roll All'
-    OnClick = btnRollAllClick
-    TabOrder = 0
-  end
   object Panel1: TPanel
     Left = 16
     Height = 60
@@ -58,7 +48,7 @@ object frmWilderness: TfrmWilderness
     ChildSizing.ControlsPerLine = 2
     ClientHeight = 60
     ClientWidth = 715
-    TabOrder = 1
+    TabOrder = 0
     object Label2: TLabel
       Left = 0
       Height = 22
@@ -102,5 +92,14 @@ object frmWilderness: TfrmWilderness
       TabOrder = 1
       Text = 'Forest'
     end
+  end
+  object Panel2: TPanel
+    Left = 16
+    Height = 63
+    Top = 134
+    Width = 715
+    Align = alTop
+    BevelOuter = bvNone
+    TabOrder = 1
   end
 end

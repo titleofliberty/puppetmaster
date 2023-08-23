@@ -95,10 +95,50 @@ object frmTract: TfrmTract
       Width = 416
       AutoSize = False
       ItemHeight = 22
+      Items.Strings = (
+        'Bluff'
+        'Bog'
+        'Butte'
+        'Canyon'
+        'Chaparral'
+        'Clearing'
+        'Cliff'
+        'Dune'
+        'Farm'
+        'Field'
+        'Fountain'
+        'Geyser'
+        'Glen'
+        'Gorge'
+        'Grassland'
+        'Grove'
+        'Gulch'
+        'Gully'
+        'Hillside'
+        'Hilltop'
+        'Marsh'
+        'Meadow'
+        'Mesa'
+        'Mire'
+        'Moor'
+        'Oasis'
+        'Orchard'
+        'Paddock'
+        'Pasture'
+        'Praire'
+        'Ravine'
+        'Ridge'
+        'Rockface'
+        'Shore'
+        'Slop'
+        'Thicket'
+        'Vineyard'
+      )
       OnExit = txtNaturalExit
       OnKeyUp = txtNaturalKeyUp
       OnSelect = txtNaturalSelect
       TabOrder = 6
+      Text = 'Beach'
     end
     object Label4: TLabel
       Left = 0
@@ -142,6 +182,7 @@ object frmTract: TfrmTract
         'Rock (Eagle)'
         'Rock (Pipes)'
         'Rock (Prism)'
+        'Rock (Skull)'
         'Rock (Wave)'
         'Rock (Wolf)'
         'Stream'
@@ -165,7 +206,7 @@ object frmTract: TfrmTract
       Width = 416
       AutoSize = False
       ItemHeight = 22
-      ItemIndex = 1
+      ItemIndex = 0
       Items.Strings = (
         'Arch'
         'Axe'
@@ -175,8 +216,10 @@ object frmTract: TfrmTract
         'Bowl'
         'Box'
         'Breastplate'
+        'Bridge'
         'Cabin'
         'Cage'
+        'Campsite'
         'Cannon'
         'Cemetary'
         'Chimney'
@@ -185,11 +228,14 @@ object frmTract: TfrmTract
         'Crate'
         'Cross'
         'Fence'
+        'Firepit'
+        'Graveyard'
         'Helm'
         'Jug'
         'Key'
         'Lamp'
         'Lantern'
+        'Mine'
         'Mound'
         'Obelisk'
         'Pitcher'
@@ -202,19 +248,22 @@ object frmTract: TfrmTract
         'Shield'
         'Shrine'
         'Sign'
+        'Steps'
         'Sword'
         'Tablet'
         'Totem'
         'Tower'
+        'Treehouse'
         'Wagon'
         'Wagon Wheel'
+        'Wall'
         'Ziggurat'
       )
       OnExit = txtNaturalExit
       OnKeyUp = txtNaturalKeyUp
       OnSelect = txtNaturalSelect
       TabOrder = 1
-      Text = 'Axe'
+      Text = 'Arch'
     end
     object Label6: TLabel
       Left = 0
@@ -241,20 +290,24 @@ object frmTract: TfrmTract
       Width = 397
       AutoSize = False
       ItemHeight = 22
+      ItemIndex = 0
       Items.Strings = (
         'Ashe'
+        'Cactus'
+        'Crop'
         'Elms'
         'Ferns'
         'Grass'
         'Oaks'
         'Pines'
+        'Vines'
         'Wildflowers'
       )
       OnExit = txtNaturalExit
       OnKeyUp = txtNaturalKeyUp
       OnSelect = txtNaturalSelect
       TabOrder = 2
-      Text = 'Arch (Stone)'
+      Text = 'Ashe'
     end
     object txtFauna: TComboBox
       Left = 405
@@ -263,7 +316,7 @@ object frmTract: TfrmTract
       Width = 416
       AutoSize = False
       ItemHeight = 22
-      ItemIndex = 3
+      ItemIndex = 0
       Items.Strings = (
         'Bat'
         'Bear'
@@ -284,6 +337,7 @@ object frmTract: TfrmTract
         'Gopher'
         'Hornets'
         'Hummingbird'
+        'Livestock'
         'Lizard'
         'Moose'
         'Mouse'
@@ -307,7 +361,7 @@ object frmTract: TfrmTract
       OnKeyUp = txtNaturalKeyUp
       OnSelect = txtNaturalSelect
       TabOrder = 3
-      Text = 'Bees'
+      Text = 'Bat'
     end
     object btnRollAll: TButton
       Left = 0

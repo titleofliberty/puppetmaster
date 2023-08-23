@@ -14,28 +14,22 @@ type
 
   TfrmSettlement = class(TForm)
     btnRollAll: TButton;
-    btnRollMood: TButton;
     btnRollName: TButton;
     Condition: TComboBox;
     Label1: TLabel;
-    Label10: TLabel;
-    Label11: TLabel;
     Label12: TLabel;
     Label3: TLabel;
-    Label4: TLabel;
     Label5: TLabel;
     Label6: TLabel;
     Label7: TLabel;
     Label8: TLabel;
     Label9: TLabel;
-    Moods: TComboBox;
     Panel1: TPanel;
     Panel2: TPanel;
     Panel3: TPanel;
     Roofs: TComboBox;
     Title: TEdit;
     Walls: TComboBox;
-    procedure btnRollMoodClick(Sender: TObject);
     procedure btnRollNameClick(Sender: TObject);
     procedure btnRollAllClick(Sender: TObject);
     procedure TitleExit(Sender: TObject);
@@ -64,22 +58,14 @@ begin
   FSettlement.SetTrait('Title', Title.Text);
 end;
 
-procedure TfrmSettlement.btnRollMoodClick(Sender: TObject);
-begin
-  Moods.ItemIndex := Random(Moods.Items.Count);
-  FSettlement.SetTrait('Moods', Moods.Text);
-end;
-
 procedure TfrmSettlement.btnRollAllClick(Sender: TObject);
 var
   i : integer;
 begin
-  Moods.ItemIndex := Random(Moods.Items.Count);
   Walls.ItemIndex := Random(Walls.Items.Count);
   Roofs.ItemIndex := Random(Roofs.Items.Count);
   Condition.ItemIndex  := Random(Condition.Items.Count);
 
-  FSettlement.SetTrait('Moods', Moods.Text);
   FSettlement.SetTrait('Walls', Walls.Text);
   FSettlement.SetTrait('Roofs', Roofs.Text);
   FSettlement.SetTrait('Condition', Condition.Text);
@@ -130,7 +116,6 @@ begin
   Title.Text := FSettlement.GetTrait('Title');
   Walls.Text := FSettlement.GetTrait('Walls');
   Roofs.Text := FSettlement.GetTrait('Roofs');
-  Moods.Text := FSettlement.GetTrait('Moods');
   Condition.Text := FSettlement.GetTrait('Condition');
 end;
 
