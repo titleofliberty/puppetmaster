@@ -21,14 +21,12 @@ type
     Label5: TLabel;
     Label6: TLabel;
     Label7: TLabel;
-    Panel1: TPanel;
     Panel2: TPanel;
     Panel3: TPanel;
     txtFauna: TComboBox;
     txtFlora: TComboBox;
     txtManufactured: TComboBox;
     txtNatural: TComboBox;
-    txtClass: TComboBox;
     txtTitle: TEdit;
     procedure btnRollAllClick(Sender: TObject);
     procedure txtNaturalExit(Sender: TObject);

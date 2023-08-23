@@ -166,107 +166,91 @@ object frmMain: TfrmMain
     Width = 1008
     Align = alTop
     BevelOuter = bvNone
-    ChildSizing.HorizontalSpacing = 16
+    ChildSizing.HorizontalSpacing = 4
     ClientHeight = 40
     ClientWidth = 1008
     TabOrder = 0
-    object lblEightBall: TLabel
-      Cursor = crHandPoint
+    object btnEightBall: TButton
+      Left = 78
+      Height = 40
+      Top = 0
+      Width = 146
+      Align = alLeft
+      AutoSize = True
+      Caption = 'Eight Ball'
+      OnClick = mnuMainToolsEightClick
+      TabOrder = 0
+    end
+    object btnEightBall1: TButton
       Left = 0
       Height = 40
       Top = 0
-      Width = 120
+      Width = 74
       Align = alLeft
-      Alignment = taCenter
-      Caption = '&Eight Ball'
-      Layout = tlCenter
-      ParentColor = False
-      OnClick = mnuMainToolsEightClick
+      AutoSize = True
+      Caption = 'Clue'
+      TabOrder = 1
     end
-    object lblHazard: TLabel
-      Cursor = crHandPoint
-      Left = 136
+    object btnLoot: TButton
+      Left = 456
       Height = 40
       Top = 0
-      Width = 72
+      Width = 74
       Align = alLeft
-      Alignment = taCenter
-      Caption = '&Hazard'
-      Layout = tlCenter
-      ParentColor = False
+      AutoSize = True
+      Caption = 'Loot'
+      TabOrder = 2
     end
-    object lblLoot: TLabel
-      Cursor = crHandPoint
-      Left = 348
+    object btnMood: TButton
+      Left = 534
       Height = 40
       Top = 0
-      Width = 48
+      Width = 74
       Align = alLeft
-      Alignment = taCenter
-      Caption = '&Loot'
-      Layout = tlCenter
-      ParentColor = False
-    end
-    object lblClue: TLabel
-      Cursor = crHandPoint
-      Left = 412
-      Height = 40
-      Top = 0
-      Width = 48
-      Align = alLeft
-      Alignment = taCenter
-      Caption = '&Clue'
-      Layout = tlCenter
-      ParentColor = False
-    end
-    object lblWares: TLabel
-      Cursor = crHandPoint
-      Left = 476
-      Height = 40
-      Top = 0
-      Width = 60
-      Align = alLeft
-      Alignment = taCenter
-      Caption = '&Wares'
-      Layout = tlCenter
-      ParentColor = False
-    end
-    object lblRumor: TLabel
-      Cursor = crHandPoint
-      Left = 552
-      Height = 40
-      Top = 0
-      Width = 60
-      Align = alLeft
-      Alignment = taCenter
-      Caption = '&Rumor'
-      Layout = tlCenter
-      ParentColor = False
-    end
-    object lblMood: TLabel
-      Cursor = crHandPoint
-      Left = 628
-      Height = 40
-      Top = 0
-      Width = 48
-      Align = alLeft
-      Alignment = taCenter
-      Caption = '&Mood'
-      Layout = tlCenter
-      ParentColor = False
+      AutoSize = True
+      Caption = 'Mood'
       OnClick = mnuMainToolsMoodClick
+      TabOrder = 3
     end
-    object lblEncounter: TLabel
-      Cursor = crHandPoint
-      Left = 224
+    object btnEncounter: TButton
+      Left = 228
       Height = 40
       Top = 0
-      Width = 108
+      Width = 134
       Align = alLeft
-      Alignment = taCenter
-      Caption = 'Enco&unter'
-      Layout = tlCenter
-      ParentColor = False
+      AutoSize = True
+      Caption = 'Encounter'
+      TabOrder = 4
+    end
+    object btnWares: TButton
+      Left = 702
+      Height = 40
+      Top = 0
+      Width = 86
+      Align = alLeft
+      AutoSize = True
+      Caption = 'Wares'
+      TabOrder = 5
+    end
+    object btnRumor: TButton
+      Left = 612
+      Height = 40
+      Top = 0
+      Width = 86
+      Align = alLeft
+      AutoSize = True
+      Caption = 'Rumor'
+      TabOrder = 6
+    end
+    object btnEvent: TButton
+      Left = 366
+      Height = 40
+      Top = 0
+      Width = 86
+      Align = alLeft
+      AutoSize = True
+      Caption = 'Event'
+      TabOrder = 7
     end
   end
   object pnlClient: TPanel
@@ -618,39 +602,31 @@ object frmMain: TfrmMain
     end
     object mnuMainTools: TMenuItem
       Caption = '&Tools'
+      object mnuMainToolsClue: TMenuItem
+        Caption = '&Clue'
+      end
       object mnuMainToolsEight: TMenuItem
         Caption = '&Eight Ball'
-        ShortCut = 16453
         OnClick = mnuMainToolsEightClick
-      end
-      object mnuMainToolsHazard: TMenuItem
-        Caption = '&Hazard'
-        ShortCut = 16456
       end
       object mnuMainToolsEncounter: TMenuItem
         Caption = 'Enco&unter'
-        ShortCut = 16469
+      end
+      object mnuMainToolsEvent: TMenuItem
+        Caption = 'E&vent'
       end
       object mnuMainToolsLoot: TMenuItem
         Caption = '&Loot'
-        ShortCut = 16460
-      end
-      object mnuMainToolsClue: TMenuItem
-        Caption = '&Clue'
-        ShortCut = 16451
-      end
-      object mnuMainToolsWares: TMenuItem
-        Caption = '&Wares'
-        ShortCut = 16471
-      end
-      object mnuMainToolsRumor: TMenuItem
-        Caption = '&Rumor'
-        ShortCut = 16466
       end
       object mnuMainToolsMood: TMenuItem
         Caption = '&Mood'
-        ShortCut = 16461
         OnClick = mnuMainToolsMoodClick
+      end
+      object mnuMainToolsRumor: TMenuItem
+        Caption = '&Rumor'
+      end
+      object mnuMainToolsWares: TMenuItem
+        Caption = '&Wares'
       end
     end
     object mnuMainHelp: TMenuItem

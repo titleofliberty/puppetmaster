@@ -21,14 +21,12 @@ type
     Label5: TLabel;
     Label6: TLabel;
     Label7: TLabel;
-    Panel1: TPanel;
     Panel2: TPanel;
     Panel3: TPanel;
     txtFauna: TComboBox;
     txtFlora: TComboBox;
     txtManufactured: TComboBox;
     txtNatural: TComboBox;
-    txtClass: TComboBox;
     txtTitle: TEdit;
     procedure btnRollAllClick(Sender: TObject);
     procedure txtNaturalExit(Sender: TObject);
@@ -55,13 +53,11 @@ implementation
 
 procedure TfrmTract.btnRollAllClick(Sender: TObject);
 begin
-  txtClass.ItemIndex := Random(txtClass.Items.Count);
   txtNatural.ItemIndex := Random(txtNatural.Items.Count);
   txtManufactured.ItemIndex := Random(txtManufactured.Items.Count);
   txtFlora.ItemIndex := Random(txtFlora.Items.Count);
   txtFauna.ItemIndex := Random(txtFauna.Items.Count);
 
-  FTract.SetTrait('Class', txtClass.Text);
   FTract.SetTrait('Natural', txtNatural.Text);
   FTract.SetTrait('Manufactured', txtManufactured.Text);
   FTract.SetTrait('Flora', txtFlora.Text);
@@ -111,8 +107,8 @@ begin
   if AValue.Category <> 'Tract' then exit;
   if FTract = AValue then Exit;
   FTract := AValue;
+
   txtTitle.Text := FTract.GetTrait('Title');
-  txtClass.Text := FTract.GetTrait('Class');
   txtNatural.Text := FTract.GetTrait('Natural');
   txtManufactured.Text := FTract.GetTrait('Manufactured');
   txtFlora.Text := FTract.GetTrait('Flora');

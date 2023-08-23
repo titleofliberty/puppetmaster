@@ -178,6 +178,7 @@ object frmMain: TfrmMain
       Align = alLeft
       AutoSize = True
       Caption = 'Eight Ball'
+      OnClick = mnuMainToolsEightClick
       TabOrder = 0
     end
     object btnEightBall1: TButton
@@ -208,6 +209,7 @@ object frmMain: TfrmMain
       Align = alLeft
       AutoSize = True
       Caption = 'Mood'
+      OnClick = mnuMainToolsMoodClick
       TabOrder = 3
     end
     object btnEncounter: TButton
