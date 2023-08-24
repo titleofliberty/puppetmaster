@@ -6,23 +6,25 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  LCLType, ExtCtrls, puppetmasterlib;
+  LCLType, ExtCtrls, Buttons, puppetmasterlib;
 
 type
 
   { TfrmDice }
 
   TfrmDice = class(TForm)
+    btnLocked: TSpeedButton;
     Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
-    Label5: TLabel;
     pnlClient: TPanel;
+    pnlHeader: TPanel;
     txtCount: TComboBox;
     txtDie: TComboBox;
     txtModifier: TComboBox;
     txtTitle: TEdit;
+    procedure btnLockedClick(Sender: TObject);
     procedure txtCountExit(Sender: TObject);
     procedure txtCountSelect(Sender: TObject);
     procedure txtDieExit(Sender: TObject);
@@ -34,6 +36,7 @@ type
   private
     FDice: TPMLeaf;
     procedure SetDice(AValue: TPMLeaf);
+    procedure LockForm;
   public
     property Dice : TPMLeaf read FDice write SetDice;
   end;
@@ -60,6 +63,11 @@ end;
 procedure TfrmDice.txtCountExit(Sender: TObject);
 begin
   FDice.SetTrait('Count', txtCount.Text);
+end;
+
+procedure TfrmDice.btnLockedClick(Sender: TObject);
+begin
+  LockForm;
 end;
 
 procedure TfrmDice.txtDieExit(Sender: TObject);
@@ -98,6 +106,17 @@ begin
   txtCount.Text := FDice.GetTrait('Count');
   txtDie.Text := FDice.GetTrait('Die');
   txtModifier.Text := FDice.GetTrait('Modifier');
+  btnLocked.Down := FDice.GetTrait('Locked') = 'True';
+  LockForm;
+end;
+
+procedure TfrmDice.LockForm;
+begin
+  txtTitle.Enabled := not btnLocked.Down;
+  txtCount.Enabled := not btnLocked.Down;
+  txtDie.Enabled := not btnLocked.Down;
+  txtModifier.Enabled := not btnLocked.Down;
+  FDice.SetTrait('Locked', BoolToStr(btnLocked.Down, 'True', 'False'));
 end;
 
 end.

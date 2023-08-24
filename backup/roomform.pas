@@ -19,6 +19,7 @@ type
     Label5: TLabel;
     Label6: TLabel;
     Panel1: TPanel;
+    Panel2: TPanel;
     txtClass: TComboBox;
     txtCondition: TComboBox;
     txtTitle: TEdit;

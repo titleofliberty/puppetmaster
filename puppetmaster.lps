@@ -19,9 +19,8 @@
         <ComponentName Value="frmMain"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <TopLine Value="426"/>
-        <CursorPos X="3" Y="426"/>
-        <FoldState Value=" T46021 T7ED{f T8je27]F3kR099 pj6jZ0B6 piXjF0E3]9cjH033]RZk3051]94jD072]9X]IL4 PiQiK0 T1kS08A]pbk8058]9Y]9m4]gPlC03[y40jC06[y4Mk70G211 Pb[z50l9257]qXof43B[z5]I812 PiQn34 T6lc02M]F7xA0;"/>
+        <TopLine Value="227"/>
+        <CursorPos X="36" Y="238"/>
         <UsageCount Value="201"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -29,10 +28,10 @@
       <Unit>
         <Filename Value="puppetmasterlib.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="2"/>
-        <TopLine Value="174"/>
-        <CursorPos X="19" Y="195"/>
-        <FoldState Value=" T4601 T3i50P1 piajM073 PKO0 T6i]T11]W1i80M[W4Z]W4012 T0iB2AG Pi3jB2:"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="37"/>
+        <CursorPos X="9" Y="46"/>
+        <FoldState Value=" T4601 T3i50P014 PRk30 T6i]N11]Q1i80M[C42 PCk4]S0iB2AG Pi3jB2;"/>
         <UsageCount Value="201"/>
         <Loaded Value="True"/>
       </Unit>
@@ -43,9 +42,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="51"/>
-        <CursorPos X="19" Y="84"/>
-        <FoldState Value=" T4602 T7EJU T8d221 T3iC037 Pi4iB0 T1iD02]FU[E56iI013y"/>
+        <TopLine Value="55"/>
+        <CursorPos Y="63"/>
+        <FoldState Value=" T4602 T7EJW T8f221 T3iE038 PiEiM0 T1iF02]Fd[E56iV013X"/>
         <UsageCount Value="200"/>
       </Unit>
       <Unit>
@@ -55,9 +54,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="42"/>
-        <CursorPos X="26" Y="46"/>
-        <FoldState Value=" T4602 T7EEN T8W221 T3i5036 PRZ0 T1i]X]DJZ0F"/>
+        <TopLine Value="46"/>
+        <CursorPos X="16" Y="86"/>
+        <FoldState Value=" T4602 T7EEP T8Y221 T3i7037 PXg0 T1i802]DOg0m"/>
         <UsageCount Value="201"/>
       </Unit>
       <Unit>
@@ -67,9 +66,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="171"/>
-        <CursorPos X="50" Y="191"/>
-        <FoldState Value=" T4602 T7EF{B T8jF221 T3jV063 PMjG0 T1jW05]ECjL]E6je013 T0kI237 PiXjd4y"/>
+        <TopLine Value="117"/>
+        <CursorPos Y="156"/>
+        <FoldState Value=" T4602 T7EF{D T8jH221 T3jX065 pj0jI0)2 PiL]9 T1jY056 pkHlC0L1 PfO]M6jg013 T0kK237]jXjf4O"/>
         <UsageCount Value="200"/>
       </Unit>
       <Unit>
@@ -78,11 +77,14 @@
         <ComponentName Value="frmDice"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="3"/>
-        <CursorPos X="7" Y="12"/>
-        <FoldState Value=" T4602 T7EDO T8X221 T3i6038 PWg0 T1i702]DNg0+"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="99"/>
+        <CursorPos X="13" Y="110"/>
+        <FoldState Value=" T4602 T8d21 T3i903215 PNe0 T1iA02[F5Ff0^"/>
         <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="playerform.pas"/>
@@ -91,10 +93,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="49"/>
-        <CursorPos X="44" Y="70"/>
-        <FoldState Value=" T4602 T8S22z"/>
-        <UsageCount Value="161"/>
+        <TopLine Value="64"/>
+        <CursorPos X="50" Y="82"/>
+        <FoldState Value=" T4602 T8U22l"/>
+        <UsageCount Value="165"/>
       </Unit>
       <Unit>
         <Filename Value="roomform.pas"/>
@@ -103,10 +105,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="49"/>
-        <CursorPos X="43" Y="74"/>
-        <FoldState Value=" T4602 T7EDQ T8Y231 T3i8038 PYi30 T1i902]EN]Ef"/>
-        <UsageCount Value="137"/>
+        <TopLine Value="53"/>
+        <CursorPos X="22" Y="95"/>
+        <FoldState Value=" T4602 T7EDS T8a231 T3iA039 PfiB0 T1]62]ET]8\"/>
+        <UsageCount Value="141"/>
       </Unit>
       <Unit>
         <Filename Value="aboutform.pas"/>
@@ -117,7 +119,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="21"/>
         <CursorPos X="20" Y="43"/>
-        <UsageCount Value="130"/>
+        <UsageCount Value="134"/>
       </Unit>
       <Unit>
         <Filename Value="dungeonform.pas"/>
@@ -126,10 +128,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="13"/>
-        <CursorPos X="34" Y="39"/>
-        <FoldState Value=" T4602 T7EGH T8P231 T3g033 PEH0 T1i0023h"/>
-        <UsageCount Value="128"/>
+        <TopLine Value="45"/>
+        <CursorPos Y="74"/>
+        <FoldState Value=" T4602 T7EGJ T8R231 T3i10301]N1i202]A/"/>
+        <UsageCount Value="132"/>
       </Unit>
       <Unit>
         <Filename Value="wildernessform.pas"/>
@@ -138,10 +140,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="7"/>
-        <CursorPos X="12" Y="39"/>
-        <FoldState Value=" T4602 T7EJF T8N231 T3e0[741f021:"/>
-        <UsageCount Value="122"/>
+        <TopLine Value="11"/>
+        <CursorPos Y="48"/>
+        <FoldState Value=" T4602 T7EJH T8P231 T3g032 PHC0 T1i002]DFC0;"/>
+        <UsageCount Value="126"/>
       </Unit>
       <Unit>
         <Filename Value="tractform.pas"/>
@@ -149,14 +151,11 @@
         <ComponentName Value="frmTract"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="1"/>
-        <TopLine Value="66"/>
-        <CursorPos X="22" Y="109"/>
-        <FoldState Value=" T4602 T7EES T8b221 T3iN064 PMV0 T1iQ03]DCU]D6iO012-"/>
-        <UsageCount Value="117"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="53"/>
+        <CursorPos Y="103"/>
+        <FoldState Value=" T4602 T7EEW T8f221 T3iE0D7 PiBiM0 T1iF0C]Fd[E56ig012e"/>
+        <UsageCount Value="121"/>
       </Unit>
       <Unit>
         <Filename Value="chamberform.pas"/>
@@ -164,11 +163,11 @@
         <ComponentName Value="frmChamber"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="4"/>
-        <CursorPos X="23" Y="69"/>
-        <FoldState Value=" T46021 T7EGk T8iB2[E43jI036 Pi8iF0 T1jJ02]FZiH]E6jV013~"/>
-        <UsageCount Value="115"/>
+        <EditorIndex Value="1"/>
+        <CursorPos Y="161"/>
+        <FoldState Value=" T4602 T7EGm T8iD221 T3iU0S8 PiTjM0 T1jb02411 PIiI]G6k6013P"/>
+        <UsageCount Value="119"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="..\gizmos\htmlcolors.pas"/>
@@ -177,7 +176,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="74"/>
+        <UsageCount Value="78"/>
       </Unit>
       <Unit>
         <Filename Value="hazardform.pas"/>
@@ -346,126 +345,18 @@
     <Debugger>
       <Backend Value="{46F8D863-C46A-4513-87F7-05B4F05262FC}"/>
     </Debugger>
-    <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="425" TopLine="425"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="432" TopLine="428"/>
-      </Position>
+    <JumpHistory HistoryIndex="2">
       <Position>
         <Filename Value="puppetmasterlib.pas"/>
-        <Caret Line="195" Column="19" TopLine="174"/>
+        <Caret Line="46" Column="9" TopLine="37"/>
       </Position>
       <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="562" Column="24" TopLine="395"/>
+        <Filename Value="diceform.pas"/>
+        <Caret Line="12" Column="7" TopLine="3"/>
       </Position>
       <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="563" Column="24" TopLine="396"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="564" Column="24" TopLine="397"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="563" Column="24" TopLine="395"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="564" Column="24" TopLine="397"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="563" Column="24" TopLine="395"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="564" Column="24" TopLine="397"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="563" Column="24" TopLine="395"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="564" Column="24" TopLine="397"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="563" Column="24" TopLine="395"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="562" Column="24" TopLine="379"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="563" Column="24" TopLine="380"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="562" Column="24" TopLine="378"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="563" Column="24" TopLine="380"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="562" Column="24" TopLine="378"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="563" Column="24" TopLine="380"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="562" Column="24" TopLine="378"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="563" Column="24" TopLine="380"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="562" Column="24" TopLine="378"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="563" Column="24" TopLine="380"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="562" Column="24" TopLine="378"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="568" Column="24" TopLine="353"/>
-      </Position>
-      <Position>
-        <Filename Value="tractform.pas"/>
-        <Caret Line="56" TopLine="49"/>
-      </Position>
-      <Position>
-        <Filename Value="tractform.pas"/>
-        <Caret Line="55" TopLine="47"/>
-      </Position>
-      <Position>
-        <Filename Value="tractform.pas"/>
-        <Caret Line="54" TopLine="45"/>
-      </Position>
-      <Position>
-        <Filename Value="tractform.pas"/>
-        <Caret Line="53" TopLine="43"/>
-      </Position>
-      <Position>
-        <Filename Value="tractform.pas"/>
-        <Caret Line="54" TopLine="45"/>
+        <Filename Value="diceform.pas"/>
+        <Caret Line="39" Column="22" TopLine="27"/>
       </Position>
     </JumpHistory>
     <RunParams>

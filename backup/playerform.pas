@@ -62,7 +62,12 @@ end;
 
 procedure TfrmPlayer.SetPlayer(AValue: TPMLeaf);
 begin
-
+  if FPlayer = AValue then exit;
+  FPlayer := AValue;
+  txtPlayer.Text := FPlayer.GetTrait('Player');
+  txtCharacter.Text := FPlayer.GetTrait('Character');
+  txtRace.Text := FPlayer.GetTrait('Race');
+  txtClass.Text := FPlayer.GetTrait('Class');
 end;
 
 

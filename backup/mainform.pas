@@ -13,7 +13,7 @@ type
   { TfrmMain }
 
   TfrmMain = class(TForm)
-    btnEightBall1: TButton;
+    btnClue: TButton;
     btnEvent: TButton;
     btnWares: TButton;
     btnLoot: TButton;

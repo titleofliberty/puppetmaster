@@ -6,13 +6,14 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ComCtrls,
-  ExtCtrls, LCLType, puppetmasterlib;
+  ExtCtrls, LCLType, Buttons, puppetmasterlib;
 
 type
 
   { TfrmPuppet }
 
   TfrmPuppet = class(TForm)
+    btnLocked: TSpeedButton;
     btnRollDetails: TButton;
     btnRollName: TButton;
     btnRollPersonality: TButton;
@@ -30,7 +31,6 @@ type
     Label19: TLabel;
     Label2: TLabel;
     Label20: TLabel;
-    Label21: TLabel;
     Label22: TLabel;
     Label23: TLabel;
     Label24: TLabel;
@@ -60,6 +60,7 @@ type
     Panel3: TPanel;
     Panel4: TPanel;
     Panel5: TPanel;
+    pnlHeader: TPanel;
     txtAbilityRollMethod: TComboBox;
     txtActivity: TComboBox;
     txtAlignment: TComboBox;
@@ -92,6 +93,7 @@ type
     txtSocialStanding: TComboBox;
     txtStrength: TComboBox;
     txtWisdom: TComboBox;
+    procedure btnLockedClick(Sender: TObject);
     procedure btnRollPersonalityClick(Sender: TObject);
     procedure btnRollStatsClick(Sender: TObject);
     procedure btnRollDetailsClick(Sender: TObject);
@@ -189,6 +191,8 @@ begin
   txtActivity.Text := FPuppet.GetTrait('Activity');
   txtDistraction.Text := FPuppet.GetTrait('Distraction');
   txtRelation.Text := FPuppet.GetTrait('Relation');
+
+  btnLocked.Down := FPuppet.GetTrait('Locked') = 'True';
 
 end;
 
@@ -319,6 +323,49 @@ begin
   FPuppet.SetTrait('Activity', txtActivity.Text);
   FPuppet.SetTrait('Distraction', txtDistraction.Text);
 
+end;
+
+procedure TfrmPuppet.btnLockedClick(Sender: TObject);
+begin
+  txtFirstName.Enabled := not btnLocked.Down;
+  txtLastName.Enabled := not btnLocked.Down;
+  txtSex.Enabled := not btnLocked.Down;
+  txtRace.Enabled := not btnLocked.Down;
+  txtClass.Enabled := not btnLocked.Down;
+  txtPersonality.Enabled := not btnLocked.Down;
+  txtClothingType.Enabled := not btnLocked.Down;
+  txtAlignment.Enabled := not btnLocked.Down;
+  txtCorruption.Enabled := not btnLocked.Down;
+  txtProfession.Enabled := not btnLocked.Down;
+  txtEconomics.Enabled := not btnLocked.Down;
+  txtClothingCondition.Enabled := not btnLocked.Down;
+  txtStrength.Enabled := not btnLocked.Down;
+  txtDexterity.Enabled := not btnLocked.Down;
+  txtConstitution.Enabled := not btnLocked.Down;
+  txtIntelligence.Enabled := not btnLocked.Down;
+  txtWisdom.Enabled := not btnLocked.Down;
+  txtCharisma.Enabled := not btnLocked.Down;
+  txtArmorClass.Enabled := not btnLocked.Down;
+  txtHPMax.Enabled := not btnLocked.Down;
+  txtHPCurrent.Enabled := not btnLocked.Down;
+  txtDesire.Enabled := not btnLocked.Down;
+  txtFear.Enabled := not btnLocked.Down;
+  txtExpression.Enabled := not btnLocked.Down;
+  txtLike.Enabled := not btnLocked.Down;
+  txtDislike.Enabled := not btnLocked.Down;
+  txtQuirk.Enabled := not btnLocked.Down;
+  txtSocialStanding.Enabled := not btnLocked.Down;
+  txtActivity.Enabled := not btnLocked.Down;
+  txtDistraction.Enabled := not btnLocked.Down;
+  txtRelation.Enabled := not btnLocked.Down;
+  txtAbilityRollMethod.Enabled := not btnLocked.Down;
+
+  btnRollName.Enabled := not btnLocked.Down;
+  btnRollDetails.Enabled := not btnLocked.Down;
+  btnRollStats.Enabled := not btnLocked.Down;
+  btnRollPersonality.Enabled := not btnLocked.Down;
+
+  FPuppet.SetTrait('Locked', BoolToStr(btnLocked.Down, 'True', 'False'));
 
 end;
 

@@ -191,4 +191,13 @@ object frmVenue: TfrmVenue
       TabOrder = 3
     end
   end
+  object Panel2: TPanel
+    Left = 16
+    Height = 63
+    Top = 136
+    Width = 1230
+    Align = alTop
+    BevelOuter = bvNone
+    TabOrder = 1
+  end
 end

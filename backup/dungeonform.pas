@@ -15,6 +15,7 @@ type
   TfrmDungeon = class(TForm)
     Label2: TLabel;
     Label3: TLabel;
+    Panel1: TPanel;
     pnlClient: TPanel;
     Label1: TLabel;
     txtClass: TComboBox;

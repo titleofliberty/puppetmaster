@@ -6,22 +6,25 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  LCLType, ExtCtrls, puppetmasterlib;
+  LCLType, ExtCtrls, Buttons, puppetmasterlib;
 
 type
 
   { TfrmDice }
 
   TfrmDice = class(TForm)
-    Label2: TLabel;
+    btnLocked: TSpeedButton;
     Label1: TLabel;
+    Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
-    Label5: TLabel;
+    pnlClient: TPanel;
+    pnlHeader: TPanel;
     txtCount: TComboBox;
     txtDie: TComboBox;
     txtModifier: TComboBox;
     txtTitle: TEdit;
+    procedure btnLockedClick(Sender: TObject);
     procedure txtCountExit(Sender: TObject);
     procedure txtCountSelect(Sender: TObject);
     procedure txtDieExit(Sender: TObject);
@@ -61,6 +64,15 @@ begin
   FDice.SetTrait('Count', txtCount.Text);
 end;
 
+procedure TfrmDice.btnLockedClick(Sender: TObject);
+begin
+  txtTitle.Enabled := not btnLocked.Down;
+  txtCount.Enabled := not btnLocked.Down;
+  txtDie.Enabled := not btnLocked.Down;
+  txtModifier.Enabled := not btnLocked.Down;
+  FDice.SetTrait('Locked', BoolToStr(btnLocked.Down, 'True', 'False'));
+end;
+
 procedure TfrmDice.txtDieExit(Sender: TObject);
 begin
   FDice.SetTrait('Die', txtDie.Text);
@@ -97,6 +109,7 @@ begin
   txtCount.Text := FDice.GetTrait('Count');
   txtDie.Text := FDice.GetTrait('Die');
   txtModifier.Text := FDice.GetTrait('Modifier');
+  if FDice.GetTrait('Locked') = 'True' then btnLockedClick(btnLocked);
 end;
 
 end.

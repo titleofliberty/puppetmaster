@@ -94,4 +94,13 @@ object frmDungeon: TfrmDungeon
       Text = 'Cavern'
     end
   end
+  object Panel1: TPanel
+    Left = 16
+    Height = 63
+    Top = 134
+    Width = 635
+    Align = alTop
+    BevelOuter = bvNone
+    TabOrder = 1
+  end
 end

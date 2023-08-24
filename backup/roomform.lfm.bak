@@ -217,4 +217,13 @@ object frmRoom: TfrmRoom
       Text = 'Arranged'
     end
   end
+  object Panel2: TPanel
+    Left = 16
+    Height = 63
+    Top = 202
+    Width = 791
+    Align = alTop
+    BevelOuter = bvNone
+    TabOrder = 1
+  end
 end

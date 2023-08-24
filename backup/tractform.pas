@@ -6,28 +6,32 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, LCLType,
-  ExtCtrls, puppetmasterlib;
+  ExtCtrls, Buttons, puppetmasterlib;
 
 type
 
   { TfrmTract }
 
   TfrmTract = class(TForm)
+    btnLocked: TSpeedButton;
     btnRollAll: TButton;
-    Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
     Label5: TLabel;
     Label6: TLabel;
     Label7: TLabel;
+    Label8: TLabel;
     Panel2: TPanel;
     Panel3: TPanel;
+    pnlHeader: TPanel;
+    txtClass: TComboBox;
     txtFauna: TComboBox;
     txtFlora: TComboBox;
     txtManufactured: TComboBox;
     txtNatural: TComboBox;
     txtTitle: TEdit;
+    procedure btnLockedClick(Sender: TObject);
     procedure btnRollAllClick(Sender: TObject);
     procedure txtNaturalExit(Sender: TObject);
     procedure txtNaturalKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState
@@ -64,6 +68,18 @@ begin
   FTract.SetTrait('Manufactured', txtManufactured.Text);
   FTract.SetTrait('Flora', txtFlora.Text);
   FTract.SetTrait('Fauna', txtFauna.Text);
+end;
+
+procedure TfrmTract.btnLockedClick(Sender: TObject);
+begin
+  txtTitle.Enabled := not btnLocked.Down;
+  txtClass.Enabled := not btnLocked.Down;
+  txtNatural.Enabled := not btnLocked.Down;
+  txtManufactured.Enabled := not btnLocked.Down;
+  txtFlora.Enabled := not btnLocked.Down;
+  txtFauna.Enabled := not btnLocked.Down;
+  btnRollAll.Enabled := not btnLocked.Down;
+  FTract.SetTrait('Locked', BoolToStr(btnLocked.Down, 'True', 'False'));
 end;
 
 procedure TfrmTract.txtNaturalExit(Sender: TObject);
@@ -109,12 +125,17 @@ begin
   if AValue.Category <> 'Tract' then exit;
   if FTract = AValue then Exit;
   FTract := AValue;
+
   txtTitle.Text := FTract.GetTrait('Title');
   txtClass.Text := FTract.GetTrait('Class');
   txtNatural.Text := FTract.GetTrait('Natural');
   txtManufactured.Text := FTract.GetTrait('Manufactured');
   txtFlora.Text := FTract.GetTrait('Flora');
   txtFauna.Text := FTract.GetTrait('Fauna');
+  if FTract.GetTrait('Locked') = 'True' then
+    btnLocked.Down := true
+  else
+    btnLocked.Down := false;
 end;
 
 end.

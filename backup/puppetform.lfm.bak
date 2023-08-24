@@ -1,7 +1,7 @@
 object frmPuppet: TfrmPuppet
-  Left = -5
+  Left = 415
   Height = 679
-  Top = 368
+  Top = 198
   Width = 1141
   Align = alClient
   BorderStyle = bsNone

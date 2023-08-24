@@ -179,9 +179,9 @@ object frmMain: TfrmMain
       AutoSize = True
       Caption = 'Eight Ball'
       OnClick = mnuMainToolsEightClick
-      TabOrder = 0
+      TabOrder = 1
     end
-    object btnEightBall1: TButton
+    object btnClue: TButton
       Left = 0
       Height = 40
       Top = 0
@@ -189,7 +189,7 @@ object frmMain: TfrmMain
       Align = alLeft
       AutoSize = True
       Caption = 'Clue'
-      TabOrder = 1
+      TabOrder = 0
     end
     object btnLoot: TButton
       Left = 456
@@ -199,7 +199,7 @@ object frmMain: TfrmMain
       Align = alLeft
       AutoSize = True
       Caption = 'Loot'
-      TabOrder = 2
+      TabOrder = 4
     end
     object btnMood: TButton
       Left = 534
@@ -210,7 +210,7 @@ object frmMain: TfrmMain
       AutoSize = True
       Caption = 'Mood'
       OnClick = mnuMainToolsMoodClick
-      TabOrder = 3
+      TabOrder = 5
     end
     object btnEncounter: TButton
       Left = 228
@@ -220,7 +220,7 @@ object frmMain: TfrmMain
       Align = alLeft
       AutoSize = True
       Caption = 'Encounter'
-      TabOrder = 4
+      TabOrder = 2
     end
     object btnWares: TButton
       Left = 702
@@ -230,7 +230,7 @@ object frmMain: TfrmMain
       Align = alLeft
       AutoSize = True
       Caption = 'Wares'
-      TabOrder = 5
+      TabOrder = 7
     end
     object btnRumor: TButton
       Left = 612
@@ -250,7 +250,7 @@ object frmMain: TfrmMain
       Align = alLeft
       AutoSize = True
       Caption = 'Event'
-      TabOrder = 7
+      TabOrder = 3
     end
   end
   object pnlClient: TPanel
@@ -418,12 +418,10 @@ object frmMain: TfrmMain
           Top = 0
           Width = 698
           Align = alClient
-          ColCount = 30
           DefaultColWidth = 200
           FixedCols = 0
           FixedRows = 0
           TabOrder = 0
-          Visible = False
         end
       end
     end

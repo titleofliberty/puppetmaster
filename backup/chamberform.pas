@@ -6,13 +6,14 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
-  ComboEx, LCLType, puppetmasterlib;
+  ComboEx, LCLType, Buttons, puppetmasterlib;
 
 type
 
   { TfrmChamber }
 
   TfrmChamber = class(TForm)
+    btnLocked: TSpeedButton;
     btnRollAll: TButton;
     Label10: TLabel;
     Label11: TLabel;
@@ -21,7 +22,6 @@ type
     Label14: TLabel;
     Label15: TLabel;
     Label16: TLabel;
-    Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
     Label5: TLabel;
@@ -31,8 +31,8 @@ type
     Label9: TLabel;
     Panel1: TPanel;
     Panel2: TPanel;
+    pnlHeader: TPanel;
     pnlTop: TPanel;
-    pnlTop1: TPanel;
     txtArmour: TComboBox;
     txtClass: TComboBox;
     txtClothing: TComboBox;
@@ -42,15 +42,14 @@ type
     txtKit: TComboBox;
     txtRemains: TComboBox;
     txtTitle: TEdit;
-    txtTitle1: TEdit;
     txtTool: TComboBox;
-    Label1: TLabel;
     txtTrap: TComboBox;
     txtVehicle: TComboBox;
     txtWeapon: TComboBox;
+    procedure btnLockedClick(Sender: TObject);
     procedure btnRollAllClick(Sender: TObject);
-    procedure txtTitle1Exit(Sender: TObject);
-    procedure txtTitle1KeyUp(Sender: TObject; var Key: Word; Shift: TShiftState
+    procedure txtTitleExit(Sender: TObject);
+    procedure txtTitleKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState
       );
     procedure txtToolExit(Sender: TObject);
     procedure txtToolKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
@@ -58,7 +57,6 @@ type
   private
     FChamber: TPMLeaf;
     procedure SetChamber(AValue: TPMLeaf);
-
   public
     property Chamber: TPMLeaf read FChamber write SetChamber;
     procedure RollCbo(Cbo: TComboBox; Multiply: integer);
@@ -70,9 +68,6 @@ var
 implementation
 
 {$R *.lfm}
-
-uses
-  traitframe;
 
 { TfrmChamber }
 
@@ -106,12 +101,31 @@ begin
 
 end;
 
-procedure TfrmChamber.txtTitle1Exit(Sender: TObject);
+procedure TfrmChamber.btnLockedClick(Sender: TObject);
+begin
+  txtTitle.Enabled := not btnLocked.Down;
+  txtClass.Enabled := not btnLocked.Down;
+  txtTool.Enabled := not btnLocked.Down;
+  txtClothing.Enabled := not btnLocked.Down;
+  txtKit.Enabled := not btnLocked.Down;
+  txtContainer.Enabled := not btnLocked.Down;
+  txtWeapon.Enabled := not btnLocked.Down;
+  txtVehicle.Enabled := not btnLocked.Down;
+  txtJewelry.Enabled := not btnLocked.Down;
+  txtRemains.Enabled := not btnLocked.Down;
+  txtInstrument.Enabled := not btnLocked.Down;
+  txtArmour.Enabled := not btnLocked.Down;
+  txtTrap.Enabled := not btnLocked.Down;
+  btnRollAll.Enabled := not btnLocked.Down;
+  FChamber.SetTrait('Locked', BoolToStr(btnLocked.Down, 'True', 'False'));
+end;
+
+procedure TfrmChamber.txtTitleExit(Sender: TObject);
 begin
   FChamber.SetTrait('Title', TEdit(Sender).Text);
 end;
 
-procedure TfrmChamber.txtTitle1KeyUp(Sender: TObject; var Key: Word;
+procedure TfrmChamber.txtTitleKeyUp(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
   if Key = VK_RETURN then
@@ -149,7 +163,23 @@ begin
   if AValue.Category <> 'Chamber' then exit;
   if FChamber = AValue then Exit;
   FChamber := AValue;
-  txtTitle.Text:= FChamber.GetTrait('Title');
+  txtTitle.Text := FChamber.GetTrait('Title');
+  txtClass.Text := FChamber.GetTrait('Class');
+  txtTool.Text := FChamber.GetTrait('Tool');
+  txtClothing.Text := FChamber.GetTrait('Clothing');
+  txtKit.Text := FChamber.GetTrait('Kit');
+  txtContainer.Text := FChamber.GetTrait('Container');
+  txtWeapon.Text := FChamber.GetTrait('Weapon');
+  txtVehicle.Text := FChamber.GetTrait('Vehicle');
+  txtJewelry.Text := FChamber.GetTrait('Jewelry');
+  txtRemains.Text := FChamber.GetTrait('Remains');
+  txtInstrument.Text := FChamber.GetTrait('Instrument');
+  txtArmour.Text := FChamber.GetTrait('Armour');
+  txtTrap.Text := FChamber.GetTrait('Trap');
+  if FChamber.GetTrait('Locked') = 'True' then
+    btnLocked.Down := true
+  else
+    btnLocked.Down := false;
 end;
 
 procedure TfrmChamber.RollCbo(Cbo: TComboBox; Multiply: integer);
