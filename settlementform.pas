@@ -16,6 +16,8 @@ type
     btnLocked: TSpeedButton;
     btnRollAll: TButton;
     btnRollName: TButton;
+    Label2: TLabel;
+    Label4: TLabel;
     txtCondition: TComboBox;
     Label1: TLabel;
     Label12: TLabel;

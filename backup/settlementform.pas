@@ -31,6 +31,7 @@ type
     txtRoofs: TComboBox;
     txtTitle: TEdit;
     txtWalls: TComboBox;
+    procedure btnLockedClick(Sender: TObject);
     procedure btnRollNameClick(Sender: TObject);
     procedure btnRollAllClick(Sender: TObject);
     procedure txtTitleExit(Sender: TObject);
@@ -58,6 +59,11 @@ implementation
 procedure TfrmSettlement.btnRollNameClick(Sender: TObject);
 begin
   FSettlement.SetTrait('Title', txtTitle.Text);
+end;
+
+procedure TfrmSettlement.btnLockedClick(Sender: TObject);
+begin
+  LockForm;
 end;
 
 procedure TfrmSettlement.btnRollAllClick(Sender: TObject);
@@ -120,6 +126,7 @@ begin
   txtRoofs.Text := FSettlement.GetTrait('Roofs');
   txtCondition.Text := FSettlement.GetTrait('Condition');
   btnLocked.Down := FSettlement.GetTrait('Locked') = 'True';
+  LockForm;
 end;
 
 procedure TfrmSettlement.LockForm;

@@ -240,6 +240,7 @@ object frmMain: TfrmMain
       Align = alLeft
       AutoSize = True
       Caption = 'Rumor'
+      OnClick = btnRumorClick
       TabOrder = 6
     end
     object btnEvent: TButton

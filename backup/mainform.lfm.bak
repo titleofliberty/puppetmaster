@@ -296,6 +296,7 @@ object frmMain: TfrmMain
         Width = 300
         Align = alClient
         DefaultItemHeight = 26
+        HideSelection = False
         ReadOnly = True
         RightClickSelect = True
         RowSelect = True
@@ -304,7 +305,7 @@ object frmMain: TfrmMain
         OnDragOver = tvwCampaignDragOver
         OnMouseDown = tvwCampaignMouseDown
         OnSelectionChanged = tvwCampaignSelectionChanged
-        Options = [tvoHideSelection, tvoKeepCollapsedNodes, tvoReadOnly, tvoRightClickSelect, tvoRowSelect, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips, tvoThemedDraw]
+        Options = [tvoKeepCollapsedNodes, tvoReadOnly, tvoRightClickSelect, tvoRowSelect, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips, tvoThemedDraw]
       end
     end
     object sprMain: TSplitter

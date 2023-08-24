@@ -366,6 +366,7 @@ object frmSettlement: TfrmSettlement
         FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00
       }
       GroupIndex = 1
+      OnClick = btnLockedClick
     end
   end
 end

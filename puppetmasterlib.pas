@@ -41,6 +41,8 @@ var
   TPMNamesLast: TStringList;
   TPMNamesFirst: TStringList;
 
+  TPMRumor: TStringList;
+
 
 implementation
 
@@ -793,6 +795,45 @@ TPMSituationVerbs.Add('write');
 TPMSituationVerbs.Add('yell');
 TPMSituationVerbs.Add('yield');
 
+TPMRumor := TStringList.Create;
+TPMRumor.Sort := true;
+TPMRumor.Duplicates := dupIgnore;
+TPMRumor.Add('<npc> seeking help to retrieve <goal>');
+TPMRumor.Add('<faction> looking for help with <mission>');
+TPMRumor.Add('<faction> coming to <goal>');
+TPMRumor.Add('<npc> arrived from <settlment>');
+TPMRumor.Add('<faction> settling in <location>');
+TPMRumor.Add('<faction> has left <location>');
+TPMRumor.Add('<npc> hiring to <goal>');
+TPMRumor.Add('Overhear <faction> discussing <event>');
+TPMRumor.Add('<npc> complains about <faction>');
+TPMRumor.Add('<npc> complains about <trend>');
+TPMRumor.Add('<npc> questions why <event>');
+TPMRumor.Add('<npcs> talk about <event>');
+TPMRumor.Add('<npc> planning <event>');
+TPMRumor.Add('<npc> arrived to <goal>');
+TPMRumor.Add('<npc-noble> decrees <goal>');
+TPMRumor.Add('<npc-noble> decrees <event>');
+TPMRumor.Add('<npc-noble> plotting to <goal>');
+TPMRumor.Add('<npc-noble> plotting to <event>');
+TPMRumor.Add('<npc> shares <secret> about <npc>');
+TPMRumor.Add('<wilderness> infested with <monster>');
+TPMRumor.Add('<npc> warns of <npc>');
+TPMRumor.Add('<npc> warns of <event>');
+TPMRumor.Add('<npc> warns of <faction>');
+TPMRumor.Add('<npc> shares <event>');
+TPMRumor.Add('<npc> shares rummor about <location>');
+TPMRumor.Add('<npc> share about <crime>');
+TPMRumor.Add('<npc> gone missing');
+TPMRumor.Add('<faction> gone missing');
+TPMRumor.Add('<npc> seeking revenge on <npc>');
+TPMRumor.Add('<faction> ploting against <faction>');
+TPMRumor.Add('<faction> advising people to <goal>');
+TPMRumor.Add('<npc> operating in the area');
+TPMRumor.Add('Passerby mumbles about <event>');
+TPMRumor.Add('Passerby mumbles about <goal>');
+TPMRumor.Add('Passerby mumbles about <crime>');
+TPMRumor.Add('Passerby mumbles about <faction>');
 
 
 end.

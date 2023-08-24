@@ -94,6 +94,7 @@ type
     tvwCampaign: TTreeView;
     txtFilterCampaign: TTreeFilterEdit;
     procedure btnOutputClearClick(Sender: TObject);
+    procedure btnRumorClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure mnuMainCampaignsExitClick(Sender: TObject);
     procedure mnuMainCampaignsNewClick(Sender: TObject);
@@ -169,6 +170,13 @@ procedure TfrmMain.btnOutputClearClick(Sender: TObject);
 begin
   while pnlOutputData.ComponentCount > 0 do
     pnlOutputData.Components[0].Free;
+end;
+
+procedure TfrmMain.btnRumorClick(Sender: TObject);
+var
+
+begin
+
 end;
 
 procedure TfrmMain.mnuMainCampaignsExitClick(Sender: TObject);

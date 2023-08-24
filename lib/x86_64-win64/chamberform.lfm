@@ -912,6 +912,7 @@ object frmChamber: TfrmChamber
     Width = 798
     Align = alClient
     OnExit = txtNotesExit
+    ScrollBars = ssVertical
     TabOrder = 3
   end
 end
