@@ -26,7 +26,7 @@ type
   private
     FWilderness: TPMLeaf;
     procedure SetWilderness(AValue: TPMLeaf);
-
+    procedure LockForm;
   public
     property Wilderness: TPMLeaf read FWilderness write SetWilderness;
   end;
@@ -47,9 +47,7 @@ end;
 
 procedure TfrmWilderness.btnLockedClick(Sender: TObject);
 begin
-  txtTitle.Enabled := not btnLocked.Down;
-  txtClass.Enabled := not btnLocked.Down;
-  FWilderness.SetTrait('Locked', BoolToStr(btnLocked.Down, 'True', 'False'));
+  LockForm;
 end;
 
 procedure TfrmWilderness.SetWilderness(AValue: TPMLeaf);
@@ -59,11 +57,15 @@ begin
   FWilderness := AValue;
   txtTitle.Text := FWilderness.GetTrait('Title');
   txtClass.Text := FWilderness.GetTrait('Class');
-  if FWilderness.GetTrait('Locked') = 'True' then
-    btnLocked.Down := true
-  else
-    btnLocked.Down := false;
+  btnLocked.Down := FWilderness.GetTrait('Locked') = 'True';
+  LockForm;
+end;
 
+procedure TfrmWilderness.LockForm;
+begin
+  txtTitle.Enabled := not btnLocked.Down;
+  txtClass.Enabled := not btnLocked.Down;
+  FWilderness.SetTrait('Locked', BoolToStr(btnLocked.Down, 'True', 'False'));
 end;
 
 end.

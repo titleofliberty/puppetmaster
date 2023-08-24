@@ -42,6 +42,7 @@ type
   private
     FSettlement: TPMLeaf;
     procedure SetSettlement(AValue: TPMLeaf);
+    procedure LockForm;
   public
     property Settlement: TPMLeaf read FSettlement write SetSettlement;
   end;
@@ -62,13 +63,7 @@ end;
 
 procedure TfrmSettlement.btnLockedClick(Sender: TObject);
 begin
-  txtTitle.Enabled := not btnLocked.Down;
-  txtWalls.Enabled := not btnLocked.Down;
-  txtRoofs.Enabled := not btnLocked.Down;
-  txtCondition.Enabled := not btnLocked.Down;
-  btnRollName.Enabled := not btnLocked.Down;
-  btnRollAll.Enabled := not btnLocked.Down;
-  FSettlement.SetTrait('Locked', BoolToStr(btnLocked.Down, 'True', 'False'));
+  LockForm;
 end;
 
 procedure TfrmSettlement.btnRollAllClick(Sender: TObject);
@@ -131,6 +126,18 @@ begin
   txtRoofs.Text := FSettlement.GetTrait('Roofs');
   txtCondition.Text := FSettlement.GetTrait('Condition');
   btnLocked.Down := FSettlement.GetTrait('Locked') = 'True';
+  LockForm;
+end;
+
+procedure TfrmSettlement.LockForm;
+begin
+  txtTitle.Enabled := not btnLocked.Down;
+  txtWalls.Enabled := not btnLocked.Down;
+  txtRoofs.Enabled := not btnLocked.Down;
+  txtCondition.Enabled := not btnLocked.Down;
+  btnRollName.Enabled := not btnLocked.Down;
+  btnRollAll.Enabled := not btnLocked.Down;
+  FSettlement.SetTrait('Locked', BoolToStr(btnLocked.Down, 'True', 'False'));
 end;
 
 end.

@@ -1,7 +1,7 @@
 object frmChamber: TfrmChamber
-  Left = 14
-  Height = 546
-  Top = 223
+  Left = 383
+  Height = 692
+  Top = 165
   Width = 830
   Align = alClient
   BorderStyle = bsNone
@@ -9,7 +9,7 @@ object frmChamber: TfrmChamber
   ChildSizing.LeftRightSpacing = 16
   ChildSizing.TopBottomSpacing = 16
   ChildSizing.VerticalSpacing = 8
-  ClientHeight = 546
+  ClientHeight = 692
   ClientWidth = 830
   DesignTimePPI = 120
   Font.CharSet = ANSI_CHARSET
@@ -33,7 +33,7 @@ object frmChamber: TfrmChamber
     ChildSizing.ControlsPerLine = 3
     ClientHeight = 266
     ClientWidth = 798
-    TabOrder = 0
+    TabOrder = 2
     object Label4: TLabel
       Left = 0
       Height = 22
@@ -659,11 +659,11 @@ object frmChamber: TfrmChamber
   object Panel2: TPanel
     Left = 16
     Height = 63
-    Top = 414
+    Top = 613
     Width = 798
-    Align = alTop
+    Align = alBottom
     BevelOuter = bvNone
-    TabOrder = 1
+    TabOrder = 4
   end
   object pnlTop: TPanel
     Left = 16
@@ -680,7 +680,7 @@ object frmChamber: TfrmChamber
     ChildSizing.ControlsPerLine = 2
     ClientHeight = 60
     ClientWidth = 798
-    TabOrder = 2
+    TabOrder = 1
     object Label3: TLabel
       Left = 0
       Height = 22
@@ -807,7 +807,7 @@ object frmChamber: TfrmChamber
     Font.Pitch = fpFixed
     Font.Quality = fqDraft
     ParentFont = False
-    TabOrder = 3
+    TabOrder = 0
     object btnLocked: TSpeedButton
       Left = 750
       Height = 48
@@ -895,5 +895,24 @@ object frmChamber: TfrmChamber
       GroupIndex = 1
       OnClick = btnLockedClick
     end
+  end
+  object Label1: TLabel
+    Left = 16
+    Height = 22
+    Top = 414
+    Width = 798
+    Align = alTop
+    Caption = 'Notes'
+    ParentColor = False
+  end
+  object txtNotes: TMemo
+    Left = 16
+    Height = 161
+    Top = 444
+    Width = 798
+    Align = alClient
+    OnExit = txtNotesExit
+    ScrollBars = ssVertical
+    TabOrder = 3
   end
 end

@@ -628,14 +628,10 @@ begin
 
   leaf := TPMLeaf(tvwCampaign.Selected.Data);
 
-  mnuMainInsertVenue.Enabled := false;
-
   while pnlWorkspaceClient.ComponentCount > 0 do
   begin
     pnlWorkspaceClient.Components[0].Free;
   end;
-
-  if not Assigned(tvwCampaign.Selected) then exit;
 
   if leaf.Category = 'Settlement' then
   begin

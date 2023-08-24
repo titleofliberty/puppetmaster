@@ -49,7 +49,7 @@ procedure TfrmWilderness.btnLockedClick(Sender: TObject);
 begin
   txtTitle.Enabled := not btnLocked.Down;
   txtClass.Enabled := not btnLocked.Down;
-  FWilderness.SetTrait('Locked', BoolToStr(btnLocked.Down));
+  FWilderness.SetTrait('Locked', BoolToStr(btnLocked.Down, 'True', 'False'));
 end;
 
 procedure TfrmWilderness.SetWilderness(AValue: TPMLeaf);

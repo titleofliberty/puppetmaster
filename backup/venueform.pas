@@ -97,7 +97,7 @@ begin
   FVenue := AValue;
   txtTitle.Text := FVenue.GetTrait('Title');
   txtClass.Text := FVenue.GetTrait('Class');
-  btnLocked.Down := FVenue.GetTrait('Locked') = True;
+  btnLocked.Down := FVenue.GetTrait('Locked') = 'True';
 end;
 
 end.

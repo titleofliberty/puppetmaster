@@ -15,6 +15,7 @@ type
   TfrmChamber = class(TForm)
     btnLocked: TSpeedButton;
     btnRollAll: TButton;
+    Label1: TLabel;
     Label10: TLabel;
     Label11: TLabel;
     Label12: TLabel;
@@ -29,6 +30,7 @@ type
     Label7: TLabel;
     Label8: TLabel;
     Label9: TLabel;
+    txtNotes: TMemo;
     Panel1: TPanel;
     Panel2: TPanel;
     pnlHeader: TPanel;
@@ -48,6 +50,7 @@ type
     txtWeapon: TComboBox;
     procedure btnLockedClick(Sender: TObject);
     procedure btnRollAllClick(Sender: TObject);
+    procedure txtNotesExit(Sender: TObject);
     procedure txtTitleExit(Sender: TObject);
     procedure txtTitleKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState
       );
@@ -57,6 +60,7 @@ type
   private
     FChamber: TPMLeaf;
     procedure SetChamber(AValue: TPMLeaf);
+    procedure LockForm;
   public
     property Chamber: TPMLeaf read FChamber write SetChamber;
     procedure RollCbo(Cbo: TComboBox; Multiply: integer);
@@ -101,23 +105,14 @@ begin
 
 end;
 
+procedure TfrmChamber.txtNotesExit(Sender: TObject);
+begin
+  FChamber.SetTrait('Notes', txtNotes.Text);
+end;
+
 procedure TfrmChamber.btnLockedClick(Sender: TObject);
 begin
-  txtTitle.Enabled := not btnLocked.Down;
-  txtClass.Enabled := not btnLocked.Down;
-  txtTool.Enabled := not btnLocked.Down;
-  txtClothing.Enabled := not btnLocked.Down;
-  txtKit.Enabled := not btnLocked.Down;
-  txtContainer.Enabled := not btnLocked.Down;
-  txtWeapon.Enabled := not btnLocked.Down;
-  txtVehicle.Enabled := not btnLocked.Down;
-  txtJewelry.Enabled := not btnLocked.Down;
-  txtRemains.Enabled := not btnLocked.Down;
-  txtInstrument.Enabled := not btnLocked.Down;
-  txtArmour.Enabled := not btnLocked.Down;
-  txtTrap.Enabled := not btnLocked.Down;
-  btnRollAll.Enabled := not btnLocked.Down;
-  FChamber.SetTrait('Locked', BoolToStr(btnLocked.Down, 'True', 'False'));
+  LockForm;
 end;
 
 procedure TfrmChamber.txtTitleExit(Sender: TObject);
@@ -176,10 +171,29 @@ begin
   txtInstrument.Text := FChamber.GetTrait('Instrument');
   txtArmour.Text := FChamber.GetTrait('Armour');
   txtTrap.Text := FChamber.GetTrait('Trap');
-  if FChamber.GetTrait('Locked') = 'True' then
-    btnLocked.Down := true
-  else
-    btnLocked.Down := false;
+  txtNotes.Text := FChamber.GetTrait('Notes');
+  btnLocked.Down := FChamber.GetTrait('Locked') = 'True';
+  LockForm;
+end;
+
+procedure TfrmChamber.LockForm;
+begin
+  txtTitle.Enabled := not btnLocked.Down;
+  txtClass.Enabled := not btnLocked.Down;
+  txtTool.Enabled := not btnLocked.Down;
+  txtClothing.Enabled := not btnLocked.Down;
+  txtKit.Enabled := not btnLocked.Down;
+  txtContainer.Enabled := not btnLocked.Down;
+  txtWeapon.Enabled := not btnLocked.Down;
+  txtVehicle.Enabled := not btnLocked.Down;
+  txtJewelry.Enabled := not btnLocked.Down;
+  txtRemains.Enabled := not btnLocked.Down;
+  txtInstrument.Enabled := not btnLocked.Down;
+  txtArmour.Enabled := not btnLocked.Down;
+  txtTrap.Enabled := not btnLocked.Down;
+  txtNotes.ReadOnly := btnLocked.Down;
+  btnRollAll.Enabled := not btnLocked.Down;
+  FChamber.SetTrait('Locked', BoolToStr(btnLocked.Down, 'True', 'False'));
 end;
 
 procedure TfrmChamber.RollCbo(Cbo: TComboBox; Multiply: integer);

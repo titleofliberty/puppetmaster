@@ -31,7 +31,6 @@ type
     txtRoofs: TComboBox;
     txtTitle: TEdit;
     txtWalls: TComboBox;
-    procedure btnLockedClick(Sender: TObject);
     procedure btnRollNameClick(Sender: TObject);
     procedure btnRollAllClick(Sender: TObject);
     procedure txtTitleExit(Sender: TObject);
@@ -42,6 +41,7 @@ type
   private
     FSettlement: TPMLeaf;
     procedure SetSettlement(AValue: TPMLeaf);
+    procedure LockForm;
   public
     property Settlement: TPMLeaf read FSettlement write SetSettlement;
   end;
@@ -58,17 +58,6 @@ implementation
 procedure TfrmSettlement.btnRollNameClick(Sender: TObject);
 begin
   FSettlement.SetTrait('Title', txtTitle.Text);
-end;
-
-procedure TfrmSettlement.btnLockedClick(Sender: TObject);
-begin
-  txtTitle.Enabled := not btnLocked.Down;
-  txtWalls.Enabled := not btnLocked.Down;
-  txtRoofs.Enabled := not btnLocked.Down;
-  txtCondition.Enabled := not btnLocked.Down;
-  btnRollName.Enabled := not btnLocked.Down;
-  btnRollAll.Enabled := not btnLocked.Down;
-  FSettlement.SetTrait('Locked', BoolToStr(btnLocked.Down, 'True', 'False'));
 end;
 
 procedure TfrmSettlement.btnRollAllClick(Sender: TObject);
@@ -100,7 +89,7 @@ var
   cbo: TComboBox;
 begin
   cbo := TComboBox(Sender);
-  FSettlement.SetTrait(cbo.Name, cbo.Text);
+  FSettlement.SetTrait(cbo.Name.Replace('txt', ''), cbo.Text);
 end;
 
 procedure TfrmSettlement.txtWallsKeyUp(Sender: TObject; var Key: Word;
@@ -109,7 +98,7 @@ var
   cbo: TComboBox;
 begin
   cbo := TComboBox(Sender);
-  FSettlement.SetTrait(cbo.Name, cbo.Text);
+  FSettlement.SetTrait(cbo.Name.Replace('txt', ''), cbo.Text);
 end;
 
 procedure TfrmSettlement.txtWallsSelect(Sender: TObject);
@@ -117,7 +106,7 @@ var
   cbo: TComboBox;
 begin
   cbo := TComboBox(Sender);
-  FSettlement.SetTrait(cbo.Name, cbo.Text);
+  FSettlement.SetTrait(cbo.Name.Replace('txt', ''), cbo.Text);
 end;
 
 procedure TfrmSettlement.SetSettlement(AValue: TPMLeaf);
@@ -131,6 +120,17 @@ begin
   txtRoofs.Text := FSettlement.GetTrait('Roofs');
   txtCondition.Text := FSettlement.GetTrait('Condition');
   btnLocked.Down := FSettlement.GetTrait('Locked') = 'True';
+end;
+
+procedure TfrmSettlement.LockForm;
+begin
+  txtTitle.Enabled := not btnLocked.Down;
+  txtWalls.Enabled := not btnLocked.Down;
+  txtRoofs.Enabled := not btnLocked.Down;
+  txtCondition.Enabled := not btnLocked.Down;
+  btnRollName.Enabled := not btnLocked.Down;
+  btnRollAll.Enabled := not btnLocked.Down;
+  FSettlement.SetTrait('Locked', BoolToStr(btnLocked.Down, 'True', 'False'));
 end;
 
 end.

@@ -42,6 +42,7 @@ type
   private
     FTract: TPMLeaf;
     procedure SetTract(AValue: TPMLeaf);
+    procedure LockForm;
   public
     property Tract: TPMLeaf read FTract write SetTract;
   end;
@@ -72,14 +73,7 @@ end;
 
 procedure TfrmTract.btnLockedClick(Sender: TObject);
 begin
-  txtTitle.Enabled := not btnLocked.Down;
-  txtClass.Enabled := not btnLocked.Down;
-  txtNatural.Enabled := not btnLocked.Down;
-  txtManufactured.Enabled := not btnLocked.Down;
-  txtFlora.Enabled := not btnLocked.Down;
-  txtFauna.Enabled := not btnLocked.Down;
-  btnRollAll.Enabled := not btnLocked.Down;
-  FTract.SetTrait('Locked', BoolToStr(btnLocked.Down, 'True', 'False'));
+  LockForm;
 end;
 
 procedure TfrmTract.txtNaturalExit(Sender: TObject);
@@ -132,10 +126,20 @@ begin
   txtManufactured.Text := FTract.GetTrait('Manufactured');
   txtFlora.Text := FTract.GetTrait('Flora');
   txtFauna.Text := FTract.GetTrait('Fauna');
-  if FTract.GetTrait('Locked') = 'True' then
-    btnLocked.Down := true
-  else
-    btnLocked.Down := false;
+  btnLocked.Down := FTract.GetTrait('Locked') = 'True';
+  LockForm;
+end;
+
+procedure TfrmTract.LockForm;
+begin
+  txtTitle.Enabled := not btnLocked.Down;
+  txtClass.Enabled := not btnLocked.Down;
+  txtNatural.Enabled := not btnLocked.Down;
+  txtManufactured.Enabled := not btnLocked.Down;
+  txtFlora.Enabled := not btnLocked.Down;
+  txtFauna.Enabled := not btnLocked.Down;
+  btnRollAll.Enabled := not btnLocked.Down;
+  FTract.SetTrait('Locked', BoolToStr(btnLocked.Down, 'True', 'False'));
 end;
 
 end.

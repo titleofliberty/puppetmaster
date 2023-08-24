@@ -1,7 +1,7 @@
 object frmSettlement: TfrmSettlement
-  Left = 84
+  Left = 419
   Height = 502
-  Top = 284
+  Top = 279
   Width = 833
   Align = alClient
   BorderStyle = bsNone
@@ -366,7 +366,6 @@ object frmSettlement: TfrmSettlement
         FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00
       }
       GroupIndex = 1
-      OnClick = btnLockedClick
     end
   end
 end

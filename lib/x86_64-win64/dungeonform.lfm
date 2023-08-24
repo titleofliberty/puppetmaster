@@ -1,7 +1,7 @@
 object frmDungeon: TfrmDungeon
-  Left = 146
+  Left = 604
   Height = 437
-  Top = 249
+  Top = 225
   Width = 667
   Align = alClient
   BorderStyle = bsNone
@@ -75,6 +75,7 @@ object frmDungeon: TfrmDungeon
       OnExit = txtClassExit
       OnKeyUp = txtClassKeyUp
       OnSelect = txtClassSelect
+      Style = csDropDownList
       TabOrder = 1
       Text = 'Cavern'
     end
@@ -82,9 +83,9 @@ object frmDungeon: TfrmDungeon
   object Panel1: TPanel
     Left = 16
     Height = 63
-    Top = 140
+    Top = 358
     Width = 635
-    Align = alTop
+    Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
   end
@@ -193,5 +194,24 @@ object frmDungeon: TfrmDungeon
       GroupIndex = 1
       OnClick = btnLockedClick
     end
+  end
+  object Label1: TLabel
+    Left = 16
+    Height = 22
+    Top = 140
+    Width = 635
+    Align = alTop
+    Caption = 'Notes'
+    ParentColor = False
+  end
+  object txtNotes: TMemo
+    Left = 16
+    Height = 180
+    Top = 170
+    Width = 635
+    Align = alClient
+    OnExit = txtNotesExit
+    ScrollBars = ssVertical
+    TabOrder = 3
   end
 end
