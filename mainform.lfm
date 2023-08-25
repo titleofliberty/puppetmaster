@@ -240,7 +240,6 @@ object frmMain: TfrmMain
       Align = alLeft
       AutoSize = True
       Caption = 'Rumor'
-      OnClick = btnRumorClick
       TabOrder = 6
     end
     object btnEvent: TButton
@@ -560,6 +559,10 @@ object frmMain: TfrmMain
       object mnuMainInsertBeast: TMenuItem
         Caption = '&Beast'
         ShortCut = 49218
+      end
+      object mnuMainInsertFaction: TMenuItem
+        Caption = '&Faction'
+        ShortCut = 49222
       end
       object mnuMainInsertPuppet: TMenuItem
         Caption = '&Puppet'

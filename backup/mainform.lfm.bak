@@ -560,6 +560,10 @@ object frmMain: TfrmMain
         Caption = '&Beast'
         ShortCut = 49218
       end
+      object mnuMainInsertFaction: TMenuItem
+        Caption = '&Faction'
+        ShortCut = 49222
+      end
       object mnuMainInsertPuppet: TMenuItem
         Caption = '&Puppet'
         ShortCut = 49232

@@ -81,79 +81,46 @@ begin
   FCategory := ACategory;
 
   if FCategory = 'Player' then
-  begin
-    FTraits.AddOrSetData('Character', 'Untitled Player');
-    FTraits.AddOrSetData('Player', 'Player Name');
-  end
+    FTraits.AddOrSetData('Character', 'Untitled Player')
   else if FCategory = 'Settlement' then
-  begin
-    FTraits.AddOrSetData('Title', 'Untitled Settlement');
-    FTraits.AddOrSetData('Walls', 'Adobe');
-    FTraits.AddOrSetData('Roofs', 'Bark');
-    FTraits.AddOrSetData('Condition', 'Battered');
-    FTraits.AddOrSetData('Moods', 'Angry');
-  end
+    FTraits.AddOrSetData('Title', 'Untitled Settlement')
   else if FCategory = 'Venue' then
-  begin
-    FTraits.AddOrSetData('Title', 'Untitled Venue');
-    FTraits.AddOrSetData('Class', 'Abbey');
-  end
+    FTraits.AddOrSetData('Title', 'Untitled Venue')
   else if FCategory = 'Room' then
-  begin
-    FTraits.AddOrSetData('Title', 'Untitled Room');
-    FTraits.AddOrSetData('Class', 'Barrack');
-    FTraits.AddOrSetData('Condition', 'Arranged');
-  end
+    FTraits.AddOrSetData('Title', 'Untitled Room')
   else if FCategory = 'Puppet' then
   begin
     FTraits.AddOrSetData('FirstName', 'FirstName');
     FTraits.AddOrSetData('LastName', 'LastName');
   end
   else if FCategory = 'Dice' then
-  begin
-    FTraits.AddOrSetData('Title', '1d20');
-    FTraits.AddOrSetData('Count', '1');
-    FTraits.AddOrSetData('Die', 'd20');
-    FTraits.AddOrSetData('Modifier', '0');
-  end
+    FTraits.AddOrSetData('Title', 'Untitled Dice')
   else if FCategory = 'Dungeon' then
-  begin
-    FTraits.AddOrSetData('Title', 'Untitled Dungeon');
-    FTraits.AddOrSetData('Class', 'Dungeon');
-  end
+    FTraits.AddOrSetData('Title', 'Untitled Dungeon')
   else if FCategory = 'Wilderness' then
-  begin
-    FTraits.AddOrSetData('Title', 'Untitled Widlerness');
-    FTraits.AddOrSetData('Class', 'Forest');
-  end
+    FTraits.AddOrSetData('Title', 'Untitled Widlerness')
   else if FCategory = 'Tract' then
-  begin
-    FTraits.AddOrSetData('Title', 'Untitled Tract');
-  end
+    FTraits.AddOrSetData('Title', 'Untitled Tract')
   else if FCategory = 'Chamber' then
-  begin
-    FTraits.AddOrSetData('Title', 'Untitled Chamber');
-  end
+    FTraits.AddOrSetData('Title', 'Untitled Chamber')
   else if FCategory = 'Campaign' then
-  begin
-    FTraits.AddOrSetData('Title', 'Campaign');
-  end
+    FTraits.AddOrSetData('Title', 'Campaign')
   else if FCategory = 'Dungeons' then
-  begin
-    FTraits.AddOrSetData('Title', 'Dungeons');
-  end
+    FTraits.AddOrSetData('Title', 'Dungeons')
+  else if FCategory = 'Chambers' then
+    FTraits.AddOrSetData('Title', 'Chambers')
+  else if FCategory = 'Factions' then
+    FTraits.AddOrSetData('Title', 'Factions')
   else if FCategory = 'Wildernesses' then
-  begin
-    FTraits.AddOrSetData('Title', 'Wildernesses');
-  end
+    FTraits.AddOrSetData('Title', 'Wildernesses')
+  else if FCategory = 'Tracts' then
+    FTraits.AddOrSetData('Title', 'Tracts')
+  else if FCategory = 'Venues' then
+    FTraits.AddOrSetData('Title', 'Venues')
   else if FCategory = 'Settlements' then
-  begin
-    FTraits.AddOrSetData('Title', 'Settlements');
-  end
+    FTraits.AddOrSetData('Title', 'Settlements')
   else if FCategory = 'DiceTray' then
-  begin
     FTraits.AddOrSetData('Title', 'Dice Tray');
-  end;
 end;
 
 function TPMLeaf.GetTrait(AKey: string): string;
@@ -796,7 +763,7 @@ TPMSituationVerbs.Add('yell');
 TPMSituationVerbs.Add('yield');
 
 TPMRumor := TStringList.Create;
-TPMRumor.Sort := true;
+TPMRumor.Sorted := true;
 TPMRumor.Duplicates := dupIgnore;
 TPMRumor.Add('<npc> seeking help to retrieve <goal>');
 TPMRumor.Add('<faction> looking for help with <mission>');

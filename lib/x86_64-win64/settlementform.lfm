@@ -244,11 +244,25 @@ object frmSettlement: TfrmSettlement
       TabOrder = 3
       Text = 'Battered'
     end
-    object btnRollAll: TButton
+    object Label2: TLabel
       Left = 0
       Height = 32
       Top = 68
       Width = 262
+      ParentColor = False
+    end
+    object Label4: TLabel
+      Left = 270
+      Height = 32
+      Top = 68
+      Width = 262
+      ParentColor = False
+    end
+    object btnRollAll: TButton
+      Left = 540
+      Height = 32
+      Top = 68
+      Width = 261
       Caption = 'Roll All'
       OnClick = btnRollAllClick
       TabOrder = 2
