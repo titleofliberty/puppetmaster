@@ -1,7 +1,7 @@
 object frmMain: TfrmMain
-  Left = 384
+  Left = 0
   Height = 680
-  Top = 203
+  Top = 187
   Width = 1024
   Caption = 'Puppetmaster'
   ChildSizing.LeftRightSpacing = 8

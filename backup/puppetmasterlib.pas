@@ -81,26 +81,26 @@ begin
   FCategory := ACategory;
 
   if FCategory = 'Player' then
-    FTraits.AddOrSetData('Character', 'Untitled Player');
+    FTraits.AddOrSetData('Character', 'Untitled Player')
   else if FCategory = 'Settlement' then
-    FTraits.AddOrSetData('Title', 'Untitled Settlement');
+    FTraits.AddOrSetData('Title', 'Untitled Settlement')
   else if FCategory = 'Venue' then
-    FTraits.AddOrSetData('Title', 'Untitled Venue');
+    FTraits.AddOrSetData('Title', 'Untitled Venue')
   else if FCategory = 'Room' then
-    FTraits.AddOrSetData('Title', 'Untitled Room');
+    FTraits.AddOrSetData('Title', 'Untitled Room')
   else if FCategory = 'Puppet' then
   begin
     FTraits.AddOrSetData('FirstName', 'FirstName');
     FTraits.AddOrSetData('LastName', 'LastName');
   end
   else if FCategory = 'Dice' then
-    FTraits.AddOrSetData('Title', '1d20');
+    FTraits.AddOrSetData('Title', 'Untitled Dice')
   else if FCategory = 'Dungeon' then
-    FTraits.AddOrSetData('Title', 'Untitled Dungeon');
+    FTraits.AddOrSetData('Title', 'Untitled Dungeon')
   else if FCategory = 'Wilderness' then
-    FTraits.AddOrSetData('Title', 'Untitled Widlerness');
+    FTraits.AddOrSetData('Title', 'Untitled Widlerness')
   else if FCategory = 'Tract' then
-    FTraits.AddOrSetData('Title', 'Untitled Tract');
+    FTraits.AddOrSetData('Title', 'Untitled Tract')
   else if FCategory = 'Chamber' then
     FTraits.AddOrSetData('Title', 'Untitled Chamber')
   else if FCategory = 'Campaign' then

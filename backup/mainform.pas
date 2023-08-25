@@ -144,6 +144,9 @@ var
   nodeDungeons     : TTreeNode;
   nodeDiceTray     : TTreeNode;
   nodeWildernesses : TTreeNode;
+  nodeResources    : TTreeNode;
+  nodeMonsters     : TTreeNode;
+  nodeBeasts       : TTreeNode;
 
 implementation
 
@@ -399,7 +402,7 @@ begin
     begin
       tracts := TPMLeaf(tvwCampaign.Selected.Items[i].Data);
       if tracts.Category = 'Tracts' then
-        node := tvwCampaign.Items.AddChildObject(tvwCampaign.Selected.Items[i]);
+        node := tvwCampaign.Items.AddChildObject(tvwCampaign.Selected.Items[i], leaf.Title, leaf);
     end
   else if (selected.Category = 'Tracts') then
     node := tvwCampaign.Items.AddChildObject(tvwCampaign.Selected, leaf.Title, leaf)
@@ -812,6 +815,9 @@ begin
   nodeWildernesses := tvwCampaign.Items.AddChildObject(nodeCampaign, 'Wildernesses', TPMLeaf.Create('Wildernesses'));
   nodeSettlements := tvwCampaign.Items.AddChildObject(nodeCampaign, 'Settlements', TPMLeaf.Create('Settlements'));
   nodeDiceTray := tvwCampaign.Items.AddChildObject(nodeCampaign, 'Dice Tray', TPMLeaf.Create('DiceTray'));
+  nodeResources := tvwCampaign.Items.AddChildObject(nodeCampaign, 'Resources', TPMLeaf.Create('Resources'));
+  nodeBeasts := tvwCampaign.Items.AddChildObject(nodeResources, 'Beasts', TPMLeaf.Create('Beasts'));
+  nodeMonsters := tvwCampaign.Items.AddChildObject(nodeResources, 'Monsters', TPMLeaf.Create('Monsters'));
 
   leaf := TPMLeaf.Create('Dice');
   leaf.SetTrait('Title', '1d4');

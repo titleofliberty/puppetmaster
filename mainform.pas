@@ -139,11 +139,22 @@ type
 
 var
   frmMain: TfrmMain;
-  nodeCampaign     : TTreeNode;
-  nodeSettlements  : TTreeNode;
-  nodeDungeons     : TTreeNode;
-  nodeDiceTray     : TTreeNode;
+  nodeGems : TTreeNode;
+  nodeKits : TTreeNode;
+  nodeTools : TTreeNode;
+  nodeTraps : TTreeNode;
+  nodeBeasts : TTreeNode;
+  nodeWeapons : TTreeNode;
+  nodePotions : TTreeNode;
+  nodeCampaign : TTreeNode;
+  nodeDungeons : TTreeNode;
+  nodeDiceTray : TTreeNode;
+  nodeMonsters : TTreeNode;
+  nodeResources : TTreeNode;
+  nodeSettlements : TTreeNode;
   nodeWildernesses : TTreeNode;
+  nodeMusicalInstruments : TTreeNode;
+
 
 implementation
 
@@ -803,6 +814,7 @@ end;
 
 procedure TfrmMain.CampaignNew;
 var
+  i : integer;
   leaf: TPMLeaf;
 begin
   tvwCampaign.Items.Clear;
@@ -812,62 +824,23 @@ begin
   nodeWildernesses := tvwCampaign.Items.AddChildObject(nodeCampaign, 'Wildernesses', TPMLeaf.Create('Wildernesses'));
   nodeSettlements := tvwCampaign.Items.AddChildObject(nodeCampaign, 'Settlements', TPMLeaf.Create('Settlements'));
   nodeDiceTray := tvwCampaign.Items.AddChildObject(nodeCampaign, 'Dice Tray', TPMLeaf.Create('DiceTray'));
+  nodeResources := tvwCampaign.Items.AddChildObject(nodeCampaign, 'Resources', TPMLeaf.Create('Resources'));
+  nodeBeasts := tvwCampaign.Items.AddChildObject(nodeResources, 'Beasts', TPMLeaf.Create('Beasts'));
+  nodeMonsters := tvwCampaign.Items.AddChildObject(nodeResources, 'Monsters', TPMLeaf.Create('Monsters'));
+  nodeGems := tvwCampaign.Items.AddChildObject(nodeResources, 'Gems', TPMLeaf.Create('Gems'));
+  nodeMusicalInstruments := tvwCampaign.Items.AddChildObject(nodeResources, 'Musical Instruments', TPMLeaf.Create('Musical Instruments'));
+  nodeKits := tvwCampaign.Items.AddChildObject(nodeResources, 'Kits', TPMLeaf.Create('Kits'));
 
-  leaf := TPMLeaf.Create('Dice');
-  leaf.SetTrait('Title', '1d4');
-  leaf.SetTrait('Count', '1');
-  leaf.SetTrait('Die', 'd4');
-  leaf.SetTrait('Modifier', '0');
-  leaf.OnChange := @LeafChange;
-  tvwCampaign.Items.AddChildObject(nodeDiceTray, leaf.Title, leaf);
-
-  leaf := TPMLeaf.Create('Dice');
-  leaf.SetTrait('Title', '1d6');
-  leaf.SetTrait('Count', '1');
-  leaf.SetTrait('Die', 'd6');
-  leaf.SetTrait('Modifier', '0');
-  leaf.OnChange := @LeafChange;
-  tvwCampaign.Items.AddChildObject(nodeDiceTray, leaf.Title, leaf);
-
-  leaf := TPMLeaf.Create('Dice');
-  leaf.SetTrait('Title', '1d8');
-  leaf.SetTrait('Count', '1');
-  leaf.SetTrait('Die', 'd8');
-  leaf.SetTrait('Modifier', '0');
-  leaf.OnChange := @LeafChange;
-  tvwCampaign.Items.AddChildObject(nodeDiceTray, leaf.Title, leaf);
-
-  leaf := TPMLeaf.Create('Dice');
-  leaf.SetTrait('Title', '1d10');
-  leaf.SetTrait('Count', '1');
-  leaf.SetTrait('Die', 'd10');
-  leaf.SetTrait('Modifier', '0');
-  leaf.OnChange := @LeafChange;
-  tvwCampaign.Items.AddChildObject(nodeDiceTray, leaf.Title, leaf);
-
-  leaf := TPMLeaf.Create('Dice');
-  leaf.SetTrait('Title', '1d12');
-  leaf.SetTrait('Count', '1');
-  leaf.SetTrait('Die', 'd12');
-  leaf.SetTrait('Modifier', '0');
-  leaf.OnChange := @LeafChange;
-  tvwCampaign.Items.AddChildObject(nodeDiceTray, leaf.Title, leaf);
-
-  leaf := TPMLeaf.Create('Dice');
-  leaf.SetTrait('Title', '1d20');
-  leaf.SetTrait('Count', '1');
-  leaf.SetTrait('Die', 'd20');
-  leaf.SetTrait('Modifier', '0');
-  leaf.OnChange := @LeafChange;
-  tvwCampaign.Items.AddChildObject(nodeDiceTray, leaf.Title, leaf);
-
-  leaf := TPMLeaf.Create('Dice');
-  leaf.SetTrait('Title', '1d100');
-  leaf.SetTrait('Count', '1');
-  leaf.SetTrait('Die', 'd100');
-  leaf.SetTrait('Modifier', '0');
-  leaf.OnChange := @LeafChange;
-  tvwCampaign.Items.AddChildObject(nodeDiceTray, leaf.Title, leaf);
+  for i := 0 to 6 to
+  begin
+    leaf := TPMLeaf.Create('Dice');
+    leaf.SetTrait('Title', TPMBasicDice[0]);
+    leaf.SetTrait('Count', TPMBasicDice[1]);
+    leaf.SetTrait('Die', TPMBasicDice[2]);
+    leaf.SetTrait('Modifier', TPMBasicDice[3]);
+    leaf.OnChange := @LeafChange;
+    tvwCampaign.Items.AddChildObject(nodeDiceTray, leaf.Title, leaf);
+  end;
 
   PopulateDiceTray;
 

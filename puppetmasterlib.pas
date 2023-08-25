@@ -43,6 +43,8 @@ var
 
   TPMRumor: TStringList;
 
+  TPMBasicDice : array of array of string;
+
 
 implementation
 
@@ -801,6 +803,16 @@ TPMRumor.Add('Passerby mumbles about <event>');
 TPMRumor.Add('Passerby mumbles about <goal>');
 TPMRumor.Add('Passerby mumbles about <crime>');
 TPMRumor.Add('Passerby mumbles about <faction>');
+
+TPMBasicDice := [
+['1d4','1','d4','0'],
+['1d6','1','d6','0'],
+['1d8','1','d8','0'],
+['1d10','1','d10','0'],
+['1d12','1','d12','0'],
+['1d20','1','d20','0'],
+['1d100','1','d100','0']
+];
 
 
 end.
