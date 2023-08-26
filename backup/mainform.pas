@@ -22,6 +22,7 @@ type
     btnOutputClear: TButton;
     btnEightBall: TButton;
     btnRumor: TButton;
+    mnuMainInsertHumanoid: TMenuItem;
     mnuMainInsertFaction: TMenuItem;
     mnuMainToolsEvent: TMenuItem;
     mnuMainToolsEncounter: TMenuItem;
@@ -131,6 +132,8 @@ type
     procedure PopulateDiceTray;
     procedure PopulateCampaign;
     procedure ToggleCampaign(AEnabled: boolean = false);
+    procedure LoadResourceNodes(AParent: TTreeNode; AArray: TStringArray); overload;
+    procedure LoadResourceNodes(AParent: TTreeNode; ACategory: string; AArray: TPM2DStringArray); overload;
     procedure SaveCampaign;
     procedure LoadCampaign;
   public
@@ -139,14 +142,30 @@ type
 
 var
   frmMain: TfrmMain;
-  nodeCampaign     : TTreeNode;
-  nodeSettlements  : TTreeNode;
-  nodeDungeons     : TTreeNode;
-  nodeDiceTray     : TTreeNode;
+  nodeGems : TTreeNode;
+  nodeKits : TTreeNode;
+  nodeTools : TTreeNode;
+  nodeTraps : TTreeNode;
+  nodeBeasts : TTreeNode;
+  nodeWeapons : TTreeNode;
+  nodePotions : TTreeNode;
+  nodeCampaign : TTreeNode;
+  nodeDungeons : TTreeNode;
+  nodeDiceTray : TTreeNode;
+  nodeMonsters : TTreeNode;
+  nodeResources : TTreeNode;
+  nodeSettlements : TTreeNode;
   nodeWildernesses : TTreeNode;
-  nodeResources    : TTreeNode;
-  nodeMonsters     : TTreeNode;
-  nodeBeasts       : TTreeNode;
+  nodeMusicalInstruments : TTreeNode;
+  nodeClothing : TTreeNode;
+  nodeContainers : TTreeNode;
+  nodeVehicle : TTreeNode;
+  nodeJewelry : TTreeNode;
+  nodeRemains : TTreeNode;
+  nodeInstruments: TTreeNode;
+  nodeArmors : TTreeNode;
+  nodeHumanoids : TTreeNode;
+
 
 implementation
 
@@ -806,6 +825,7 @@ end;
 
 procedure TfrmMain.CampaignNew;
 var
+  i : integer;
   leaf: TPMLeaf;
 begin
   tvwCampaign.Items.Clear;
@@ -818,62 +838,48 @@ begin
   nodeResources := tvwCampaign.Items.AddChildObject(nodeCampaign, 'Resources', TPMLeaf.Create('Resources'));
   nodeBeasts := tvwCampaign.Items.AddChildObject(nodeResources, 'Beasts', TPMLeaf.Create('Beasts'));
   nodeMonsters := tvwCampaign.Items.AddChildObject(nodeResources, 'Monsters', TPMLeaf.Create('Monsters'));
+  nodeGems := tvwCampaign.Items.AddChildObject(nodeResources, 'Gems', TPMLeaf.Create('Gems'));
+  nodeMusicalInstruments := tvwCampaign.Items.AddChildObject(nodeResources, 'Musical Instruments', TPMLeaf.Create('Musical Instruments'));
+  nodeKits := tvwCampaign.Items.AddChildObject(nodeResources, 'Kits', TPMLeaf.Create('Kits'));
+  nodeTools := tvwCampaign.Items.AddChildObject(nodeResources, 'Tools', TPMLeaf.Create('Tools'));
+  nodeClothing := tvwCampaign.Items.AddChildObject(nodeResources, 'Clothing', TPMLeaf.Create('Clothing'));
+  nodeContainers := tvwCampaign.Items.AddChildObject(nodeResources, 'Containers', TPMLeaf.Create('Containers'));
+  nodeVehicle := tvwCampaign.Items.AddChildObject(nodeResources, 'Vehicles', TPMLeaf.Create('Vehicles'));
+  nodeJewelry := tvwCampaign.Items.AddChildObject(nodeResources, 'Jewelry', TPMLeaf.Create('Jewelry'));;
+  nodeRemains := tvwCampaign.Items.AddChildObject(nodeResources, 'Remains', TPMLeaf.Create('Remains'));
+  nodeInstruments := tvwCampaign.Items.AddChildObject(nodeResources, 'Instruments', TPMLeaf.Create('Instruments'));;
+  nodeArmors := tvwCampaign.Items.AddChildObject(nodeResources, 'Armor', TPMLeaf.Create('Armor'));
+  nodeWeapons := tvwCampaign.Items.AddChildObject(nodeResources, 'Weapons', TPMLeaf.Create('Weapons'));
+  nodeTraps := tvwCampaign.Items.AddChildObject(nodeResources, 'Traps', TPMLeaf.Create('Traps'));
+  nodeHumanoids := tvwCampaign.Items.AddChildObject(nodeResources, 'Humanoids', TPMLeaf.Create('Humanoids'));
 
-  leaf := TPMLeaf.Create('Dice');
-  leaf.SetTrait('Title', '1d4');
-  leaf.SetTrait('Count', '1');
-  leaf.SetTrait('Die', 'd4');
-  leaf.SetTrait('Modifier', '0');
-  leaf.OnChange := @LeafChange;
-  tvwCampaign.Items.AddChildObject(nodeDiceTray, leaf.Title, leaf);
+  nodeResources.AlphaSort;
 
-  leaf := TPMLeaf.Create('Dice');
-  leaf.SetTrait('Title', '1d6');
-  leaf.SetTrait('Count', '1');
-  leaf.SetTrait('Die', 'd6');
-  leaf.SetTrait('Modifier', '0');
-  leaf.OnChange := @LeafChange;
-  tvwCampaign.Items.AddChildObject(nodeDiceTray, leaf.Title, leaf);
+  for i := 0 to High(TPMBasicDice) do
+  begin
+    leaf := TPMLeaf.Create('Dice');
+    leaf.SetTrait(TPMBasicDice[i, 0]);
+    leaf.SetTrait(TPMBasicDice[i, 1]);
+    leaf.SetTrait(TPMBasicDice[i, 2]);
+    leaf.SetTrait(TPMBasicDice[i, 3]);
+    leaf.OnChange := @LeafChange;
+    tvwCampaign.Items.AddChildObject(nodeDiceTray, leaf.Title, leaf);
+  end;
 
-  leaf := TPMLeaf.Create('Dice');
-  leaf.SetTrait('Title', '1d8');
-  leaf.SetTrait('Count', '1');
-  leaf.SetTrait('Die', 'd8');
-  leaf.SetTrait('Modifier', '0');
-  leaf.OnChange := @LeafChange;
-  tvwCampaign.Items.AddChildObject(nodeDiceTray, leaf.Title, leaf);
+  LoadResourceNodes(nodeKits, TPMKits);
+  LoadResourceNodes(nodeTools, TPMTools);
+  LoadResourceNodes(nodeClothing, TPMClothing);
+  LoadResourceNodes(nodeContainers, TPMContainers);
+  LoadResourceNodes(nodeWeapons, TPMWeapons);
+  LoadResourceNodes(nodeVehicle, TPMVehicle);
+  LoadResourceNodes(nodeJewelry, TPMJewelry);
+  LoadResourceNodes(nodeRemains, TPMRemains);
+  LoadResourceNodes(nodeInstruments, TPMInstruments);
+  LoadResourceNodes(nodeArmors, TPMArmors);
+  LoadResourceNodes(nodeTraps, TPMTraps);
 
-  leaf := TPMLeaf.Create('Dice');
-  leaf.SetTrait('Title', '1d10');
-  leaf.SetTrait('Count', '1');
-  leaf.SetTrait('Die', 'd10');
-  leaf.SetTrait('Modifier', '0');
-  leaf.OnChange := @LeafChange;
-  tvwCampaign.Items.AddChildObject(nodeDiceTray, leaf.Title, leaf);
-
-  leaf := TPMLeaf.Create('Dice');
-  leaf.SetTrait('Title', '1d12');
-  leaf.SetTrait('Count', '1');
-  leaf.SetTrait('Die', 'd12');
-  leaf.SetTrait('Modifier', '0');
-  leaf.OnChange := @LeafChange;
-  tvwCampaign.Items.AddChildObject(nodeDiceTray, leaf.Title, leaf);
-
-  leaf := TPMLeaf.Create('Dice');
-  leaf.SetTrait('Title', '1d20');
-  leaf.SetTrait('Count', '1');
-  leaf.SetTrait('Die', 'd20');
-  leaf.SetTrait('Modifier', '0');
-  leaf.OnChange := @LeafChange;
-  tvwCampaign.Items.AddChildObject(nodeDiceTray, leaf.Title, leaf);
-
-  leaf := TPMLeaf.Create('Dice');
-  leaf.SetTrait('Title', '1d100');
-  leaf.SetTrait('Count', '1');
-  leaf.SetTrait('Die', 'd100');
-  leaf.SetTrait('Modifier', '0');
-  leaf.OnChange := @LeafChange;
-  tvwCampaign.Items.AddChildObject(nodeDiceTray, leaf.Title, leaf);
+  LoadResourceNodes(nodeBeasts, 'Beast', TPMBeasts);
+  LoadResourceNodes(nodeMonsters, 'Monster', TPMMonsters);
 
   PopulateDiceTray;
 
@@ -914,6 +920,37 @@ begin
   pnlTop.Enabled := AEnabled;
   pnlClient.Enabled := AEnabled;
   pnlBottom.Enabled := AEnabled;
+end;
+
+procedure TfrmMain.LoadResourceNodes(AParent: TTreeNode; AArray: TStringArray);
+var
+  i: integer;
+  leaf: TPMLeaf;
+begin
+  for i := 0 to High(AArray) do
+  begin
+    leaf := TPMLeaf.Create('Simple');
+    leaf.SetTrait('Title', AArray[i]);
+    leaf.OnChange := @LeafChange;
+    tvwCampaign.Items.AddChildObject(AParent, leaf.Title, leaf);
+  end;
+  AParent.AlphaSort;
+end;
+
+procedure TfrmMain.LoadResourceNodes(AParent: TTreeNode; ACategory: string; AArray: TPM2DStringArray);
+var
+  i, j: integer;
+  leaf: TPMLeaf;
+begin
+  for i := 0 to High(AArray) do
+  begin
+    leaf := TPMLeaf.Create(ACategory);
+    for j := 0 to High(AArray[i]) do
+      leaf.SetTrait(AArray[i, j]);
+    leaf.OnChange := @LeafChange;
+    tvwCampaign.Items.AddChildObject(AParent, leaf.Title, leaf);
+  end;
+  AParent.AlphaSort;
 end;
 
 procedure TfrmMain.SaveCampaign;

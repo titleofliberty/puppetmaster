@@ -1,7 +1,7 @@
 object frmChamber: TfrmChamber
-  Left = 383
+  Left = 380
   Height = 692
-  Top = 165
+  Top = 171
   Width = 830
   Align = alClient
   BorderStyle = bsNone
@@ -20,8 +20,8 @@ object frmChamber: TfrmChamber
   LCLVersion = '2.2.6.0'
   object Panel1: TPanel
     Left = 16
-    Height = 266
-    Top = 140
+    Height = 334
+    Top = 72
     Width = 798
     Align = alTop
     AutoSize = True
@@ -31,671 +31,32 @@ object frmChamber: TfrmChamber
     ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
     ChildSizing.Layout = cclLeftToRightThenTopToBottom
     ChildSizing.ControlsPerLine = 3
-    ClientHeight = 266
-    ClientWidth = 798
-    TabOrder = 2
-    object Label4: TLabel
-      Left = 0
-      Height = 22
-      Top = 0
-      Width = 261
-      AutoSize = False
-      Caption = 'Tool'
-      ParentColor = False
-    end
-    object Label5: TLabel
-      Left = 269
-      Height = 22
-      Top = 0
-      Width = 261
-      AutoSize = False
-      Caption = 'Clothing'
-      ParentColor = False
-    end
-    object Label7: TLabel
-      Left = 538
-      Height = 22
-      Top = 0
-      Width = 260
-      AutoSize = False
-      Caption = 'Kit'
-      ParentColor = False
-    end
-    object txtTool: TComboBox
-      Left = 0
-      Height = 30
-      Top = 30
-      Width = 261
-      AutoSize = False
-      Font.CharSet = ANSI_CHARSET
-      Font.Height = -20
-      Font.Name = 'Courier New'
-      Font.Pitch = fpFixed
-      Font.Quality = fqDraft
-      ItemHeight = 22
-      ItemIndex = 0
-      Items.Strings = (
-        ''
-        'Abacus'
-        'Ball Bearings'
-        'Bedroll'
-        'Blanket'
-        'Book'
-        'Bridle'
-        'Candle'
-        'Censar'
-        'Chain'
-        'Chalk'
-        'Compass'
-        'Cup'
-        'Fork'
-        'Grappling Hook'
-        'Hammer'
-        'Hammer, Sledge'
-        'Handaxe'
-        'Hourglass'
-        'Hunting Trap'
-        'Ink'
-        'Ink Pen'
-        'Jug'
-        'Key'
-        'Knife'
-        'Ladder'
-        'Lamp'
-        'Lantern'
-        'Lock'
-        'Magnifying Glass'
-        'Manacles'
-        'Map'
-        'Mirror, Steel'
-        'Net'
-        'Oil'
-        'Paper'
-        'Parchment'
-        'Pick, Miner'
-        'Pitcher'
-        'Piton'
-        'Plate'
-        'Playing Cards'
-        'Pot'
-        'Pot, Iron'
-        'Potion'
-        'Pulley'
-        'Rope, Hempen'
-        'Rope, Silk'
-        'Saddle, Exotic'
-        'Saddle, Military'
-        'Saddle, Pack'
-        'Saddle, Riding'
-        'Scales (Weights)'
-        'Scroll'
-        'Sealing Wax'
-        'Sexton'
-        'Shovel'
-        'Sickle'
-        'Spikes, Iron'
-        'Spoon'
-        'Spyglass'
-        'Staff'
-        'Stake (Wooden)'
-        'String'
-        'Tent'
-        'Torch'
-        'Wargong'
-        'Watch, Pocket'
-        'Waterskin'
-        'Whetstone'
-        'Whip'
-        'Whistle'
-      )
-      OnExit = txtToolExit
-      OnKeyUp = txtToolKeyUp
-      OnSelect = txtToolSelect
-      ParentFont = False
-      TabOrder = 0
-    end
-    object txtClothing: TComboBox
-      Left = 269
-      Height = 30
-      Top = 30
-      Width = 261
-      AutoSize = False
-      ItemHeight = 22
-      ItemIndex = 0
-      Items.Strings = (
-        ''
-        'Bandana'
-        'Belt'
-        'Bonnet'
-        'Boots'
-        'Bowtie'
-        'Britches'
-        'Cap'
-        'Cape'
-        'Cloak, Fur'
-        'Cloak, Wool'
-        'Coat, Fur'
-        'Coat, Wool'
-        'Dress'
-        'Girdle'
-        'Gloves'
-        'Gown'
-        'Hat'
-        'Hood'
-        'Hose'
-        'Jacket'
-        'Kilt'
-        'Leggings'
-        'Long Coat'
-        'Mantle'
-        'Neckerchief'
-        'Necktie'
-        'Poncho'
-        'Robes'
-        'Sandles'
-        'Scarf'
-        'Shaw'
-        'Skirt'
-        'Smock'
-        'Surcoat'
-        'Sweater'
-        'Trousers'
-        'Tunic'
-        'Vest'
-        'Vestments'
-        'Waistcoat'
-      )
-      OnExit = txtToolExit
-      OnKeyUp = txtToolKeyUp
-      OnSelect = txtToolSelect
-      TabOrder = 1
-    end
-    object txtKit: TComboBox
-      Left = 538
-      Height = 30
-      Top = 30
-      Width = 260
-      AutoSize = False
-      ItemHeight = 22
-      ItemIndex = 0
-      Items.Strings = (
-        ''
-        'Brewer'
-        'Burglar'
-        'Calligrapher'
-        'Carpenter'
-        'Cartographer'
-        'Climber'
-        'Cobbler'
-        'Cooking'
-        'Fishing'
-        'Forgery'
-        'Glassblower'
-        'Healer'
-        'Herbalism'
-        'Jeweler'
-        'Leather'
-        'Mason'
-        'Mess'
-        'Navigator'
-        'Painter'
-        'Potter'
-        'Smith'
-        'Snowshoes'
-        'Soap'
-        'Thieves'
-        'Tinger'
-        'Tingerbox'
-        'Weaver'
-        'Woodcarver'
-      )
-      OnExit = txtToolExit
-      OnKeyUp = txtToolKeyUp
-      OnSelect = txtToolSelect
-      TabOrder = 2
-    end
-    object Label8: TLabel
-      Left = 0
-      Height = 22
-      Top = 68
-      Width = 261
-      AutoSize = False
-      Caption = 'Container'
-      ParentColor = False
-    end
-    object Label9: TLabel
-      Left = 269
-      Height = 22
-      Top = 68
-      Width = 261
-      AutoSize = False
-      Caption = 'Weapon'
-      ParentColor = False
-    end
-    object Label11: TLabel
-      Left = 538
-      Height = 22
-      Top = 68
-      Width = 260
-      AutoSize = False
-      Caption = 'Vehicle'
-      ParentColor = False
-    end
-    object txtContainer: TComboBox
-      Left = 0
-      Height = 30
-      Top = 98
-      Width = 261
-      AutoSize = False
-      ItemHeight = 22
-      ItemIndex = 0
-      Items.Strings = (
-        ''
-        'Backpack'
-        'Bag'
-        'Barrel'
-        'Basket'
-        'Bow, Jewelry'
-        'Box, Strong'
-        'Box, Wood'
-        'Bucket'
-        'Chest'
-        'Coffin'
-        'Crate'
-        'Pouch'
-        'Purse'
-        'Sack'
-        'Saddlebags'
-      )
-      OnExit = txtToolExit
-      OnKeyUp = txtToolKeyUp
-      OnSelect = txtToolSelect
-      TabOrder = 3
-    end
-    object txtWeapon: TComboBox
-      Left = 269
-      Height = 30
-      Top = 98
-      Width = 261
-      AutoSize = False
-      ItemHeight = 22
-      Items.Strings = (
-        ''
-        'Axe'
-        'Balista'
-        'Battleaxe'
-        'Blowgun'
-        'Boomerang'
-        'Caltrops'
-        'Catapult'
-        'Club'
-        'Flail'
-        'Glaive'
-        'Greataxe'
-        'Greatclub'
-        'Greatsword'
-        'Halberd'
-        'Hammer'
-        'Javelin'
-        'Knife'
-        'Lance'
-        'Light Hammer'
-        'Longbow'
-        'Longsword'
-        'Mace'
-        'Maul'
-        'Morningstar'
-        'Needles'
-        'Net'
-        'Pike'
-        'Quarterstaff'
-        'Ram'
-        'Rapier'
-        'Scimitar'
-        'Shortbow'
-        'Shortsword'
-        'Sickle'
-        'Sling'
-        'Spear'
-        'Sword'
-        'Trident'
-        'War Pick'
-        'Whip'
-      )
-      OnExit = txtToolExit
-      OnKeyUp = txtToolKeyUp
-      OnSelect = txtToolSelect
-      TabOrder = 4
-    end
-    object txtVehicle: TComboBox
-      Left = 538
-      Height = 30
-      Top = 98
-      Width = 260
-      AutoSize = False
-      ItemHeight = 22
-      ItemIndex = 0
-      Items.Strings = (
-        ''
-        'Canoe'
-        'Carriage'
-        'Cart'
-        'Chariot'
-        'Galley'
-        'Rowboat'
-        'Sailboat'
-        'Sailing Ship'
-        'Sled'
-        'Wagon, Covered'
-        'Wagon, Open'
-        'Wagon, Vardo'
-      )
-      OnExit = txtToolExit
-      OnKeyUp = txtToolKeyUp
-      OnSelect = txtToolSelect
-      TabOrder = 5
-    end
-    object Label12: TLabel
-      Left = 0
-      Height = 22
-      Top = 136
-      Width = 261
-      AutoSize = False
-      Caption = 'Jewelry'
-      ParentColor = False
-    end
-    object Label16: TLabel
-      Left = 269
-      Height = 22
-      Top = 136
-      Width = 261
-      AutoSize = False
-      Caption = 'Remains'
-      ParentColor = False
-    end
-    object Label6: TLabel
-      Left = 538
-      Height = 22
-      Top = 136
-      Width = 260
-      AutoSize = False
-      Caption = 'Instrument'
-      ParentColor = False
-    end
-    object txtJewelry: TComboBox
-      Left = 0
-      Height = 30
-      Top = 166
-      Width = 261
-      AutoSize = False
-      ItemHeight = 22
-      ItemIndex = 0
-      Items.Strings = (
-        ''
-        'Amulet'
-        'Anklet'
-        'Armlet'
-        'Bangle, Glass'
-        'Bangle, Metal'
-        'Bangle, Wood'
-        'Beads, Prayer'
-        'Beads, Rosary'
-        'Bracelet'
-        'Bracelet, Charm'
-        'Bracelets'
-        'Brooche'
-        'Cameo'
-        'Chain, Belly'
-        'Chatelaine'
-        'Choker'
-        'Crown'
-        'Cuff Links'
-        'Dog Tags'
-        'Earring'
-        'Hair Pin'
-        'Necklace, Beads'
-        'Necklace, Chain'
-        'Necklace, Locket'
-        'Necklace, Medallion'
-        'Necklace, Pearls'
-        'Pendant'
-        'Pin'
-        'Ring, Finger'
-        'Ring, Puzzle'
-        'Ring, Signet'
-        'Ring, Thumb'
-        'Ring, Toe'
-        'Rope, Prayer'
-        'Tiara'
-        'Tie, Bolo'
-        'Torc (Torq)'
-      )
-      OnExit = txtToolExit
-      OnKeyUp = txtToolKeyUp
-      OnSelect = txtToolSelect
-      TabOrder = 6
-    end
-    object txtRemains: TComboBox
-      Left = 269
-      Height = 30
-      Top = 166
-      Width = 261
-      AutoSize = False
-      ItemHeight = 22
-      ItemIndex = 0
-      Items.Strings = (
-        ''
-        'Arm'
-        'Blood'
-        'Brain'
-        'Entrails'
-        'Head'
-        'Heart'
-        'Leg'
-        'Liver'
-        'Skeleton'
-        'Skull'
-        'Teeth'
-      )
-      OnExit = txtToolExit
-      OnKeyUp = txtToolKeyUp
-      OnSelect = txtToolSelect
-      TabOrder = 7
-    end
-    object txtInstrument: TComboBox
-      Left = 538
-      Height = 30
-      Top = 166
-      Width = 260
-      AutoSize = False
-      ItemHeight = 22
-      ItemIndex = 0
-      Items.Strings = (
-        ''
-        'Bagpipes'
-        'Bell'
-        'Citole'
-        'Drum'
-        'Drum, Hand'
-        'Drum, War'
-        'Dulcimer'
-        'Fiddle'
-        'Flute'
-        'Gittern'
-        'Guitar'
-        'Harp'
-        'Horn'
-        'Horn'
-        'Hurdy-Gurdy'
-        'Lute'
-        'Lyre'
-        'Mandolin'
-        'Recorder'
-        'Shawm'
-        'Tambourine'
-        'Trumpet'
-        'Viol'
-      )
-      OnExit = txtToolExit
-      OnKeyUp = txtToolKeyUp
-      OnSelect = txtToolSelect
-      TabOrder = 8
-    end
-    object Label10: TLabel
-      Left = 0
-      Height = 22
-      Top = 204
-      Width = 261
-      AutoSize = False
-      Caption = 'Armour'
-      ParentColor = False
-    end
-    object Label13: TLabel
-      Left = 269
-      Height = 22
-      Top = 204
-      Width = 261
-      AutoSize = False
-      Caption = 'Trap'
-      ParentColor = False
-    end
-    object Label15: TLabel
-      Left = 538
-      Height = 22
-      Top = 204
-      Width = 260
-      AutoSize = False
-      ParentColor = False
-    end
-    object txtArmour: TComboBox
-      Left = 0
-      Height = 30
-      Top = 234
-      Width = 261
-      AutoSize = False
-      ItemHeight = 22
-      ItemIndex = 0
-      Items.Strings = (
-        ''
-        'Breastplate'
-        'Chain Mail'
-        'Chain Shirt'
-        'Half Plate'
-        'Helm'
-        'Hide'
-        'Leather'
-        'Padded'
-        'Plate'
-        'Ring Mail'
-        'Scale Mail'
-        'Shield'
-        'Splint'
-        'Studded'
-      )
-      OnExit = txtToolExit
-      OnKeyUp = txtToolKeyUp
-      OnSelect = txtToolSelect
-      TabOrder = 9
-    end
-    object txtTrap: TComboBox
-      Left = 269
-      Height = 30
-      Top = 234
-      Width = 261
-      AutoSize = False
-      ItemHeight = 22
-      ItemIndex = 0
-      Items.Strings = (
-        ''
-        'Acid'
-        'Arrows'
-        'Automiton'
-        'Autonomous Sentry'
-        'Blades'
-        'Compactor'
-        'Darkness'
-        'Darts'
-        'Doppelganger'
-        'Fire Blasts'
-        'Fog'
-        'Frost'
-        'Illusion'
-        'Invisible Bridge'
-        'Laval'
-        'Lightening'
-        'Locked Doors'
-        'Magnets'
-        'Neddle'
-        'Pit'
-        'Pit, Attack'
-        'Poison'
-        'Pressure Plate'
-        'Rust'
-        'Sand'
-        'Slide'
-        'Snare'
-        'Spikes'
-        'Teleport'
-        'Time Warp'
-        'Toxic Gas'
-        'Water'
-        'Tumble'
-      )
-      OnExit = txtToolExit
-      OnKeyUp = txtToolKeyUp
-      OnSelect = txtToolSelect
-      TabOrder = 10
-    end
-    object btnRollAll: TButton
-      Left = 538
-      Height = 32
-      Top = 234
-      Width = 260
-      Caption = 'Roll All'
-      OnClick = btnRollAllClick
-      TabOrder = 11
-    end
-  end
-  object Panel2: TPanel
-    Left = 16
-    Height = 63
-    Top = 613
-    Width = 798
-    Align = alBottom
-    BevelOuter = bvNone
-    TabOrder = 4
-  end
-  object pnlTop: TPanel
-    Left = 16
-    Height = 60
-    Top = 72
-    Width = 798
-    Align = alTop
-    AutoSize = True
-    BevelOuter = bvNone
-    ChildSizing.HorizontalSpacing = 8
-    ChildSizing.VerticalSpacing = 8
-    ChildSizing.EnlargeHorizontal = crsScaleChilds
-    ChildSizing.Layout = cclLeftToRightThenTopToBottom
-    ChildSizing.ControlsPerLine = 2
-    ClientHeight = 60
+    ClientHeight = 334
     ClientWidth = 798
     TabOrder = 1
     object Label3: TLabel
       Left = 0
       Height = 22
       Top = 0
-      Width = 351
+      Width = 261
       Caption = 'Title'
       Layout = tlCenter
       ParentColor = False
     end
     object Label14: TLabel
-      Left = 359
+      Left = 269
       Height = 22
       Top = 0
-      Width = 439
+      Width = 261
       Caption = 'Class'
+      Layout = tlCenter
+      ParentColor = False
+    end
+    object Label17: TLabel
+      Left = 538
+      Height = 22
+      Top = 0
+      Width = 260
       Layout = tlCenter
       ParentColor = False
     end
@@ -703,16 +64,16 @@ object frmChamber: TfrmChamber
       Left = 0
       Height = 30
       Top = 30
-      Width = 351
+      Width = 261
       OnExit = txtTitleExit
       OnKeyUp = txtTitleKeyUp
-      TabOrder = 0
+      TabOrder = 12
     end
     object txtClass: TComboBox
-      Left = 359
+      Left = 269
       Height = 30
       Top = 30
-      Width = 439
+      Width = 261
       AutoSize = False
       ItemHeight = 22
       ItemIndex = 0
@@ -786,9 +147,292 @@ object frmChamber: TfrmChamber
       OnExit = txtToolExit
       OnKeyUp = txtToolKeyUp
       OnSelect = txtToolSelect
-      TabOrder = 1
+      Sorted = True
+      TabOrder = 13
       Text = 'Alter'
     end
+    object Label18: TLabel
+      Left = 538
+      Height = 30
+      Top = 30
+      Width = 260
+      Layout = tlCenter
+      ParentColor = False
+    end
+    object Label4: TLabel
+      Left = 0
+      Height = 22
+      Top = 68
+      Width = 261
+      AutoSize = False
+      Caption = 'Tool'
+      ParentColor = False
+    end
+    object Label5: TLabel
+      Left = 269
+      Height = 22
+      Top = 68
+      Width = 261
+      AutoSize = False
+      Caption = 'Clothing'
+      ParentColor = False
+    end
+    object Label7: TLabel
+      Left = 538
+      Height = 22
+      Top = 68
+      Width = 260
+      AutoSize = False
+      Caption = 'Kit'
+      ParentColor = False
+    end
+    object txtTool: TComboBox
+      Left = 0
+      Height = 30
+      Top = 98
+      Width = 261
+      AutoSize = False
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -20
+      Font.Name = 'Courier New'
+      Font.Pitch = fpFixed
+      Font.Quality = fqDraft
+      ItemHeight = 22
+      OnExit = txtToolExit
+      OnKeyUp = txtToolKeyUp
+      OnSelect = txtToolSelect
+      ParentFont = False
+      Sorted = True
+      TabOrder = 0
+    end
+    object txtClothing: TComboBox
+      Left = 269
+      Height = 30
+      Top = 98
+      Width = 261
+      AutoSize = False
+      ItemHeight = 22
+      OnExit = txtToolExit
+      OnKeyUp = txtToolKeyUp
+      OnSelect = txtToolSelect
+      Sorted = True
+      TabOrder = 1
+    end
+    object txtKit: TComboBox
+      Left = 538
+      Height = 30
+      Top = 98
+      Width = 260
+      AutoSize = False
+      ItemHeight = 22
+      OnExit = txtToolExit
+      OnKeyUp = txtToolKeyUp
+      OnSelect = txtToolSelect
+      Sorted = True
+      TabOrder = 2
+    end
+    object Label8: TLabel
+      Left = 0
+      Height = 22
+      Top = 136
+      Width = 261
+      AutoSize = False
+      Caption = 'Container'
+      ParentColor = False
+    end
+    object Label9: TLabel
+      Left = 269
+      Height = 22
+      Top = 136
+      Width = 261
+      AutoSize = False
+      Caption = 'Weapon'
+      ParentColor = False
+    end
+    object Label11: TLabel
+      Left = 538
+      Height = 22
+      Top = 136
+      Width = 260
+      AutoSize = False
+      Caption = 'Vehicle'
+      ParentColor = False
+    end
+    object txtContainer: TComboBox
+      Left = 0
+      Height = 30
+      Top = 166
+      Width = 261
+      AutoSize = False
+      ItemHeight = 22
+      OnExit = txtToolExit
+      OnKeyUp = txtToolKeyUp
+      OnSelect = txtToolSelect
+      Sorted = True
+      TabOrder = 3
+    end
+    object txtWeapon: TComboBox
+      Left = 269
+      Height = 30
+      Top = 166
+      Width = 261
+      AutoSize = False
+      ItemHeight = 22
+      OnExit = txtToolExit
+      OnKeyUp = txtToolKeyUp
+      OnSelect = txtToolSelect
+      Sorted = True
+      TabOrder = 4
+    end
+    object txtVehicle: TComboBox
+      Left = 538
+      Height = 30
+      Top = 166
+      Width = 260
+      AutoSize = False
+      ItemHeight = 22
+      OnExit = txtToolExit
+      OnKeyUp = txtToolKeyUp
+      OnSelect = txtToolSelect
+      Sorted = True
+      TabOrder = 5
+    end
+    object Label12: TLabel
+      Left = 0
+      Height = 22
+      Top = 204
+      Width = 261
+      AutoSize = False
+      Caption = 'Jewelry'
+      ParentColor = False
+    end
+    object Label16: TLabel
+      Left = 269
+      Height = 22
+      Top = 204
+      Width = 261
+      AutoSize = False
+      Caption = 'Remains'
+      ParentColor = False
+    end
+    object Label6: TLabel
+      Left = 538
+      Height = 22
+      Top = 204
+      Width = 260
+      AutoSize = False
+      Caption = 'Instrument'
+      ParentColor = False
+    end
+    object txtJewelry: TComboBox
+      Left = 0
+      Height = 30
+      Top = 234
+      Width = 261
+      AutoSize = False
+      ItemHeight = 22
+      OnExit = txtToolExit
+      OnKeyUp = txtToolKeyUp
+      OnSelect = txtToolSelect
+      Sorted = True
+      TabOrder = 6
+    end
+    object txtRemains: TComboBox
+      Left = 269
+      Height = 30
+      Top = 234
+      Width = 261
+      AutoSize = False
+      ItemHeight = 22
+      OnExit = txtToolExit
+      OnKeyUp = txtToolKeyUp
+      OnSelect = txtToolSelect
+      Sorted = True
+      TabOrder = 7
+    end
+    object txtInstrument: TComboBox
+      Left = 538
+      Height = 30
+      Top = 234
+      Width = 260
+      AutoSize = False
+      ItemHeight = 22
+      OnExit = txtToolExit
+      OnKeyUp = txtToolKeyUp
+      OnSelect = txtToolSelect
+      Sorted = True
+      TabOrder = 8
+    end
+    object Label10: TLabel
+      Left = 0
+      Height = 22
+      Top = 272
+      Width = 261
+      AutoSize = False
+      Caption = 'Armour'
+      ParentColor = False
+    end
+    object Label13: TLabel
+      Left = 269
+      Height = 22
+      Top = 272
+      Width = 261
+      AutoSize = False
+      Caption = 'Trap'
+      ParentColor = False
+    end
+    object Label15: TLabel
+      Left = 538
+      Height = 22
+      Top = 272
+      Width = 260
+      AutoSize = False
+      ParentColor = False
+    end
+    object txtArmour: TComboBox
+      Left = 0
+      Height = 30
+      Top = 302
+      Width = 261
+      AutoSize = False
+      ItemHeight = 22
+      OnExit = txtToolExit
+      OnKeyUp = txtToolKeyUp
+      OnSelect = txtToolSelect
+      Sorted = True
+      TabOrder = 9
+    end
+    object txtTrap: TComboBox
+      Left = 269
+      Height = 30
+      Top = 302
+      Width = 261
+      AutoSize = False
+      ItemHeight = 22
+      OnExit = txtToolExit
+      OnKeyUp = txtToolKeyUp
+      OnSelect = txtToolSelect
+      Sorted = True
+      TabOrder = 10
+    end
+    object btnRollAll: TButton
+      Left = 538
+      Height = 32
+      Top = 302
+      Width = 260
+      Caption = 'Roll All'
+      OnClick = btnRollAllClick
+      TabOrder = 11
+    end
+  end
+  object Panel2: TPanel
+    Left = 16
+    Height = 63
+    Top = 613
+    Width = 798
+    Align = alBottom
+    BevelOuter = bvNone
+    TabOrder = 3
   end
   object pnlHeader: TPanel
     Left = 16
@@ -913,6 +557,6 @@ object frmChamber: TfrmChamber
     Align = alClient
     OnExit = txtNotesExit
     ScrollBars = ssVertical
-    TabOrder = 3
+    TabOrder = 2
   end
 end

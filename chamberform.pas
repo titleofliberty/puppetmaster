@@ -23,6 +23,8 @@ type
     Label14: TLabel;
     Label15: TLabel;
     Label16: TLabel;
+    Label17: TLabel;
+    Label18: TLabel;
     Label3: TLabel;
     Label4: TLabel;
     Label5: TLabel;
@@ -30,13 +32,12 @@ type
     Label7: TLabel;
     Label8: TLabel;
     Label9: TLabel;
+    txtClass: TComboBox;
     txtNotes: TMemo;
     Panel1: TPanel;
     Panel2: TPanel;
     pnlHeader: TPanel;
-    pnlTop: TPanel;
     txtArmour: TComboBox;
-    txtClass: TComboBox;
     txtClothing: TComboBox;
     txtContainer: TComboBox;
     txtInstrument: TComboBox;

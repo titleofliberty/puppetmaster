@@ -1,7 +1,7 @@
 object frmMain: TfrmMain
-  Left = 384
+  Left = 370
   Height = 680
-  Top = 203
+  Top = 184
   Width = 1024
   Caption = 'Puppetmaster'
   ChildSizing.LeftRightSpacing = 8
@@ -551,6 +551,10 @@ object frmMain: TfrmMain
       end
       object Separator3: TMenuItem
         Caption = '-'
+      end
+      object mnuMainInsertHumanoid: TMenuItem
+        Caption = '&Humanoid'
+        ShortCut = 49224
       end
       object mnuMainInsertMonster: TMenuItem
         Caption = '&Monster'
