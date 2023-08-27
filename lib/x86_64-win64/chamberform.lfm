@@ -1,7 +1,7 @@
 object frmChamber: TfrmChamber
-  Left = 380
+  Left = 537
   Height = 692
-  Top = 171
+  Top = 225
   Width = 830
   Align = alClient
   BorderStyle = bsNone

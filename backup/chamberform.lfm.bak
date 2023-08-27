@@ -1,7 +1,7 @@
 object frmChamber: TfrmChamber
-  Left = 380
+  Left = 358
   Height = 692
-  Top = 171
+  Top = 262
   Width = 830
   Align = alClient
   BorderStyle = bsNone
@@ -396,24 +396,6 @@ object frmChamber: TfrmChamber
       Width = 261
       AutoSize = False
       ItemHeight = 22
-      ItemIndex = 0
-      Items.Strings = (
-        ''
-        'Breastplate'
-        'Chain Mail'
-        'Chain Shirt'
-        'Half Plate'
-        'Helm'
-        'Hide'
-        'Leather'
-        'Padded'
-        'Plate'
-        'Ring Mail'
-        'Scale Mail'
-        'Shield'
-        'Splint'
-        'Studded'
-      )
       OnExit = txtToolExit
       OnKeyUp = txtToolKeyUp
       OnSelect = txtToolSelect
@@ -427,43 +409,6 @@ object frmChamber: TfrmChamber
       Width = 261
       AutoSize = False
       ItemHeight = 22
-      ItemIndex = 0
-      Items.Strings = (
-        ''
-        'Acid'
-        'Arrows'
-        'Automiton'
-        'Autonomous Sentry'
-        'Blades'
-        'Compactor'
-        'Darkness'
-        'Darts'
-        'Doppelganger'
-        'Fire Blasts'
-        'Fog'
-        'Frost'
-        'Illusion'
-        'Invisible Bridge'
-        'Laval'
-        'Lightening'
-        'Locked Doors'
-        'Magnets'
-        'Neddle'
-        'Pit'
-        'Pit, Attack'
-        'Poison'
-        'Pressure Plate'
-        'Rust'
-        'Sand'
-        'Slide'
-        'Snare'
-        'Spikes'
-        'Teleport'
-        'Time Warp'
-        'Toxic Gas'
-        'Tumble'
-        'Water'
-      )
       OnExit = txtToolExit
       OnKeyUp = txtToolKeyUp
       OnSelect = txtToolSelect

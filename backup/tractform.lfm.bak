@@ -1,7 +1,7 @@
 object frmTract: TfrmTract
-  Left = 447
+  Left = 364
   Height = 516
-  Top = 274
+  Top = 285
   Width = 853
   Align = alClient
   BorderStyle = bsNone
@@ -38,15 +38,15 @@ object frmTract: TfrmTract
       Left = 0
       Height = 22
       Top = 0
-      Width = 397
+      Width = 407
       Caption = 'Title'
       ParentColor = False
     end
     object Label8: TLabel
-      Left = 405
+      Left = 415
       Height = 22
       Top = 0
-      Width = 416
+      Width = 406
       Caption = 'Class'
       ParentColor = False
     end
@@ -54,16 +54,16 @@ object frmTract: TfrmTract
       Left = 0
       Height = 30
       Top = 30
-      Width = 397
+      Width = 407
       OnExit = txtTitleExit
       OnKeyUp = txtTitleKeyUp
       TabOrder = 5
     end
     object txtClass: TComboBox
-      Left = 405
+      Left = 415
       Height = 30
       Top = 30
-      Width = 416
+      Width = 406
       ItemHeight = 22
       ItemIndex = 12
       Items.Strings = (
@@ -125,141 +125,58 @@ object frmTract: TfrmTract
       Left = 0
       Height = 22
       Top = 68
-      Width = 397
+      Width = 407
       AutoSize = False
       Caption = 'Natural'
       ParentColor = False
     end
     object Label5: TLabel
-      Left = 405
+      Left = 415
       Height = 22
       Top = 68
-      Width = 416
+      Width = 406
       AutoSize = False
-      Caption = 'Manufactured'
+      Caption = 'Unnatural'
       ParentColor = False
     end
     object txtNatural: TComboBox
       Left = 0
       Height = 30
       Top = 98
-      Width = 397
+      Width = 407
       AutoSize = False
       ItemHeight = 22
-      ItemIndex = 0
-      Items.Strings = (
-        'Arch (Stone)'
-        'Butte'
-        'Cave'
-        'Hill'
-        'Lake'
-        'Mushrooms'
-        'Pond'
-        'River'
-        'Rock'
-        'Rock (Balance)'
-        'Rock (Bear)'
-        'Rock (Buffalo)'
-        'Rock (Eagle)'
-        'Rock (Pipes)'
-        'Rock (Prism)'
-        'Rock (Skull)'
-        'Rock (Wave)'
-        'Rock (Wolf)'
-        'Stream'
-        'Stump'
-        'Tree (Enormous)'
-        'Tree (Lightening)'
-        'Tree (Petrified)'
-        'Waterfall (Large)'
-        'Waterfall (Small)'
-      )
       OnExit = txtNaturalExit
       OnKeyUp = txtNaturalKeyUp
       OnSelect = txtNaturalSelect
       TabOrder = 0
-      Text = 'Arch (Stone)'
     end
-    object txtManufactured: TComboBox
-      Left = 405
+    object txtUnnatural: TComboBox
+      Left = 415
       Height = 30
       Top = 98
-      Width = 416
+      Width = 406
       AutoSize = False
       ItemHeight = 22
-      ItemIndex = 0
-      Items.Strings = (
-        'Arch'
-        'Axe'
-        'Bag'
-        'Barral'
-        'Bottle'
-        'Bowl'
-        'Box'
-        'Breastplate'
-        'Bridge'
-        'Cabin'
-        'Cage'
-        'Campsite'
-        'Cannon'
-        'Cemetary'
-        'Chimney'
-        'Clothing'
-        'Cottage'
-        'Crate'
-        'Cross'
-        'Fence'
-        'Firepit'
-        'Graveyard'
-        'Helm'
-        'Jug'
-        'Key'
-        'Lamp'
-        'Lantern'
-        'Mine'
-        'Mound'
-        'Obelisk'
-        'Pitcher'
-        'Polearm'
-        'Post'
-        'Pylon'
-        'Pyramid'
-        'Ring'
-        'Road'
-        'Shield'
-        'Shrine'
-        'Sign'
-        'Steps'
-        'Sword'
-        'Tablet'
-        'Totem'
-        'Tower'
-        'Treehouse'
-        'Wagon'
-        'Wagon Wheel'
-        'Wall'
-        'Ziggurat'
-      )
       OnExit = txtNaturalExit
       OnKeyUp = txtNaturalKeyUp
       OnSelect = txtNaturalSelect
       TabOrder = 1
-      Text = 'Arch'
     end
     object Label6: TLabel
       Left = 0
       Height = 22
       Top = 136
-      Width = 397
+      Width = 407
       AutoSize = False
       Caption = 'Flora'
       ParentColor = False
     end
     object Label7: TLabel
-      Left = 405
+      Left = 415
       Height = 22
       Top = 136
-      Width = 416
+      Width = 406
       AutoSize = False
       Caption = 'Fauna'
       ParentColor = False
@@ -268,94 +185,38 @@ object frmTract: TfrmTract
       Left = 0
       Height = 30
       Top = 166
-      Width = 397
+      Width = 407
       AutoSize = False
       ItemHeight = 22
-      ItemIndex = 0
-      Items.Strings = (
-        'Ashe'
-        'Cactus'
-        'Crop'
-        'Elms'
-        'Ferns'
-        'Grass'
-        'Oaks'
-        'Pines'
-        'Vines'
-        'Wildflowers'
-      )
       OnExit = txtNaturalExit
       OnKeyUp = txtNaturalKeyUp
       OnSelect = txtNaturalSelect
       TabOrder = 2
-      Text = 'Ashe'
     end
     object txtFauna: TComboBox
-      Left = 405
+      Left = 415
       Height = 30
       Top = 166
-      Width = 416
+      Width = 406
       AutoSize = False
       ItemHeight = 22
-      ItemIndex = 0
-      Items.Strings = (
-        'Bat'
-        'Bear'
-        'Beaver'
-        'Bees'
-        'Bison'
-        'Butterfly'
-        'Cat'
-        'Chipmunk'
-        'Crab'
-        'Deer'
-        'Dog'
-        'Dragonfly'
-        'Elf'
-        'Firefly'
-        'Fox'
-        'Frog'
-        'Gopher'
-        'Hornets'
-        'Hummingbird'
-        'Livestock'
-        'Lizard'
-        'Moose'
-        'Mouse'
-        'Opossum'
-        'Otter'
-        'Porcupine'
-        'Rabit'
-        'Raccon'
-        'Rat'
-        'Salamander'
-        'Seal'
-        'Skunk'
-        'Snake'
-        'Songbird'
-        'Squirrel'
-        'Viper'
-        'Wasps'
-        'Wolf'
-      )
       OnExit = txtNaturalExit
       OnKeyUp = txtNaturalKeyUp
       OnSelect = txtNaturalSelect
       TabOrder = 3
-      Text = 'Bat'
     end
     object Label3: TLabel
       Left = 0
       Height = 32
       Top = 204
-      Width = 397
+      Width = 407
       ParentColor = False
     end
     object btnRollAll: TButton
-      Left = 405
+      Left = 415
       Height = 32
       Top = 204
-      Width = 416
+      Width = 406
       Caption = 'Roll All'
       OnClick = btnRollAllClick
       TabOrder = 4

@@ -587,26 +587,56 @@ object frmMain: TfrmMain
     end
     object mnuMainRandom: TMenuItem
       Caption = '&Random'
+      object mnuMainRandomArmor: TMenuItem
+        Caption = '&Armor'
+        OnClick = mnuMainRandomArmorClick
+      end
+      object mnuMainRandomClothing: TMenuItem
+        Caption = '&Clothing'
+        OnClick = mnuMainRandomClothingClick
+      end
+      object mnuMainRandomContainer: TMenuItem
+        Caption = 'Co&ntainer'
+        OnClick = mnuMainRandomContainerClick
+      end
       object mnuMainRandomGem: TMenuItem
         Caption = '&Gem'
+        OnClick = mnuMainRandomGemClick
+      end
+      object mnuMainRandomInstrument: TMenuItem
+        Caption = '&Instrument'
+        OnClick = mnuMainRandomInstrumentClick
+      end
+      object mnuMainRandomJewelry: TMenuItem
+        Caption = '&Jewelry'
+        OnClick = mnuMainRandomJewelryClick
       end
       object mnuMainRandomKit: TMenuItem
         Caption = '&Kit'
-      end
-      object mnuMainRandomInstrument: TMenuItem
-        Caption = '&Musical Instrument'
+        OnClick = mnuMainRandomKitClick
       end
       object mnuMainRandomPotion: TMenuItem
         Caption = '&Potion'
       end
+      object mnuMainRandomRemains: TMenuItem
+        Caption = '&Remains'
+        OnClick = mnuMainRandomRemainsClick
+      end
       object mnuMainRandomTool: TMenuItem
         Caption = 'T&ool'
+        OnClick = mnuMainRandomToolClick
       end
       object mnuMainRandomTrap: TMenuItem
         Caption = '&Trap'
+        OnClick = mnuMainRandomTrapClick
+      end
+      object mnuMainRandomVehicle: TMenuItem
+        Caption = '&Vehicle'
+        OnClick = mnuMainRandomVehicleClick
       end
       object mnuMainRandomWeapon: TMenuItem
         Caption = '&Weapon'
+        OnClick = mnuMainRandomWeaponClick
       end
     end
     object mnuMainTools: TMenuItem

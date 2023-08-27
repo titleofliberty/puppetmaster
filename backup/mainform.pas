@@ -22,6 +22,12 @@ type
     btnOutputClear: TButton;
     btnEightBall: TButton;
     btnRumor: TButton;
+    mnuMainRandomRemains: TMenuItem;
+    mnuMainRandomVehicle: TMenuItem;
+    mnuMainRandomJewelry: TMenuItem;
+    mnuMainRandomContainer: TMenuItem;
+    mnuMainRandomClothing: TMenuItem;
+    mnuMainRandomArmor: TMenuItem;
     mnuMainInsertHumanoid: TMenuItem;
     mnuMainInsertFaction: TMenuItem;
     mnuMainToolsEvent: TMenuItem;
@@ -114,6 +120,18 @@ type
     procedure mnuMainInsertTractClick(Sender: TObject);
     procedure mnuMainInsertVenueClick(Sender: TObject);
     procedure mnuMainInsertWildernessClick(Sender: TObject);
+    procedure mnuMainRandomArmorClick(Sender: TObject);
+    procedure mnuMainRandomClothingClick(Sender: TObject);
+    procedure mnuMainRandomContainerClick(Sender: TObject);
+    procedure mnuMainRandomGemClick(Sender: TObject);
+    procedure mnuMainRandomInstrumentClick(Sender: TObject);
+    procedure mnuMainRandomJewelryClick(Sender: TObject);
+    procedure mnuMainRandomKitClick(Sender: TObject);
+    procedure mnuMainRandomRemainsClick(Sender: TObject);
+    procedure mnuMainRandomToolClick(Sender: TObject);
+    procedure mnuMainRandomTrapClick(Sender: TObject);
+    procedure mnuMainRandomVehicleClick(Sender: TObject);
+    procedure mnuMainRandomWeaponClick(Sender: TObject);
     procedure mnuMainToolsEightClick(Sender: TObject);
     procedure mnuMainToolsMoodClick(Sender: TObject);
     procedure mnuMainViewCollapseClick(Sender: TObject);
@@ -129,8 +147,10 @@ type
   private
     FFileName: string;
     procedure CampaignNew;
+    procedure RandomResource(ACaption: string; ANode: TTreeNode);
     procedure PopulateDiceTray;
     procedure PopulateCampaign;
+    procedure PopulateResourceToCbo(ACbo: TComboBox; AResource: TTreeNode);
     procedure ToggleCampaign(AEnabled: boolean = false);
     procedure LoadResourceNodes(AParent: TTreeNode; AArray: TStringArray); overload;
     procedure LoadResourceNodes(AParent: TTreeNode; ACategory: string; AArray: TPM2DStringArray); overload;
@@ -142,29 +162,34 @@ type
 
 var
   frmMain: TfrmMain;
-  nodeGems : TTreeNode;
-  nodeKits : TTreeNode;
-  nodeTools : TTreeNode;
-  nodeTraps : TTreeNode;
+
+  nodeArmors : TTreeNode;
   nodeBeasts : TTreeNode;
-  nodeWeapons : TTreeNode;
-  nodePotions : TTreeNode;
   nodeCampaign : TTreeNode;
-  nodeDungeons : TTreeNode;
+  nodeClothing : TTreeNode;
+  nodeConsumables : TTreeNode;
+  nodeContainers : TTreeNode;
   nodeDiceTray : TTreeNode;
+  nodeDungeons : TTreeNode;
+  nodeGems : TTreeNode;
+  nodeHumanoids : TTreeNode;
+  nodeInstruments: TTreeNode;
+  nodeJewelry : TTreeNode;
+  nodeKits : TTreeNode;
   nodeMonsters : TTreeNode;
+  nodeRemains : TTreeNode;
   nodeResources : TTreeNode;
   nodeSettlements : TTreeNode;
-  nodeWildernesses : TTreeNode;
-  nodeMusicalInstruments : TTreeNode;
-  nodeClothing : TTreeNode;
-  nodeContainers : TTreeNode;
+  nodeSpells: TTreeNode;
+  nodeTools : TTreeNode;
+  nodeTraps : TTreeNode;
   nodeVehicle : TTreeNode;
-  nodeJewelry : TTreeNode;
-  nodeRemains : TTreeNode;
-  nodeInstruments: TTreeNode;
-  nodeArmors : TTreeNode;
-  nodeHumanoids : TTreeNode;
+  nodeWeapons : TTreeNode;
+  nodeWildernesses : TTreeNode;
+  nodeNatural : TTreeNode;
+  nodeUnnatural : TTreeNode;
+  nodeFlora : TTreeNode;
+  nodeFauna : TTreeNode;
 
 
 implementation
@@ -461,6 +486,66 @@ begin
   node.Selected := true;
 end;
 
+procedure TfrmMain.mnuMainRandomArmorClick(Sender: TObject);
+begin
+  RandomResource('Armor', nodeArmors);
+end;
+
+procedure TfrmMain.mnuMainRandomClothingClick(Sender: TObject);
+begin
+  RandomResource('Clothing', nodeClothing);
+end;
+
+procedure TfrmMain.mnuMainRandomContainerClick(Sender: TObject);
+begin
+  RandomResource('Container', nodeContainers);
+end;
+
+procedure TfrmMain.mnuMainRandomGemClick(Sender: TObject);
+begin
+  RandomResource('Gem', nodeGems);
+end;
+
+procedure TfrmMain.mnuMainRandomInstrumentClick(Sender: TObject);
+begin
+  RandomResource('Instrument', nodeInstruments);
+end;
+
+procedure TfrmMain.mnuMainRandomJewelryClick(Sender: TObject);
+begin
+  RandomResource('Jewelry', nodeJewelry);
+end;
+
+procedure TfrmMain.mnuMainRandomKitClick(Sender: TObject);
+begin
+  RandomResource('Kit', nodeKits);
+end;
+
+procedure TfrmMain.mnuMainRandomRemainsClick(Sender: TObject);
+begin
+  RandomResource('Remain', nodeRemains);
+end;
+
+procedure TfrmMain.mnuMainRandomToolClick(Sender: TObject);
+begin
+  RandomResource('Tool', nodeTools);
+end;
+
+procedure TfrmMain.mnuMainRandomTrapClick(Sender: TObject);
+begin
+  RandomResource('Trap', nodeTraps);
+end;
+
+procedure TfrmMain.mnuMainRandomVehicleClick(Sender: TObject);
+begin
+  RandomResource('Vehicle', nodeVehicle);
+end;
+
+procedure TfrmMain.mnuMainRandomWeaponClick(Sender: TObject);
+begin
+  RandomResource('Weapon', nodeWeapons);
+end;
+
 procedure TfrmMain.mnuMainToolsEightClick(Sender: TObject);
 var
   i: integer;
@@ -751,6 +836,10 @@ begin
   begin
     form := TfrmTract.Create(pnlWorkspaceClient);
     form.Parent := pnlWorkspaceClient;
+    with TfrmTract do
+    begin
+
+    end;
     TfrmTract(form).Tract := leaf;
     form.Show;
   end
@@ -758,6 +847,20 @@ begin
   begin
     form := TfrmChamber.Create(pnlWorkspaceClient);
     form.Parent := pnlWorkspaceClient;
+    with TfrmChamber(form) do
+    begin
+      PopulateResourceToCbo(txtTool, nodeTools);
+      PopulateResourceToCbo(txtClothing, nodeClothing);
+      PopulateResourceToCbo(txtKit, nodeKits);
+      PopulateResourceToCbo(txtContainer, nodeContainers);
+      PopulateResourceToCbo(txtWeapon, nodeWeapons);
+      PopulateResourceToCbo(txtVehicle, nodeVehicle);
+      PopulateResourceToCbo(txtJewelry, nodeJewelry);
+      PopulateResourceToCbo(txtRemains, nodeRemains);
+      PopulateResourceToCbo(txtInstrument, nodeInstruments);
+      PopulateResourceToCbo(txtArmour, nodeArmors);
+      PopulateResourceToCbo(txtTrap, nodeTraps);
+    end;
     TfrmChamber(form).Chamber := leaf;
     form.Show;
   end;
@@ -839,7 +942,6 @@ begin
   nodeBeasts := tvwCampaign.Items.AddChildObject(nodeResources, 'Beasts', TPMLeaf.Create('Beasts'));
   nodeMonsters := tvwCampaign.Items.AddChildObject(nodeResources, 'Monsters', TPMLeaf.Create('Monsters'));
   nodeGems := tvwCampaign.Items.AddChildObject(nodeResources, 'Gems', TPMLeaf.Create('Gems'));
-  nodeMusicalInstruments := tvwCampaign.Items.AddChildObject(nodeResources, 'Musical Instruments', TPMLeaf.Create('Musical Instruments'));
   nodeKits := tvwCampaign.Items.AddChildObject(nodeResources, 'Kits', TPMLeaf.Create('Kits'));
   nodeTools := tvwCampaign.Items.AddChildObject(nodeResources, 'Tools', TPMLeaf.Create('Tools'));
   nodeClothing := tvwCampaign.Items.AddChildObject(nodeResources, 'Clothing', TPMLeaf.Create('Clothing'));
@@ -852,6 +954,13 @@ begin
   nodeWeapons := tvwCampaign.Items.AddChildObject(nodeResources, 'Weapons', TPMLeaf.Create('Weapons'));
   nodeTraps := tvwCampaign.Items.AddChildObject(nodeResources, 'Traps', TPMLeaf.Create('Traps'));
   nodeHumanoids := tvwCampaign.Items.AddChildObject(nodeResources, 'Humanoids', TPMLeaf.Create('Humanoids'));
+  nodeConsumables := tvwCampaign.Items.AddChildObject(nodeResources, 'Consumables', TPMLeaf.Create('Consumables'));
+  nodeSpells := tvwCampaign.Items.AddChildObject(nodeResources, 'Spells', TPMLeaf.Create('Spells'));
+  nodeNatural := tvwCampaign.Items.AddChildObject(nodeResources, 'Natural', TPMLeaf.Create('Natural'));
+  nodeUnnatural := tvwCampaign.Items.AddChildObject(nodeResources, 'Unnatural', TPMLeaf.Create('Unnatural'));
+  nodeFlora := tvwCampaign.Items.AddChildObject(nodeResources, 'Flora', TPMLeaf.Create('Flora'));
+  nodeFauna := tvwCampaign.Items.AddChildObject(nodeResources, 'Fauna', TPMLeaf.Create('Fauna'));
+
 
   nodeResources.AlphaSort;
 
@@ -877,13 +986,34 @@ begin
   LoadResourceNodes(nodeInstruments, TPMInstruments);
   LoadResourceNodes(nodeArmors, TPMArmors);
   LoadResourceNodes(nodeTraps, TPMTraps);
+  LoadResourceNodes(nodeGems, TPMGems);
+  LoadResourceNodes(nodeNatural, TPMNatural);
+  LoadResourceNodes(nodeUnnatural, TPMUnnatural);
+  LoadResourceNodes(nodeFlora, TPMFlora);
+  LoadResourceNodes(nodeFauna, TPMFauna);
 
   LoadResourceNodes(nodeBeasts, 'Beast', TPMBeasts);
   LoadResourceNodes(nodeMonsters, 'Monster', TPMMonsters);
+  LoadResourceNodes(nodeHumanoids, 'Humanoid', TPMHumanoids);
+  LoadResourceNodes(nodeSpells, 'Spell', TPMSpells);
 
   PopulateDiceTray;
 
   nodeCampaign.Expand(false);
+end;
+
+procedure TfrmMain.RandomResource(ACaption: string; ANode: TTreeNode);
+var
+  lbl: TLabel;
+begin
+  lbl := TLabel.Create(pnlOutputData);
+  lbl.Parent := pnlOutputData;
+  lbl.Align := alTop;
+  lbl.Font.Color := htmlcolors.clHTMLPurple;
+  lbl.BorderSpacing.Left := 8;
+  lbl.BorderSpacing.Right := 8;
+  lbl.BorderSpacing.Bottom := 16;
+  lbl.Caption := Format('%s: %s', [ACaption, ANode.Items[Random(ANode.Count)].Text]) ;
 end;
 
 procedure TfrmMain.PopulateDiceTray;
@@ -914,6 +1044,15 @@ begin
   //nodeDiceTray.ImageIndex := ;
 end;
 
+procedure TfrmMain.PopulateResourceToCbo(ACbo: TComboBox; AResource: TTreeNode);
+var
+  i : integer;
+begin
+  ACbo.Clear;
+  for i := 0 to AResource.Count - 1 do
+    ACbo.Items.Add(AResource.Items[i].Text);
+end;
+
 procedure TfrmMain.ToggleCampaign(AEnabled: boolean);
 begin
   mnuMainInsert.Enabled := AEnabled;
@@ -927,6 +1066,7 @@ var
   i: integer;
   leaf: TPMLeaf;
 begin
+  if AParent.HasChildren then AParent.DeleteChildren;
   for i := 0 to High(AArray) do
   begin
     leaf := TPMLeaf.Create('Simple');
@@ -942,6 +1082,7 @@ var
   i, j: integer;
   leaf: TPMLeaf;
 begin
+  if AParent.HasChildren then AParent.DeleteChildren;
   for i := 0 to High(AArray) do
   begin
     leaf := TPMLeaf.Create(ACategory);

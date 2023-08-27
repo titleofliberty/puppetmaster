@@ -28,7 +28,7 @@ type
     txtClass: TComboBox;
     txtFauna: TComboBox;
     txtFlora: TComboBox;
-    txtManufactured: TComboBox;
+    txtUnnatural: TComboBox;
     txtNatural: TComboBox;
     txtTitle: TEdit;
     procedure btnLockedClick(Sender: TObject);
@@ -60,13 +60,13 @@ procedure TfrmTract.btnRollAllClick(Sender: TObject);
 begin
   txtClass.ItemIndex := Random(txtClass.Items.Count);
   txtNatural.ItemIndex := Random(txtNatural.Items.Count);
-  txtManufactured.ItemIndex := Random(txtManufactured.Items.Count);
+  txtUnnatural.ItemIndex := Random(txtUnnatural.Items.Count);
   txtFlora.ItemIndex := Random(txtFlora.Items.Count);
   txtFauna.ItemIndex := Random(txtFauna.Items.Count);
 
   FTract.SetTrait('Class', txtClass.Text);
   FTract.SetTrait('Natural', txtNatural.Text);
-  FTract.SetTrait('Manufactured', txtManufactured.Text);
+  FTract.SetTrait('Manufactured', txtUnnatural.Text);
   FTract.SetTrait('Flora', txtFlora.Text);
   FTract.SetTrait('Fauna', txtFauna.Text);
 end;
@@ -123,7 +123,7 @@ begin
   txtTitle.Text := FTract.GetTrait('Title');
   txtClass.Text := FTract.GetTrait('Class');
   txtNatural.Text := FTract.GetTrait('Natural');
-  txtManufactured.Text := FTract.GetTrait('Manufactured');
+  txtUnnatural.Text := FTract.GetTrait('Manufactured');
   txtFlora.Text := FTract.GetTrait('Flora');
   txtFauna.Text := FTract.GetTrait('Fauna');
   btnLocked.Down := FTract.GetTrait('Locked') = 'True';
@@ -135,7 +135,7 @@ begin
   txtTitle.Enabled := not btnLocked.Down;
   txtClass.Enabled := not btnLocked.Down;
   txtNatural.Enabled := not btnLocked.Down;
-  txtManufactured.Enabled := not btnLocked.Down;
+  txtUnnatural.Enabled := not btnLocked.Down;
   txtFlora.Enabled := not btnLocked.Down;
   txtFauna.Enabled := not btnLocked.Down;
   btnRollAll.Enabled := not btnLocked.Down;

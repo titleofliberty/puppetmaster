@@ -41,6 +41,8 @@ var
   TPMBeasts : TPM2DStringArray;
   TPMMonsters : TPM2DStringArray;
   TPMHumanoids : TPM2DStringArray;
+  TPMConsumables : TPM2DStringArray;
+  TPMSpells : TPM2DStringArray;
 
   TPMNamesLast : TStringArray;
   TPMNamesFirst: TStringArray;
@@ -60,6 +62,11 @@ var
   TPMArmors : TStringArray;
   TPMTraps : TStringArray;
   TPMMounts : TStringArray;
+  TPMGems : TStringArray;
+  TPMNatural: TStringArray;
+  TPMUnnatural: TStringArray;
+  TPMFlora: TStringArray;
+  TPMFauna: TStringArray;
 
 implementation
 
@@ -264,6 +271,35 @@ TPMRumor := [
 'Passerby mumbles about <goal>','Passerby mumbles about <crime>','Passerby mumbles about <faction>'
 ];
 
+
+TPMNatural := [
+'Arch (Stone)','Butte','Cave','Hill','Lake','Mushrooms','Pond','River','Rock',
+'Rock (Balance)','Rock (Bear)','Rock (Buffalo)','Rock (Eagle)','Rock (Pipes)',
+'Rock (Prism)','Rock (Skull)','Rock (Wave)','Rock (Wolf)','Stream','Stump',
+'Tree (Enormous)','Tree (Lightening)','Tree (Petrified)','Waterfall (Large)',
+'Waterfall (Small)'
+];
+
+TPMUnnatural := [
+'Arch','Axe','Bag','Barral','Bottle','Bowl','Box','Breastplate','Bridge','Cabin',
+'Cage','Campsite','Cannon','Cemetary','Chimney','Clothing','Cottage','Crate','Cross',
+'Fence','Firepit','Graveyard','Helm','Jug','Key','Lamp','Lantern','Mine','Mound',
+'Obelisk','Pitcher','Polearm','Post','Pylon','Pyramid','Ring','Road','Shield',
+'Shrine','Sign','Steps','Sword','Tablet','Totem','Tower','Treehouse','Wagon',
+'Wagon Wheel','Wall','Ziggurat'
+];
+
+TPMFlora := ['Ashe','Cactus','Crop','Elms','Ferns','Grass','Oaks','Pines','Vines',
+'Wildflowers'
+];
+
+TPMFauna := ['Bat','Bear','Beaver','Bees','Bison','Butterfly','Cat','Chipmunk',
+'Crab','Deer','Dog','Dragonfly','Elf','Firefly','Fox','Frog','Gopher','Hornets',
+'Hummingbird','Livestock','Lizard','Moose','Mouse','Opossum','Otter','Porcupine',
+'Rabit','Raccon','Rat','Salamander','Seal','Skunk','Snake','Songbird','Squirrel',
+'Viper','Wasps','Wolf'
+];
+
 TPMBasicDice := [
 ['Title:1d4'  ,'Count:1','Die:d4'  ,'Modifier:0'],
 ['Title:1d6'  ,'Count:1','Die:d6'  ,'Modifier:0'],
@@ -310,7 +346,6 @@ TPMBeasts := [
 ['Title:Hyena','Class:Beast','ArmorClass:18','HPMax:8','HPCurrent:8'],
 ['Title:Griffon','Class:Beast','ArmorClass:18','HPMax:8','HPCurrent:8'],
 ['Title:Hippogriff','Class:Beast','ArmorClass:18','HPMax:8','HPCurrent:8'],
-['Title:Hawk','Class:Beast','ArmorClass:18','HPMax:8','HPCurrent:8'],
 ['Title:Cat','Class:Beast','ArmorClass:18','HPMax:8','HPCurrent:8'],
 ['Title:Baboon','Class:Beast','ArmorClass:18','HPMax:8','HPCurrent:8'],
 ['Title:Fox','Class:Beast','ArmorClass:18','HPMax:8','HPCurrent:8'],
@@ -411,6 +446,120 @@ TPMHumanoids := [
 ['Title:Kobold','Class:Humanoid','ArmorClass:18','HPMax:8','HPCurrent:8']
 ];
 
+TPMSpells := [
+['Title:Adhere','Effect:Object is covered in extremely sticky slime.'],
+['Title:Animate Object','Effect:Object obeys your commands as best it can. It can walk 15ft per round.'],
+['Title:Anthropomorphize','Effect:A touched animal either gains human intelligence or human appearance for L days.'],
+['Title:Arcane Eye','Effect:You can see through a magical floating eyeball that flies around at your command.'],
+['Title:Astral Prison','Effect:An object is frozen in time and space within an invulnerable crystal shell.'],
+['Title:Attract','Effect:L+1 objects are strongly magnetically attracted to each other if they come within 10 feet.'],
+['Title:Auditory Illusion','Effect:You create illusory sounds that seem to come from a direction of your choice.'],
+['Title:Babble','Effect:A creature must loudly and clearly repeat everything you think. It is otherwise mute.'],
+['Title:Beast Form','Effect:You and your possessions transform into a mundane animal.'],
+['Title:Befuddle','Effect:L creatures of your choice are unable to form new short-term memories for the duration of the spell.'],
+['Title:Bend Fate','Effect:Roll L+1 d20s. Whenever you must roll a d20 after casting the spell, you must choose and then discard one of the rolled results until they are all gone.'],
+['Title:Bird Person','Effect:Your arms turn into huge bird wings.'],
+['Title:Body Swap','Effect:You switch bodies with a creature you touch. If one body dies, the other dies as well.'],
+['Title:Catherine','Effect:A woman wearing a blue dress appears until end of spell. She will obey polite, safe requests.'],
+['Title:Charm','Effect:L creatures treat you like a friend.'],
+['Title:Command','Effect:A creature obeys a single, three-word command that does not harm it.'],
+['Title:Comprehend','Effect:You become fluent in all languages.'],
+['Title:Control Plants','Effect:Nearby plants and trees obey you and gain the ability to move at 5 feet per round.'],
+['Title:Control Weather','Effect:You may alter the type of weather at will, but you do not otherwise control it.'],
+['Title:Counterspell','Effect:Make an opposed Intelligence save against the Intelligence of the caster of a nearby spell. You may do this out of turn as a reaction, or against an ongoing magical effect. On a success, you may cancel the spell.'],
+['Title:Deafen','Effect:All nearby creatures are deafened.'],
+['Title:Detect Magic','Effect:You hear nearby magical auras singing. Volume and harmony signify the aura’s power and refinement.'],
+['Title:Disassemble','Effect:Any of your body parts may be detached and reattached at will, without causing pain or damage. You can still control them.'],
+['Title:Disguise','Effect:You may alter the appearance of L characters at will as long as they remain humanoid. Attempts to duplicate other characters will seem uncanny.'],
+['Title:Displace','Effect:An object appears to be up to L×10ft from its actual position.'],
+['Title:Earthquake','Effect:The ground begins shaking violently. Structures may be damaged or collapse.'],
+['Title:Elasticity','Effect:Your body can stretch up to L×10ft.'],
+['Title:Elemental Wall','Effect:A straight wall of ice or fire L×40ft long and 10ft high rises from the ground.'],
+['Title:Filch','Effect:L visible items teleport to your hands.'],
+['Title:Fog Cloud','Effect:Dense fog spreads out from you.'],
+['Title:Frenzy','Effect:L creatures erupt in a frenzy of violence.'],
+['Title:Gate','Effect:A portal to a random plane opens.'],
+['Title:Gravity Shift','Effect:You can change the direction of gravity (for yourself only) up to once per round.'],
+['Title:Greed','Effect:L creatures develop an overwhelming urge to possess a visible item of your choice.'],
+['Title:Haste','Effect:Your movement speed is tripled.'],
+['Title:Hatred','Effect:L creatures develop a deep hatred of another creature or group of creatures and wish to destroy it.'],
+['Title:Hear Whispers','Effect:You can hear faint sounds clearly.'],
+['Title:Hover','Effect:An object hovers, frictionless, 2ft above the ground. It can hold up to L humanoids.'],
+['Title:Hypnotize','Effect:A creature enters a trance and will truthfully answer L yes or no questions you ask it.'],
+['Title:Icy Touch','Effect:A thick ice layer spreads across a touched surface, up to L×10ft in radius.'],
+['Title:Illuminate','Effect:A floating light moves as you command.'],
+['Title:Increase Gravity','Effect:The gravity in an area triples.'],
+['Title:Invisible Tether','Effect:Two objects within 10ft of each other cannot be moved more than 10ft apart.'],
+['Title:Knock','Effect:L nearby mundane or magical locks unlock.'],
+['Title:Leap','Effect:You can jump up to L×10ft in the air.'],
+['Title:Liquid Air','Effect:The air around you becomes swimmable.'],
+['Title:Magic Dampener','Effect:All nearby magical effects have their effectiveness halved.'],
+['Title:Manse','Effect:A sturdy, furnished cottage appears for L×12 hours. You can permit and forbid entry to it at will.'],
+['Title:Marble Madness','Effect:Your pockets are full of marbles, and will refill every round.'],
+['Title:Masquerade','Effect:L characters’ appearances and voices become identical to a touched character.'],
+['Title:Miniaturize','Effect:You and L other touched creatures are reduced to the size of a mouse.'],
+['Title:Mirror Image','Effect:L illusory duplicates of yourself appear under your control.'],
+['Title:Mirrorwalk','Effect:A mirror becomes a gateway to another mirror that you looked into today.'],
+['Title:Multiarm','Effect:You gain L extra arms.'],
+['Title:Night Sphere','Effect:An L×40ft wide sphere of darkness displaying the night sky appears.'],
+['Title:Objectify','Effect:You become any inanimate object between the size of a grand piano and an apple.'],
+['Title:Ooze Form','Effect:You become a living jelly.'],
+['Title:Pacify','L creatures have an aversion to violence.'],
+['Title:Phantom Coach','Effect:A ghostly coach appears until end of spell. It moves unnaturally fast over any terrain, including water.'],
+['Title:Phobia','Effect:L creatures become terrified of an object of your choice.'],
+['Title:Pit','Effect:A pit 10ft wide and L×5ft deep opens in the ground.'],
+['Title:Primeval Surge','Effect:An object grows to the size of an elephant. If it is an animal, it is enraged.'],
+['Title:Psychometry','Effect:The referee answers L yes or no questions about a touched object.'],
+['Title:Pull','Effect:An object of any size is pulled directly towards you with the strength of L men for one round.'],
+['Title:Push','Effect:An object of any size is pushed directly away from you with the strength of L men for one round.'],
+['Title:Raise Dead','Effect:L skeletons rise from the ground to serve you. They are incredibly stupid and can only obey simple orders.'],
+['Title:Raise Spirit','Effect:The spirit of a dead body manifests and will answer L questions.'],
+['Title:Read Mind','Effect:You can hear the surface thoughts of nearby creatures.'],
+['Title:Repel','Effect:L+1 objects are strongly magnetically repelled from each other if they come within 10 feet.'],
+['Title:Scry','Effect:You can see through the eyes of a creature you touched earlier today.'],
+['Title:Sculpt Elements','Effect:All inanimate material behaves like clay in your hands.'],
+['Title:Shroud','Effect:L creatures are invisible until they move.'],
+['Title:Shuffle','Effect:L creatures instantly switch places. Determine where they end up randomly.'],
+['Title:Sleep','Effect:L creatures fall into a light sleep.'],
+['Title:Smoke Form','Effect:Your body becomes living smoke.'],
+['Title:Snail Knight','Effect:10 minutes after casting, a knight sitting astride a giant snail rides into view. He is able to answer most questions related to quests and chivalry, and may aid you if he finds you worthy.'],
+['Title:Sniff','Effect:You can smell even the faintest traces of scents.'],
+['Title:Sort','Effect:Inanimate items sort themselves according to categories you set. The categories must be visually verifiable.'],
+['Title:Spectacle','Effect:A clearly unreal but impressive illusion of your choice appears, under your control. It may be up to the size of a palace and has full motion and sound.'],
+['Title:Spellseize','Effect:Cast this as a reaction to another spell going off to make a temporary copy of it that you can cast at any time before this spell ends.'],
+['Title:Spider Climb','Effect:You can climb surfaces like a spider.'],
+['Title:Summon Cube','Effect:Once per second, (6 times per round) you may summon or banish a 3-foot-wide cube of earth. New cubes must be affixed to the earth or to other cubes.'],
+['Title:Swarm','Effect:You become a swarm of crows, rats, or piranhas. You only take damage from area effects.'],
+['Title:Telekinesis','Effect:You may mentally move L items.'],
+['Title:Telepathy','Effect:L+1 creatures can hear each other’s thoughts, no matter how far apart they move.'],
+['Title:Teleport','Effect:An object disappears and reappears on the ground in a visible, clear area up to L×40ft away.'],
+['Title:Thaumaturgic Anchor','Effect:Object becomes the target of every spell cast near it.'],
+['Title:Thicket','Effect:A thicket of trees and dense brush up to L×40ft wide suddenly sprouts up.'],
+['Title:Time Jump','Effect:An object disappears as it jumps L×10 minutes into the future. When it returns, it appears in the unoccupied area nearest to where it left.'],
+['Title:Summon Idol','Effect:A carved stone statue the size of a four poster bed rises from the ground.'],
+['Title:Time Rush','Effect:Time in a 40ft bubble starts moving 10 times faster.'],
+['Title:Time Slow','Effect:Time in a 40ft bubble slows to 10%.'],
+['Title:True Sight','Effect:You see through all nearby illusions.'],
+['Title:Upwell','Effect:A spring of seawater appears.'],
+['Title:Vision','Effect:You completely control what a creature sees.'],
+['Title:Visual Illusion','Effect:A silent, immobile, illusion of your choice appears, up to the size of a bedroom.'],
+['Title:Ward','Effect:A silver circle 40ft across appears on the ground. Choose one thing that cannot cross it: Living creatures, dead creatures, projectiles or metal.'],
+['Title:Web','Effect:Your wrists can shoot thick webbing.'],
+['Title:Wizard Mark','Effect:Your finger can shoot a stream of ulfire-colored paint. This paint is only visible to you, and can be seen at any distance, even through solid objects.'],
+['Title:X-Ray Vision','Effect:You gain X-Ray vision.']
+];
+
+TPMConsumables := [
+['Title:Wand','Charges:5','Effect:','Note:'],
+['Title:Scroll','Charges:1','Effect:','Note:'],
+['Title:Light Bandage','Charges:1','Effect:Heals +2','Note:Cannot be used in combat.'],
+['Title:Medium Bandage','Charges:1','Effect:Heals +4','Note:Cannot be used in combat.'],
+['Title:Heavy Bandage','Charges:1','Effect:Heals +6','Note:Cannot be used in combat.']
+['Title:Great Healing Postion','Charges:1','Effect:Heals +2','Note:Can be used in combat.'],
+['Title:Magnificent Healing Postion','Charges:1','Effect:Heals +4','Note:Can be used in combat.'],
+['Title:Superb Healing Postion','Charges:1','Effect:Heals +4','Note:Can be used in combat.']
+];
+
 TPMMounts := [
 'Camel','Quarter Horse','Draft Horse','Warhorse','Donkey','Mule','Elephant','Hyena','Dire Wolf',
 'Dire Boar','Giant Eagle','Giant Owl','Pegasus','Rhinoceros','Griffon','Hippogriff',
@@ -443,7 +592,6 @@ TPMClothing := [
 'Necktie','Poncho','Robes','Sandles','Scarf','Shaw','Skirt','Smock','Surcoat',
 'Sweater','Trousers','Tunic','Vest','Vestments','Waistcoat'
 ];
-
 
 TPMContainers := [
 'Backpack','Bag','Barrel','Basket','Bow (Jewelry)','Box (Strong)','Box (Wood)',
@@ -497,6 +645,38 @@ TPMTraps := [
 'Time Warp','Toxic Gas','Tumble','Water','Noxious Gas'
 ];
 
+TPMGems := [
+'Alexandrite','Amber','Amethyst','Ametrine','Ammolite','Andalusite','Andesine',
+'Apatite','Aquamarine','Aventurine','Azurite','Beryl','Bixbite','Black Pearl',
+'Black Spinel','Black Tourmaline','Blizzard Stone','Bloodstone','Blue Fluorite',
+'Blue Moonstone','Blue Opal','Blue Sapphire','Blue Spinel','Blue Topaz','Blue Tourmaline',
+'Blue Zircon','Boulder Opal','Brown Moonstone','Brown Zircon','Carnelian',
+'Cats Eye Moonstone','Cats Eye Opal','Cats Eye Quartz','Chrome Diopside','Chrome Tourmaline',
+'Chrysoberyl','Chrysocolla','Citrine','Clinohumite','Coral','Cornflower Blue Sapphire',
+'Danburite','Demantoid Garnet','Diopside','Emerald','Fire Agate','Fire Opal','Fluorite',
+'Garnet','Golden Sapphire','Golden Topaz','Goshenite','Grandidierite','Green Amethyst',
+'Green Apatite','Green Garnet','Green Kyanite','Green Sapphire','Green Tanzanite',
+'Green Tourmaline','Grey Sapphire','Heliodor','Hessonite','Howlite','Imperial Topaz',
+'Indraneelam','Iolite','Jade','Jade Nephrite','Jadeite','Jasper','Khooni Neelam',
+'Kunzite','Kyanite','Labradorite','Lapis Lazuli','Lavender Quartz','Lemon Quartz',
+'Malachite','Mandarin Garnet','Mocha Scapolite','Moldavite','Monazite','Moonstone',
+'Morganite','Moss Agate','Navratna','Obsidian','Onyx','Opal','Orange Kyanite',
+'Orange Sapphire','Orthoclase','Padparadscha Sapphire','Panjshir Emerald',
+'Paraiba Tourmaline','Peach Morganite','Peach Sapphire','Peacock Tanzanite',
+'Pearl','Peridot','Persian Turquoise','Petalite','Petrified Wood','Pigeon Blood Ruby',
+'Pink Coral','Pink Fluorite','Pink Morganite','Pink Opal','Pink Sapphire','Pink Spinel',
+'Pink Topaz','Pink Tourmaline','Pitambari Neelam','Prehnite','Purple Garnet',
+'Purple Sapphire','Rainbow Fluorite','Rainbow Moonstone','Red Coral','Red Spinel',
+'Red Tourmaline','Red Zircon','Rhodochrosite','Rhodonite','Rose Quartz','Royal Blue Sapphire',
+'Rubellite','Ruby','Rutilated Quartz','Sang Maryam','Sapphire','Tourmaline','Serpentine',
+'Sillimanite Cats Eye','Sky Blue Topaz','Smoky Quartz','Sodalite','Spectrolite',
+'Spessartite','Sphalerite','Spinel','Star Garnet','Star Ruby','Star Sapphire',
+'Sunstone','Taaffeite','Tahitian Pearls','Tanzania Ruby','Tanzanite','Teal Sapphire',
+'Tibetian Turquoise','Tiger Eye','Titanite','Topaz','Tourmaline','Trapiche Emerald',
+'Tsavorite','Turquoise','Violet Sapphire','Vivid Green Emerald','Watermelon Tourmaline',
+'White Coral','White Opal','White Sapphire','White Topaz','White Zircon','Yellow Beryl',
+'Yellow Fluorite','Yellow Sapphire','Yellow Topaz','Yellow Zircon','Zircon','Zultanite'
+];
 
 
 end.

@@ -203,7 +203,7 @@ var
 begin
   j := Cbo.Items.Count * Multiply;
   i := Random(j);
-  if i > Cbo.Items.Count - 1 then i := 0;;
+  if i > Cbo.Items.Count - 1 then i := -1;
   Cbo.ItemIndex := i;
 end;
 
