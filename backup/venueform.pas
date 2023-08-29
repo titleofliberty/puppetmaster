@@ -35,6 +35,7 @@ type
   private
     FVenue: TPMLeaf;
     procedure SetVenue(AValue: TPMLeaf);
+    procedure LockForm;
   public
     property Venue: TPMLeaf read FVenue write SetVenue;
   end;
@@ -66,9 +67,7 @@ end;
 
 procedure TfrmVenue.btnLockedClick(Sender: TObject);
 begin
-  txtTitle.Enabled := not btnLocked.Down;
-  txtClass.Enabled := not btnLocked.Down;
-  FVenue.SetTrait('Locked', BoolToStr(btnLocked.Down, 'True', 'False'));
+  LockForm;
 end;
 
 procedure TfrmVenue.txtClassKeyUp(Sender: TObject; var Key: Word;
@@ -98,6 +97,14 @@ begin
   txtTitle.Text := FVenue.GetTrait('Title');
   txtClass.Text := FVenue.GetTrait('Class');
   btnLocked.Down := FVenue.GetTrait('Locked') = 'True';
+  LockForm;
+end;
+
+procedure TfrmVenue.LockForm;
+begin
+  txtTitle.Enabled := not btnLocked.Down;
+  txtClass.Enabled := not btnLocked.Down;
+  FVenue.SetTrait('Locked', BoolToStr(btnLocked.Down, 'True', 'False'));
 end;
 
 end.

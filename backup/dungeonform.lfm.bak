@@ -1,7 +1,7 @@
 object frmDungeon: TfrmDungeon
-  Left = 604
+  Left = 1082
   Height = 437
-  Top = 225
+  Top = 223
   Width = 667
   Align = alClient
   BorderStyle = bsNone
@@ -83,9 +83,9 @@ object frmDungeon: TfrmDungeon
   object Panel1: TPanel
     Left = 16
     Height = 63
-    Top = 305
+    Top = 358
     Width = 635
-    Align = alTop
+    Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
   end
@@ -206,21 +206,12 @@ object frmDungeon: TfrmDungeon
   end
   object txtNotes: TMemo
     Left = 16
-    Height = 113
+    Height = 180
     Top = 170
     Width = 635
-    Align = alTop
+    Align = alClient
     OnExit = txtNotesExit
     ScrollBars = ssVertical
     TabOrder = 3
-  end
-  object Splitter1: TSplitter
-    Cursor = crVSplit
-    Left = 16
-    Height = 6
-    Top = 291
-    Width = 635
-    Align = alTop
-    ResizeAnchor = akTop
   end
 end

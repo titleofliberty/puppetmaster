@@ -17,7 +17,6 @@ type
     Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
-    Splitter1: TSplitter;
     txtNotes: TMemo;
     Panel1: TPanel;
     pnlClient: TPanel;

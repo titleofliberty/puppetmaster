@@ -76,7 +76,7 @@ procedure TfrmDungeon.SetDungeon(AValue: TPMLeaf);
 begin
   if FDungeon = AValue then Exit;
   FDungeon := AValue;
-  txtTitle.Text := FDungeon.Title;
+  txtTitle.Text := FDungeon.GetTrait('Title');
   txtClass.Text := FDungeon.GetTrait('Class');
   txtNotes.Text := FDungeon.GetTrait('Notes');
   btnLocked.Down:= FDungeon.GetTrait('Locked') = 'True';

@@ -22,6 +22,9 @@ type
     btnOutputClear: TButton;
     btnEightBall: TButton;
     btnRumor: TButton;
+    mnuMainInsertFloor: TMenuItem;
+    mnuMainInsertRoute: TMenuItem;
+    mnuMainInsertLevel: TMenuItem;
     mnuMainRandomRemains: TMenuItem;
     mnuMainRandomVehicle: TMenuItem;
     mnuMainRandomJewelry: TMenuItem;
@@ -113,9 +116,13 @@ type
     procedure mnuMainInsertClick(Sender: TObject);
     procedure mnuMainInsertDiceRollClick(Sender: TObject);
     procedure mnuMainInsertDungeonClick(Sender: TObject);
+    procedure mnuMainInsertFactionClick(Sender: TObject);
+    procedure mnuMainInsertFloorClick(Sender: TObject);
+    procedure mnuMainInsertLevelClick(Sender: TObject);
     procedure mnuMainInsertPlayerClick(Sender: TObject);
     procedure mnuMainInsertPuppetClick(Sender: TObject);
     procedure mnuMainInsertRoomClick(Sender: TObject);
+    procedure mnuMainInsertRouteClick(Sender: TObject);
     procedure mnuMainInsertSettlementClick(Sender: TObject);
     procedure mnuMainInsertTractClick(Sender: TObject);
     procedure mnuMainInsertVenueClick(Sender: TObject);
@@ -199,7 +206,8 @@ implementation
 
 uses
   settlementform, venueform, puppetform, diceform, playerform, roomform,
-  aboutform, dungeonform, wildernessform, tractform, chamberform, dicetrayform;
+  aboutform, dungeonform, wildernessform, tractform, chamberform, levelform,
+  routeform, floorform;
 
 { TfrmMain }
 
@@ -283,23 +291,14 @@ procedure TfrmMain.mnuMainInsertChamberClick(Sender: TObject);
 var
   i : integer;
   node: TTreeNode;
-  leaf, selected, chambers: TPMLeaf;
+  leaf, slct: TPMLeaf;
 begin
   leaf := TPMLeaf.Create('Chamber');
   leaf.OnChange := @LeafChange;
-  selected := TPMLeaf(tvwCampaign.Selected.Data);
-  if (selected.Category = 'Dungeon') then
-  begin
-    for i := 0 to tvwCampaign.Selected.Count - 1 do
-    begin
-      chambers := TPMLeaf(tvwCampaign.Selected.Items[i].Data);
-      if chambers.Category = 'Chambers' then
-        node := tvwCampaign.Items.AddChildObject(tvwCampaign.Selected.Items[i], leaf.Title, leaf);
-    end;
-  end
-  else if (selected.Category = 'Chambers') then
+  slct := TPMLeaf(tvwCampaign.Selected.Data);
+  if (slct.Category = 'Level') then
     node := tvwCampaign.Items.AddChildObject(tvwCampaign.Selected, leaf.Title, leaf)
-  else if (selected.Category = 'Chamber') then
+  else if (slct.Category = 'Chamber') then
     node := tvwCampaign.Items.AddObject(tvwCampaign.Selected, leaf.Title, leaf);
   node.Selected := true;
 end;
@@ -308,31 +307,21 @@ procedure TfrmMain.mnuMainInsertClick(Sender: TObject);
 var
   leaf: TPMLeaf;
 begin
-  mnuMainInsertDungeon.Enabled := true;
-  mnuMainInsertChamber.Enabled := false;
-
-  mnuMainInsertWilderness.Enabled := true;
-  mnuMainInsertTract.Enabled := false;
-
-  mnuMainInsertSettlement.Enabled := true;
-  mnuMainInsertVenue.Enabled := false;
-  mnuMainInsertRoom.Enabled := false;
-
-  mnuMainInsertMonster.Enabled := false;
-  mnuMainInsertBeast.Enabled := false;
-  mnuMainInsertPuppet.Enabled := false;
-  mnuMainInsertPlayer.Enabled := false;
-  mnuMainInsertDiceRoll.Enabled := true;;
 
   if Assigned(tvwCampaign.Selected) then
     leaf := TPMLeaf(tvwCampaign.Selected.Data);
 
-  mnuMainInsertChamber.Enabled := (leaf.Category = 'Dungeon') or (leaf.Category = 'Chambers') or (leaf.Category = 'Chamber');
-  mnuMainInsertTract.Enabled := (leaf.Category = 'Wilderness') or (leaf.Category = 'Tract');
-  mnuMainInsertVenue.Enabled := (leaf.Category = 'Settlement') or (leaf.Category = 'Venue');
-  mnuMainInsertRoom.Enabled := (leaf.Category = 'Venue') or (leaf.Category = 'Room');
+  mnuMainInsertLevel.Enabled := (leaf.Category = 'Dungeon') or (leaf.Category = 'Level') or (leaf.Category = 'Chamber') or (leaf.Category = 'Factions') or (leaf.Category = 'Faction');
+  mnuMainInsertChamber.Enabled := (leaf.Category = 'Level') or (leaf.Category = 'Chamber');
 
-  mnuMainInsertFaction.Enabled := (leaf.Category <> 'Dungeons') and (leaf.Category <> 'Wildernesses') and (leaf.Category <> 'Settlements') and (leaf.Category <> 'DiceTray') and (leaf.Category <> 'Dice');
+  mnuMainInsertRoute.Enabled := (leaf.Category = 'Wilderness') or (leaf.Category = 'Route') or (leaf.Category = 'Tract');
+  mnuMainInsertTract.Enabled := (leaf.Category = 'Route') or (leaf.Category = 'Tract');
+
+  mnuMainInsertVenue.Enabled := (leaf.Category = 'Settlement') or (leaf.Category = 'Venue');
+  mnuMainInsertFloor.Enabled := (leaf.Category = 'Floor') or (leaf.Category = 'Venue');
+  mnuMainInsertRoom.Enabled := (leaf.Category = 'Floor') or (leaf.Category = 'Room');
+
+  mnuMainInsertFaction.Enabled := (leaf.Category = 'Dungeon') or (leaf.Category <> 'Wilderness') or (leaf.Category <> 'Settlement') and (leaf.Category <> 'Factions') and (leaf.Category <> 'Faction');
   mnuMainInsertMonster.Enabled := (leaf.Category = 'Room') or (leaf.Category = 'Chamber') or (leaf.Category = 'Tract') or (leaf.Category = 'Puppet') or (leaf.Category = 'Player');
   mnuMainInsertBeast.Enabled := (leaf.Category = 'Room') or (leaf.Category = 'Chamber') or (leaf.Category = 'Tract') or (leaf.Category = 'Puppet') or (leaf.Category = 'Player');
   mnuMainInsertPuppet.Enabled := (leaf.Category = 'Room') or (leaf.Category = 'Chamber') or (leaf.Category = 'Tract') or (leaf.Category = 'Puppet') or (leaf.Category = 'Player');
@@ -355,15 +344,60 @@ end;
 procedure TfrmMain.mnuMainInsertDungeonClick(Sender: TObject);
 var
   node: TTreeNode;
-  leaf, factions, chambers: TPMLeaf;
+  leaf: TPMLeaf;
 begin
   leaf := TPMLeaf.Create('Dungeon');
   leaf.OnChange := @LeafChange;
   node := tvwCampaign.Items.AddChildObject(nodeDungeons, leaf.Title, leaf);
-  chambers := TPMLeaf.Create('Chambers');
-  tvwCampaign.Items.AddChildObject(node, chambers.Title, chambers);
-  factions := TPMLeaf.Create('Factions');
-  tvwCampaign.Items.AddChildObject(node, factions.Title, factions);
+  node.Selected := true;
+end;
+
+procedure TfrmMain.mnuMainInsertFactionClick(Sender: TObject);
+var
+  leaf, slct : TPMLeaf;
+  node : TTreeNode;
+begin
+  slct := TPMLeaf(tvwCampaign.Selected.Data);
+  leaf := TPMLeaf.Create('Faction');
+  leaf.OnChange := @LeafChange;
+  if (slct.Category = 'Dungeon') or (slct.Category = 'Tract') or (slct.Category = 'Room') then
+    node := tvwCampaign.Items.AddChildObject(tvwCampaign.Selected, leaf.Title, leaf);
+  node.Selected := true;
+end;
+
+procedure TfrmMain.mnuMainInsertFloorClick(Sender: TObject);
+var
+  leaf, slct: TPMLeaf;
+  node: TTreeNode;
+begin
+  if not Assigned(tvwCampaign.Selected) then exit;
+  slct := TPMLeaf(tvwCampaign.Selected.Data);
+  leaf := TPMLeaf.Create('Floor');
+  leaf.OnChange := @LeafChange;
+  if slct.Category = 'Venue' then
+    node := tvwCampaign.Items.AddChildObject(tvwCampaign.Selected, leaf.Title, leaf)
+  else if slct.Category = 'Floor' then
+    node := tvwCampaign.Items.AddChildObject(tvwCampaign.Selected.Parent, leaf.Title, leaf);
+  node.Selected := true;
+end;
+
+procedure TfrmMain.mnuMainInsertLevelClick(Sender: TObject);
+var
+  leaf, slct: TPMLeaf;
+  node: TTreeNode;
+begin
+  if not Assigned(tvwCampaign.Selected) then exit;
+  leaf := TPMLeaf.Create('Level');
+  slct := TPMLeaf(tvwCampaign.Selected.Data);
+
+  if slct.Category = 'Dungeon' then
+    node := tvwCampaign.Items.AddChildObject(tvwCampaign.Selected, leaf.Title, leaf)
+  else if slct.Category = 'Level' then
+    node := tvwCampaign.Items.AddObject(tvwCampaign.Selected, leaf.Title, leaf)
+  else if slct.Category = 'Chamber' then
+    node := tvwCampaign.Items.AddObject(tvwCampaign.Selected.Parent, leaf.Title, leaf);
+
+  leaf.OnChange := @LeafChange;
   node.Selected := true;
 end;
 
@@ -408,28 +442,43 @@ var
 begin
   leaf := TPMLeaf.Create('Room');
   leaf.OnChange := @LeafChange;
-  if TPMLeaf(tvwCampaign.Selected.Data).Category = 'Venue' then
+  if TPMLeaf(tvwCampaign.Selected.Data).Category = 'Floor' then
     node := tvwCampaign.items.AddChildObject(tvwCampaign.Selected, leaf.Title, leaf)
   else if TPMLeaf(tvwCampaign.Selected.Data).Category = 'Room' then
-    node := tvwCampaign.items.AddObject(tvwCampaign.Selected, leaf.Title, leaf)
+    node := tvwCampaign.items.AddChildObject(tvwCampaign.Selected, leaf.Title, leaf)
   else
     Exit;
+  node.Selected := true;
+end;
+
+procedure TfrmMain.mnuMainInsertRouteClick(Sender: TObject);
+var
+  leaf, slct: TPMLeaf;
+  node : TTreeNode;
+begin
+  if not Assigned(tvwCampaign.Selected) then exit;
+  slct := TPMLeaf(tvwCampaign.Selected.Data);
+  leaf := TPMLeaf.Create('Route');
+  leaf.OnChange := @LeafChange;
+  if (slct.Category = 'Wilderness') then
+    node := tvwCampaign.Items.AddChildObject(tvwCampaign.Selected, leaf.Title, leaf)
+  else if (slct.Category = 'Route') then
+    node := tvwCampaign.Items.AddObject(tvwCampaign.Selected, leaf.Title, leaf)
+  else if (slct.Category = 'Tract') then
+    node := tvwCampaign.Items.AddObject(tvwCampaign.Selected.Parent, leaf.Title, leaf);
+
   node.Selected := true;
 end;
 
 procedure TfrmMain.mnuMainInsertSettlementClick(Sender: TObject);
 var
   node : TTreeNode;
-  leaf, venues, factions : TPMLeaf;
+  leaf : TPMLeaf;
 begin
   leaf := TPMLeaf.Create('Settlement');
   leaf.Traits.AddOrSetData('Name', 'Untitled');
   leaf.OnChange := @LeafChange;
   node := tvwCampaign.Items.AddChildObject(nodeSettlements, leaf.Title, leaf);
-  venues := TPMLeaf.Create('Venues');
-  tvwCampaign.Items.AddChildObject(node, venues.Title, venues);
-  factions := TPMLeaf.Create('Factions');
-  tvwCampaign.Items.AddChildObject(node, factions.Title, factions);
   node.Selected := true;
 end;
 
@@ -439,20 +488,14 @@ var
   node: TTreeNode;
   leaf, selected, tracts: TPMLeaf;
 begin
+  if not Assigned(tvwCampaign.Selected) then exit;
   leaf := TPMLeaf.Create('Tract');
   leaf.OnChange := @LeafChange;
   selected := TPMLeaf(tvwCampaign.Selected.Data);
-  if (selected.Category = 'Wilderness') then
-    for i := 0 to tvwCampaign.Selected.Count - 1 do
-    begin
-      tracts := TPMLeaf(tvwCampaign.Selected.Items[i].Data);
-      if tracts.Category = 'Tracts' then
-        node := tvwCampaign.Items.AddChildObject(tvwCampaign.Selected.Items[i], leaf.Title, leaf);
-    end
-  else if (selected.Category = 'Tracts') then
+  if (selected.Category = 'Route') then
     node := tvwCampaign.Items.AddChildObject(tvwCampaign.Selected, leaf.Title, leaf)
   else if (selected.Category = 'Tract') then
-    node := tvwCampaign.Items.AddObject(tvwCampaign.Selected, leaf.Title, leaf);
+    node := tvwCampaign.Items.AddChildObject(tvwCampaign.Selected, leaf.Title, leaf);
   node.Selected := true;
 end;
 
@@ -466,24 +509,19 @@ begin
   if TPMLeaf(tvwCampaign.Selected.Data).Category = 'Settlement' then
     node := tvwCampaign.items.AddChildObject(tvwCampaign.Selected, leaf.Title, leaf)
   else if TPMLeaf(tvwCampaign.Selected.Data).Category = 'Venue' then
-    node := tvwCampaign.items.AddObject(tvwCampaign.Selected, leaf.Title, leaf)
-  else
-    Exit;
+    node := tvwCampaign.items.AddObject(tvwCampaign.Selected, leaf.Title, leaf);
+
   node.Selected := true;
 end;
 
 procedure TfrmMain.mnuMainInsertWildernessClick(Sender: TObject);
 var
   node: TTreeNode;
-  leaf, factions, tracts: TPMLeaf;
+  leaf: TPMLeaf;
 begin
   leaf := TPMLeaf.Create('Wilderness');
   leaf.OnChange := @LeafChange;
   node := tvwCampaign.Items.AddChildObject(nodeWildernesses, leaf.Title, leaf);
-  tracts := TPMLeaf.Create('Tracts');
-  tvwCampaign.Items.AddChildObject(node, tracts.Title, tracts);
-  factions := TPMLeaf.Create('Factions');
-  tvwCampaign.Items.AddChildObject(node, factions.Title, factions);
   node.Selected := true;
 end;
 
@@ -654,6 +692,11 @@ begin
       if (leaf1.Category = 'Dungeons') or (leaf1.Category = 'Dungeon') then
         tree.Selected.MoveTo(node, naAddChildFirst);
     end
+    else if (leaf2.Category = 'Level') then
+    begin
+      if (leaf1.Category = 'Dungeon') or (leaf1.Category = 'Level') then
+        tree.Selected.MoveTo(node, naAddChildFirst);
+    end
     else if (leaf2.Category = 'Chamber') then
     begin
       if (leaf1.Category = 'Chamber') or (leaf1.Category = 'Chambers') or (leaf1.Category = 'Dungeon') then
@@ -723,11 +766,13 @@ begin
     leaf2 := TPMLeaf(tree.Selected.Data);
     if (leaf2.Category = 'Dungeon') and ((leaf1.Category = 'Dungeons') or (leaf1.Category = 'Dungeon')) then
       Accept := true
-    else if (leaf2.Category = 'Chamber') and ((leaf1.Category = 'Chamber') or (leaf1.Category = 'Chambers') or (leaf1.Category = 'Dungeon')) then
+    else if (leaf2.Category = 'Level') and ((leaf1.Category = 'Dungeon') or (leaf1.Category = 'Level')) then
+      Accept := true
+    else if (leaf2.Category = 'Chamber') and ((leaf1.Category = 'Level') or (leaf1.Category = 'Chambers') or (leaf1.Category = 'Dungeon')) then
       Accept := true
     else if (leaf2.Category = 'Wilderness') and ((leaf1.Category = 'Wilderness') or (leaf1.Category = 'Wildernesses')) then
       Accept := true
-    else if (leaf2.Category = 'Tract') and ((leaf1.Category = 'Wilderness') or (leaf1.Category = 'Tract')) then
+    else if (leaf2.Category = 'Tract') and ((leaf1.Category = 'Route') or (leaf1.Category = 'Tract')) then
       Accept := true
     else if (leaf2.Category = 'Settlement') and ((leaf1.Category = 'Settlement') or (leaf1.Category = 'Settlements')) then
       Accept := true
@@ -805,6 +850,13 @@ begin
     TfrmDungeon(form).Dungeon := leaf;
     form.Show;
   end
+  else if leaf.Category = 'Level' then
+  begin
+    form := TfrmLevel.Create(pnlWorkspaceClient);
+    form.Parent := pnlWorkspaceClient;
+    TfrmLevel(form).Level := leaf;
+    form.Show;
+  end
   else if leaf.Category = 'Puppet' then
   begin
     form := TfrmPuppet.Create(pnlWorkspaceClient);
@@ -831,6 +883,20 @@ begin
     form := TfrmWilderness.Create(pnlWorkspaceClient);
     form.Parent := pnlWorkspaceClient;
     TfrmWilderness(form).Wilderness := leaf;
+    form.Show;
+  end
+  else if leaf.Category = 'Route' then
+  begin
+    form := TfrmRoute.Create(pnlWorkspaceClient);
+    form.Parent := pnlWorkspaceClient;
+    TfrmRoute(form).Route := leaf;
+    form.Show;
+  end
+  else if leaf.Category = 'Floor' then
+  begin
+    form := TfrmFloor.Create(pnlWorkspaceClient);
+    form.Parent := pnlWorkspaceClient;
+    TfrmFloor(form).Floor := leaf;
     form.Show;
   end
   else if leaf.Category = 'Tract' then

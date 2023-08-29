@@ -90,11 +90,9 @@ begin
       str := str + ' [Player Name]';
   end
   else if FCategory = 'Puppet' then
-  begin
-    str := Trim(GetTrait('FirstName') + ' ' + GetTrait('LastName'));
-  end
+    str := Format('%s %s [%s]', [Trim(GetTrait('FirstName')), Trim(GetTrait('LastName')), 'Puppet'])
   else
-    str := GetTrait('Title');
+    str := Format('%s [%s]', [GetTrait('Title'), GetTrait('Class')]);
 
   result := str;
 end;
@@ -113,23 +111,31 @@ begin
     FTraits.AddOrSetData('Title', 'Untitled Venue')
   else if FCategory = 'Room' then
     FTraits.AddOrSetData('Title', 'Untitled Room')
+  else if FCategory = 'Floor' then
+    FTraits.AddOrSetData('Title', 'Untitled Floor')
   else if FCategory = 'Puppet' then
   begin
     FTraits.AddOrSetData('FirstName', 'FirstName');
     FTraits.AddOrSetData('LastName', 'LastName');
   end
-  else if FCategory = 'Dice' then
-    FTraits.AddOrSetData('Title', 'Untitled Dice')
   else if FCategory = 'Dungeon' then
     FTraits.AddOrSetData('Title', 'Untitled Dungeon')
-  else if FCategory = 'Wilderness' then
-    FTraits.AddOrSetData('Title', 'Untitled Widlerness')
-  else if FCategory = 'Tract' then
-    FTraits.AddOrSetData('Title', 'Untitled Tract')
+  else if FCategory = 'Level' then
+    FTraits.AddOrSetData('Title', 'Untitled Level')
   else if FCategory = 'Chamber' then
     FTraits.AddOrSetData('Title', 'Untitled Chamber')
+  else if FCategory = 'Wilderness' then
+    FTraits.AddOrSetData('Title', 'Untitled Widlerness')
+  else if FCategory = 'Route' then
+    FTraits.AddOrSetData('Title', 'Untitled Route')
+  else if FCategory = 'Tract' then
+    FTraits.AddOrSetData('Title', 'Untitled Tract')
   else if FCategory = 'DiceTray' then
-    FTraits.AddOrSetData('Title', 'Dice Tray');
+    FTraits.AddOrSetData('Title', 'Dice Tray')
+  else if FCategory = 'Dice' then
+    FTraits.AddOrSetData('Title', 'Untitled Dice')
+  else if FCategory = 'Faction' then
+    FTraits.AddOrSetData('Title', 'Untitled Faction');
 end;
 
 function TPMLeaf.GetTrait(AKey: string): string;
@@ -270,7 +276,6 @@ TPMRumor := [
 '<faction> advising people to <goal>','<npc> operating in the area','Passerby mumbles about <event>',
 'Passerby mumbles about <goal>','Passerby mumbles about <crime>','Passerby mumbles about <faction>'
 ];
-
 
 TPMNatural := [
 'Arch (Stone)','Butte','Cave','Hill','Lake','Mushrooms','Pond','River','Rock',

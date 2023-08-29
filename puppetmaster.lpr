@@ -12,7 +12,8 @@ uses
   Interfaces, // this includes the LCL widgetset
   Forms, lazcontrols, mainform, puppetmasterlib, settlementform, venueform,
   puppetform, diceform, playerform, roomform, aboutform, dungeonform, 
-wildernessform, tractform, chamberform, htmlcolors;
+wildernessform, tractform, chamberform, htmlcolors, levelform, routeform, 
+floorform;
 
 {$R *.res}
 
@@ -22,6 +23,9 @@ begin
   Application.Scaled:=True;
   Application.Initialize;
   Application.CreateForm(TfrmMain, frmMain);
+  Application.CreateForm(TfrmLevel, frmLevel);
+  Application.CreateForm(TfrmRoute, frmRoute);
+  Application.CreateForm(TfrmFloor, frmFloor);
   Application.Run;
 end.
 

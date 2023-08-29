@@ -16,26 +16,30 @@ type
     btnLocked: TSpeedButton;
     btnRollAll: TButton;
     btnRollName: TButton;
+    Label1: TLabel;
     Label2: TLabel;
     Label4: TLabel;
+    Label6: TLabel;
+    Label9: TLabel;
     txtCondition: TComboBox;
-    Label1: TLabel;
     Label12: TLabel;
     Label3: TLabel;
     Label5: TLabel;
-    Label7: TLabel;
     Label8: TLabel;
-    Label9: TLabel;
     Panel1: TPanel;
     Panel2: TPanel;
     Panel3: TPanel;
     pnlHeader: TPanel;
+    txtNotes: TMemo;
     txtRoofs: TComboBox;
     txtTitle: TEdit;
     txtWalls: TComboBox;
+    txtClass: TComboBox;
     procedure btnLockedClick(Sender: TObject);
     procedure btnRollNameClick(Sender: TObject);
     procedure btnRollAllClick(Sender: TObject);
+    procedure txtNotesExit(Sender: TObject);
+    procedure txtNotesKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure txtTitleExit(Sender: TObject);
     procedure txtTitleKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure txtWallsExit(Sender: TObject);
@@ -79,6 +83,18 @@ begin
   FSettlement.SetTrait('Walls', txtWalls.Text);
   FSettlement.SetTrait('Roofs', txtRoofs.Text);
   FSettlement.SetTrait('Condition', txtCondition.Text);
+end;
+
+procedure TfrmSettlement.txtNotesExit(Sender: TObject);
+begin
+  FSettlement.SetTrait('Notes', txtNotes.Text);
+end;
+
+procedure TfrmSettlement.txtNotesKeyUp(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  if Key = VK_RETURN then
+    FSettlement.SetTrait('Notes', txtNotes.Text);
 end;
 
 procedure TfrmSettlement.txtTitleExit(Sender: TObject);

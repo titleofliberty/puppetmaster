@@ -1,0 +1,14 @@
+object frmFloor: TfrmFloor
+  Left = 386
+  Height = 575
+  Top = 171
+  Width = 832
+  Align = alClient
+  BorderStyle = bsNone
+  Caption = 'Floor'
+  ChildSizing.LeftRightSpacing = 16
+  ChildSizing.TopBottomSpacing = 16
+  ChildSizing.VerticalSpacing = 8
+  DesignTimePPI = 120
+  LCLVersion = '2.2.6.0'
+end

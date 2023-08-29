@@ -513,6 +513,11 @@ object frmMain: TfrmMain
         ShortCut = 49220
         OnClick = mnuMainInsertDungeonClick
       end
+      object mnuMainInsertLevel: TMenuItem
+        Caption = '&Level'
+        ShortCut = 49228
+        OnClick = mnuMainInsertLevelClick
+      end
       object mnuMainInsertChamber: TMenuItem
         Caption = '&Chamber'
         ShortCut = 49219
@@ -525,6 +530,11 @@ object frmMain: TfrmMain
         Caption = '&Wilderness'
         ShortCut = 49239
         OnClick = mnuMainInsertWildernessClick
+      end
+      object mnuMainInsertRoute: TMenuItem
+        Caption = 'Ro&ute'
+        ShortCut = 49237
+        OnClick = mnuMainInsertRouteClick
       end
       object mnuMainInsertTract: TMenuItem
         Caption = '&Tract'
@@ -543,6 +553,11 @@ object frmMain: TfrmMain
         Caption = '&Venue'
         ShortCut = 49238
         OnClick = mnuMainInsertVenueClick
+      end
+      object mnuMainInsertFloor: TMenuItem
+        Caption = '&Floor'
+        ShortCut = 49222
+        OnClick = mnuMainInsertFloorClick
       end
       object mnuMainInsertRoom: TMenuItem
         Caption = '&Room'
@@ -564,14 +579,15 @@ object frmMain: TfrmMain
         Caption = '&Beast'
         ShortCut = 49218
       end
-      object mnuMainInsertFaction: TMenuItem
-        Caption = '&Faction'
-        ShortCut = 49222
-      end
       object mnuMainInsertPuppet: TMenuItem
         Caption = '&Puppet'
         ShortCut = 49232
         OnClick = mnuMainInsertPuppetClick
+      end
+      object mnuMainInsertFaction: TMenuItem
+        Caption = 'F&action'
+        ShortCut = 49217
+        OnClick = mnuMainInsertFactionClick
       end
       object mnuMainInsertPlayer: TMenuItem
         Caption = 'Pla&yer'

@@ -1,28 +1,23 @@
-object frmSettlement: TfrmSettlement
-  Left = 419
-  Height = 502
-  Top = 279
-  Width = 833
+object frmRoute: TfrmRoute
+  Left = 689
+  Height = 473
+  Top = 288
+  Width = 702
   Align = alClient
   BorderStyle = bsNone
-  Caption = 'Settlement'
+  Caption = 'Route'
   ChildSizing.LeftRightSpacing = 16
   ChildSizing.TopBottomSpacing = 16
   ChildSizing.VerticalSpacing = 8
-  ClientHeight = 502
-  ClientWidth = 833
+  ClientHeight = 473
+  ClientWidth = 702
   DesignTimePPI = 120
-  Font.CharSet = ANSI_CHARSET
-  Font.Height = -20
-  Font.Name = 'Courier New'
-  Font.Pitch = fpFixed
-  Font.Quality = fqDraft
   LCLVersion = '2.2.6.0'
-  object Panel1: TPanel
+  object pnlClient: TPanel
     Left = 16
-    Height = 100
+    Height = 56
     Top = 72
-    Width = 801
+    Width = 670
     Align = alTop
     AutoSize = True
     BevelOuter = bvNone
@@ -31,288 +26,81 @@ object frmSettlement: TfrmSettlement
     ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
     ChildSizing.Layout = cclLeftToRightThenTopToBottom
     ChildSizing.ControlsPerLine = 2
-    ClientHeight = 100
-    ClientWidth = 801
+    ClientHeight = 56
+    ClientWidth = 670
     TabOrder = 0
-    object Label1: TLabel
+    object Label2: TLabel
       Left = 0
-      Height = 22
+      Height = 20
       Top = 0
-      Width = 380
+      Width = 319
       Caption = 'Title'
       ParentColor = False
     end
-    object Label12: TLabel
-      Left = 388
-      Height = 22
+    object Label3: TLabel
+      Left = 327
+      Height = 20
       Top = 0
-      Width = 413
+      Width = 343
       Caption = 'Class'
       ParentColor = False
     end
     object txtTitle: TEdit
       Left = 0
-      Height = 30
-      Top = 30
-      Width = 380
+      Height = 28
+      Top = 28
+      Width = 319
       OnExit = txtTitleExit
       OnKeyUp = txtTitleKeyUp
       TabOrder = 0
     end
     object txtClass: TComboBox
-      Left = 388
-      Height = 30
-      Top = 30
-      Width = 413
-      AutoComplete = True
-      AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
-      ItemHeight = 22
+      Left = 327
+      Height = 28
+      Top = 28
+      Width = 343
+      ItemHeight = 20
       Items.Strings = (
-        'Capital'
-        'City'
-        'Encampment'
-        'Hamlet'
-        'Town'
+        'Trail'
+        'Road'
+        'Highway'
       )
-      OnExit = txtWallsExit
-      OnKeyUp = txtWallsKeyUp
-      OnSelect = txtWallsSelect
-      Sorted = True
+      OnExit = txtClassExit
+      OnKeyUp = txtClassKeyUp
+      OnSelect = txtClassSelect
+      Style = csDropDownList
       TabOrder = 1
-      Text = 'Adobe'
-    end
-    object Label9: TLabel
-      Left = 0
-      Height = 32
-      Top = 68
-      Width = 380
-      ParentColor = False
-    end
-    object btnRollName: TButton
-      Left = 388
-      Height = 32
-      Top = 68
-      Width = 413
-      Caption = 'Roll Name'
-      OnClick = btnRollNameClick
-      TabOrder = 2
     end
   end
-  object Panel2: TPanel
-    Left = 16
-    Height = 100
-    Top = 180
-    Width = 801
-    Align = alTop
-    AutoSize = True
-    BevelOuter = bvNone
-    ChildSizing.HorizontalSpacing = 8
-    ChildSizing.VerticalSpacing = 8
-    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
-    ChildSizing.Layout = cclLeftToRightThenTopToBottom
-    ChildSizing.ControlsPerLine = 3
-    ClientHeight = 100
-    ClientWidth = 801
-    TabOrder = 1
-    object Label8: TLabel
-      Left = 0
-      Height = 22
-      Top = 0
-      Width = 262
-      Caption = 'Walls'
-      ParentColor = False
-    end
-    object Label3: TLabel
-      Left = 270
-      Height = 22
-      Top = 0
-      Width = 262
-      Caption = 'Roofs'
-      ParentColor = False
-    end
-    object Label5: TLabel
-      Left = 540
-      Height = 22
-      Top = 0
-      Width = 261
-      Caption = 'Condition'
-      ParentColor = False
-    end
-    object txtWalls: TComboBox
-      Left = 0
-      Height = 30
-      Top = 30
-      Width = 262
-      AutoComplete = True
-      AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
-      ItemHeight = 22
-      ItemIndex = 0
-      Items.Strings = (
-        'Adobe'
-        'Brick'
-        'Brush'
-        'Clay'
-        'Fabric'
-        'Ice'
-        'Leather'
-        'Log'
-        'Rock'
-        'Stone'
-        'Thatch'
-        'Timber'
-      )
-      OnExit = txtWallsExit
-      OnKeyUp = txtWallsKeyUp
-      OnSelect = txtWallsSelect
-      Sorted = True
-      TabOrder = 0
-      Text = 'Adobe'
-    end
-    object txtRoofs: TComboBox
-      Left = 270
-      Height = 30
-      Top = 30
-      Width = 262
-      AutoComplete = True
-      AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
-      ItemHeight = 22
-      ItemIndex = 0
-      Items.Strings = (
-        'Bark'
-        'Moss'
-        'Slate'
-        'Terracotta'
-        'Thatch'
-        'Wood'
-      )
-      OnExit = txtWallsExit
-      OnKeyUp = txtWallsKeyUp
-      OnSelect = txtWallsSelect
-      Sorted = True
-      TabOrder = 1
-      Text = 'Bark'
-    end
-    object txtCondition: TComboBox
-      Left = 540
-      Height = 30
-      Top = 30
-      Width = 261
-      AutoComplete = True
-      AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
-      ItemHeight = 22
-      ItemIndex = 0
-      Items.Strings = (
-        'Battered'
-        'Beat-Up'
-        'Bright'
-        'Broken-Down'
-        'Clean'
-        'Crumbling'
-        'Crumbly'
-        'Crummy'
-        'Damaged'
-        'Decayed'
-        'Decaying'
-        'Decrepit'
-        'Derelict'
-        'Dilapidated'
-        'Dingy'
-        'Dirty'
-        'Dusty'
-        'Elegant'
-        'Faded'
-        'Fallen-In'
-        'Filthy'
-        'Grimy'
-        'Immaculate'
-        'Impaired'
-        'Injured'
-        'Marred'
-        'Messy'
-        'Muddy'
-        'Neat'
-        'Neglected'
-        'Old'
-        'Orderly'
-        'Organized'
-        'Ramshackle'
-        'Ratty'
-        'Rickety'
-        'Ruined'
-        'Run-Down'
-        'Seedy'
-        'Shabby'
-        'Shaky'
-        'Simple'
-        'Sloppy'
-        'Slummy'
-        'Spotless'
-        'Tacky'
-        'Tidy'
-        'Unimproved'
-        'Unkempt'
-        'Worn-Out'
-      )
-      OnExit = txtWallsExit
-      OnKeyUp = txtWallsKeyUp
-      OnSelect = txtWallsSelect
-      Sorted = True
-      TabOrder = 3
-      Text = 'Battered'
-    end
-    object Label2: TLabel
-      Left = 0
-      Height = 32
-      Top = 68
-      Width = 262
-      ParentColor = False
-    end
-    object Label4: TLabel
-      Left = 270
-      Height = 32
-      Top = 68
-      Width = 262
-      ParentColor = False
-    end
-    object btnRollAll: TButton
-      Left = 540
-      Height = 32
-      Top = 68
-      Width = 261
-      Caption = 'Roll All'
-      OnClick = btnRollAllClick
-      TabOrder = 2
-    end
-  end
-  object Panel3: TPanel
+  object Panel1: TPanel
     Left = 16
     Height = 63
-    Top = 423
-    Width = 801
+    Top = 394
+    Width = 670
     Align = alBottom
     BevelOuter = bvNone
-    TabOrder = 2
+    TabOrder = 1
   end
   object pnlHeader: TPanel
     Left = 16
     Height = 48
     Top = 16
-    Width = 801
+    Width = 670
     Align = alTop
     Alignment = taLeftJustify
     BevelOuter = bvNone
-    Caption = 'Settlement'
+    Caption = 'Route'
     ClientHeight = 48
-    ClientWidth = 801
+    ClientWidth = 670
     Font.CharSet = ANSI_CHARSET
     Font.Height = -40
     Font.Name = 'Courier New'
     Font.Pitch = fpFixed
     Font.Quality = fqDraft
     ParentFont = False
-    TabOrder = 3
+    TabOrder = 2
     object btnLocked: TSpeedButton
-      Left = 753
+      Left = 622
       Height = 48
       Top = 0
       Width = 48
@@ -396,27 +184,26 @@ object frmSettlement: TfrmSettlement
         FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00
       }
       GroupIndex = 1
-      OnClick = btnLockedClick
     end
   end
-  object Label6: TLabel
+  object Label1: TLabel
     Left = 16
-    Height = 22
-    Top = 288
-    Width = 801
+    Height = 20
+    Top = 136
+    Width = 670
     Align = alTop
     Caption = 'Notes'
     ParentColor = False
   end
   object txtNotes: TMemo
     Left = 16
-    Height = 97
-    Top = 318
-    Width = 801
+    Height = 222
+    Top = 164
+    Width = 670
     Align = alClient
     OnExit = txtNotesExit
     OnKeyUp = txtNotesKeyUp
     ScrollBars = ssVertical
-    TabOrder = 4
+    TabOrder = 3
   end
 end

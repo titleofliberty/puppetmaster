@@ -132,6 +132,26 @@
         <Filename Value="..\gizmos\htmlcolors.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
+      <Unit>
+        <Filename Value="levelform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmLevel"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit>
+      <Unit>
+        <Filename Value="routeform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmRoute"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit>
+      <Unit>
+        <Filename Value="floorform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmFloor"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

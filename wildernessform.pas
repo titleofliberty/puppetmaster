@@ -13,6 +13,7 @@ type
   { TfrmWilderness }
 
   TfrmWilderness = class(TForm)
+    Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
     Panel1: TPanel;
@@ -20,9 +21,17 @@ type
     pnlHeader: TPanel;
     btnLocked: TSpeedButton;
     txtClass: TComboBox;
+    txtNotes: TMemo;
     txtTitle: TEdit;
     procedure btnLockedClick(Sender: TObject);
     procedure btnRollAllClick(Sender: TObject);
+    procedure txtClassExit(Sender: TObject);
+    procedure txtClassKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure txtClassSelect(Sender: TObject);
+    procedure txtNotesExit(Sender: TObject);
+    procedure txtNotesKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure txtTitleExit(Sender: TObject);
+    procedure txtTitleKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
   private
     FWilderness: TPMLeaf;
     procedure SetWilderness(AValue: TPMLeaf);
@@ -43,6 +52,47 @@ implementation
 procedure TfrmWilderness.btnRollAllClick(Sender: TObject);
 begin
   txtClass.ItemIndex := Random(txtClass.Items.Count);
+end;
+
+procedure TfrmWilderness.txtClassExit(Sender: TObject);
+begin
+  FWilderness.SetTrait('Class', txtClass.Text);
+end;
+
+procedure TfrmWilderness.txtClassKeyUp(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  if Key = VK_RETURN then
+    FWilderness.SetTrait('Class', txtClass.Text);
+end;
+
+procedure TfrmWilderness.txtClassSelect(Sender: TObject);
+begin
+  FWilderness.SetTrait('Class', txtClass.Text);
+end;
+
+procedure TfrmWilderness.txtNotesExit(Sender: TObject);
+begin
+  FWilderness.SetTrait('Notes', txtNotes.Text);
+end;
+
+procedure TfrmWilderness.txtNotesKeyUp(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  if Key = VK_RETURN then
+    FWilderness.SetTrait('Notes', txtNotes.Text);
+end;
+
+procedure TfrmWilderness.txtTitleExit(Sender: TObject);
+begin
+  FWilderness.SetTrait('Title', txtTitle.Text);
+end;
+
+procedure TfrmWilderness.txtTitleKeyUp(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  if Key = VK_RETURN then
+    FWilderness.SetTrait('Title', txtTitle.Text);
 end;
 
 procedure TfrmWilderness.btnLockedClick(Sender: TObject);

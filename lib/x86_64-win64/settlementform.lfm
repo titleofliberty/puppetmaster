@@ -20,7 +20,7 @@ object frmSettlement: TfrmSettlement
   LCLVersion = '2.2.6.0'
   object Panel1: TPanel
     Left = 16
-    Height = 62
+    Height = 100
     Top = 72
     Width = 801
     Align = alTop
@@ -30,62 +30,78 @@ object frmSettlement: TfrmSettlement
     ChildSizing.VerticalSpacing = 8
     ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
     ChildSizing.Layout = cclLeftToRightThenTopToBottom
-    ChildSizing.ControlsPerLine = 4
-    ClientHeight = 62
+    ChildSizing.ControlsPerLine = 2
+    ClientHeight = 100
     ClientWidth = 801
     TabOrder = 0
     object Label1: TLabel
       Left = 0
       Height = 22
       Top = 0
-      Width = 236
+      Width = 380
       Caption = 'Title'
       ParentColor = False
     end
-    object Label7: TLabel
-      Left = 244
-      Height = 22
-      Top = 0
-      Width = 270
-      ParentColor = False
-    end
-    object Label9: TLabel
-      Left = 522
-      Height = 22
-      Top = 0
-      Width = 137
-      ParentColor = False
-    end
     object Label12: TLabel
-      Left = 667
+      Left = 388
       Height = 22
       Top = 0
-      Width = 134
+      Width = 413
+      Caption = 'Class'
       ParentColor = False
     end
     object txtTitle: TEdit
       Left = 0
-      Height = 32
+      Height = 30
       Top = 30
-      Width = 236
+      Width = 380
       OnExit = txtTitleExit
       OnKeyUp = txtTitleKeyUp
       TabOrder = 0
     end
-    object btnRollName: TButton
-      Left = 244
-      Height = 32
+    object txtClass: TComboBox
+      Left = 388
+      Height = 30
       Top = 30
-      Width = 270
+      Width = 413
+      AutoComplete = True
+      AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
+      ItemHeight = 22
+      Items.Strings = (
+        'Capital'
+        'City'
+        'Encampment'
+        'Hamlet'
+        'Town'
+      )
+      OnExit = txtWallsExit
+      OnKeyUp = txtWallsKeyUp
+      OnSelect = txtWallsSelect
+      Sorted = True
+      TabOrder = 1
+      Text = 'Adobe'
+    end
+    object Label9: TLabel
+      Left = 0
+      Height = 32
+      Top = 68
+      Width = 380
+      ParentColor = False
+    end
+    object btnRollName: TButton
+      Left = 388
+      Height = 32
+      Top = 68
+      Width = 413
       Caption = 'Roll Name'
       OnClick = btnRollNameClick
-      TabOrder = 1
+      TabOrder = 2
     end
   end
   object Panel2: TPanel
     Left = 16
     Height = 100
-    Top = 142
+    Top = 180
     Width = 801
     Align = alTop
     AutoSize = True
@@ -271,9 +287,9 @@ object frmSettlement: TfrmSettlement
   object Panel3: TPanel
     Left = 16
     Height = 63
-    Top = 250
+    Top = 423
     Width = 801
-    Align = alTop
+    Align = alBottom
     BevelOuter = bvNone
     TabOrder = 2
   end
@@ -382,5 +398,25 @@ object frmSettlement: TfrmSettlement
       GroupIndex = 1
       OnClick = btnLockedClick
     end
+  end
+  object Label6: TLabel
+    Left = 16
+    Height = 22
+    Top = 288
+    Width = 801
+    Align = alTop
+    Caption = 'Notes'
+    ParentColor = False
+  end
+  object txtNotes: TMemo
+    Left = 16
+    Height = 97
+    Top = 318
+    Width = 801
+    Align = alClient
+    OnExit = txtNotesExit
+    OnKeyUp = txtNotesKeyUp
+    ScrollBars = ssVertical
+    TabOrder = 4
   end
 end

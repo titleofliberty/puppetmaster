@@ -37,7 +37,7 @@ type
   private
     FRoom: TPMLeaf;
     procedure SetRoom(AValue: TPMLeaf);
-
+    procedure LockForm;
   public
     property Room: TPMLeaf read FRoom write SetRoom;
   end;
@@ -63,10 +63,7 @@ end;
 
 procedure TfrmRoom.btnLockedClick(Sender: TObject);
 begin
-  txtTitle.Enabled := not btnLocked.Down;
-  txtClass.Enabled := not btnLocked.Down;
-  txtCondition.Enabled := not btnLocked.Down;
-  FRoom.SetTrait('Locked', BoolToStr(btnLocked.Down, 'True', 'False'));
+  LockForm;
 end;
 
 procedure TfrmRoom.txtClassKeyUp(Sender: TObject; var Key: Word;
@@ -113,6 +110,15 @@ begin
   txtClass.Text := FRoom.GetTrait('Class');
   txtCondition.Text := FRoom.GetTrait('Condition');
   btnLocked.Down := FRoom.GetTrait('Locked') = 'True';
+  LockForm;
+end;
+
+procedure TfrmRoom.LockForm;
+begin
+  txtTitle.Enabled := not btnLocked.Down;
+  txtClass.Enabled := not btnLocked.Down;
+  txtCondition.Enabled := not btnLocked.Down;
+  FRoom.SetTrait('Locked', BoolToStr(btnLocked.Down, 'True', 'False'));
 end;
 
 end.
