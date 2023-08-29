@@ -90,9 +90,9 @@ begin
       str := str + ' [Player Name]';
   end
   else if FCategory = 'Puppet' then
-    str := Format('%s %s [%s]', [Trim(GetTrait('FirstName')), Trim(GetTrait('LastName')), 'Puppet'])
+    str := Format('%s %s', [Trim(GetTrait('FirstName')), Trim(GetTrait('LastName'))])
   else
-    str := Format('%s [%s]', [GetTrait('Title'), GetTrait('Class')]);
+    str := Format('%s', [GetTrait('Title')]);
 
   result := str;
 end;

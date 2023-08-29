@@ -1,7 +1,7 @@
 object frmVenue: TfrmVenue
-  Left = 21
+  Left = 471
   Height = 460
-  Top = 267
+  Top = 270
   Width = 820
   Align = alClient
   BorderStyle = bsNone
@@ -179,9 +179,9 @@ object frmVenue: TfrmVenue
   object Panel2: TPanel
     Left = 16
     Height = 63
-    Top = 142
+    Top = 381
     Width = 788
-    Align = alTop
+    Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
   end
@@ -290,5 +290,25 @@ object frmVenue: TfrmVenue
       GroupIndex = 1
       OnClick = btnLockedClick
     end
+  end
+  object Label3: TLabel
+    Left = 16
+    Height = 22
+    Top = 142
+    Width = 788
+    Align = alTop
+    Caption = 'Notes'
+    ParentColor = False
+  end
+  object txtNotes: TMemo
+    Left = 16
+    Height = 201
+    Top = 172
+    Width = 788
+    Align = alClient
+    OnExit = txtNotesExit
+    OnKeyUp = txtNotesKeyUp
+    ScrollBars = ssVertical
+    TabOrder = 3
   end
 end

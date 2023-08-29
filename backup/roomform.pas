@@ -16,6 +16,7 @@ type
     btnLocked: TSpeedButton;
     Label1: TLabel;
     Label2: TLabel;
+    Label3: TLabel;
     Label5: TLabel;
     Label6: TLabel;
     Panel1: TPanel;
@@ -23,6 +24,7 @@ type
     pnlHeader: TPanel;
     txtClass: TComboBox;
     txtCondition: TComboBox;
+    txtNotes: TMemo;
     txtTitle: TEdit;
     procedure btnLockedClick(Sender: TObject);
     procedure txtClassEnter(Sender: TObject);
@@ -32,6 +34,8 @@ type
     procedure txtConditionKeyUp(Sender: TObject; var Key: Word;
       Shift: TShiftState);
     procedure txtConditionSelect(Sender: TObject);
+    procedure txtNotesExit(Sender: TObject);
+    procedure txtNotesKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure txtTitleExit(Sender: TObject);
     procedure txtTitleKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
   private
@@ -93,6 +97,18 @@ end;
 procedure TfrmRoom.txtConditionSelect(Sender: TObject);
 begin
   FRoom.SetTrait('Condition', txtCondition.Text);
+end;
+
+procedure TfrmRoom.txtNotesExit(Sender: TObject);
+begin
+  FRoom.SetTrait('Notes', txtNotes.Text);
+end;
+
+procedure TfrmRoom.txtNotesKeyUp(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  if Key = VK_RETURN then
+    FRoom.SetTrait('Notes', txtNotes.Text);
 end;
 
 procedure TfrmRoom.txtTitleKeyUp(Sender: TObject; var Key: Word;

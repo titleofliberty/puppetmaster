@@ -155,6 +155,7 @@ begin
   txtCondition.Enabled := not btnLocked.Down;
   btnRollName.Enabled := not btnLocked.Down;
   btnRollAll.Enabled := not btnLocked.Down;
+  txtNotes.ReadOnly := btnLocked.Down;
   FSettlement.SetTrait('Locked', BoolToStr(btnLocked.Down, 'True', 'False'));
 end;
 

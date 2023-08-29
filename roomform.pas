@@ -134,6 +134,7 @@ begin
   txtTitle.Enabled := not btnLocked.Down;
   txtClass.Enabled := not btnLocked.Down;
   txtCondition.Enabled := not btnLocked.Down;
+  txtNotes.ReadOnly := btnLocked.Down;
   FRoom.SetTrait('Locked', BoolToStr(btnLocked.Down, 'True', 'False'));
 end;
 

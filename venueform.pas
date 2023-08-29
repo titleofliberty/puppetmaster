@@ -14,7 +14,6 @@ type
 
   TfrmVenue = class(TForm)
     btnLocked: TSpeedButton;
-    btnRollClass: TButton;
     btnRollName: TButton;
     Label1: TLabel;
     Label2: TLabel;

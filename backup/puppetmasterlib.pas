@@ -133,7 +133,9 @@ begin
   else if FCategory = 'DiceTray' then
     FTraits.AddOrSetData('Title', 'Dice Tray')
   else if FCategory = 'Dice' then
-    FTraits.AddOrSetData('Title', 'Untitled Dice');
+    FTraits.AddOrSetData('Title', 'Untitled Dice')
+  else if FCategory = 'Faction' then
+    FTraits.AddOrSetData('Title', 'Untitled Faction');
 end;
 
 function TPMLeaf.GetTrait(AKey: string): string;
