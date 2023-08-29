@@ -903,9 +903,22 @@ begin
   begin
     form := TfrmTract.Create(pnlWorkspaceClient);
     form.Parent := pnlWorkspaceClient;
-    with TfrmTract do
+    with TfrmTract(form) do
     begin
-
+      PopulateResourceToCbo(txtNatural, nodeNatural);
+      PopulateResourceToCbo(txtUnnatural, nodeUnnatural);
+      PopulateResourceToCbo(txtFlora, nodeFlora);
+      PopulateResourceToCbo(txtFauna, nodeFauna);
+      PopulateResourceToCbo(txtTool, nodeTools);
+      PopulateResourceToCbo(txtClothing, nodeClothing);
+      PopulateResourceToCbo(txtKit, nodeKits);
+      PopulateResourceToCbo(txtContainer, nodeContainers);
+      PopulateResourceToCbo(txtWeapon, nodeWeapons);
+      PopulateResourceToCbo(txtVehicle, nodeVehicle);
+      PopulateResourceToCbo(txtRemains, nodeRemains);
+      PopulateResourceToCbo(txtInstrument, nodeInstruments);
+      PopulateResourceToCbo(txtArmour, nodeArmors);
+      PopulateResourceToCbo(txtTrap, nodeTraps);
     end;
     TfrmTract(form).Tract := leaf;
     form.Show;

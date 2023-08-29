@@ -1,7 +1,7 @@
 object frmTract: TfrmTract
-  Left = 570
+  Left = 373
   Height = 677
-  Top = 210
+  Top = 261
   Width = 972
   Align = alClient
   BorderStyle = bsNone
@@ -346,6 +346,7 @@ object frmTract: TfrmTract
       Top = 234
       Width = 229
       Caption = 'Roll All'
+      OnClick = btnRollAllClick
       TabOrder = 15
     end
   end

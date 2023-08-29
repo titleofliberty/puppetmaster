@@ -16,9 +16,7 @@ type
     btnLocked: TSpeedButton;
     btnRollAll: TButton;
     Label1: TLabel;
-    Label10: TLabel;
     Label11: TLabel;
-    Label12: TLabel;
     Label13: TLabel;
     Label14: TLabel;
     Label15: TLabel;
@@ -31,13 +29,12 @@ type
     Label21: TLabel;
     Label22: TLabel;
     Label23: TLabel;
-    Label3: TLabel;
     Label4: TLabel;
     Label5: TLabel;
     Label6: TLabel;
     Label7: TLabel;
     Label8: TLabel;
-    Label9: TLabel;
+    Panel1: TPanel;
     Panel2: TPanel;
     Panel3: TPanel;
     pnlHeader: TPanel;
@@ -52,11 +49,11 @@ type
     txtKit: TComboBox;
     txtNotes: TMemo;
     txtRemains: TComboBox;
+    txtTitle: TEdit;
     txtTool: TComboBox;
     txtTrap: TComboBox;
     txtUnnatural: TComboBox;
     txtNatural: TComboBox;
-    txtTitle: TEdit;
     txtVehicle: TComboBox;
     txtWeapon: TComboBox;
     procedure btnLockedClick(Sender: TObject);
@@ -91,6 +88,7 @@ begin
   txtUnnatural.ItemIndex := Random(txtUnnatural.Items.Count);
   txtFlora.ItemIndex := Random(txtFlora.Items.Count);
   txtFauna.ItemIndex := Random(txtFauna.Items.Count);
+
 
   FTract.SetTrait('Class', txtClass.Text);
   FTract.SetTrait('Natural', txtNatural.Text);

@@ -279,30 +279,37 @@ TPMRumor := [
 
 TPMNatural := [
 'Arch (Stone)','Butte','Cave','Hill','Lake','Mushrooms','Pond','River','Rock',
-'Rock (Balance)','Rock (Bear)','Rock (Buffalo)','Rock (Eagle)','Rock (Pipes)',
-'Rock (Prism)','Rock (Skull)','Rock (Wave)','Rock (Wolf)','Stream','Stump',
-'Tree (Enormous)','Tree (Lightening)','Tree (Petrified)','Waterfall (Large)',
-'Waterfall (Small)'
+'Rock (Pipes)','Rock (Prism)','Rock (Wave)','Stream','Stump','Tree (Enormous)',
+'Tree (Lightening)','Tree (Petrified)','Tree (Haunted)','Waterfall', 'Swamp',
+'Bogg'
 ];
 
 TPMUnnatural := [
-'Arch','Axe','Bag','Barral','Bottle','Bowl','Box','Breastplate','Bridge','Cabin',
-'Cage','Campsite','Cannon','Cemetary','Chimney','Clothing','Cottage','Crate','Cross',
-'Fence','Firepit','Graveyard','Helm','Jug','Key','Lamp','Lantern','Mine','Mound',
-'Obelisk','Pitcher','Polearm','Post','Pylon','Pyramid','Ring','Road','Shield',
-'Shrine','Sign','Steps','Sword','Tablet','Totem','Tower','Treehouse','Wagon',
-'Wagon Wheel','Wall','Ziggurat'
+'Arch','Bridge','Cabin','Campsite','Cannon','Cemetary','Chimney','Cottage','Cross',
+'Fence','Firepit','Graveyard','Mine','Mound','Obelisk','Post','Pylon','Pyramid',
+'Road','Shrine','Sign','Steps','Tablet','Totem','Tower','Treehouse','Wagon Wheel',
+'Wall','Ziggurat'
 ];
 
-TPMFlora := ['Ashe','Cactus','Crop','Elms','Ferns','Grass','Oaks','Pines','Vines',
-'Wildflowers'
+TPMFlora := ['Ashe','Cactus','Crop','Elms','Ferns','Grass','Oak','Pine','Vines',
+'Wildflowers','Ivy','Agave','Joshua','Tumbleweed','Maple','Birch','Magnolia','Sweet Gum',
+'Beech','Sumac','Hogweed','Oleander','Foxglove','Monkshood','Baneberry','Larkspur',
+'Nightshade','Poinsettia','Iris','Hemlock','Daffodil','Elderberry','Parsnip','Azaleas',
+'Witch-hazel','Blueberries','Chestnut','Cedar','Fir','Cypress','Juniper','Larch',
+'Redwood','Spruce','Yew','Mangroves','Holly','Dogwood','Swamp Rose','Willow',
+'Buttonbush','Aster','Goldenrod','Sunflower','Clover','Wild Indigo','Moss','Strawberry',
+'Coffee','Cocoa','Banana','Pear','Apple','Blackberry','Cypress'
 ];
 
-TPMFauna := ['Bat','Bear','Beaver','Bees','Bison','Butterfly','Cat','Chipmunk',
-'Crab','Deer','Dog','Dragonfly','Elf','Firefly','Fox','Frog','Gopher','Hornets',
-'Hummingbird','Livestock','Lizard','Moose','Mouse','Opossum','Otter','Porcupine',
-'Rabit','Raccon','Rat','Salamander','Seal','Skunk','Snake','Songbird','Squirrel',
-'Viper','Wasps','Wolf'
+TPMFauna := [
+'Ants','Bat','Bear','Beaver','Bees','Bighorn','Bison','Bullfrog','Butterfly','Cat',
+'Chipmunk','Coyote','Crab','Condor','Crow','Deer','Dog','Dove','Dragonfly','Eagle',
+'Elk','Falcon','Ferret','Firefly','Fox','Frog','Gila Monster','Gecko','Goose','Gopher',
+'Grizzly','Hawk','Hornets','Hummingbird','Iguana','Jackal','Kangaroo','Livestock',
+'Lizard','Mockingbird','Moose','Moth','Mouse','Opossum','Otter','Owl','Owl','Porcupine',
+'Pronghorn','Quail','Rabit','Raccon','Rat','Rhinoceros','Roadrunner','Robin','Salamander',
+'Seal','Sheep','Skunk','Snake','Songbird','Spider','Squirrel','Toad','Tortoise''Treefrog',
+'Turtle','Viper','Wasps','Wolf','Woodpecker','Xerocoles','Horse','Periwinkle'
 ];
 
 TPMBasicDice := [

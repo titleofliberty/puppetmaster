@@ -89,6 +89,7 @@ begin
   txtFlora.ItemIndex := Random(txtFlora.Items.Count);
   txtFauna.ItemIndex := Random(txtFauna.Items.Count);
 
+
   FTract.SetTrait('Class', txtClass.Text);
   FTract.SetTrait('Natural', txtNatural.Text);
   FTract.SetTrait('Manufactured', txtUnnatural.Text);

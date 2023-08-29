@@ -373,6 +373,7 @@ begin
   if not Assigned(tvwCampaign.Selected) then exit;
   slct := TPMLeaf(tvwCampaign.Selected.Data);
   leaf := TPMLeaf.Create('Floor');
+  leaf.OnChange := @LeafChange;
   if slct.Category = 'Venue' then
     node := tvwCampaign.Items.AddChildObject(tvwCampaign.Selected, leaf.Title, leaf)
   else if slct.Category = 'Floor' then
@@ -904,7 +905,20 @@ begin
     form.Parent := pnlWorkspaceClient;
     with TfrmTract do
     begin
-
+      PopulateResourceToCbo(txtNatural, nodeNatural);
+      PopulateResourceToCbo(txtUnnatural, nodeUnnatural);
+      PopulateResourceToCbo(txtFlora, nodeFlora);
+      PopulateResourceToCbo(txtFauna, nodeFauna);
+      PopulateResourceToCbo(txtTool, nodeTools);
+      PopulateResourceToCbo(txtClothing, nodeClothing);
+      PopulateResourceToCbo(txtKit, nodeKits);
+      PopulateResourceToCbo(txtContainer, nodeContainers);
+      PopulateResourceToCbo(txtWeapon, nodeWeapons);
+      PopulateResourceToCbo(txtVehicle, nodeVehicle);
+      PopulateResourceToCbo(txtRemains, nodeRemains);
+      PopulateResourceToCbo(txtInstrument, nodeInstruments);
+      PopulateResourceToCbo(txtArmour, nodeArmors);
+      PopulateResourceToCbo(txtTrap, nodeTraps);
     end;
     TfrmTract(form).Tract := leaf;
     form.Show;
