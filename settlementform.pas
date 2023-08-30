@@ -20,20 +20,13 @@ type
     Label2: TLabel;
     Label4: TLabel;
     Label6: TLabel;
-    Label9: TLabel;
-    txtCondition: TComboBox;
     Label12: TLabel;
-    Label3: TLabel;
-    Label5: TLabel;
-    Label8: TLabel;
     Panel1: TPanel;
     Panel2: TPanel;
     Panel3: TPanel;
     pnlHeader: TPanel;
     txtNotes: TMemo;
-    txtRoofs: TComboBox;
     txtTitle: TEdit;
-    txtWalls: TComboBox;
     txtClass: TComboBox;
     procedure btnLockedClick(Sender: TObject);
     procedure btnRollNameClick(Sender: TObject);
@@ -76,13 +69,7 @@ procedure TfrmSettlement.btnRollAllClick(Sender: TObject);
 var
   i : integer;
 begin
-  txtWalls.ItemIndex := Random(txtWalls.Items.Count);
-  txtRoofs.ItemIndex := Random(txtRoofs.Items.Count);
-  txtCondition.ItemIndex  := Random(txtCondition.Items.Count);
 
-  FSettlement.SetTrait('Walls', txtWalls.Text);
-  FSettlement.SetTrait('Roofs', txtRoofs.Text);
-  FSettlement.SetTrait('Condition', txtCondition.Text);
 end;
 
 procedure TfrmSettlement.txtNotesExit(Sender: TObject);
@@ -140,9 +127,6 @@ begin
   FSettlement := AValue;
 
   txtTitle.Text := FSettlement.GetTrait('Title');
-  txtWalls.Text := FSettlement.GetTrait('Walls');
-  txtRoofs.Text := FSettlement.GetTrait('Roofs');
-  txtCondition.Text := FSettlement.GetTrait('Condition');
   btnLocked.Down := FSettlement.GetTrait('Locked') = 'True';
   LockForm;
 end;
@@ -150,9 +134,6 @@ end;
 procedure TfrmSettlement.LockForm;
 begin
   txtTitle.Enabled := not btnLocked.Down;
-  txtWalls.Enabled := not btnLocked.Down;
-  txtRoofs.Enabled := not btnLocked.Down;
-  txtCondition.Enabled := not btnLocked.Down;
   btnRollName.Enabled := not btnLocked.Down;
   btnRollAll.Enabled := not btnLocked.Down;
   txtNotes.ReadOnly := btnLocked.Down;

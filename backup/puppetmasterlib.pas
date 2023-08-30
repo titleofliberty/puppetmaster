@@ -67,6 +67,10 @@ var
   TPMUnnatural: TStringArray;
   TPMFlora: TStringArray;
   TPMFauna: TStringArray;
+  TPMConditions: TStringArray;
+  TPMChamberClasses: TStringArray;
+  TPMTractClasses: TStringArray;
+  TPMRoomClasses: TStringArray;
 
 implementation
 
@@ -281,14 +285,14 @@ TPMNatural := [
 'Arch (Stone)','Butte','Cave','Hill','Lake','Mushrooms','Pond','River','Rock',
 'Rock (Pipes)','Rock (Prism)','Rock (Wave)','Stream','Stump','Tree (Enormous)',
 'Tree (Lightening)','Tree (Petrified)','Tree (Haunted)','Waterfall', 'Swamp',
-'Bogg'
+'Bog'
 ];
 
 TPMUnnatural := [
 'Arch','Bridge','Cabin','Campsite','Cannon','Cemetary','Chimney','Cottage','Cross',
 'Fence','Firepit','Graveyard','Mine','Mound','Obelisk','Post','Pylon','Pyramid',
 'Road','Shrine','Sign','Steps','Tablet','Totem','Tower','Treehouse','Wagon Wheel',
-'Wall','Ziggurat'
+'Wall','Ziggurat','Lean-to'
 ];
 
 TPMFlora := ['Ashe','Cactus','Crop','Elms','Ferns','Grass','Oak','Pine','Vines',
@@ -297,7 +301,9 @@ TPMFlora := ['Ashe','Cactus','Crop','Elms','Ferns','Grass','Oak','Pine','Vines',
 'Nightshade','Poinsettia','Iris','Hemlock','Daffodil','Elderberry','Parsnip','Azaleas',
 'Witch-hazel','Blueberries','Chestnut','Cedar','Fir','Cypress','Juniper','Larch',
 'Redwood','Spruce','Yew','Mangroves','Holly','Dogwood','Swamp Rose','Willow',
-'Buttonbush','Aster','Goldenrod','Sunflower','Clover','Wild Indigo'
+'Buttonbush','Aster','Goldenrod','Sunflower','Clover','Wild Indigo','Moss','Strawberry',
+'Coffee','Cocoa','Banana','Pear','Apple','Blackberry','Cypress','Walnut','Peacan',
+'Potato','Onion','Grape','Almond'
 ];
 
 TPMFauna := [
@@ -308,7 +314,7 @@ TPMFauna := [
 'Lizard','Mockingbird','Moose','Moth','Mouse','Opossum','Otter','Owl','Owl','Porcupine',
 'Pronghorn','Quail','Rabit','Raccon','Rat','Rhinoceros','Roadrunner','Robin','Salamander',
 'Seal','Sheep','Skunk','Snake','Songbird','Spider','Squirrel','Toad','Tortoise''Treefrog',
-'Turtle','Viper','Wasps','Wolf','Woodpecker','Xerocoles',
+'Turtle','Viper','Wasps','Wolf','Woodpecker','Xerocoles','Horse','Periwinkle'
 ];
 
 TPMBasicDice := [
@@ -587,13 +593,14 @@ TPMKits := [
 TPMTools := [
 'Abacus','Ball Bearings','Bedroll','Blanket','Book','Bridle','Candle','Censar',
 'Chain','Chalk','Compass','Cup','Fork','Grappling Hook','Hammer','Hammer, Sledge',
-'Handaxe','Hourglass','Hunting Trap','Ink','Ink Pen','Jug','Key','Knife','Ladder',
+'Handaxe','Hourglass','Hunting Trap','Ink','Quill','Jug','Key','Knife','Ladder',
 'Lamp','Lantern','Lock','Magnifying Glass','Manacles','Map','Mirror, Steel','Net',
 'Oil','Paper','Parchment','Pick (Miner)','Pitcher','Piton','Plate','Playing Cards',
 'Pot','Potion','Pulley','Rope','Saddle (Exotic)','Saddle (Military)','Saddle (Pack)',
 'Saddle (Riding)','Scales (Weights)','Scroll','Sealing Wax','Sexton','Shovel','Sickle',
 'Spikes (Iron)','Spoon','Spyglass','Staff','Stake (Wooden)','String','Tent','Torch',
-'Wargong','Watch (Pocket)','Waterskin','Whetstone','Whip','Whistle'
+'Wargong','Watch (Pocket)','Waterskin','Whetstone','Whip','Whistle','Bowl','Mug',
+'Stein','Dice','Cards','Game Piece'
 ];
 
 TPMClothing := [
@@ -606,7 +613,8 @@ TPMClothing := [
 
 TPMContainers := [
 'Backpack','Bag','Barrel','Basket','Bow (Jewelry)','Box (Strong)','Box (Wood)',
-'Bucket','Cage','Chest','Coffin','Crate','Pouch','Purse','Sack','Saddlebags'
+'Box (Tin)','Bucket','Cage','Chest','Coffin','Crate','Pouch','Purse','Sack',
+'Saddlebags'
 ];
 
 TPMWeapons := [
@@ -653,7 +661,7 @@ TPMTraps := [
 'Darts','Doppelganger','Fire Blasts','Fog','Frost','Illusion','Invisible Bridge',
 'Laval','Lightening','Locked Doors','Magnets','Neddle','Pit','Pit (Attack)',
 'Poison','Pressure Plate','Rust','Sand','Slide','Snare','Spikes','Teleport',
-'Time Warp','Toxic Gas','Tumble','Water','Noxious Gas'
+'Time Warp','Toxic Gas','Tumble','Water','Noxious Gas','Quick Sand'
 ];
 
 TPMGems := [
@@ -688,6 +696,57 @@ TPMGems := [
 'White Coral','White Opal','White Sapphire','White Topaz','White Zircon','Yellow Beryl',
 'Yellow Fluorite','Yellow Sapphire','Yellow Topaz','Yellow Zircon','Zircon','Zultanite'
 ];
+
+TPMConditions := [
+'Battered','Beat-Up','Bright','Broken-Down','Crumbling','Crumbly','Crummy',
+'Damaged','Decayed','Decaying','Decrepit','Derelict','Dilapidated','Dingy',
+'Faded','Fallen-In','Filthy','Grimy','Impaired','Injured','Marred',
+'Muddy','Neat','Neglected','Old','Orderly','Organized','Ramshackle','Ratty',
+'Rickety','Ruined','Run-Down','Seedy','Shabby','Shaky','Simple','Sloppy',
+'Slummy','Spotless','Tacky','Tidy','Unimproved','Unkempt','Worn-Out','New',
+'Pristine','Intact','Exquisite','Flawless','Beautiful','Meticulous','Perfect',
+'Polished','Precise','Exact','Satisfactory','Bad','Arranged','Clean','Cluttered',
+'Dirty','Disarranged','Disarrayed','Dishevelled','Disordered','Dusty','Elegant',
+'Hygienic','Immaculate','Messy','Piled','Pillaged',
+'Plundered','Ransacked','Robed','Ruffled','Simple','Spotless',
+'Strewn','Tidy','Unkempt','Untidy'
+];
+
+TPMChamberClasses := [
+'Alter','Anteroom','Armoury','Barrack','Bedroom','Bedroom (Master)','Bottlery',
+'Bower','Buttery','Cell','Cellar (Wine)','Chapel','Closet','Conservatory','Crypt',
+'Den','Dormitory','Font','Gallery','Gallery (Minstrel)','Greenhouse','Hall (Banquet)',
+'Hall (Court)','Hall (Dance)','Hall (Dining)','Hall (Drinking)','Hall (Great)',
+'Hall (Guild)','Hall (Mess)','Hallway','Infirmary','Kitchen','Laboratory','Laundry',
+'Library','Lobby','Loft','Map','Maze','Obelisk','Obervatory','Office','Oratory',
+'Pantry','Parlor (Game)','Parlor (Sitting)','Parlor (Trophy)','Patio','Portico',
+'Reception','Room (Storage)','Room (Throne)','Room (War)','Salon','Sanctum','Shop',
+'Statue','Storeroom','Studio (Musician)','Studio (Painter)','Studio (Sculpter)',
+'Study','Treasury','Vault','Wardrobe'
+];
+
+TPMTractClasses := [
+'Bluff','Bog','Butte','Canyon','Chaparral','Clearing','Cliff','Costal','Desert',
+'Dune','Farm','Field','Forest','Fountain','Geyser','Glacier','Glen','Gorge',
+'Grassland','Grove','Gulch','Gully','Hill','Hillside','Hilltop','Jungle','Marsh',
+'Meadow','Mesa','Mire','Moor','Mountain','Oasis','Orchard','Paddock','Pasture',
+'Praire','Ravine','Ridge','Rockface','Shore','Slop','Swamp','Thicket','Tundra',
+'Valley','Vineyard'
+];
+
+TPMRoomClasses := [
+'Anteroom','Attic','Barrack','Basement','Bedroom','Bedroom (Master)','Bottlery',
+'Bower','Buttery','Cell','Cellar','Cellar (Wine)','Chapel','Closet','Conservatory',
+'Den','Dormitory','Entry','Foyer','Gallery','Gallery (Minstrel)','Greenhouse',
+'Hall (Banquet)','Hall (Court)','Hall (Dance)','Hall (Dining)','Hall (Drinking)',
+'Hall (Great)','Hall (Guild)','Hall (Mess)','Hallway','Kitchen','Laboratory',
+'Laundry','Library','Lobby','Loft','Obervatory','Office','Oratory','Pantry',
+'Parlor (Game)','Parlor (Sitting)','Parlor (Trophy) ','Patio','Porch','Portico',
+'Reception','Room (Storage)','Room (Throne)','Room (War)','Salon','Sanctum',
+'Shop','Storeroom','Studio (Musician)','Studio (Painter)','Studio (Sculpter)',
+'Study','Treasury','Vault','Ward (Hospital)','Wardrobe'
+];
+
 
 
 end.

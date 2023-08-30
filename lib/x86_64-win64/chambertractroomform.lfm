@@ -1,11 +1,11 @@
-object frmTract: TfrmTract
-  Left = 373
+object frmChamberTractRoom: TfrmChamberTractRoom
+  Left = 676
   Height = 677
-  Top = 261
+  Top = 258
   Width = 972
   Align = alClient
   BorderStyle = bsNone
-  Caption = 'Trait'
+  Caption = 'Chamber Tract Room'
   ChildSizing.LeftRightSpacing = 16
   ChildSizing.TopBottomSpacing = 16
   ChildSizing.VerticalSpacing = 8
@@ -34,7 +34,6 @@ object frmTract: TfrmTract
     ClientHeight = 266
     ClientWidth = 940
     TabOrder = 0
-    OnExit = txtNaturalExit
     object Label4: TLabel
       Left = 0
       Height = 22
@@ -563,55 +562,6 @@ object frmTract: TfrmTract
       Top = 30
       Width = 478
       ItemHeight = 22
-      Items.Strings = (
-        'Bluff'
-        'Bog'
-        'Butte'
-        'Canyon'
-        'Chaparral'
-        'Clearing'
-        'Cliff'
-        'Costal'
-        'Desert'
-        'Dune'
-        'Farm'
-        'Field'
-        'Forest'
-        'Fountain'
-        'Geyser'
-        'Glacier'
-        'Glen'
-        'Gorge'
-        'Grassland'
-        'Grove'
-        'Gulch'
-        'Gully'
-        'Hill'
-        'Hillside'
-        'Hilltop'
-        'Jungle'
-        'Marsh'
-        'Meadow'
-        'Mesa'
-        'Mire'
-        'Moor'
-        'Mountain'
-        'Oasis'
-        'Orchard'
-        'Paddock'
-        'Pasture'
-        'Praire'
-        'Ravine'
-        'Ridge'
-        'Rockface'
-        'Shore'
-        'Slop'
-        'Swamp'
-        'Thicket'
-        'Tundra'
-        'Valley'
-        'Vineyard'
-      )
       OnExit = txtNaturalExit
       OnKeyUp = txtNaturalKeyUp
       OnSelect = txtNaturalSelect

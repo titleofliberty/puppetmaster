@@ -171,7 +171,7 @@ object frmMain: TfrmMain
     ClientWidth = 1008
     TabOrder = 0
     object btnEightBall: TButton
-      Left = 78
+      Left = 216
       Height = 40
       Top = 0
       Width = 146
@@ -192,7 +192,7 @@ object frmMain: TfrmMain
       TabOrder = 0
     end
     object btnLoot: TButton
-      Left = 456
+      Left = 594
       Height = 40
       Top = 0
       Width = 74
@@ -202,7 +202,7 @@ object frmMain: TfrmMain
       TabOrder = 4
     end
     object btnMood: TButton
-      Left = 534
+      Left = 672
       Height = 40
       Top = 0
       Width = 74
@@ -213,7 +213,7 @@ object frmMain: TfrmMain
       TabOrder = 5
     end
     object btnEncounter: TButton
-      Left = 228
+      Left = 366
       Height = 40
       Top = 0
       Width = 134
@@ -223,7 +223,7 @@ object frmMain: TfrmMain
       TabOrder = 2
     end
     object btnWares: TButton
-      Left = 702
+      Left = 840
       Height = 40
       Top = 0
       Width = 86
@@ -233,7 +233,7 @@ object frmMain: TfrmMain
       TabOrder = 7
     end
     object btnRumor: TButton
-      Left = 612
+      Left = 750
       Height = 40
       Top = 0
       Width = 86
@@ -243,7 +243,7 @@ object frmMain: TfrmMain
       TabOrder = 6
     end
     object btnEvent: TButton
-      Left = 366
+      Left = 504
       Height = 40
       Top = 0
       Width = 86
@@ -251,6 +251,17 @@ object frmMain: TfrmMain
       AutoSize = True
       Caption = 'Event'
       TabOrder = 3
+    end
+    object btnCondition: TButton
+      Left = 78
+      Height = 40
+      Top = 0
+      Width = 134
+      Align = alLeft
+      AutoSize = True
+      Caption = 'Condition'
+      OnClick = mnuMainToolsConditionClick
+      TabOrder = 8
     end
   end
   object pnlClient: TPanel
@@ -631,9 +642,6 @@ object frmMain: TfrmMain
         Caption = '&Kit'
         OnClick = mnuMainRandomKitClick
       end
-      object mnuMainRandomPotion: TMenuItem
-        Caption = '&Potion'
-      end
       object mnuMainRandomRemains: TMenuItem
         Caption = '&Remains'
         OnClick = mnuMainRandomRemainsClick
@@ -659,6 +667,10 @@ object frmMain: TfrmMain
       Caption = '&Tools'
       object mnuMainToolsClue: TMenuItem
         Caption = '&Clue'
+      end
+      object mnuMainToolsCondition: TMenuItem
+        Caption = 'C&ondition'
+        OnClick = mnuMainToolsConditionClick
       end
       object mnuMainToolsEight: TMenuItem
         Caption = '&Eight Ball'

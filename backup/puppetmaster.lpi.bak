@@ -87,13 +87,6 @@
         <ResourceBaseClass Value="Form"/>
       </Unit>
       <Unit>
-        <Filename Value="roomform.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="frmRoom"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-      </Unit>
-      <Unit>
         <Filename Value="aboutform.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmAbout"/>
@@ -115,16 +108,9 @@
         <ResourceBaseClass Value="Form"/>
       </Unit>
       <Unit>
-        <Filename Value="tractform.pas"/>
+        <Filename Value="chambertractroomform.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="frmTract"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-      </Unit>
-      <Unit>
-        <Filename Value="chamberform.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="frmChamber"/>
+        <ComponentName Value="frmChamberTractRoom"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit>

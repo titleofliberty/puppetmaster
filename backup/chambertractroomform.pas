@@ -1,4 +1,4 @@
-unit tractform;
+unit chambertractroomform;
 
 {$mode ObjFPC}{$H+}
 
@@ -10,9 +10,9 @@ uses
 
 type
 
-  { TfrmTract }
+  { TfrmChamberTractRoom }
 
-  TfrmTract = class(TForm)
+  TfrmChamberTractRoom = class(TForm)
     btnLocked: TSpeedButton;
     btnRollAll: TButton;
     Label1: TLabel;
@@ -65,24 +65,24 @@ type
     procedure txtTitleExit(Sender: TObject);
     procedure txtTitleKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
   private
-    FTract: TPMLeaf;
-    procedure SetTract(AValue: TPMLeaf);
+    FLeaf: TPMLeaf;
+    procedure SetLeaf(AValue: TPMLeaf);
     procedure LockForm;
     procedure RollCbo(Cbo: TComboBox; Multiply: integer);
   public
-    property Tract: TPMLeaf read FTract write SetTract;
+    property Leaf: TPMLeaf read FLeaf write SetLeaf;
   end;
 
 var
-  frmTract: TfrmTract;
+  frmChamberTractRoom: TfrmChamberTractRoom;
 
 implementation
 
 {$R *.lfm}
 
-{ TfrmTract }
+{ TfrmChamberTractRoom }
 
-procedure TfrmTract.btnRollAllClick(Sender: TObject);
+procedure TfrmChamberTractRoom.btnRollAllClick(Sender: TObject);
 begin
   txtClass.ItemIndex := Random(txtClass.Items.Count);
   txtNatural.ItemIndex := Random(txtNatural.Items.Count);
@@ -102,85 +102,87 @@ begin
   RollCbo(txtRemains, 9);
   RollCbo(txtTrap, 8);
 
-  FTract.SetTrait('Class', txtClass.Text);
-  FTract.SetTrait('Natural', txtNatural.Text);
-  FTract.SetTrait('Manufactured', txtUnnatural.Text);
-  FTract.SetTrait('Flora', txtFlora.Text);
-  FTract.SetTrait('Fauna', txtFauna.Text);
-  FTract.SetTrait('Tool', txtTool.Text);
-  FTract.SetTrait('Clothing', txtClothing.Text);
-  FTract.SetTrait('Kit', txtKit.Text);
-  FTract.SetTrait('Container', txtContainer.Text);
-  FTract.SetTrait('Weapon', txtWeapon.Text);
-  FTract.SetTrait('Vehicle', txtVehicle.Text);
-  FTract.SetTrait('Jewelry', txtJewelry.Text);
-  FTract.SetTrait('Remains', txtRemains.Text);
-  FTract.SetTrait('Instrument', txtInstrument.Text);
-  FTract.SetTrait('Armour', txtArmour.Text);
-  FTract.SetTrait('Trap', txtTrap.Text);
+  FLeaf.SetTrait('Class', txtClass.Text);
+  FLeaf.SetTrait('Natural', txtNatural.Text);
+  FLeaf.SetTrait('Manufactured', txtUnnatural.Text);
+  FLeaf.SetTrait('Flora', txtFlora.Text);
+  FLeaf.SetTrait('Fauna', txtFauna.Text);
+  FLeaf.SetTrait('Tool', txtTool.Text);
+  FLeaf.SetTrait('Clothing', txtClothing.Text);
+  FLeaf.SetTrait('Kit', txtKit.Text);
+  FLeaf.SetTrait('Container', txtContainer.Text);
+  FLeaf.SetTrait('Weapon', txtWeapon.Text);
+  FLeaf.SetTrait('Vehicle', txtVehicle.Text);
+  FLeaf.SetTrait('Jewelry', txtJewelry.Text);
+  FLeaf.SetTrait('Remains', txtRemains.Text);
+  FLeaf.SetTrait('Instrument', txtInstrument.Text);
+  FLeaf.SetTrait('Armour', txtArmour.Text);
+  FLeaf.SetTrait('Trap', txtTrap.Text);
 
 end;
 
-procedure TfrmTract.btnLockedClick(Sender: TObject);
+procedure TfrmChamberTractRoom.btnLockedClick(Sender: TObject);
 begin
   LockForm;
 end;
 
-procedure TfrmTract.txtNaturalExit(Sender: TObject);
+procedure TfrmChamberTractRoom.txtNaturalExit(Sender: TObject);
 var
   cbo : TComboBox;
 begin
   cbo := TComboBox(Sender);
-  FTract.SetTrait(cbo.Name.Replace('txt', ''), cbo.Text);
+  FLeaf.SetTrait(cbo.Name.Replace('txt', ''), cbo.Text);
 end;
 
-procedure TfrmTract.txtNaturalKeyUp(Sender: TObject; var Key: Word;
+procedure TfrmChamberTractRoom.txtNaturalKeyUp(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 var
   cbo : TComboBox;
 begin
   cbo := TComboBox(Sender);
   if Key = VK_RETURN then
-    FTract.SetTrait(cbo.Name.Replace('txt', ''), cbo.Text);
+    FLeaf.SetTrait(cbo.Name.Replace('txt', ''), cbo.Text);
 end;
 
-procedure TfrmTract.txtNaturalSelect(Sender: TObject);
+procedure TfrmChamberTractRoom.txtNaturalSelect(Sender: TObject);
 var
   cbo : TComboBox;
 begin
   cbo := TComboBox(Sender);
-  FTract.SetTrait(cbo.Name.Replace('txt', ''), cbo.Text);
+  FLeaf.SetTrait(cbo.Name.Replace('txt', ''), cbo.Text);
 end;
 
-procedure TfrmTract.txtTitleExit(Sender: TObject);
+procedure TfrmChamberTractRoom.txtTitleExit(Sender: TObject);
 begin
-  FTract.SetTrait('Title', txtTitle.Text);
+  FLeaf.SetTrait('Title', txtTitle.Text);
 end;
 
-procedure TfrmTract.txtTitleKeyUp(Sender: TObject; var Key: Word;
+procedure TfrmChamberTractRoom.txtTitleKeyUp(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
   if Key = VK_RETURN then
-    FTract.SetTrait('Title', txtTitle.Text);
+    FLeaf.SetTrait('Title', txtTitle.Text);
 end;
 
-procedure TfrmTract.SetTract(AValue: TPMLeaf);
+procedure TfrmChamberTractRoom.SetLeaf(AValue: TPMLeaf);
 begin
-  if AValue.Category <> 'Tract' then exit;
-  if FTract = AValue then Exit;
-  FTract := AValue;
 
-  txtTitle.Text := FTract.GetTrait('Title');
-  txtClass.Text := FTract.GetTrait('Class');
-  txtNatural.Text := FTract.GetTrait('Natural');
-  txtUnnatural.Text := FTract.GetTrait('Manufactured');
-  txtFlora.Text := FTract.GetTrait('Flora');
-  txtFauna.Text := FTract.GetTrait('Fauna');
-  btnLocked.Down := FTract.GetTrait('Locked') = 'True';
+  if FLeaf = AValue then Exit;
+  FLeaf := AValue;
+
+  pnlHeader.Caption := FLeaf.Category;
+
+  txtTitle.Text     := FLeaf.GetTrait('Title');
+  txtClass.Text     := FLeaf.GetTrait('Class');
+  txtNatural.Text   := FLeaf.GetTrait('Natural');
+  txtUnnatural.Text := FLeaf.GetTrait('Manufactured');
+  txtFlora.Text     := FLeaf.GetTrait('Flora');
+  txtFauna.Text     := FLeaf.GetTrait('Fauna');
+  btnLocked.Down    := FLeaf.GetTrait('Locked') = 'True';
   LockForm;
 end;
 
-procedure TfrmTract.LockForm;
+procedure TfrmChamberTractRoom.LockForm;
 begin
   txtTitle.Enabled := not btnLocked.Down;
   txtClass.Enabled := not btnLocked.Down;
@@ -201,10 +203,10 @@ begin
   txtTrap.Enabled := not btnLocked.Down;
 
   btnRollAll.Enabled := not btnLocked.Down;
-  FTract.SetTrait('Locked', BoolToStr(btnLocked.Down, 'True', 'False'));
+  FLeaf.SetTrait('Locked', BoolToStr(btnLocked.Down, 'True', 'False'));
 end;
 
-procedure TfrmTract.RollCbo(Cbo: TComboBox; Multiply: integer);
+procedure TfrmChamberTractRoom.RollCbo(Cbo: TComboBox; Multiply: integer);
 var
   i, j: Integer;
 begin

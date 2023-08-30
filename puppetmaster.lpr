@@ -11,8 +11,9 @@ uses
   {$ENDIF}
   Interfaces, // this includes the LCL widgetset
   Forms, lazcontrols, mainform, puppetmasterlib, settlementform, venueform,
-  puppetform, diceform, playerform, roomform, aboutform, dungeonform, 
-wildernessform, tractform, chamberform, htmlcolors, levelform, routeform, 
+  puppetform, diceform, playerform, aboutform, dungeonform, 
+wildernessform, 
+chambertractroomform, htmlcolors, levelform, routeform, 
 floorform;
 
 {$R *.res}

@@ -1,7 +1,7 @@
 object frmChamber: TfrmChamber
-  Left = 723
+  Left = 456
   Height = 692
-  Top = 194
+  Top = 215
   Width = 1181
   Align = alClient
   BorderStyle = bsNone
@@ -20,8 +20,8 @@ object frmChamber: TfrmChamber
   LCLVersion = '2.2.6.0'
   object Panel1: TPanel
     Left = 16
-    Height = 266
-    Top = 72
+    Height = 207
+    Top = 143
     Width = 1149
     Align = alTop
     AutoSize = True
@@ -31,146 +31,37 @@ object frmChamber: TfrmChamber
     ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
     ChildSizing.Layout = cclLeftToRightThenTopToBottom
     ChildSizing.ControlsPerLine = 4
-    ClientHeight = 266
+    ClientHeight = 207
     ClientWidth = 1149
     TabOrder = 1
-    object Label3: TLabel
-      Left = 0
-      Height = 22
-      Top = 0
-      Width = 282
-      Caption = 'Title'
-      Layout = tlCenter
-      ParentColor = False
-    end
-    object Label14: TLabel
-      Left = 290
-      Height = 22
-      Top = 0
-      Width = 282
-      Caption = 'Class'
-      Layout = tlCenter
-      ParentColor = False
-    end
     object Label17: TLabel
-      Left = 580
-      Height = 22
+      Left = 0
+      Height = 1
       Top = 0
       Width = 282
       Layout = tlCenter
       ParentColor = False
     end
     object Label18: TLabel
-      Left = 870
-      Height = 22
+      Left = 290
+      Height = 1
       Top = 0
-      Width = 279
+      Width = 282
       Layout = tlCenter
       ParentColor = False
     end
-    object txtTitle: TEdit
-      Left = 0
-      Height = 30
-      Top = 30
-      Width = 282
-      OnExit = txtTitleExit
-      OnKeyUp = txtTitleKeyUp
-      TabOrder = 12
-    end
-    object txtClass: TComboBox
-      Left = 290
-      Height = 30
-      Top = 30
-      Width = 282
-      AutoSize = False
-      ItemHeight = 22
-      ItemIndex = 0
-      Items.Strings = (
-        'Alter'
-        'Anteroom'
-        'Armoury'
-        'Barrack'
-        'Bedroom'
-        'Bedroom (Master)'
-        'Bottlery'
-        'Bower'
-        'Buttery'
-        'Cell'
-        'Cellar (Wine)'
-        'Chapel'
-        'Closet'
-        'Conservatory'
-        'Crypt'
-        'Den'
-        'Dormitory'
-        'Font'
-        'Gallery'
-        'Gallery (Minstrel)'
-        'Greenhouse'
-        'Hall (Banquet)'
-        'Hall (Court)'
-        'Hall (Dance)'
-        'Hall (Dining)'
-        'Hall (Drinking)'
-        'Hall (Great)'
-        'Hall (Guild)'
-        'Hall (Mess)'
-        'Hallway'
-        'Kitchen'
-        'Laboratory'
-        'Laundry'
-        'Library'
-        'Lobby'
-        'Loft'
-        'Map'
-        'Maze'
-        'Obelisk'
-        'Obervatory'
-        'Office'
-        'Oratory'
-        'Pantry'
-        'Parlor (Game)'
-        'Parlor (Sitting)'
-        'Parlor (Trophy)'
-        'Patio'
-        'Portico'
-        'Reception'
-        'Room (Storage)'
-        'Room (Throne)'
-        'Room (War)'
-        'Salon'
-        'Sanctum'
-        'Shop'
-        'Statue'
-        'Storeroom'
-        'Studio (Musician)'
-        'Studio (Painter)'
-        'Studio (Sculpter)'
-        'Study'
-        'Treasury'
-        'Vault'
-        'Ward (Hospital)'
-        'Wardrobe'
-      )
-      OnExit = txtToolExit
-      OnKeyUp = txtToolKeyUp
-      OnSelect = txtToolSelect
-      Sorted = True
-      TabOrder = 13
-      Text = 'Alter'
-    end
     object Label19: TLabel
       Left = 580
-      Height = 30
-      Top = 30
+      Height = 1
+      Top = 0
       Width = 282
       Layout = tlCenter
       ParentColor = False
     end
     object Label20: TLabel
       Left = 870
-      Height = 30
-      Top = 30
+      Height = 1
+      Top = 0
       Width = 279
       Layout = tlCenter
       ParentColor = False
@@ -178,7 +69,7 @@ object frmChamber: TfrmChamber
     object Label4: TLabel
       Left = 0
       Height = 22
-      Top = 68
+      Top = 9
       Width = 282
       AutoSize = False
       Caption = 'Tool'
@@ -187,7 +78,7 @@ object frmChamber: TfrmChamber
     object Label5: TLabel
       Left = 290
       Height = 22
-      Top = 68
+      Top = 9
       Width = 282
       AutoSize = False
       Caption = 'Clothing'
@@ -196,7 +87,7 @@ object frmChamber: TfrmChamber
     object Label7: TLabel
       Left = 580
       Height = 22
-      Top = 68
+      Top = 9
       Width = 282
       AutoSize = False
       Caption = 'Kit'
@@ -205,7 +96,7 @@ object frmChamber: TfrmChamber
     object Label8: TLabel
       Left = 870
       Height = 22
-      Top = 68
+      Top = 9
       Width = 279
       AutoSize = False
       Caption = 'Container'
@@ -214,7 +105,7 @@ object frmChamber: TfrmChamber
     object txtTool: TComboBox
       Left = 0
       Height = 30
-      Top = 98
+      Top = 39
       Width = 282
       AutoSize = False
       Font.CharSet = ANSI_CHARSET
@@ -233,7 +124,7 @@ object frmChamber: TfrmChamber
     object txtClothing: TComboBox
       Left = 290
       Height = 30
-      Top = 98
+      Top = 39
       Width = 282
       AutoSize = False
       ItemHeight = 22
@@ -246,7 +137,7 @@ object frmChamber: TfrmChamber
     object txtKit: TComboBox
       Left = 580
       Height = 30
-      Top = 98
+      Top = 39
       Width = 282
       AutoSize = False
       ItemHeight = 22
@@ -259,7 +150,7 @@ object frmChamber: TfrmChamber
     object txtContainer: TComboBox
       Left = 870
       Height = 30
-      Top = 98
+      Top = 39
       Width = 279
       AutoSize = False
       ItemHeight = 22
@@ -272,7 +163,7 @@ object frmChamber: TfrmChamber
     object Label9: TLabel
       Left = 0
       Height = 22
-      Top = 136
+      Top = 77
       Width = 282
       AutoSize = False
       Caption = 'Weapon'
@@ -281,7 +172,7 @@ object frmChamber: TfrmChamber
     object Label11: TLabel
       Left = 290
       Height = 22
-      Top = 136
+      Top = 77
       Width = 282
       AutoSize = False
       Caption = 'Vehicle'
@@ -290,7 +181,7 @@ object frmChamber: TfrmChamber
     object Label12: TLabel
       Left = 580
       Height = 22
-      Top = 136
+      Top = 77
       Width = 282
       AutoSize = False
       Caption = 'Jewelry'
@@ -299,7 +190,7 @@ object frmChamber: TfrmChamber
     object Label16: TLabel
       Left = 870
       Height = 22
-      Top = 136
+      Top = 77
       Width = 279
       AutoSize = False
       Caption = 'Remains'
@@ -308,7 +199,7 @@ object frmChamber: TfrmChamber
     object txtWeapon: TComboBox
       Left = 0
       Height = 30
-      Top = 166
+      Top = 107
       Width = 282
       AutoSize = False
       ItemHeight = 22
@@ -321,7 +212,7 @@ object frmChamber: TfrmChamber
     object txtVehicle: TComboBox
       Left = 290
       Height = 30
-      Top = 166
+      Top = 107
       Width = 282
       AutoSize = False
       ItemHeight = 22
@@ -334,7 +225,7 @@ object frmChamber: TfrmChamber
     object txtJewelry: TComboBox
       Left = 580
       Height = 30
-      Top = 166
+      Top = 107
       Width = 282
       AutoSize = False
       ItemHeight = 22
@@ -347,7 +238,7 @@ object frmChamber: TfrmChamber
     object txtRemains: TComboBox
       Left = 870
       Height = 30
-      Top = 166
+      Top = 107
       Width = 279
       AutoSize = False
       ItemHeight = 22
@@ -360,7 +251,7 @@ object frmChamber: TfrmChamber
     object Label6: TLabel
       Left = 0
       Height = 22
-      Top = 204
+      Top = 145
       Width = 282
       AutoSize = False
       Caption = 'Instrument'
@@ -369,7 +260,7 @@ object frmChamber: TfrmChamber
     object Label10: TLabel
       Left = 290
       Height = 22
-      Top = 204
+      Top = 145
       Width = 282
       AutoSize = False
       Caption = 'Armour'
@@ -378,7 +269,7 @@ object frmChamber: TfrmChamber
     object Label13: TLabel
       Left = 580
       Height = 22
-      Top = 204
+      Top = 145
       Width = 282
       AutoSize = False
       Caption = 'Trap'
@@ -387,7 +278,7 @@ object frmChamber: TfrmChamber
     object Label15: TLabel
       Left = 870
       Height = 22
-      Top = 204
+      Top = 145
       Width = 279
       AutoSize = False
       ParentColor = False
@@ -395,7 +286,7 @@ object frmChamber: TfrmChamber
     object txtInstrument: TComboBox
       Left = 0
       Height = 30
-      Top = 234
+      Top = 175
       Width = 282
       AutoSize = False
       ItemHeight = 22
@@ -408,7 +299,7 @@ object frmChamber: TfrmChamber
     object txtArmour: TComboBox
       Left = 290
       Height = 30
-      Top = 234
+      Top = 175
       Width = 282
       AutoSize = False
       ItemHeight = 22
@@ -421,7 +312,7 @@ object frmChamber: TfrmChamber
     object txtTrap: TComboBox
       Left = 580
       Height = 30
-      Top = 234
+      Top = 175
       Width = 282
       AutoSize = False
       ItemHeight = 22
@@ -434,7 +325,7 @@ object frmChamber: TfrmChamber
     object btnRollAll: TButton
       Left = 870
       Height = 32
-      Top = 234
+      Top = 175
       Width = 279
       Caption = 'Roll All'
       OnClick = btnRollAllClick
@@ -559,7 +450,7 @@ object frmChamber: TfrmChamber
   object Label1: TLabel
     Left = 16
     Height = 22
-    Top = 346
+    Top = 358
     Width = 1149
     Align = alTop
     Caption = 'Notes'
@@ -567,12 +458,137 @@ object frmChamber: TfrmChamber
   end
   object txtNotes: TMemo
     Left = 16
-    Height = 229
-    Top = 376
+    Height = 217
+    Top = 388
     Width = 1149
     Align = alClient
     OnExit = txtNotesExit
     ScrollBars = ssVertical
     TabOrder = 2
+  end
+  object Panel3: TPanel
+    Left = 16
+    Height = 63
+    Top = 72
+    Width = 1149
+    Align = alTop
+    BevelOuter = bvNone
+    ChildSizing.TopBottomSpacing = 8
+    ChildSizing.HorizontalSpacing = 8
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 2
+    ClientHeight = 63
+    ClientWidth = 1149
+    TabOrder = 4
+    object Label3: TLabel
+      Left = 0
+      Height = 22
+      Top = 8
+      Width = 558
+      Caption = 'Title'
+      Layout = tlCenter
+      ParentColor = False
+    end
+    object Label14: TLabel
+      Left = 566
+      Height = 22
+      Top = 8
+      Width = 583
+      Caption = 'Class'
+      Layout = tlCenter
+      ParentColor = False
+    end
+    object txtTitle: TEdit
+      Left = 0
+      Height = 30
+      Top = 30
+      Width = 558
+      OnExit = txtTitleExit
+      OnKeyUp = txtTitleKeyUp
+      TabOrder = 0
+    end
+    object txtClass: TComboBox
+      Left = 566
+      Height = 30
+      Top = 30
+      Width = 583
+      AutoSize = False
+      ItemHeight = 22
+      ItemIndex = 0
+      Items.Strings = (
+        'Alter'
+        'Anteroom'
+        'Armoury'
+        'Barrack'
+        'Bedroom'
+        'Bedroom (Master)'
+        'Bottlery'
+        'Bower'
+        'Buttery'
+        'Cell'
+        'Cellar (Wine)'
+        'Chapel'
+        'Closet'
+        'Conservatory'
+        'Crypt'
+        'Den'
+        'Dormitory'
+        'Font'
+        'Gallery'
+        'Gallery (Minstrel)'
+        'Greenhouse'
+        'Hall (Banquet)'
+        'Hall (Court)'
+        'Hall (Dance)'
+        'Hall (Dining)'
+        'Hall (Drinking)'
+        'Hall (Great)'
+        'Hall (Guild)'
+        'Hall (Mess)'
+        'Hallway'
+        'Kitchen'
+        'Laboratory'
+        'Laundry'
+        'Library'
+        'Lobby'
+        'Loft'
+        'Map'
+        'Maze'
+        'Obelisk'
+        'Obervatory'
+        'Office'
+        'Oratory'
+        'Pantry'
+        'Parlor (Game)'
+        'Parlor (Sitting)'
+        'Parlor (Trophy)'
+        'Patio'
+        'Portico'
+        'Reception'
+        'Room (Storage)'
+        'Room (Throne)'
+        'Room (War)'
+        'Salon'
+        'Sanctum'
+        'Shop'
+        'Statue'
+        'Storeroom'
+        'Studio (Musician)'
+        'Studio (Painter)'
+        'Studio (Sculpter)'
+        'Study'
+        'Treasury'
+        'Vault'
+        'Ward (Hospital)'
+        'Wardrobe'
+      )
+      OnExit = txtToolExit
+      OnKeyUp = txtToolKeyUp
+      OnSelect = txtToolSelect
+      Sorted = True
+      TabOrder = 1
+      Text = 'Alter'
+    end
   end
 end

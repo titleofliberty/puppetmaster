@@ -1,11 +1,11 @@
-object frmTract: TfrmTract
-  Left = 373
+object frmChamberTractRoom: TfrmChamberTractRoom
+  Left = 676
   Height = 677
-  Top = 261
+  Top = 258
   Width = 972
   Align = alClient
   BorderStyle = bsNone
-  Caption = 'Trait'
+  Caption = 'Chamber Tract Room'
   ChildSizing.LeftRightSpacing = 16
   ChildSizing.TopBottomSpacing = 16
   ChildSizing.VerticalSpacing = 8
@@ -166,6 +166,9 @@ object frmTract: TfrmTract
       Font.Pitch = fpFixed
       Font.Quality = fqDraft
       ItemHeight = 22
+      OnExit = txtNaturalExit
+      OnKeyUp = txtNaturalKeyUp
+      OnSelect = txtNaturalSelect
       ParentFont = False
       Sorted = True
       TabOrder = 7
@@ -177,6 +180,9 @@ object frmTract: TfrmTract
       Width = 229
       AutoSize = False
       ItemHeight = 22
+      OnExit = txtNaturalExit
+      OnKeyUp = txtNaturalKeyUp
+      OnSelect = txtNaturalSelect
       Sorted = True
       TabOrder = 6
     end
@@ -187,6 +193,9 @@ object frmTract: TfrmTract
       Width = 229
       AutoSize = False
       ItemHeight = 22
+      OnExit = txtNaturalExit
+      OnKeyUp = txtNaturalKeyUp
+      OnSelect = txtNaturalSelect
       Sorted = True
       TabOrder = 5
     end
@@ -197,6 +206,9 @@ object frmTract: TfrmTract
       Width = 229
       AutoSize = False
       ItemHeight = 22
+      OnExit = txtNaturalExit
+      OnKeyUp = txtNaturalKeyUp
+      OnSelect = txtNaturalSelect
       Sorted = True
       TabOrder = 4
     end
@@ -243,6 +255,9 @@ object frmTract: TfrmTract
       Width = 229
       AutoSize = False
       ItemHeight = 22
+      OnExit = txtNaturalExit
+      OnKeyUp = txtNaturalKeyUp
+      OnSelect = txtNaturalSelect
       Sorted = True
       TabOrder = 11
     end
@@ -253,6 +268,9 @@ object frmTract: TfrmTract
       Width = 229
       AutoSize = False
       ItemHeight = 22
+      OnExit = txtNaturalExit
+      OnKeyUp = txtNaturalKeyUp
+      OnSelect = txtNaturalSelect
       Sorted = True
       TabOrder = 10
     end
@@ -263,6 +281,9 @@ object frmTract: TfrmTract
       Width = 229
       AutoSize = False
       ItemHeight = 22
+      OnExit = txtNaturalExit
+      OnKeyUp = txtNaturalKeyUp
+      OnSelect = txtNaturalSelect
       Sorted = True
       TabOrder = 9
     end
@@ -273,6 +294,9 @@ object frmTract: TfrmTract
       Width = 229
       AutoSize = False
       ItemHeight = 22
+      OnExit = txtNaturalExit
+      OnKeyUp = txtNaturalKeyUp
+      OnSelect = txtNaturalSelect
       Sorted = True
       TabOrder = 8
     end
@@ -317,6 +341,9 @@ object frmTract: TfrmTract
       Width = 229
       AutoSize = False
       ItemHeight = 22
+      OnExit = txtNaturalExit
+      OnKeyUp = txtNaturalKeyUp
+      OnSelect = txtNaturalSelect
       Sorted = True
       TabOrder = 14
     end
@@ -327,6 +354,9 @@ object frmTract: TfrmTract
       Width = 229
       AutoSize = False
       ItemHeight = 22
+      OnExit = txtNaturalExit
+      OnKeyUp = txtNaturalKeyUp
+      OnSelect = txtNaturalSelect
       Sorted = True
       TabOrder = 13
     end
@@ -337,6 +367,9 @@ object frmTract: TfrmTract
       Width = 229
       AutoSize = False
       ItemHeight = 22
+      OnExit = txtNaturalExit
+      OnKeyUp = txtNaturalKeyUp
+      OnSelect = txtNaturalSelect
       Sorted = True
       TabOrder = 12
     end
@@ -529,55 +562,6 @@ object frmTract: TfrmTract
       Top = 30
       Width = 478
       ItemHeight = 22
-      Items.Strings = (
-        'Bluff'
-        'Bog'
-        'Butte'
-        'Canyon'
-        'Chaparral'
-        'Clearing'
-        'Cliff'
-        'Costal'
-        'Desert'
-        'Dune'
-        'Farm'
-        'Field'
-        'Forest'
-        'Fountain'
-        'Geyser'
-        'Glacier'
-        'Glen'
-        'Gorge'
-        'Grassland'
-        'Grove'
-        'Gulch'
-        'Gully'
-        'Hill'
-        'Hillside'
-        'Hilltop'
-        'Jungle'
-        'Marsh'
-        'Meadow'
-        'Mesa'
-        'Mire'
-        'Moor'
-        'Mountain'
-        'Oasis'
-        'Orchard'
-        'Paddock'
-        'Pasture'
-        'Praire'
-        'Ravine'
-        'Ridge'
-        'Rockface'
-        'Shore'
-        'Slop'
-        'Swamp'
-        'Thicket'
-        'Tundra'
-        'Valley'
-        'Vineyard'
-      )
       OnExit = txtNaturalExit
       OnKeyUp = txtNaturalKeyUp
       OnSelect = txtNaturalSelect

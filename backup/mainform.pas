@@ -14,6 +14,7 @@ type
 
   TfrmMain = class(TForm)
     btnClue: TButton;
+    btnCondition: TButton;
     btnEvent: TButton;
     btnWares: TButton;
     btnLoot: TButton;
@@ -22,6 +23,7 @@ type
     btnOutputClear: TButton;
     btnEightBall: TButton;
     btnRumor: TButton;
+    mnuMainToolsCondition: TMenuItem;
     mnuMainInsertFloor: TMenuItem;
     mnuMainInsertRoute: TMenuItem;
     mnuMainInsertLevel: TMenuItem;
@@ -48,7 +50,6 @@ type
     mnuMainRandomTool: TMenuItem;
     mnuMainRandomGem: TMenuItem;
     mnuMainRandomTrap: TMenuItem;
-    mnuMainRandomPotion: TMenuItem;
     mnuMainRandomWeapon: TMenuItem;
     mnuMainRandomKit: TMenuItem;
     mnuMainRandomInstrument: TMenuItem;
@@ -139,6 +140,7 @@ type
     procedure mnuMainRandomTrapClick(Sender: TObject);
     procedure mnuMainRandomVehicleClick(Sender: TObject);
     procedure mnuMainRandomWeaponClick(Sender: TObject);
+    procedure mnuMainToolsConditionClick(Sender: TObject);
     procedure mnuMainToolsEightClick(Sender: TObject);
     procedure mnuMainToolsMoodClick(Sender: TObject);
     procedure mnuMainViewCollapseClick(Sender: TObject);
@@ -154,7 +156,7 @@ type
   private
     FFileName: string;
     procedure CampaignNew;
-    procedure RandomResource(ACaption: string; ANode: TTreeNode);
+    procedure RandomResource(ACaption: string; ANode: TTreeNode; AColor: TColor);
     procedure PopulateDiceTray;
     procedure PopulateCampaign;
     procedure PopulateResourceToCbo(ACbo: TComboBox; AResource: TTreeNode);
@@ -197,6 +199,7 @@ var
   nodeVehicle : TTreeNode;
   nodeWeapons : TTreeNode;
   nodeWildernesses : TTreeNode;
+  nodeConditions : TTreeNode;
 
 
 
@@ -205,8 +208,8 @@ implementation
 {$R *.lfm}
 
 uses
-  settlementform, venueform, puppetform, diceform, playerform, roomform,
-  aboutform, dungeonform, wildernessform, tractform, chamberform, levelform,
+  settlementform, venueform, puppetform, diceform, playerform,
+  aboutform, dungeonform, wildernessform, chambertractroomform, levelform,
   routeform, floorform;
 
 { TfrmMain }
@@ -527,62 +530,67 @@ end;
 
 procedure TfrmMain.mnuMainRandomArmorClick(Sender: TObject);
 begin
-  RandomResource('Armor', nodeArmors);
+  RandomResource('Armor', nodeArmors, htmlcolors.clHTMLBlack);
 end;
 
 procedure TfrmMain.mnuMainRandomClothingClick(Sender: TObject);
 begin
-  RandomResource('Clothing', nodeClothing);
+  RandomResource('Clothing', nodeClothing, htmlcolors.clHTMLDarkKhaki);
 end;
 
 procedure TfrmMain.mnuMainRandomContainerClick(Sender: TObject);
 begin
-  RandomResource('Container', nodeContainers);
+  RandomResource('Container', nodeContainers, htmlcolors.clHTMLBrown);
 end;
 
 procedure TfrmMain.mnuMainRandomGemClick(Sender: TObject);
 begin
-  RandomResource('Gem', nodeGems);
+  RandomResource('Gem', nodeGems, htmlcolors.clHTMLIndianRed);
 end;
 
 procedure TfrmMain.mnuMainRandomInstrumentClick(Sender: TObject);
 begin
-  RandomResource('Instrument', nodeInstruments);
+  RandomResource('Instrument', nodeInstruments, htmlcolors.clHTMLGoldenRod);
 end;
 
 procedure TfrmMain.mnuMainRandomJewelryClick(Sender: TObject);
 begin
-  RandomResource('Jewelry', nodeJewelry);
+  RandomResource('Jewelry', nodeJewelry, htmlcolors.clHTMLGoldenRod);
 end;
 
 procedure TfrmMain.mnuMainRandomKitClick(Sender: TObject);
 begin
-  RandomResource('Kit', nodeKits);
+  RandomResource('Kit', nodeKits, htmlcolors.clHTMLSaddleBrown);
 end;
 
 procedure TfrmMain.mnuMainRandomRemainsClick(Sender: TObject);
 begin
-  RandomResource('Remain', nodeRemains);
+  RandomResource('Remains', nodeRemains, htmlcolors.clHTMLRed);
 end;
 
 procedure TfrmMain.mnuMainRandomToolClick(Sender: TObject);
 begin
-  RandomResource('Tool', nodeTools);
+  RandomResource('Tool', nodeTools, htmlcolors.clHTMLDarkOrange);
 end;
 
 procedure TfrmMain.mnuMainRandomTrapClick(Sender: TObject);
 begin
-  RandomResource('Trap', nodeTraps);
+  RandomResource('Trap', nodeTraps, htmlcolors.clHTMLDarkMagenta);
 end;
 
 procedure TfrmMain.mnuMainRandomVehicleClick(Sender: TObject);
 begin
-  RandomResource('Vehicle', nodeVehicle);
+  RandomResource('Vehicle', nodeVehicle, htmlcolors.clHTMLMediumPurple);
 end;
 
 procedure TfrmMain.mnuMainRandomWeaponClick(Sender: TObject);
 begin
-  RandomResource('Weapon', nodeWeapons);
+  RandomResource('Weapon', nodeWeapons, htmlcolors.clHTMLDarkSlateGrey);
+end;
+
+procedure TfrmMain.mnuMainToolsConditionClick(Sender: TObject);
+begin
+  RandomResource('Condition', nodeConditions, htmlcolors.clHTMLDarkMagenta);
 end;
 
 procedure TfrmMain.mnuMainToolsEightClick(Sender: TObject);
@@ -836,11 +844,11 @@ begin
     TfrmVenue(form).Venue := leaf;
     form.Show;
   end
-  else if leaf.Category = 'Room' then
+  else if (leaf.Category = 'Chamber') or (leaf.Category = 'Tract') or (leaf.Category = 'Room') then
   begin
-    form := TfrmRoom.Create(pnlWorkspaceClient);
+    form := TfrmChamberTractRoom.Create(pnlWorkspaceClient);
     form.Parent := pnlWorkspaceClient;
-    TfrmRoom(form).Room := leaf;
+    TfrmChamberTractRoom(form).Leaf := leaf;
     form.Show;
   end
   else if leaf.Category = 'Dungeon' then
@@ -897,51 +905,6 @@ begin
     form := TfrmFloor.Create(pnlWorkspaceClient);
     form.Parent := pnlWorkspaceClient;
     TfrmFloor(form).Floor := leaf;
-    form.Show;
-  end
-  else if leaf.Category = 'Tract' then
-  begin
-    form := TfrmTract.Create(pnlWorkspaceClient);
-    form.Parent := pnlWorkspaceClient;
-    with TfrmTract do
-    begin
-      PopulateResourceToCbo(txtNatural, nodeNatural);
-      PopulateResourceToCbo(txtUnnatural, nodeUnnatural);
-      PopulateResourceToCbo(txtFlora, nodeFlora);
-      PopulateResourceToCbo(txtFauna, nodeFauna);
-      PopulateResourceToCbo(txtTool, nodeTools);
-      PopulateResourceToCbo(txtClothing, nodeClothing);
-      PopulateResourceToCbo(txtKit, nodeKits);
-      PopulateResourceToCbo(txtContainer, nodeContainers);
-      PopulateResourceToCbo(txtWeapon, nodeWeapons);
-      PopulateResourceToCbo(txtVehicle, nodeVehicle);
-      PopulateResourceToCbo(txtRemains, nodeRemains);
-      PopulateResourceToCbo(txtInstrument, nodeInstruments);
-      PopulateResourceToCbo(txtArmour, nodeArmors);
-      PopulateResourceToCbo(txtTrap, nodeTraps);
-    end;
-    TfrmTract(form).Tract := leaf;
-    form.Show;
-  end
-  else if leaf.Category = 'Chamber' then
-  begin
-    form := TfrmChamber.Create(pnlWorkspaceClient);
-    form.Parent := pnlWorkspaceClient;
-    with TfrmChamber(form) do
-    begin
-      PopulateResourceToCbo(txtTool, nodeTools);
-      PopulateResourceToCbo(txtClothing, nodeClothing);
-      PopulateResourceToCbo(txtKit, nodeKits);
-      PopulateResourceToCbo(txtContainer, nodeContainers);
-      PopulateResourceToCbo(txtWeapon, nodeWeapons);
-      PopulateResourceToCbo(txtVehicle, nodeVehicle);
-      PopulateResourceToCbo(txtJewelry, nodeJewelry);
-      PopulateResourceToCbo(txtRemains, nodeRemains);
-      PopulateResourceToCbo(txtInstrument, nodeInstruments);
-      PopulateResourceToCbo(txtArmour, nodeArmors);
-      PopulateResourceToCbo(txtTrap, nodeTraps);
-    end;
-    TfrmChamber(form).Chamber := leaf;
     form.Show;
   end;
 
@@ -1040,7 +1003,7 @@ begin
   nodeUnnatural := tvwCampaign.Items.AddChildObject(nodeResources, 'Unnatural', TPMLeaf.Create('Unnatural'));
   nodeFlora := tvwCampaign.Items.AddChildObject(nodeResources, 'Flora', TPMLeaf.Create('Flora'));
   nodeFauna := tvwCampaign.Items.AddChildObject(nodeResources, 'Fauna', TPMLeaf.Create('Fauna'));
-
+  nodeConditions := tvwCampaign.Items.AddChildObject(nodeResources, 'Conditions', TPMLeaf.Create('Conditions'));
 
   nodeResources.AlphaSort;
 
@@ -1071,6 +1034,7 @@ begin
   LoadResourceNodes(nodeUnnatural, TPMUnnatural);
   LoadResourceNodes(nodeFlora, TPMFlora);
   LoadResourceNodes(nodeFauna, TPMFauna);
+  LoadResourceNodes(nodeConditions, TPMConditions);
 
   LoadResourceNodes(nodeBeasts, 'Beast', TPMBeasts);
   LoadResourceNodes(nodeMonsters, 'Monster', TPMMonsters);
@@ -1083,14 +1047,14 @@ begin
   nodeCampaign.Expand(false);
 end;
 
-procedure TfrmMain.RandomResource(ACaption: string; ANode: TTreeNode);
+procedure TfrmMain.RandomResource(ACaption: string; ANode: TTreeNode; AColor: TColor);
 var
   lbl: TLabel;
 begin
   lbl := TLabel.Create(pnlOutputData);
   lbl.Parent := pnlOutputData;
   lbl.Align := alTop;
-  lbl.Font.Color := htmlcolors.clHTMLPurple;
+  lbl.Font.Color := AColor;
   lbl.BorderSpacing.Left := 8;
   lbl.BorderSpacing.Right := 8;
   lbl.BorderSpacing.Bottom := 16;
