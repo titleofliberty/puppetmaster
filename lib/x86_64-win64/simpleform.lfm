@@ -1,16 +1,16 @@
-object frmLevel: TfrmLevel
-  Left = 992
-  Height = 525
-  Top = 257
-  Width = 688
+object frmSimple: TfrmSimple
+  Left = 285
+  Height = 402
+  Top = 302
+  Width = 554
   Align = alClient
   BorderStyle = bsNone
-  Caption = 'Level'
+  Caption = 'Simple'
   ChildSizing.LeftRightSpacing = 16
   ChildSizing.TopBottomSpacing = 16
   ChildSizing.VerticalSpacing = 8
-  ClientHeight = 525
-  ClientWidth = 688
+  ClientHeight = 402
+  ClientWidth = 554
   DesignTimePPI = 120
   Font.CharSet = ANSI_CHARSET
   Font.Height = -20
@@ -18,100 +18,35 @@ object frmLevel: TfrmLevel
   Font.Pitch = fpFixed
   Font.Quality = fqDraft
   LCLVersion = '2.2.6.0'
-  object pnlClient: TPanel
-    Left = 16
-    Height = 60
-    Top = 72
-    Width = 656
-    Align = alTop
-    AutoSize = True
-    BevelOuter = bvNone
-    ChildSizing.HorizontalSpacing = 8
-    ChildSizing.VerticalSpacing = 8
-    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
-    ChildSizing.Layout = cclLeftToRightThenTopToBottom
-    ChildSizing.ControlsPerLine = 2
-    ClientHeight = 60
-    ClientWidth = 656
-    TabOrder = 0
-    object Label2: TLabel
-      Left = 0
-      Height = 22
-      Top = 0
-      Width = 312
-      Caption = 'Title'
-      ParentColor = False
-    end
-    object Label3: TLabel
-      Left = 320
-      Height = 22
-      Top = 0
-      Width = 336
-      Caption = 'Class'
-      ParentColor = False
-    end
-    object txtTitle: TEdit
-      Left = 0
-      Height = 30
-      Top = 30
-      Width = 312
-      OnExit = txtTitleExit
-      OnKeyUp = txtTitleKeyUp
-      TabOrder = 0
-    end
-    object txtClass: TComboBox
-      Left = 320
-      Height = 30
-      Top = 30
-      Width = 336
-      ItemHeight = 22
-      Items.Strings = (
-        '1st'
-        '2nd'
-        '3rd'
-        '4th'
-        '5th'
-        '6th'
-        '7th'
-        '8th'
-        '9th'
-      )
-      OnExit = txtClassExit
-      OnKeyUp = txtClassKeyUp
-      OnSelect = txtClassSelect
-      Style = csDropDownList
-      TabOrder = 1
-    end
-  end
   object Panel1: TPanel
     Left = 16
     Height = 63
-    Top = 446
-    Width = 656
+    Top = 323
+    Width = 522
     Align = alBottom
     BevelOuter = bvNone
-    TabOrder = 1
+    TabOrder = 0
   end
   object pnlHeader: TPanel
     Left = 16
     Height = 48
     Top = 16
-    Width = 656
+    Width = 522
     Align = alTop
     Alignment = taLeftJustify
     BevelOuter = bvNone
-    Caption = 'Level'
+    Caption = 'Simple'
     ClientHeight = 48
-    ClientWidth = 656
+    ClientWidth = 522
     Font.CharSet = ANSI_CHARSET
     Font.Height = -40
     Font.Name = 'Courier New'
     Font.Pitch = fpFixed
     Font.Quality = fqDraft
     ParentFont = False
-    TabOrder = 2
+    TabOrder = 1
     object btnLocked: TSpeedButton
-      Left = 608
+      Left = 474
       Height = 48
       Top = 0
       Width = 48
@@ -202,20 +137,39 @@ object frmLevel: TfrmLevel
     Left = 16
     Height = 22
     Top = 140
-    Width = 656
+    Width = 522
     Align = alTop
     Caption = 'Notes'
     ParentColor = False
   end
   object txtNotes: TMemo
     Left = 16
-    Height = 268
+    Height = 145
     Top = 170
-    Width = 656
+    Width = 522
     Align = alClient
     OnExit = txtNotesExit
     OnKeyUp = txtNotesKeyUp
     ScrollBars = ssVertical
+    TabOrder = 2
+  end
+  object Label2: TLabel
+    Left = 16
+    Height = 22
+    Top = 72
+    Width = 522
+    Align = alTop
+    Caption = 'Title'
+    ParentColor = False
+  end
+  object txtTitle: TEdit
+    Left = 16
+    Height = 30
+    Top = 102
+    Width = 522
+    Align = alTop
+    OnExit = txtTitleExit
+    OnKeyUp = txtTitleKeyUp
     TabOrder = 3
   end
 end

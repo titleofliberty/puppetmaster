@@ -71,6 +71,16 @@ var
   TPMChamberClasses: TStringArray;
   TPMTractClasses: TStringArray;
   TPMRoomClasses: TStringArray;
+  TPMDungeonClasses: TStringArray;
+  TPMLevelClasses: TStringArray;
+  TPMWildernessClasses: TStringArray;
+  TPMRouteClasses: TStringArray;
+  TPMSettlementClasses: TStringArray;
+  TPMVenueClasses: TStringArray;
+  TPMFloorClasses: TStringArray;
+  TPMConsumableClasses: TStringArray;
+  TPMBeastClasses: TStringArray;
+  TPMMonsterClasses: TStringArray;
 
 implementation
 
@@ -303,7 +313,7 @@ TPMFlora := ['Ashe','Cactus','Crop','Elms','Ferns','Grass','Oak','Pine','Vines',
 'Redwood','Spruce','Yew','Mangroves','Holly','Dogwood','Swamp Rose','Willow',
 'Buttonbush','Aster','Goldenrod','Sunflower','Clover','Wild Indigo','Moss','Strawberry',
 'Coffee','Cocoa','Banana','Pear','Apple','Blackberry','Cypress','Walnut','Peacan',
-'Potato','Onion','Grape','Almond'
+'Potato','Onion','Grape','Almond','Periwinkle'
 ];
 
 TPMFauna := [
@@ -311,10 +321,11 @@ TPMFauna := [
 'Chipmunk','Coyote','Crab','Condor','Crow','Deer','Dog','Dove','Dragonfly','Eagle',
 'Elk','Falcon','Ferret','Firefly','Fox','Frog','Gila Monster','Gecko','Goose','Gopher',
 'Grizzly','Hawk','Hornets','Hummingbird','Iguana','Jackal','Kangaroo','Livestock',
-'Lizard','Mockingbird','Moose','Moth','Mouse','Opossum','Otter','Owl','Owl','Porcupine',
-'Pronghorn','Quail','Rabit','Raccon','Rat','Rhinoceros','Roadrunner','Robin','Salamander',
-'Seal','Sheep','Skunk','Snake','Songbird','Spider','Squirrel','Toad','Tortoise''Treefrog',
-'Turtle','Viper','Wasps','Wolf','Woodpecker','Xerocoles','Horse','Periwinkle'
+'Lizard','Mockingbird','Moose','Moth','Mouse','Opossum','Otter','Owl','Porcupine',
+'Pronghorn','Quail','Rabit','Raccon','Rat','Rhinoceros','Roadrunner','Robin',
+'Salamander','Seal','Sheep','Skunk','Snake','Songbird','Spider','Squirrel','Toad',
+'Tortoise','Treefrog','Turtle','Viper','Wasps','Wolf','Woodpecker','Xerocoles',
+'Horse','Mule','Donkey','Ox'
 ];
 
 TPMBasicDice := [
@@ -343,7 +354,7 @@ TPMBeasts := [
 ['Title:Chimpanzee','Class:Beast','ArmorClass:18','HPMax:8','HPCurrent:8'],
 ['Title:Lemur','Class:Beast','ArmorClass:18','HPMax:8','HPCurrent:8'],
 ['Title:Opossum','Class:Beast','ArmorClass:18','HPMax:8','HPCurrent:8'],
-['Title:Skunk','ArmorClass:18','HPMax:8','HPCurrent:8'],
+['Title:Skunk','Class:Beast','ArmorClass:18','HPMax:8','HPCurrent:8'],
 ['Title:Rat','Class:Beast','ArmorClass:1','HPMax:1','HPCurrent:1'],
 ['Title:Viper','Class:Beast','ArmorClass:18','HPMax:8','HPCurrent:8'],
 ['Title:Firefly','Class:Beast','ArmorClass:1','HPMax:1','HPCurrent:1'],
@@ -567,14 +578,14 @@ TPMSpells := [
 ];
 
 TPMConsumables := [
-['Title:Wand','Charges:5','Effect:','Note:'],
-['Title:Scroll','Charges:1','Effect:','Note:'],
-['Title:Light Bandage','Charges:1','Effect:Heals +2','Note:Cannot be used in combat.'],
-['Title:Medium Bandage','Charges:1','Effect:Heals +4','Note:Cannot be used in combat.'],
-['Title:Heavy Bandage','Charges:1','Effect:Heals +6','Note:Cannot be used in combat.'],
-['Title:Great Healing Postion','Charges:1','Effect:Heals +2','Note:Can be used in combat.'],
-['Title:Magnificent Healing Postion','Charges:1','Effect:Heals +4','Note:Can be used in combat.'],
-['Title:Superb Healing Postion','Charges:1','Effect:Heals +4','Note:Can be used in combat.']
+['Title:Wand','Class:Wand','Charges:5','Effect:','Note:'],
+['Title:Scroll','Class:Scroll','Charges:1','Effect:','Note:'],
+['Title:Light Bandage','Class:Bandage','Charges:1','Effect:Heals +2','Note:Cannot be used in combat.'],
+['Title:Medium Bandage','Class:Bandage','Charges:1','Effect:Heals +4','Note:Cannot be used in combat.'],
+['Title:Heavy Bandage','Class:Bandage','Charges:1','Effect:Heals +6','Note:Cannot be used in combat.'],
+['Title:Great Healing Potion','Class:Potion','Charges:1','Effect:Heals +2','Note:Can be used in combat.'],
+['Title:Magnificent Healing Potion','Class:Potion','Charges:1','Effect:Heals +4','Note:Can be used in combat.'],
+['Title:Superb Healing Potion','Class:Potion','Charges:1','Effect:Heals +4','Note:Can be used in combat.']
 ];
 
 TPMMounts := [
@@ -600,7 +611,7 @@ TPMTools := [
 'Saddle (Riding)','Scales (Weights)','Scroll','Sealing Wax','Sexton','Shovel','Sickle',
 'Spikes (Iron)','Spoon','Spyglass','Staff','Stake (Wooden)','String','Tent','Torch',
 'Wargong','Watch (Pocket)','Waterskin','Whetstone','Whip','Whistle','Bowl','Mug',
-'Stein','Dice','Cards','Game Piece'
+'Stein','Dice','Cards','Game Piece','Cloth','Wood','Leather','Hide'
 ];
 
 TPMClothing := [
@@ -746,6 +757,40 @@ TPMRoomClasses := [
 'Study','Treasury','Vault','Ward (Hospital)','Wardrobe'
 ];
 
+TPMDungeonClasses := ['Cavern','Crypt','Dungeon','Mine','Sewer','Tumb'];
+
+TPMLevelClasses := ['1st','2nd','3rd','4th','5th','6th','7th','8th','9th'];
+
+TPMWildernessClasses := ['Costal','Desert','Forest','Hill','Jungle','Mountain',
+'Praire','Swamp','Tundra'];
+
+TPMRouteClasses := ['Trail','Road','Highway'];
+
+TPMSettlementClasses := ['Capital','City','Encampment','Hamlet','Town'];
+
+TPMVenueClasses := [
+'Abbey','Academy','Alchemist','Armourer','Armoury','Backery','Bank','Barber',
+'Barrack','Blacksmith','Bookbinder','Brewery','Bungalow','Butcher','Cabin',
+'Cartographer','Casino','Castle','Cathedral','Chapel','Church','Clubhouse',
+'Cobbler','College','Colosseum','Cottage','Courthouse','Distillery','Farm',
+'Fletcher','Gallery','Garrison','Goldsmith','Guard Tower','Hall (Dance)',
+'Hall (Guild)','Hatter','Hut','Inn','Jail','Keep','Livery','Locksmith','Lodge',
+'Mage Tower','Mansion','Miller','Monastery','Museum','Nunnery','Ranch',
+'Roadhouse','Ropemaker','Sadler','Saloon','School','Scribe','Shanty','Shed',
+'Tailor','Tannery','Tavern','Theater','Tinsmith','Townhall','Warehouse','Weaver',
+'Wheelwright','Winery','Zoo'
+];
+
+TPMFloorClasses := ['1st','2nd','3rd','4th','5th','6th','7th','8th','9th'];
+
+TPMConsumableClasses := ['Bandage','Potion','Scroll''Wand'];
+
+TPMBeastClasses := ['Beast'];
+
+TPMMonsterClasses := [
+'Aberration','Beast','Construct','Dragon','Elemental','Fey','Fiend','Giant',
+'Monstrosity','Ooze','Plant','Undead'
+];
 
 
 end.

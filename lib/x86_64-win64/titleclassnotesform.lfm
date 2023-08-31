@@ -1,16 +1,16 @@
-object frmRoom: TfrmRoom
-  Left = 688
-  Height = 487
-  Top = 187
-  Width = 823
+object frmTitleClassNotes: TfrmTitleClassNotes
+  Left = 836
+  Height = 575
+  Top = 227
+  Width = 832
   Align = alClient
   BorderStyle = bsNone
-  Caption = 'Room'
+  Caption = 'Title Class Notes'
   ChildSizing.LeftRightSpacing = 16
   ChildSizing.TopBottomSpacing = 16
   ChildSizing.VerticalSpacing = 8
-  ClientHeight = 487
-  ClientWidth = 823
+  ClientHeight = 575
+  ClientWidth = 832
   DesignTimePPI = 120
   Font.CharSet = ANSI_CHARSET
   Font.Height = -20
@@ -18,11 +18,11 @@ object frmRoom: TfrmRoom
   Font.Pitch = fpFixed
   Font.Quality = fqDraft
   LCLVersion = '2.2.6.0'
-  object Panel1: TPanel
+  object pnlClient: TPanel
     Left = 16
-    Height = 128
+    Height = 60
     Top = 72
-    Width = 791
+    Width = 800
     Align = alTop
     AutoSize = True
     BevelOuter = bvNone
@@ -31,22 +31,22 @@ object frmRoom: TfrmRoom
     ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
     ChildSizing.Layout = cclLeftToRightThenTopToBottom
     ChildSizing.ControlsPerLine = 2
-    ClientHeight = 128
-    ClientWidth = 791
+    ClientHeight = 60
+    ClientWidth = 800
     TabOrder = 0
-    object Label1: TLabel
+    object Label2: TLabel
       Left = 0
       Height = 22
       Top = 0
-      Width = 392
+      Width = 384
       Caption = 'Title'
       ParentColor = False
     end
-    object Label2: TLabel
-      Left = 400
+    object Label3: TLabel
+      Left = 392
       Height = 22
       Top = 0
-      Width = 391
+      Width = 408
       Caption = 'Class'
       ParentColor = False
     end
@@ -54,159 +54,40 @@ object frmRoom: TfrmRoom
       Left = 0
       Height = 30
       Top = 30
-      Width = 392
+      Width = 384
       OnExit = txtTitleExit
       OnKeyUp = txtTitleKeyUp
       TabOrder = 0
     end
     object txtClass: TComboBox
-      Left = 400
+      Left = 392
       Height = 30
       Top = 30
-      Width = 391
-      AutoSize = False
+      Width = 408
       ItemHeight = 22
-      ItemIndex = 2
       Items.Strings = (
-        'Anteroom'
-        'Attic'
-        'Barrack'
-        'Basement'
-        'Bedroom'
-        'Bedroom (Master)'
-        'Bottlery'
-        'Bower'
-        'Buttery'
-        'Cell'
-        'Cellar'
-        'Cellar (Wine)'
-        'Chapel'
-        'Closet'
-        'Conservatory'
-        'Den'
-        'Dormitory'
-        'Entry'
-        'Foyer'
-        'Gallery'
-        'Gallery (Minstrel)'
-        'Greenhouse'
-        'Hall (Banquet)'
-        'Hall (Court)'
-        'Hall (Dance)'
-        'Hall (Dining)'
-        'Hall (Drinking)'
-        'Hall (Great)'
-        'Hall (Guild)'
-        'Hall (Mess)'
-        'Hallway'
-        'Kitchen'
-        'Laboratory'
-        'Laundry'
-        'Library'
-        'Lobby'
-        'Loft'
-        'Obervatory'
-        'Office'
-        'Oratory'
-        'Pantry'
-        'Parlor (Game)'
-        'Parlor (Sitting)'
-        'Parlor (Trophy)'
-        'Patio'
-        'Porch'
-        'Portico'
-        'Reception'
-        'Room (Storage)'
-        'Room (Throne)'
-        'Room (War)'
-        'Salon'
-        'Sanctum'
-        'Shop'
-        'Storeroom'
-        'Studio (Musician)'
-        'Studio (Painter)'
-        'Studio (Sculpter)'
-        'Study'
-        'Treasury'
-        'Vault'
-        'Ward (Hospital)'
-        'Wardrobe'
+        '1st'
+        '2nd'
+        '3rd'
+        '4th'
+        '5th'
+        '6th'
+        '7th'
+        '8th'
+        '9th'
       )
-      OnEnter = txtClassEnter
+      OnExit = txtClassExit
       OnKeyUp = txtClassKeyUp
       OnSelect = txtClassSelect
+      Style = csDropDownList
       TabOrder = 1
-      Text = 'Barrack'
-    end
-    object Label5: TLabel
-      Left = 0
-      Height = 22
-      Top = 68
-      Width = 392
-      AutoSize = False
-      Caption = 'Condition'
-      ParentColor = False
-    end
-    object Label6: TLabel
-      Left = 400
-      Height = 22
-      Top = 68
-      Width = 391
-      AutoSize = False
-      ParentColor = False
-    end
-    object txtCondition: TComboBox
-      Left = 0
-      Height = 30
-      Top = 98
-      Width = 392
-      AutoSize = False
-      ItemHeight = 22
-      ItemIndex = 0
-      Items.Strings = (
-        'Arranged'
-        'Clean'
-        'Cluttered'
-        'Dirty'
-        'Disarranged'
-        'Disarrayed'
-        'Dishevelled'
-        'Disordered'
-        'Dusty'
-        'Elegant'
-        'Hygienic'
-        'Immaculate'
-        'Messy'
-        'Neat'
-        'Orderly'
-        'Organized'
-        'Piled'
-        'Pillaged'
-        'Plundered'
-        'Prefect'
-        'Pristine'
-        'Ransacked'
-        'Robed'
-        'Ruffled'
-        'Simple'
-        'Spotless'
-        'Strewn'
-        'Tidy'
-        'Unkempt'
-        'Untidy'
-      )
-      OnExit = txtConditionExit
-      OnKeyUp = txtConditionKeyUp
-      OnSelect = txtConditionSelect
-      TabOrder = 2
-      Text = 'Arranged'
     end
   end
-  object Panel2: TPanel
+  object Panel1: TPanel
     Left = 16
     Height = 63
-    Top = 408
-    Width = 791
+    Top = 496
+    Width = 800
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
@@ -215,13 +96,13 @@ object frmRoom: TfrmRoom
     Left = 16
     Height = 48
     Top = 16
-    Width = 791
+    Width = 800
     Align = alTop
     Alignment = taLeftJustify
     BevelOuter = bvNone
-    Caption = 'Room'
+    Caption = 'Floor'
     ClientHeight = 48
-    ClientWidth = 791
+    ClientWidth = 800
     Font.CharSet = ANSI_CHARSET
     Font.Height = -40
     Font.Name = 'Courier New'
@@ -230,7 +111,7 @@ object frmRoom: TfrmRoom
     ParentFont = False
     TabOrder = 2
     object btnLocked: TSpeedButton
-      Left = 743
+      Left = 752
       Height = 48
       Top = 0
       Width = 48
@@ -314,23 +195,22 @@ object frmRoom: TfrmRoom
         FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00
       }
       GroupIndex = 1
-      OnClick = btnLockedClick
     end
   end
-  object Label3: TLabel
+  object Label1: TLabel
     Left = 16
     Height = 22
-    Top = 208
-    Width = 791
+    Top = 140
+    Width = 800
     Align = alTop
     Caption = 'Notes'
     ParentColor = False
   end
   object txtNotes: TMemo
     Left = 16
-    Height = 162
-    Top = 238
-    Width = 791
+    Height = 318
+    Top = 170
+    Width = 800
     Align = alClient
     OnExit = txtNotesExit
     OnKeyUp = txtNotesKeyUp

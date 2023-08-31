@@ -1,11 +1,11 @@
-object frmFloor: TfrmFloor
-  Left = 649
+object frmTitleClassNotes: TfrmTitleClassNotes
+  Left = 836
   Height = 575
-  Top = 260
+  Top = 227
   Width = 832
   Align = alClient
   BorderStyle = bsNone
-  Caption = 'Floor'
+  Caption = 'Title Class Notes'
   ChildSizing.LeftRightSpacing = 16
   ChildSizing.TopBottomSpacing = 16
   ChildSizing.VerticalSpacing = 8

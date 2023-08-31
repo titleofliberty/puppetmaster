@@ -161,7 +161,7 @@ type
     procedure PopulateCampaign;
     procedure PopulateResourceToCbo(ACbo: TComboBox; AResource: TTreeNode);
     procedure ToggleCampaign(AEnabled: boolean = false);
-    procedure LoadResourceNodes(AParent: TTreeNode; AArray: TStringArray); overload;
+    procedure LoadResourceNodes(AParent: TTreeNode; ACategory: string; AArray: TStringArray); overload;
     procedure LoadResourceNodes(AParent: TTreeNode; ACategory: string; AArray: TPM2DStringArray); overload;
     procedure SaveCampaign;
     procedure LoadCampaign;
@@ -208,9 +208,8 @@ implementation
 {$R *.lfm}
 
 uses
-  settlementform, venueform, puppetform, diceform, playerform,
-  aboutform, dungeonform, wildernessform, chambertractroomform, levelform,
-  routeform, floorform;
+  puppetform, diceform, playerform, aboutform, chambertractroomform,
+  titleclassnotesform, simpleform, beastmonsterform;
 
 { TfrmMain }
 
@@ -826,88 +825,84 @@ begin
   leaf := TPMLeaf(tvwCampaign.Selected.Data);
 
   while pnlWorkspaceClient.ComponentCount > 0 do
-  begin
     pnlWorkspaceClient.Components[0].Free;
-  end;
 
-  if leaf.Category = 'Settlement' then
-  begin
-    form := TfrmSettlement.Create(pnlWorkspaceClient);
-    form.Parent := pnlWorkspaceClient;
-    TfrmSettlement(form).Settlement := leaf;
-    form.Show;
-  end
-  else if leaf.Category = 'Venue' then
-  begin
-    form := TfrmVenue.Create(pnlWorkspaceClient);
-    form.Parent := pnlWorkspaceClient;
-    TfrmVenue(form).Venue := leaf;
-    form.Show;
-  end
-  else if (leaf.Category = 'Chamber') or (leaf.Category = 'Tract') or (leaf.Category = 'Room') then
+  if (leaf.Category = 'Chamber') or
+     (leaf.Category = 'Tract') or
+     (leaf.Category = 'Room') then
   begin
     form := TfrmChamberTractRoom.Create(pnlWorkspaceClient);
     form.Parent := pnlWorkspaceClient;
     TfrmChamberTractRoom(form).Leaf := leaf;
     form.Show;
   end
-  else if leaf.Category = 'Dungeon' then
-  begin
-    form := TfrmDungeon.Create(pnlWorkspaceClient);
-    form.Parent := pnlWorkspaceClient;
-    TfrmDungeon(form).Dungeon := leaf;
-    form.Show;
-  end
-  else if leaf.Category = 'Level' then
-  begin
-    form := TfrmLevel.Create(pnlWorkspaceClient);
-    form.Parent := pnlWorkspaceClient;
-    TfrmLevel(form).Level := leaf;
-    form.Show;
-  end
-  else if leaf.Category = 'Puppet' then
+  else if (leaf.Category = 'Puppet') then
   begin
     form := TfrmPuppet.Create(pnlWorkspaceClient);
     form.Parent := pnlWorkspaceClient;
     TfrmPuppet(form).Puppet := leaf;
     form.Show;
   end
-  else if leaf.Category = 'Player' then
+  else if (leaf.Category = 'Player') then
   begin
     form := TfrmPlayer.Create(pnlWorkspaceClient);
     form.Parent := pnlWorkspaceClient;
     TfrmPlayer(form).Player := leaf;
     form.Show;
   end
-  else if leaf.Category = 'Dice' then
+  else if (leaf.Category = 'Dice') then
   begin
     form := TfrmDice.Create(pnlWorkspaceClient);
     form.Parent := pnlWorkspaceClient;
     TfrmDice(form).Dice := leaf;
     form.Show;
   end
-  else if leaf.Category = 'Wilderness' then
+  else if (leaf.Category = 'Beast') or (leaf.Category = 'Monster') then
   begin
-    form := TfrmWilderness.Create(pnlWorkspaceClient);
+    form := TfrmBeastMonster.Create(pnlWorkspaceClient);
     form.Parent := pnlWorkspaceClient;
-    TfrmWilderness(form).Wilderness := leaf;
+    TfrmBeastMonster(form).Leaf := leaf;
     form.Show;
   end
-  else if leaf.Category = 'Route' then
+  else if (leaf.Category = 'Dungeon') or
+       (leaf.Category = 'Level') or
+       (leaf.Category = 'Wilderness') or
+       (leaf.Category = 'Route') or
+       (leaf.Category = 'Settlement') or
+       (leaf.Category = 'Venue') or
+       (leaf.Category = 'Floor')
+  then
   begin
-    form := TfrmRoute.Create(pnlWorkspaceClient);
+    form := TfrmTitleClassNotes.Create(pnlWorkspaceClient);
     form.Parent := pnlWorkspaceClient;
-    TfrmRoute(form).Route := leaf;
+    TfrmTitleClassNotes(form).Leaf := leaf;
     form.Show;
   end
-  else if leaf.Category = 'Floor' then
+  else if
+    (leaf.Category = 'Armor') or
+    (leaf.Category = 'Clothing') or
+    (leaf.Category = 'Condition') or
+    (leaf.Category = 'Container') or
+    (leaf.Category = 'Fauna') or
+    (leaf.Category = 'Flora') or
+    (leaf.Category = 'Gem') or
+    (leaf.Category = 'Instrument') or
+    (leaf.Category = 'Jewelry') or
+    (leaf.Category = 'Kit') or
+    (leaf.Category = 'Natural') or
+    (leaf.Category = 'Remains') or
+    (leaf.Category = 'Tool') or
+    (leaf.Category = 'Trap') or
+    (leaf.Category = 'Unnatural') or
+    (leaf.Category = 'Vehicle') or
+    (leaf.Category = 'Weapon')
+  then
   begin
-    form := TfrmFloor.Create(pnlWorkspaceClient);
+    form := TfrmSimple.Create(pnlWorkspaceClient);
     form.Parent := pnlWorkspaceClient;
-    TfrmFloor(form).Floor := leaf;
+    TfrmSimple(form).Leaf := leaf;
     form.Show;
   end;
-
 end;
 
 procedure TfrmMain.LeafChange(Sender: TObject);
@@ -987,22 +982,22 @@ begin
   nodeGems := tvwCampaign.Items.AddChildObject(nodeResources, 'Gems', TPMLeaf.Create('Gems'));
   nodeKits := tvwCampaign.Items.AddChildObject(nodeResources, 'Kits', TPMLeaf.Create('Kits'));
   nodeTools := tvwCampaign.Items.AddChildObject(nodeResources, 'Tools', TPMLeaf.Create('Tools'));
-  nodeClothing := tvwCampaign.Items.AddChildObject(nodeResources, 'Clothing', TPMLeaf.Create('Clothing'));
+  nodeClothing := tvwCampaign.Items.AddChildObject(nodeResources, 'Clothing', TPMLeaf.Create('Clothings'));
   nodeContainers := tvwCampaign.Items.AddChildObject(nodeResources, 'Containers', TPMLeaf.Create('Containers'));
   nodeVehicle := tvwCampaign.Items.AddChildObject(nodeResources, 'Vehicles', TPMLeaf.Create('Vehicles'));
-  nodeJewelry := tvwCampaign.Items.AddChildObject(nodeResources, 'Jewelry', TPMLeaf.Create('Jewelry'));;
-  nodeRemains := tvwCampaign.Items.AddChildObject(nodeResources, 'Remains', TPMLeaf.Create('Remains'));
+  nodeJewelry := tvwCampaign.Items.AddChildObject(nodeResources, 'Jewelry', TPMLeaf.Create('Jewelrys'));;
+  nodeRemains := tvwCampaign.Items.AddChildObject(nodeResources, 'Remains', TPMLeaf.Create('Remainsx'));
   nodeInstruments := tvwCampaign.Items.AddChildObject(nodeResources, 'Instruments', TPMLeaf.Create('Instruments'));;
-  nodeArmors := tvwCampaign.Items.AddChildObject(nodeResources, 'Armor', TPMLeaf.Create('Armor'));
+  nodeArmors := tvwCampaign.Items.AddChildObject(nodeResources, 'Armor', TPMLeaf.Create('Armors'));
   nodeWeapons := tvwCampaign.Items.AddChildObject(nodeResources, 'Weapons', TPMLeaf.Create('Weapons'));
   nodeTraps := tvwCampaign.Items.AddChildObject(nodeResources, 'Traps', TPMLeaf.Create('Traps'));
   nodeHumanoids := tvwCampaign.Items.AddChildObject(nodeResources, 'Humanoids', TPMLeaf.Create('Humanoids'));
   nodeConsumables := tvwCampaign.Items.AddChildObject(nodeResources, 'Consumables', TPMLeaf.Create('Consumables'));
   nodeSpells := tvwCampaign.Items.AddChildObject(nodeResources, 'Spells', TPMLeaf.Create('Spells'));
-  nodeNatural := tvwCampaign.Items.AddChildObject(nodeResources, 'Natural', TPMLeaf.Create('Natural'));
-  nodeUnnatural := tvwCampaign.Items.AddChildObject(nodeResources, 'Unnatural', TPMLeaf.Create('Unnatural'));
-  nodeFlora := tvwCampaign.Items.AddChildObject(nodeResources, 'Flora', TPMLeaf.Create('Flora'));
-  nodeFauna := tvwCampaign.Items.AddChildObject(nodeResources, 'Fauna', TPMLeaf.Create('Fauna'));
+  nodeNatural := tvwCampaign.Items.AddChildObject(nodeResources, 'Natural', TPMLeaf.Create('Naturals'));
+  nodeUnnatural := tvwCampaign.Items.AddChildObject(nodeResources, 'Unnatural', TPMLeaf.Create('Unnaturals'));
+  nodeFlora := tvwCampaign.Items.AddChildObject(nodeResources, 'Flora', TPMLeaf.Create('Floras'));
+  nodeFauna := tvwCampaign.Items.AddChildObject(nodeResources, 'Fauna', TPMLeaf.Create('Faunas'));
   nodeConditions := tvwCampaign.Items.AddChildObject(nodeResources, 'Conditions', TPMLeaf.Create('Conditions'));
 
   nodeResources.AlphaSort;
@@ -1018,23 +1013,23 @@ begin
     tvwCampaign.Items.AddChildObject(nodeDiceTray, leaf.Title, leaf);
   end;
 
-  LoadResourceNodes(nodeKits, TPMKits);
-  LoadResourceNodes(nodeTools, TPMTools);
-  LoadResourceNodes(nodeClothing, TPMClothing);
-  LoadResourceNodes(nodeContainers, TPMContainers);
-  LoadResourceNodes(nodeWeapons, TPMWeapons);
-  LoadResourceNodes(nodeVehicle, TPMVehicle);
-  LoadResourceNodes(nodeJewelry, TPMJewelry);
-  LoadResourceNodes(nodeRemains, TPMRemains);
-  LoadResourceNodes(nodeInstruments, TPMInstruments);
-  LoadResourceNodes(nodeArmors, TPMArmors);
-  LoadResourceNodes(nodeTraps, TPMTraps);
-  LoadResourceNodes(nodeGems, TPMGems);
-  LoadResourceNodes(nodeNatural, TPMNatural);
-  LoadResourceNodes(nodeUnnatural, TPMUnnatural);
-  LoadResourceNodes(nodeFlora, TPMFlora);
-  LoadResourceNodes(nodeFauna, TPMFauna);
-  LoadResourceNodes(nodeConditions, TPMConditions);
+  LoadResourceNodes(nodeKits, 'Kit', TPMKits);
+  LoadResourceNodes(nodeTools, 'Tool', TPMTools);
+  LoadResourceNodes(nodeClothing, 'Clothing', TPMClothing);
+  LoadResourceNodes(nodeContainers, 'Container', TPMContainers);
+  LoadResourceNodes(nodeWeapons, 'Weapon', TPMWeapons);
+  LoadResourceNodes(nodeVehicle, 'Vehicle', TPMVehicle);
+  LoadResourceNodes(nodeJewelry, 'Jewelry', TPMJewelry);
+  LoadResourceNodes(nodeRemains, 'Remains', TPMRemains);
+  LoadResourceNodes(nodeInstruments, 'Instrument', TPMInstruments);
+  LoadResourceNodes(nodeArmors, 'Armor', TPMArmors);
+  LoadResourceNodes(nodeTraps, 'Trap', TPMTraps);
+  LoadResourceNodes(nodeGems, 'Gem', TPMGems);
+  LoadResourceNodes(nodeNatural, 'Natural', TPMNatural);
+  LoadResourceNodes(nodeUnnatural, 'Unnatural', TPMUnnatural);
+  LoadResourceNodes(nodeFlora, 'Flora', TPMFlora);
+  LoadResourceNodes(nodeFauna, 'Fauna', TPMFauna);
+  LoadResourceNodes(nodeConditions, 'Condition', TPMConditions);
 
   LoadResourceNodes(nodeBeasts, 'Beast', TPMBeasts);
   LoadResourceNodes(nodeMonsters, 'Monster', TPMMonsters);
@@ -1106,7 +1101,8 @@ begin
   pnlBottom.Enabled := AEnabled;
 end;
 
-procedure TfrmMain.LoadResourceNodes(AParent: TTreeNode; AArray: TStringArray);
+procedure TfrmMain.LoadResourceNodes(AParent: TTreeNode; ACategory: string;
+  AArray: TStringArray);
 var
   i: integer;
   leaf: TPMLeaf;
@@ -1114,7 +1110,7 @@ begin
   if AParent.HasChildren then AParent.DeleteChildren;
   for i := 0 to High(AArray) do
   begin
-    leaf := TPMLeaf.Create('Simple');
+    leaf := TPMLeaf.Create(ACategory);
     leaf.SetTrait('Title', AArray[i]);
     leaf.OnChange := @LeafChange;
     tvwCampaign.Items.AddChildObject(AParent, leaf.Title, leaf);

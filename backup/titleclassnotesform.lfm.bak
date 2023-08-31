@@ -1,16 +1,16 @@
-object frmVenue: TfrmVenue
-  Left = 471
-  Height = 460
-  Top = 270
-  Width = 820
+object frmTitleClassNotes: TfrmTitleClassNotes
+  Left = 475
+  Height = 575
+  Top = 256
+  Width = 832
   Align = alClient
   BorderStyle = bsNone
-  Caption = 'Venue'
+  Caption = 'Title Class Notes'
   ChildSizing.LeftRightSpacing = 16
   ChildSizing.TopBottomSpacing = 16
   ChildSizing.VerticalSpacing = 8
-  ClientHeight = 460
-  ClientWidth = 820
+  ClientHeight = 575
+  ClientWidth = 832
   DesignTimePPI = 120
   Font.CharSet = ANSI_CHARSET
   Font.Height = -20
@@ -18,11 +18,11 @@ object frmVenue: TfrmVenue
   Font.Pitch = fpFixed
   Font.Quality = fqDraft
   LCLVersion = '2.2.6.0'
-  object Panel1: TPanel
+  object pnlClient: TPanel
     Left = 16
-    Height = 109
+    Height = 60
     Top = 72
-    Width = 788
+    Width = 800
     Align = alTop
     AutoSize = True
     BevelOuter = bvNone
@@ -31,22 +31,22 @@ object frmVenue: TfrmVenue
     ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
     ChildSizing.Layout = cclLeftToRightThenTopToBottom
     ChildSizing.ControlsPerLine = 2
-    ClientHeight = 109
-    ClientWidth = 788
+    ClientHeight = 60
+    ClientWidth = 800
     TabOrder = 0
-    object Label1: TLabel
+    object Label2: TLabel
       Left = 0
       Height = 22
       Top = 0
-      Width = 373
+      Width = 384
       Caption = 'Title'
       ParentColor = False
     end
-    object Label2: TLabel
-      Left = 381
+    object Label3: TLabel
+      Left = 392
       Height = 22
       Top = 0
-      Width = 407
+      Width = 408
       Caption = 'Class'
       ParentColor = False
     end
@@ -54,124 +54,40 @@ object frmVenue: TfrmVenue
       Left = 0
       Height = 30
       Top = 30
-      Width = 373
+      Width = 384
       OnExit = txtTitleExit
       OnKeyUp = txtTitleKeyUp
       TabOrder = 0
     end
     object txtClass: TComboBox
-      Left = 381
+      Left = 392
       Height = 30
       Top = 30
-      Width = 407
+      Width = 408
       ItemHeight = 22
-      ItemIndex = 0
       Items.Strings = (
-        'Abbey'
-        'Academy'
-        'Alchemist'
-        'Armourer'
-        'Armoury'
-        'Backery'
-        'Bank'
-        'Barber'
-        'Barrack'
-        'Blacksmith'
-        'Bookbinder'
-        'Brewery'
-        'Bungalow'
-        'Butcher'
-        'Cabin'
-        'Cartographer'
-        'Casino'
-        'Castle'
-        'Cathedral'
-        'Chapel'
-        'Church'
-        'Clubhouse'
-        'Cobbler'
-        'College'
-        'Colosseum '
-        'Cottage'
-        'Courthouse'
-        'Distillery'
-        'Farm'
-        'Fletcher'
-        'Gallery'
-        'Garrison'
-        'Goldsmith'
-        'Guard Tower'
-        'Hall (Dance)'
-        'Hall (Guild)'
-        'Hatter'
-        'Hut'
-        'Inn'
-        'Jail'
-        'Keep'
-        'Livery'
-        'Locksmith'
-        'Lodge'
-        'Mage Tower'
-        'Mansion'
-        'Miller'
-        'Monastery'
-        'Museum'
-        'Nunnery'
-        'Ranch'
-        'Roadhouse'
-        'Ropemaker'
-        'Sadler'
-        'Saloon'
-        'School'
-        'Scribe'
-        'Shanty'
-        'Shed'
-        'Tailor'
-        'Tannery'
-        'Tavern'
-        'Theater'
-        'Tinsmith'
-        'Townhall'
-        'Warehouse'
-        'Weaver'
-        'Wheelwright'
-        'Winery'
-        'Zoo'
+        '1st'
+        '2nd'
+        '3rd'
+        '4th'
+        '5th'
+        '6th'
+        '7th'
+        '8th'
+        '9th'
       )
       OnExit = txtClassExit
       OnKeyUp = txtClassKeyUp
       OnSelect = txtClassSelect
-      TabOrder = 2
-      Text = 'Abbey'
-    end
-    object Label4: TLabel
-      Left = 0
-      Height = 32
-      Top = 68
-      Width = 373
-      ParentColor = False
-    end
-    object btnRollName: TButton
-      Left = 381
-      Height = 32
-      Top = 68
-      Width = 407
-      Caption = 'Roll Name'
+      Style = csDropDownList
       TabOrder = 1
     end
-    object Label5: TLabel
-      Left = 0
-      Height = 1
-      Top = 108
-      Width = 373
-      ParentColor = False
-    end
   end
-  object Panel2: TPanel
+  object Panel1: TPanel
     Left = 16
     Height = 63
-    Top = 381
-    Width = 788
+    Top = 496
+    Width = 800
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
@@ -180,13 +96,13 @@ object frmVenue: TfrmVenue
     Left = 16
     Height = 48
     Top = 16
-    Width = 788
+    Width = 800
     Align = alTop
     Alignment = taLeftJustify
     BevelOuter = bvNone
-    Caption = 'Venue'
+    Caption = 'Floor'
     ClientHeight = 48
-    ClientWidth = 788
+    ClientWidth = 800
     Font.CharSet = ANSI_CHARSET
     Font.Height = -40
     Font.Name = 'Courier New'
@@ -195,7 +111,7 @@ object frmVenue: TfrmVenue
     ParentFont = False
     TabOrder = 2
     object btnLocked: TSpeedButton
-      Left = 740
+      Left = 752
       Height = 48
       Top = 0
       Width = 48
@@ -279,23 +195,22 @@ object frmVenue: TfrmVenue
         FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00
       }
       GroupIndex = 1
-      OnClick = btnLockedClick
     end
   end
-  object Label3: TLabel
+  object Label1: TLabel
     Left = 16
     Height = 22
-    Top = 189
-    Width = 788
+    Top = 140
+    Width = 800
     Align = alTop
     Caption = 'Notes'
     ParentColor = False
   end
   object txtNotes: TMemo
     Left = 16
-    Height = 154
-    Top = 219
-    Width = 788
+    Height = 318
+    Top = 170
+    Width = 800
     Align = alClient
     OnExit = txtNotesExit
     OnKeyUp = txtNotesKeyUp

@@ -214,6 +214,7 @@ object frmLevel: TfrmLevel
     Width = 656
     Align = alClient
     OnExit = txtNotesExit
+    OnKeyUp = txtNotesKeyUp
     ScrollBars = ssVertical
     TabOrder = 3
   end

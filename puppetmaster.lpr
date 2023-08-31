@@ -10,11 +10,10 @@ uses
   athreads,
   {$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, lazcontrols, mainform, puppetmasterlib, settlementform, venueform,
-  puppetform, diceform, playerform, aboutform, dungeonform, 
-wildernessform, 
-chambertractroomform, htmlcolors, levelform, routeform, 
-floorform;
+  Forms, lazcontrols, mainform, puppetmasterlib,
+  puppetform, diceform, playerform, aboutform, 
+chambertractroomform, htmlcolors, 
+titleclassnotesform, beastmonsterform, simpleform;
 
 {$R *.res}
 
@@ -24,9 +23,6 @@ begin
   Application.Scaled:=True;
   Application.Initialize;
   Application.CreateForm(TfrmMain, frmMain);
-  Application.CreateForm(TfrmLevel, frmLevel);
-  Application.CreateForm(TfrmRoute, frmRoute);
-  Application.CreateForm(TfrmFloor, frmFloor);
   Application.Run;
 end.
 

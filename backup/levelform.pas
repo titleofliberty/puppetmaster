@@ -28,6 +28,7 @@ type
     procedure txtClassKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure txtClassSelect(Sender: TObject);
     procedure txtNotesExit(Sender: TObject);
+    procedure txtNotesKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure txtTitleExit(Sender: TObject);
     procedure txtTitleKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
   private
@@ -77,6 +78,13 @@ end;
 procedure TfrmLevel.txtNotesExit(Sender: TObject);
 begin
   FLevel.SetTrait('Notes', txtNotes.Text);
+end;
+
+procedure TfrmLevel.txtNotesKeyUp(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  if Key = VK_RETURN then
+    FLevel.SetTrait('Notes', txtNotes.Text);
 end;
 
 procedure TfrmLevel.txtTitleKeyUp(Sender: TObject; var Key: Word;

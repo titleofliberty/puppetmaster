@@ -65,17 +65,6 @@ object frmLevel: TfrmLevel
       Top = 30
       Width = 336
       ItemHeight = 22
-      Items.Strings = (
-        '1st'
-        '2nd'
-        '3rd'
-        '4th'
-        '5th'
-        '6th'
-        '7th'
-        '8th'
-        '9th'
-      )
       OnExit = txtClassExit
       OnKeyUp = txtClassKeyUp
       OnSelect = txtClassSelect

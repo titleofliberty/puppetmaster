@@ -52,20 +52,6 @@
         <IsPartOfProject Value="True"/>
       </Unit>
       <Unit>
-        <Filename Value="settlementform.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="frmSettlement"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-      </Unit>
-      <Unit>
-        <Filename Value="venueform.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="frmVenue"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-      </Unit>
-      <Unit>
         <Filename Value="puppetform.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmPuppet"/>
@@ -94,20 +80,6 @@
         <ResourceBaseClass Value="Form"/>
       </Unit>
       <Unit>
-        <Filename Value="dungeonform.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="frmDungeon"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-      </Unit>
-      <Unit>
-        <Filename Value="wildernessform.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="frmWilderness"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-      </Unit>
-      <Unit>
         <Filename Value="chambertractroomform.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmChamberTractRoom"/>
@@ -119,23 +91,23 @@
         <IsPartOfProject Value="True"/>
       </Unit>
       <Unit>
-        <Filename Value="levelform.pas"/>
+        <Filename Value="titleclassnotesform.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="frmLevel"/>
+        <ComponentName Value="frmTitleClassNotes"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit>
       <Unit>
-        <Filename Value="routeform.pas"/>
+        <Filename Value="beastmonsterform.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="frmRoute"/>
+        <ComponentName Value="frmBeastMonster"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit>
       <Unit>
-        <Filename Value="floorform.pas"/>
+        <Filename Value="simpleform.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="frmFloor"/>
-        <HasResources Value="True"/>
+        <ComponentName Value="frmSimple"/>
         <ResourceBaseClass Value="Form"/>
       </Unit>
     </Units>
