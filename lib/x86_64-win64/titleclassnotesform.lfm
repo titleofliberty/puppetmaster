@@ -1,7 +1,7 @@
 object frmTitleClassNotes: TfrmTitleClassNotes
-  Left = 836
+  Left = 464
   Height = 575
-  Top = 227
+  Top = 295
   Width = 832
   Align = alClient
   BorderStyle = bsNone
@@ -79,7 +79,6 @@ object frmTitleClassNotes: TfrmTitleClassNotes
       OnExit = txtClassExit
       OnKeyUp = txtClassKeyUp
       OnSelect = txtClassSelect
-      Style = csDropDownList
       TabOrder = 1
     end
   end
@@ -195,6 +194,7 @@ object frmTitleClassNotes: TfrmTitleClassNotes
         FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00
       }
       GroupIndex = 1
+      OnClick = btnLockedClick
     end
   end
   object Label1: TLabel

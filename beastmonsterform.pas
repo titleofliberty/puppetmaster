@@ -117,12 +117,14 @@ begin
   if FLeaf = AValue then Exit;
   FLeaf := AValue;
 
-  pnlHeader.Caption := FLeaf.Category;
-
   if FLeaf.Category = 'Beast' then
     txtClass.Items.AddStrings(TPMBeastClasses)
   else if FLeaf.Category = 'Monster' then
-    txtClass.Items.AddStrings(TPMMonsterClasses);
+    txtClass.Items.AddStrings(TPMMonsterClasses)
+  else if FLeaf.Category = 'Humanoid' then
+    txtClass.Items.AddStrings(TPMHumanoidClasses);
+
+  pnlHeader.Caption := FLeaf.Category;
 
   txtTitle.Text := FLeaf.GetTrait('Title');
   txtClass.Text := FLeaf.GetTrait('Class');

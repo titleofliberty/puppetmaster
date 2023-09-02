@@ -19,9 +19,9 @@
         <ComponentName Value="frmMain"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <TopLine Value="861"/>
-        <CursorPos X="14" Y="865"/>
-        <FoldState Value=" T4602 T7ED{? T8kQ2B1 T3m0099 pj2jV0B6 pidjL0E9]9XjO03A]RAjZ032]IYj00p113 pk7nU0C7]T6jY0Z T1m108B]abkF078]9gkI09G]Y8kZ023]9UkB0301[B4WmL098 PjDja0 T0mP256 piZrb43B[94kA2512[!4coW42 T6nB02K]G0w306]yGmX0^"/>
+        <TopLine Value="832"/>
+        <CursorPos X="35" Y="862"/>
+        <FoldState Value=" T4602 T7ED{? T8kQ2B1 T3m0099 pj2jV0B6 pidjL0E9]9XjO03A]RAjZ032]IYj00p113 pk7nZ0C7]T6jY0Z T1m108B]abkF078]9gkI09G]Y8kZ023]9UkB0301[B4WmQ098 PjDja0 T0mP256 piZrb43B[94kA2513]ZiZob4 T6nB02K]Q0w806]OGmX0i"/>
         <UsageCount Value="201"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -31,9 +31,9 @@
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="309"/>
-        <CursorPos X="29" Y="328"/>
-        <FoldState Value=" T4601 T7HCI T8I25]D3j20N5 PiNj40 T6j3013 T1jS0c4 PGiP]M0k123v"/>
+        <TopLine Value="778"/>
+        <CursorPos Y="791"/>
+        <FoldState Value=" T4601 T7HCI T8I25]D3j30N5 PiNj40 T6]613 T1jT0c4 PGiP]M0k223%"/>
         <UsageCount Value="201"/>
         <Loaded Value="True"/>
       </Unit>
@@ -90,10 +90,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="191"/>
-        <CursorPos Y="207"/>
-        <FoldState Value=" T4602 T7EPx T8iN241 T3if0b711 PiCjc0 T1ig0a[H5bje]G6k0013T"/>
-        <UsageCount Value="187"/>
+        <TopLine Value="169"/>
+        <CursorPos X="47" Y="179"/>
+        <FoldState Value=" T4602 T7EPx T8iN241 T3if0b621 Pdk30 T1ig0a[G5Mk5]G6k00135"/>
+        <UsageCount Value="191"/>
       </Unit>
       <Unit>
         <Filename Value="..\gizmos\htmlcolors.pas"/>
@@ -102,7 +102,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="144"/>
+        <UsageCount Value="148"/>
       </Unit>
       <Unit>
         <Filename Value="titleclassnotesform.pas"/>
@@ -111,10 +111,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="47"/>
-        <CursorPos X="22" Y="50"/>
-        <FoldState Value=" T4602 T7EOO T8W231 T3i6038 Pci80 T1i702]ER]EN"/>
-        <UsageCount Value="42"/>
+        <TopLine Value="2"/>
+        <CursorPos Y="61"/>
+        <FoldState Value=" T4602 T7EOP T8X231 T3i7039 PiIiX0 T1i80211511 PK]IK"/>
+        <UsageCount Value="46"/>
       </Unit>
       <Unit>
         <Filename Value="beastmonsterform.pas"/>
@@ -123,9 +123,20 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="2"/>
-        <CursorPos X="12" Y="56"/>
-        <FoldState Value=" T4602 T7ELY T8g231 T3iG039 PiLiX0 T1iH02711 PS[G56iM012,"/>
+        <TopLine Value="114"/>
+        <CursorPos X="49" Y="125"/>
+        <FoldState Value=" T4602 T7ELY T8g231 T3iG03711 Pi2iZ0 T1iH02[H5S[G56iM012H"/>
+        <UsageCount Value="32"/>
+      </Unit>
+      <Unit>
+        <Filename Value="simpleform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmSimple"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
         <UsageCount Value="28"/>
       </Unit>
       <Unit>
@@ -395,22 +406,11 @@
         <UsageCount Value="20"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit>
-      <Unit>
-        <Filename Value="simpleform.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="frmSimple"/>
-        <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="-1"/>
-        <TopLine Value="-1"/>
-        <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="24"/>
-      </Unit>
     </Units>
     <Debugger>
       <Backend Value="{46F8D863-C46A-4513-87F7-05B4F05262FC}"/>
     </Debugger>
-    <JumpHistory HistoryIndex="11">
+    <JumpHistory HistoryIndex="13">
       <Position>
         <Filename Value="mainform.pas"/>
         <Caret Line="541" Column="31" TopLine="541"/>
@@ -456,8 +456,16 @@
         <Caret Line="981" Column="55" TopLine="976"/>
       </Position>
       <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="212" Column="52" TopLine="345"/>
+        <Filename Value="puppetmasterlib.pas"/>
+        <Caret Line="578" TopLine="571"/>
+      </Position>
+      <Position>
+        <Filename Value="puppetmasterlib.pas"/>
+        <Caret Line="792" Column="34" TopLine="776"/>
+      </Position>
+      <Position>
+        <Filename Value="puppetmasterlib.pas"/>
+        <Caret Line="476" TopLine="455"/>
       </Position>
     </JumpHistory>
     <RunParams>

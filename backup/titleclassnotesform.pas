@@ -92,6 +92,26 @@ procedure TfrmTitleClassNotes.SetLeaf(AValue: TPMLeaf);
 begin
   if FLeaf = AValue then Exit;
   FLeaf := AValue;
+
+  txtClass.Items.Clear;
+  if (leaf.Category = 'Dungeon') then
+    txtClass.Items.AddStrings(TPMDungeonClasses)
+  else if (leaf.Category = 'Level') then
+    txtClass.Items.AddStrings(TPMLevelClasses)
+  else if (leaf.Category = 'Wilderness') then
+    txtClass.Items.AddStrings(TPMWildernessClasses)
+  else if (leaf.Category = 'Route') then
+    txtClass.Items.AddStrings(TPMRouteClasses)
+  else if (leaf.Category = 'Settlement') then
+    txtClass.Items.AddStrings(TPMSettlementClasses)
+  else if (leaf.Category = 'Venue') then
+    txtClass.Items.AddStrings(TPMVenueClasses)
+  else if (leaf.Category = 'Floor') then
+    txtClass.Items.AddStrings(TPMFloorClasses)
+  else if (leaf.Category = 'Consumable') then
+    txtClass.Items.AddStrings(TPMConsumableClasses);
+
+
   pnlHeader.Caption := FLeaf.Category;
   txtTitle.Text := FLeaf.GetTrait('Title');
   txtClass.Text := FLeaf.GetTrait('Class');

@@ -170,6 +170,14 @@ begin
   if FLeaf = AValue then Exit;
   FLeaf := AValue;
 
+  txtClass.Clear;
+  if (FLeaf.Category = 'Chamber') then
+    txtClass.Items.AddStrings(TPMChamberClasses)
+  else if (FLeaf.Category = 'Tract') then
+    txtClass.Items.AddStrings(TPMTractClasses)
+  else if (FLeaf.Category = 'Room') then
+    txtClass.Items.AddStrings(TPMRoomClasses);
+
   pnlHeader.Caption := FLeaf.Category;
 
   txtTitle.Text     := FLeaf.GetTrait('Title');

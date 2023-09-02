@@ -209,7 +209,7 @@ implementation
 
 uses
   puppetform, diceform, playerform, aboutform, chambertractroomform,
-  titleclassnotesform, simpleform;
+  titleclassnotesform, simpleform, beastmonsterform;
 
 { TfrmMain }
 
@@ -857,13 +857,21 @@ begin
     TfrmDice(form).Dice := leaf;
     form.Show;
   end
+  else if (leaf.Category = 'Beast') or (leaf.Category = 'Monster') then
+  begin
+    form := TfrmBeastMonster.Create(pnlWorkspaceClient);
+    form.Parent := pnlWorkspaceClient;
+    TfrmBeastMonster(form).Leaf := leaf;
+    form.Show;
+  end
   else if (leaf.Category = 'Dungeon') or
        (leaf.Category = 'Level') or
        (leaf.Category = 'Wilderness') or
        (leaf.Category = 'Route') or
        (leaf.Category = 'Settlement') or
        (leaf.Category = 'Venue') or
-       (leaf.Category = 'Floor')
+       (leaf.Category = 'Floor') or
+       (leaf.Category = 'Consumable')
   then
   begin
     form := TfrmTitleClassNotes.Create(pnlWorkspaceClient);
@@ -888,7 +896,8 @@ begin
     (leaf.Category = 'Trap') or
     (leaf.Category = 'Unnatural') or
     (leaf.Category = 'Vehicle') or
-    (leaf.Category = 'Weapon')
+    (leaf.Category = 'Weapon') or
+    (leaf.Category = 'Spell')
   then
   begin
     form := TfrmSimple.Create(pnlWorkspaceClient);
