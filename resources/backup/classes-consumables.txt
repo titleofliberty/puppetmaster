@@ -1,0 +1,3 @@
+TPMConsumableClasses := ['Bandage','Potion','Scroll','Wand'];
+
+

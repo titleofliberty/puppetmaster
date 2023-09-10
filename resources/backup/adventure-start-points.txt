@@ -1,0 +1,8 @@
+TPMAdventureStartPoints := [
+'Absent-Minded Expert','Arrogant Snob','Childhood Friend With Dark Secret',
+'Congenial Madman','Crusty Old Professional','Gibbering Madman','Government Observer',
+'Hero-Worshipper','Ingenue In Distress','Inquisitive Chronicler','Merry Minstrel',
+'Obsequious Merchant','Romantic Loony','Talkative Barkeep','Tragic Fellow Hero',
+'Villain Ally'
+];
+

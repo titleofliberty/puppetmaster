@@ -30,8 +30,8 @@
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="891"/>
-        <CursorPos X="19" Y="907"/>
+        <TopLine Value="809"/>
+        <CursorPos Y="828"/>
         <FoldState Value=" T4601 T7HCI T8I25]D3jH0N5 PiNj40 T6jI013 T1k00c4 PGiP]M0kG23K"/>
         <UsageCount Value="201"/>
         <Loaded Value="True"/>
@@ -101,7 +101,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="163"/>
+        <UsageCount Value="165"/>
       </Unit>
       <Unit>
         <Filename Value="titleclassnotesform.pas"/>
@@ -113,7 +113,7 @@
         <TopLine Value="2"/>
         <CursorPos Y="61"/>
         <FoldState Value=" T4602 T7EOP T8X231 T3i7039 PiIiX0 T1i80211511 PK]IK"/>
-        <UsageCount Value="61"/>
+        <UsageCount Value="63"/>
       </Unit>
       <Unit>
         <Filename Value="beastmonsterform.pas"/>
@@ -125,7 +125,7 @@
         <TopLine Value="107"/>
         <CursorPos X="58" Y="126"/>
         <FoldState Value=" T4602 T7ELY T8g231 T3iG03711 Pi2iZ0 T1iH02[H5S[G56iM012H"/>
-        <UsageCount Value="47"/>
+        <UsageCount Value="49"/>
       </Unit>
       <Unit>
         <Filename Value="simpleform.pas"/>
@@ -136,7 +136,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="43"/>
+        <UsageCount Value="45"/>
       </Unit>
       <Unit>
         <Filename Value="settlementform.pas"/>
@@ -404,6 +404,168 @@
         <CursorPos X="-1" Y="-1"/>
         <UsageCount Value="19"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\red-herrings.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="4"/>
+        <UsageCount Value="22"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\special-conditions.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="11" Y="8"/>
+        <UsageCount Value="22"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\death-traps.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="16" Y="10"/>
+        <UsageCount Value="22"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\character-encounters.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="17" Y="13"/>
+        <UsageCount Value="22"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\monster-encounters.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="16" Y="12"/>
+        <UsageCount Value="22"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\adventure-climaxes.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="17" Y="6"/>
+        <UsageCount Value="22"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\adventure-plots.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="19" Y="5"/>
+        <UsageCount Value="22"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\adventure-lieutenants.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="22" Y="13"/>
+        <UsageCount Value="22"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\adventure-bosses.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="7" Y="12"/>
+        <UsageCount Value="22"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\adventure-start-points.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="13" Y="16"/>
+        <UsageCount Value="22"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\adventure-specific-settings.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="14" Y="16"/>
+        <UsageCount Value="22"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\adventure-general-settings.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="13" Y="9"/>
+        <UsageCount Value="22"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\adventure-story-hooks.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="17" Y="9"/>
+        <UsageCount Value="22"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\adventure-goals.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="13"/>
+        <UsageCount Value="22"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\adventure-themes.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="8" Y="7"/>
+        <UsageCount Value="22"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\classes-monsters.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="7" Y="12"/>
+        <UsageCount Value="22"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\classes-humanoids.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="7" Y="8"/>
+        <UsageCount Value="22"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\classes-beasts.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="6"/>
+        <UsageCount Value="22"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\classes-consumables.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="3"/>
+        <CursorPos X="5" Y="6"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\classes-floors.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="4" Y="9"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
     </Units>
     <Debugger>

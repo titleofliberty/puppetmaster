@@ -1,0 +1,5 @@
+TPMAdventureClimaxes := [
+'Bloody Battle','Chase to Ground','Divine Retribution','Prevented Deed',
+'Scattered Duels','Throne-Room Duel'
+];
+

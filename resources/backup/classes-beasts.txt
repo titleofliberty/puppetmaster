@@ -1,0 +1,2 @@
+TPMBeastClasses := ['Beast'];
+

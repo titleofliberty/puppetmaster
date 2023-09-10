@@ -92,6 +92,10 @@ var
   TPMAdventureStartPoints: TPMStringArray;
   TPMAdventureBosses: TPMStringArray;
   TPMAdventureLieutenants: TPMStringArray;
+  TPMAdventurePlots: TPMStringArray;
+  TPMAdventureClimaxes: TPMStringArray;
+  TPMAdventureMonsterEncounters: TPMStringArray;
+  TPMAdventureCharacterEncounters: TPMStringArray;
 
 implementation
 
@@ -831,55 +835,9 @@ TPMHumanoidClasses := [
 'Hobgoblin','Goblin','Troll','Orc','Ogre','Drow','Gnoll','Kobold'
 ];
 
-TPMMonsterClasses := [
-'Aberration','Beast','Construct','Dragon','Elemental','Fey','Fiend','Giant',
-'Monstrosity','Ooze','Plant','Undead'
-];
 
-TPMAdventureThemes := [
-'Adventure','Comedy','Espionage','Horror','Mystery','Revenge','Romance'
-];
 
-TPMAdventureGoals := [
-'Reputation','Escape','Explore','Enemy','Money','Power','Escort','Rescue','Retrieve',
-'Debt','Survival','Thwart','War'
-];
 
-TPMAdventureHooks := [
-'Dying Delivery','Grim Necessity','Hero Offended','Legend and Rumor','Mistaken Identity',
-'Mystery Woman','Old Enemy','Old Friend','Pressing Buttons'
-];
-
-TPMAdventureGeneralSettings := [
-'Alternate Plane','Cosmopolitan City','Exotic Distant Land','Hero''s Home Town',
-'On the Road','On the Sea','Torturous Terrain','Under the Ground','Under the Sea'
-]
-
-TPMAdventureSpecificSettings := [
-'Catacombs','Caves of Magical Folk','Classic Dungeon','Craftsmen''s Chambers/Quarter',
-'Demi-human Community','Laboratory','Legendary Forest','Lost City','Madman''s Fortress',
-'Magical Lake','Mansion of Powerful NPC','Military Encampment','Palace of the Ruler',
-'Ruins','Shacktown of the Oppressed','Tavem/Inn','Temple/Church'
-];
-
-TPMAdventureStartPoints := [
-'Absent-Minded Expert','Arrogant Snob','Childhood Friend With Dark Secret',
-'Congenial Madman','Crusty Old Professional','Gibbering Madman','Government Observer',
-'Hero-Worshipper','Ingenue In Distress','Inquisitive Chronicler','Merry Minstrel',
-'Obsequious Merchant','Romantic Loony','Talkative Barkeep','Tragic Fellow Hero',
-'Villain Ally'
-];
-
-TPMAdventureBosses := [
-'Agent Provocateur','Advance Agent','Avenger','Conquerer','Corruptor','Destroyer',
-'God of Chance','Lovable Rogue','Organizer','Ravager','Sufferer','Zealot'
-];
-
-TPMAdventureLieutenants := [
-'Avenger','Chief Assassin','Childhood Friend','Corrupted Hero','Coward',
-'Hard-Eyed Advisor','Inquisitor','Lovable Rogue','Misguided Moralist','Relative',
-'Moronic Muscleman','Single-Minded Soldier','Snivelling Bureaucrat'
-];
 
 
 end.

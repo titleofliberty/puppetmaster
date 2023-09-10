@@ -1,0 +1,12 @@
+Aberration
+Beast
+Construct
+Dragon
+Elemental
+Fey
+Fiend
+Giant
+Monstrosity
+Ooze
+Plant
+Undead

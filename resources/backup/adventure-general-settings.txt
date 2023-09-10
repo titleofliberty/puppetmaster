@@ -1,0 +1,4 @@
+TPMAdventureGeneralSettings := [
+'Alternate Plane','Cosmopolitan City','Exotic Distant Land','Hero''s Home Town',
+'On the Road','On the Sea','Torturous Terrain','Under the Ground','Under the Sea'
+

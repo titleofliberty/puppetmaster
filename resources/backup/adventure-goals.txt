@@ -1,0 +1,6 @@
+TPMAdventureGoals := [
+'Reputation','Escape','Explore','Enemy','Money','Power','Escort','Rescue','Retrieve',
+'Debt','Survival','Thwart','War'
+];
+
+

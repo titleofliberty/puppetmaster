@@ -1,0 +1,3 @@
+TPMHumanoidClasses := [
+'Hobgoblin','Goblin','Troll','Orc','Ogre','Drow','Gnoll','Kobold'
+

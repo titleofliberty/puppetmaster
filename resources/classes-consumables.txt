@@ -1,0 +1,6 @@
+Arrow
+Bandage
+Dart
+Potion
+Scroll
+Wand
