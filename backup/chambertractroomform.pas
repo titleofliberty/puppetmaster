@@ -170,14 +170,49 @@ begin
   if FLeaf = AValue then Exit;
   FLeaf := AValue;
 
+  txtNatural.Items.AddStrings(TPMNatural);
+  txtUnnatural.Items.AddStrings(TPMUnnatural);
+  txtFlora.Items.AddStrings(TPMFlora);
+  txtFauna.Items.AddStrings(TPMFauna);
+  txtTool.Items.AddStrings(TPMTools);
+  txtClothing.Items.AddStrings(TPMClothing);
+  txtKit.Items.AddStrings(TPMKits);
+  txtContainer.Items.AddStrings(TPMContainers);
+  txtWeapon.Items.AddStrings(TPMWeapons);
+  txtVehicle.Items.AddStrings(TPMVehicle);
+  txtJewelry.Items.AddStrings(TPMJewelry);
+  txtRemains.Items.AddStrings(TPMRemains);
+  txtInstrument.Items.AddStrings(TPMInstruments);
+  txtArmour.Items.AddStrings(TPMArmors);
+  txtTrap.Items.AddStrings(TPMTraps);
+
+  txtClass.Clear;
+  if (FLeaf.Category = 'Chamber') then
+    txtClass.Items.AddStrings(TPMChamberClasses)
+  else if (FLeaf.Category = 'Tract') then
+    txtClass.Items.AddStrings(TPMTractClasses)
+  else if (FLeaf.Category = 'Room') then
+    txtClass.Items.AddStrings(TPMRoomClasses);
+
   pnlHeader.Caption := FLeaf.Category;
 
-  txtTitle.Text     := FLeaf.GetTrait('Title');
-  txtClass.Text     := FLeaf.GetTrait('Class');
-  txtNatural.Text   := FLeaf.GetTrait('Natural');
-  txtUnnatural.Text := FLeaf.GetTrait('Manufactured');
-  txtFlora.Text     := FLeaf.GetTrait('Flora');
-  txtFauna.Text     := FLeaf.GetTrait('Fauna');
+  txtTitle.Text      := FLeaf.GetTrait('Title');
+  txtClass.Text      := FLeaf.GetTrait('Class');
+  txtNatural.Text    := FLeaf.GetTrait('Natural');
+  txtUnnatural.Text  := FLeaf.GetTrait('Manufactured');
+  txtFlora.Text      := FLeaf.GetTrait('Flora');
+  txtFauna.Text      := FLeaf.GetTrait('Fauna');
+  txtTool.Text       := FLeaf.GetTrait('Tool');
+  txtClothing.Text   := FLeaf.GetTrait('Clothing');
+  txtKit.Text        := FLeaf.GetTrait('Kit');
+  txtContainer.Text  := FLeaf.GetTrait('Container');
+  txtWeapon.Text     := FLeaf.GetTrait('Weapon');
+  txtVehicle.Text    := FLeaf.GetTrait('Vehicle');
+  txtJewelry.Text    := FLeaf.GetTrait('Jewelry');
+  txtRemains.Text    := FLeaf.GetTrait('Remains');
+  txtInstrument.Text := FLeaf.GetTrait('Instrument');
+  txtArmour.Text     := FLeaf.GetTrait('Armor');
+  txtTrap.Text       := FLeaf.GetTrait('Trap');
   btnLocked.Down    := FLeaf.GetTrait('Locked') = 'True';
   LockForm;
 end;

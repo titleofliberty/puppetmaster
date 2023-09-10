@@ -1,7 +1,7 @@
 object frmChamberTractRoom: TfrmChamberTractRoom
-  Left = 676
+  Left = 428
   Height = 677
-  Top = 258
+  Top = 285
   Width = 972
   Align = alClient
   BorderStyle = bsNone

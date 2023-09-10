@@ -857,7 +857,10 @@ begin
     TfrmDice(form).Dice := leaf;
     form.Show;
   end
-  else if (leaf.Category = 'Beast') or (leaf.Category = 'Monster') then
+  else if (leaf.Category = 'Beast') or
+       (leaf.Category = 'Monster') or
+       (leaf.Category = 'Humanoid')
+  then
   begin
     form := TfrmBeastMonster.Create(pnlWorkspaceClient);
     form.Parent := pnlWorkspaceClient;

@@ -296,14 +296,19 @@ TPMNatural := [
 'Arch (Stone)','Butte','Cave','Hill','Lake','Mushrooms','Pond','River','Rock',
 'Rock (Pipes)','Rock (Prism)','Rock (Wave)','Stream','Stump','Tree (Enormous)',
 'Tree (Lightening)','Tree (Petrified)','Tree (Haunted)','Waterfall', 'Swamp',
-'Bog'
+'Bog','Webs','Silk','Tree (Felled)','Volcano','Gyser'
 ];
 
 TPMUnnatural := [
 'Arch','Bridge','Cabin','Campsite','Cannon','Cemetary','Chimney','Cottage','Cross',
 'Fence','Firepit','Graveyard','Mine','Mound','Obelisk','Post','Pylon','Pyramid',
 'Road','Shrine','Sign','Steps','Tablet','Totem','Tower','Treehouse','Wagon Wheel',
-'Wall','Ziggurat','Lean-to'
+'Wall','Ziggurat','Lean-to','Quarry (Limestone)','Quarry (Sand)','Quarry (Clay)',
+'Quarry (Chalk)','Quarry (Cinder)','Quarry (Coal)','Quarry (Gravel)','Quarry (Granite)',
+'Quarry (Gritstone)','Quarry (Gypsum)','Quarry (Marble)','Quarry (Ores)',
+'Quarry (Quartz)','Quarry (Sandstone)','Quarry (Sandstone)','Quarry (Slate)',
+'Quarry (Travertine)','Canal','Dock','Terrace','Reservoir','Dam','Berm','Bank',
+'Dike','Ditch','Levee','Gate','Ore','Lighthouse'
 ];
 
 TPMFlora := ['Ashe','Cactus','Crop','Elms','Ferns','Grass','Oak','Pine','Vines',
@@ -314,7 +319,7 @@ TPMFlora := ['Ashe','Cactus','Crop','Elms','Ferns','Grass','Oak','Pine','Vines',
 'Redwood','Spruce','Yew','Mangroves','Holly','Dogwood','Swamp Rose','Willow',
 'Buttonbush','Aster','Goldenrod','Sunflower','Clover','Wild Indigo','Moss','Strawberry',
 'Coffee','Cocoa','Banana','Pear','Apple','Blackberry','Cypress','Walnut','Peacan',
-'Potato','Onion','Grape','Almond','Periwinkle'
+'Potato','Onion','Grape','Almond','Periwinkle','Bush','Garden'
 ];
 
 TPMFauna := [
@@ -465,14 +470,14 @@ TPMMonsters := [
 ];
 
 TPMHumanoids := [
-['Title:Hobgoblin','Class:Humanoid','ArmorClass:18','HPMax:8','HPCurrent:8'],
-['Title:Goblin','Class:Humanoid','ArmorClass:18','HPMax:8','HPCurrent:8'],
-['Title:Troll','Class:Humanoid','ArmorClass:18','HPMax:8','HPCurrent:8'],
-['Title:Orc','Class:Humanoid','ArmorClass:18','HPMax:8','HPCurrent:8'],
-['Title:Ogre','Class:Humanoid','ArmorClass:18','HPMax:8','HPCurrent:8'],
-['Title:Drow','Class:Humanoid','ArmorClass:18','HPMax:8','HPCurrent:8'],
-['Title:Gnoll','Class:Humanoid','ArmorClass:18','HPMax:8','HPCurrent:8'],
-['Title:Kobold','Class:Humanoid','ArmorClass:18','HPMax:8','HPCurrent:8']
+['Title:Hobgoblin','Class:Hobgoblin','ArmorClass:18','HPMax:8','HPCurrent:8'],
+['Title:Goblin','Class:Goblin','ArmorClass:18','HPMax:8','HPCurrent:8'],
+['Title:Troll','Class:Troll','ArmorClass:18','HPMax:8','HPCurrent:8'],
+['Title:Orc','Class:Orc','ArmorClass:18','HPMax:8','HPCurrent:8'],
+['Title:Ogre','Class:Ogre','ArmorClass:18','HPMax:8','HPCurrent:8'],
+['Title:Drow','Class:Drow','ArmorClass:18','HPMax:8','HPCurrent:8'],
+['Title:Gnoll','Class:Gnoll','ArmorClass:18','HPMax:8','HPCurrent:8'],
+['Title:Kobold','Class:Kobold','ArmorClass:18','HPMax:8','HPCurrent:8']
 ];
 
 TPMSpells := [
@@ -603,16 +608,45 @@ TPMKits := [
 ];
 
 TPMTools := [
-'Abacus','Ball Bearings','Bedroll','Blanket','Book','Bridle','Candle','Censar',
-'Chain','Chalk','Compass','Cup','Fork','Grappling Hook','Hammer','Hammer, Sledge',
-'Handaxe','Hourglass','Hunting Trap','Ink','Quill','Jug','Key','Knife','Ladder',
-'Lamp','Lantern','Lock','Magnifying Glass','Manacles','Map','Mirror, Steel','Net',
-'Oil','Paper','Parchment','Pick (Miner)','Pitcher','Piton','Plate','Playing Cards',
-'Pot','Potion','Pulley','Rope','Saddle (Exotic)','Saddle (Military)','Saddle (Pack)',
-'Saddle (Riding)','Scales (Weights)','Scroll','Sealing Wax','Sexton','Shovel','Sickle',
-'Spikes (Iron)','Spoon','Spyglass','Staff','Stake (Wooden)','String','Tent','Torch',
-'Wargong','Watch (Pocket)','Waterskin','Whetstone','Whip','Whistle','Bowl','Mug',
-'Stein','Dice','Cards','Game Piece','Cloth','Wood','Leather','Hide'
+'Abacus',
+'Alquerque (Game)',
+'Atlas',
+'Ax (Stone)',
+'Backgammon (Game)',
+'Ball Bearings',
+'Bedroll',
+'Blanket',
+'Bobber (Fish)',
+'Bolt',
+'Book (History)',
+'Book (Spell)',
+'Book (Text)',
+'Bottle',
+'Bowl (Stone)',
+'Bowl (Wood)',
+'Bridle',
+'Bucket',
+'Candle',
+'Canteen',
+'Censar',
+'Chain',
+'Chalk','Checkers (Game)','Chess (Game)','Clasp','Cloth','Compass','Crock',
+'Cup (Tin)','Cup (Wood)','Decanter','Dice (Game)','Dominoes (Game)','Flagon','Flask',
+'Flint','Fork','Globe','Go (Game)','Grappling Hook','Hammer','Hammer (Sledge)',
+'Hammer (Stone)','Handaxe','Hasp','Hide','Hinge','Hook (Fish)','Hourglass','Ink',
+'Jar','Jug','Key','Knife','Knife (Stone)','Knucklebones (Game)','Ladder','Lamp (Glass)',
+'Lamp (Hurricane)','Lantern','Latch','Leather','Level','Lock','Magnifying Glass',
+'Majang (Game)','Manacles','Mancala (Game)','Map','Mehen (Game)','Metronome',
+'Mirror (Steel)','Mortise','Mug','Nail','Net','Nine-man Morris (Game)','Oil','Pan',
+'Paper','Parchment','Pestle','Pick (Miner)','Piece (Game)','Pitcher','Pitcher','Piton',
+'Plate (Ceramic)','Plate (Tin)','Plate (Wood)','Playing Cards (Game)','Plumb Line',
+'Pole (Fish)','Pot','Potion','Pulley','Quill','Rasp','Rithmomachia (Game)','Rope',
+'Ruler','Saddle (Exotic)','Saddle (Military)','Saddle (Pack)','Saddle (Riding)',
+'Scales (Weights)','Scroll','Sealing Wax','Senet (Game)','Sexton','Shovel','Sickle',
+'Spikes (Iron)','Spoon','Spyglass','Square','Staff','Stake (Wooden)','Steel','Stein',
+'String','Sundial','Tablet (Wax)','Tafl (Game)','Tent','Torch','Trap (Hunting)',
+'Urn','Vase','Wargong','Watch (Pocket)','Waterskin','Whetstone','Whip','Whistle',
+'Wood'
 ];
 
 TPMClothing := [
@@ -638,7 +672,7 @@ TPMWeapons := [
 ];
 
 TPMVehicle := [
-'Canoe','Carriage','Cart','Chariot','Galley','Rowboat','Sailboat','Sailing Ship',
+'Canoe','Carriage','Cart','Chariot','Galley','Rowboat','Sailboat','Ship (Sailing)',
 'Sled','Wagon (Covered)','Wagon (Open)','Wagon (Vardo)'
 ];
 
@@ -664,8 +698,22 @@ TPMInstruments := [
 ];
 
 TPMArmors := [
-'Breastplate','Chain Mail','Chain Shirt','Half Plate','Helm','Hide','Leather',
-'Padded','Plate','Ring Mail','Scale Mail','Shield','Splint','Studded'
+'Breastplate',
+'Chain Mail',
+'Chain Shirt',
+'Half Plate',
+'Helm',
+'Hide',
+'Leather',
+'Padded',
+'Plate',
+'Ring Mail',
+'Scale Mail',
+'Shield',
+'Splint',
+'Studded Leather',
+'Medium Leather',
+'Heavy Armor'
 ];
 
 TPMTraps := [
@@ -788,7 +836,9 @@ TPMConsumableClasses := ['Bandage','Potion','Scroll','Wand'];
 
 TPMBeastClasses := ['Beast'];
 
-TPMHumanoidClasses := ['Humanoid'];
+TPMHumanoidClasses := [
+'Hobgoblin','Goblin','Troll','Orc','Ogre','Drow','Gnoll','Kobold'
+];
 
 TPMMonsterClasses := [
 'Aberration','Beast','Construct','Dragon','Elemental','Fey','Fiend','Giant',

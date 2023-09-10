@@ -1,5 +1,5 @@
 object frmChamberTractRoom: TfrmChamberTractRoom
-  Left = 676
+  Left = 2
   Height = 677
   Top = 258
   Width = 972
