@@ -68,6 +68,7 @@ var
   TPMFlora: TStringArray;
   TPMFauna: TStringArray;
   TPMConditions: TStringArray;
+
   TPMChamberClasses: TStringArray;
   TPMTractClasses: TStringArray;
   TPMRoomClasses: TStringArray;
@@ -82,6 +83,15 @@ var
   TPMBeastClasses: TStringArray;
   TPMMonsterClasses: TStringArray;
   TPMHumanoidClasses: TStringArray;
+
+  TPMAdventureThemes: TPMStringArray;
+  TPMAdventureGoals: TPMStringArray;
+  TPMAdventureHooks: TPMStringArray;
+  TPMAdventureGeneralSettings: TPMStringArray;
+  TPMAdventureSpecificSettings: TPMStringArray;
+  TPMAdventureStartPoints: TPMStringArray;
+  TPMAdventureBosses: TPMStringArray;
+  TPMAdventureLieutenants: TPMStringArray;
 
 implementation
 
@@ -608,29 +618,10 @@ TPMKits := [
 ];
 
 TPMTools := [
-'Abacus',
-'Alquerque (Game)',
-'Atlas',
-'Ax (Stone)',
-'Backgammon (Game)',
-'Ball Bearings',
-'Bedroll',
-'Blanket',
-'Bobber (Fish)',
-'Bolt',
-'Book (History)',
-'Book (Spell)',
-'Book (Text)',
-'Bottle',
-'Bowl (Stone)',
-'Bowl (Wood)',
-'Bridle',
-'Bucket',
-'Candle',
-'Canteen',
-'Censar',
-'Chain',
-'Chalk','Checkers (Game)','Chess (Game)','Clasp','Cloth','Compass','Crock',
+'Abacus','Alquerque (Game)','Atlas','Ax (Stone)','Backgammon (Game)','Ball Bearings',
+'Bedroll','Blanket','Bobber (Fish)','Bolt','Book (History)','Book (Spell)','Book (Text)',
+'Bottle','Bowl (Stone)','Bowl (Wood)','Bridle','Bucket','Candle','Canteen','Censar',
+'Chain','Chalk','Checkers (Game)','Chess (Game)','Clasp','Cloth','Compass','Crock',
 'Cup (Tin)','Cup (Wood)','Decanter','Dice (Game)','Dominoes (Game)','Flagon','Flask',
 'Flint','Fork','Globe','Go (Game)','Grappling Hook','Hammer','Hammer (Sledge)',
 'Hammer (Stone)','Handaxe','Hasp','Hide','Hinge','Hook (Fish)','Hourglass','Ink',
@@ -806,7 +797,7 @@ TPMRoomClasses := [
 'Study','Treasury','Vault','Ward (Hospital)','Wardrobe'
 ];
 
-TPMDungeonClasses := ['Cavern','Crypt','Dungeon','Mine','Sewer','Tumb'];
+TPMDungeonClasses := ['Cavern','Crypt','Dungeon','Mine','Sewer','Tumb','Catacombs'];
 
 TPMLevelClasses := ['1st','2nd','3rd','4th','5th','6th','7th','8th','9th'];
 
@@ -843,6 +834,51 @@ TPMHumanoidClasses := [
 TPMMonsterClasses := [
 'Aberration','Beast','Construct','Dragon','Elemental','Fey','Fiend','Giant',
 'Monstrosity','Ooze','Plant','Undead'
+];
+
+TPMAdventureThemes := [
+'Adventure','Comedy','Espionage','Horror','Mystery','Revenge','Romance'
+];
+
+TPMAdventureGoals := [
+'Reputation','Escape','Explore','Enemy','Money','Power','Escort','Rescue','Retrieve',
+'Debt','Survival','Thwart','War'
+];
+
+TPMAdventureHooks := [
+'Dying Delivery','Grim Necessity','Hero Offended','Legend and Rumor','Mistaken Identity',
+'Mystery Woman','Old Enemy','Old Friend','Pressing Buttons'
+];
+
+TPMAdventureGeneralSettings := [
+'Alternate Plane','Cosmopolitan City','Exotic Distant Land','Hero''s Home Town',
+'On the Road','On the Sea','Torturous Terrain','Under the Ground','Under the Sea'
+]
+
+TPMAdventureSpecificSettings := [
+'Catacombs','Caves of Magical Folk','Classic Dungeon','Craftsmen''s Chambers/Quarter',
+'Demi-human Community','Laboratory','Legendary Forest','Lost City','Madman''s Fortress',
+'Magical Lake','Mansion of Powerful NPC','Military Encampment','Palace of the Ruler',
+'Ruins','Shacktown of the Oppressed','Tavem/Inn','Temple/Church'
+];
+
+TPMAdventureStartPoints := [
+'Absent-Minded Expert','Arrogant Snob','Childhood Friend With Dark Secret',
+'Congenial Madman','Crusty Old Professional','Gibbering Madman','Government Observer',
+'Hero-Worshipper','Ingenue In Distress','Inquisitive Chronicler','Merry Minstrel',
+'Obsequious Merchant','Romantic Loony','Talkative Barkeep','Tragic Fellow Hero',
+'Villain Ally'
+];
+
+TPMAdventureBosses := [
+'Agent Provocateur','Advance Agent','Avenger','Conquerer','Corruptor','Destroyer',
+'God of Chance','Lovable Rogue','Organizer','Ravager','Sufferer','Zealot'
+];
+
+TPMAdventureLieutenants := [
+'Avenger','Chief Assassin','Childhood Friend','Corrupted Hero','Coward',
+'Hard-Eyed Advisor','Inquisitor','Lovable Rogue','Misguided Moralist','Relative',
+'Moronic Muscleman','Single-Minded Soldier','Snivelling Bureaucrat'
 ];
 
 

@@ -30,9 +30,9 @@
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="609"/>
-        <CursorPos Y="633"/>
-        <FoldState Value=" T4601 T7HCI T8I25]D3j30N5 PiNj40 T6]613 T1jT0c4 PGiP]M0k223%"/>
+        <TopLine Value="864"/>
+        <CursorPos X="45" Y="881"/>
+        <FoldState Value=" T4601 T7HCI T8I25]D3jD0N5 PiNj40 T6jE013 T1jd0c4 PGiP]M0kC238"/>
         <UsageCount Value="201"/>
         <Loaded Value="True"/>
       </Unit>
@@ -91,10 +91,8 @@
         <EditorIndex Value="2"/>
         <TopLine Value="172"/>
         <CursorPos X="42" Y="182"/>
-        <FoldState Value=" T4602 T7EPx T8iN241 T3if0b621 PdkU0 T1ig0a[G5MkW]G6k0013="/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="..\gizmos\htmlcolors.pas"/>
@@ -103,7 +101,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="158"/>
+        <UsageCount Value="162"/>
       </Unit>
       <Unit>
         <Filename Value="titleclassnotesform.pas"/>
@@ -115,7 +113,7 @@
         <TopLine Value="2"/>
         <CursorPos Y="61"/>
         <FoldState Value=" T4602 T7EOP T8X231 T3i7039 PiIiX0 T1i80211511 PK]IK"/>
-        <UsageCount Value="56"/>
+        <UsageCount Value="60"/>
       </Unit>
       <Unit>
         <Filename Value="beastmonsterform.pas"/>
@@ -127,7 +125,7 @@
         <TopLine Value="107"/>
         <CursorPos X="58" Y="126"/>
         <FoldState Value=" T4602 T7ELY T8g231 T3iG03711 Pi2iZ0 T1iH02[H5S[G56iM012H"/>
-        <UsageCount Value="42"/>
+        <UsageCount Value="46"/>
       </Unit>
       <Unit>
         <Filename Value="simpleform.pas"/>
@@ -138,7 +136,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="38"/>
+        <UsageCount Value="42"/>
       </Unit>
       <Unit>
         <Filename Value="settlementform.pas"/>
@@ -334,7 +332,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="3582"/>
         <CursorPos X="42" Y="3590"/>
-        <UsageCount Value="0"/>
+        <UsageCount Value="10"/>
       </Unit>
       <Unit>
         <Filename Value="C:\lazarus\lcl\comctrls.pp"/>
@@ -411,7 +409,7 @@
     <Debugger>
       <Backend Value="{46F8D863-C46A-4513-87F7-05B4F05262FC}"/>
     </Debugger>
-    <JumpHistory HistoryIndex="22">
+    <JumpHistory HistoryIndex="25">
       <Position>
         <Filename Value="mainform.pas"/>
         <Caret Line="541" Column="31" TopLine="541"/>
@@ -503,6 +501,18 @@
       <Position>
         <Filename Value="puppetmasterlib.pas"/>
         <Caret Line="651" Column="17" TopLine="640"/>
+      </Position>
+      <Position>
+        <Filename Value="puppetmasterlib.pas"/>
+        <Caret Line="75" Column="20" TopLine="67"/>
+      </Position>
+      <Position>
+        <Filename Value="puppetmasterlib.pas"/>
+        <Caret Line="878" Column="25" TopLine="858"/>
+      </Position>
+      <Position>
+        <Filename Value="puppetmasterlib.pas"/>
+        <Caret Line="94" Column="26" TopLine="73"/>
       </Position>
     </JumpHistory>
     <RunParams>
