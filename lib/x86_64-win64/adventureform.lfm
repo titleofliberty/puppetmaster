@@ -620,7 +620,7 @@ object frmAdventure: TfrmAdventure
   end
   object txtNotes: TMemo
     Left = 16
-    Height = 571
+    Height = 300
     Top = 732
     Width = 1041
     Align = alTop

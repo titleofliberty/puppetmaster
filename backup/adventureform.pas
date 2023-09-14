@@ -204,8 +204,8 @@ begin
   txtStoryHook.Items.AddStrings(TPMAdventureStoryHooks);
   txtPlot.Items.AddStrings(TPMAdventurePlots);
   txtClimax.Items.AddStrings(TPMAdventureClimaxes);
-  txtGeneralSetting.Items.AddStrings(TPMAdventureGeneralSettings);
-  txtSpecificSetting.Items.AddStrings(TPMAdventureSpecificSettings);
+  txtGeneralSetting.Items.AddStrings(TPMAdventureSettingGenerals);
+  txtSpecificSetting.Items.AddStrings(TPMAdventureSettingSpecifics);
   txtMasterVillian.Items.AddStrings(TPMAdventureBosses);
   txtLieutenant1.Items.AddStrings(TPMAdventureLieutenants);
   txtLieutenant2.Items.AddStrings(TPMAdventureLieutenants);

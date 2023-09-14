@@ -524,7 +524,6 @@ object frmMain: TfrmMain
       OnClick = mnuMainInsertClick
       object mnuMainInsertAdventures: TMenuItem
         Caption = '&Adve&ntures'
-        ShortCut = 49230
         OnClick = mnuMainInsertAdventuresClick
       end
       object Separator8: TMenuItem
@@ -534,17 +533,14 @@ object frmMain: TfrmMain
         Caption = '&Dungeons'
         object mnuMainInsertDungeonsDungeon: TMenuItem
           Caption = '&Dungeon'
-          ShortCut = 49220
           OnClick = mnuMainInsertDungeonsDungeonClick
         end
         object mnuMainInsertDungeonsLevel: TMenuItem
           Caption = '&Level'
-          ShortCut = 49228
           OnClick = mnuMainInsertDungeonsLevelClick
         end
         object mnuMainInsertDungeonsChamber: TMenuItem
           Caption = '&Chamber'
-          ShortCut = 49219
           OnClick = mnuMainInsertDungeonsChamberClick
         end
       end
@@ -552,17 +548,14 @@ object frmMain: TfrmMain
         Caption = '&Wildernesses'
         object mnuMainInsertWildernessesWilderness: TMenuItem
           Caption = '&Wilderness'
-          ShortCut = 49239
           OnClick = mnuMainInsertWildernessesWildernessClick
         end
         object mnuMainInsertWildernessesRoute: TMenuItem
           Caption = '&Route'
-          ShortCut = 49234
           OnClick = mnuMainInsertWildernessesRouteClick
         end
         object mnuMainInsertWildernessesTract: TMenuItem
           Caption = '&Tract'
-          ShortCut = 49236
           OnClick = mnuMainInsertWildernessesTractClick
         end
       end
@@ -588,26 +581,87 @@ object frmMain: TfrmMain
       object Separator6: TMenuItem
         Caption = '-'
       end
-      object mnuMainInsertHumanoid: TMenuItem
-        Caption = '&Humanoid'
-        ShortCut = 49224
+      object mnuMainInsertResources: TMenuItem
+        Caption = '&Resources'
+        object mnuMainInsertResourcesArmor: TMenuItem
+          Caption = '&Armor'
+        end
+        object mnuMainInsertResourcesBeast: TMenuItem
+          Caption = '&Beast'
+        end
+        object mnuMainInsertResourcesClothing: TMenuItem
+          Caption = '&Clothing'
+        end
+        object mnuMainInsertResourcesCondition: TMenuItem
+          Caption = 'C&ondition'
+        end
+        object mnuMainInsertResourcesConsumable: TMenuItem
+          Caption = 'Consumable'
+        end
+        object mnuMainInsertResourcesContainer: TMenuItem
+          Caption = 'Container'
+        end
+        object mnuMainInsertResourcesFauna: TMenuItem
+          Caption = 'Fauna'
+        end
+        object mnuMainInsertResourcesFlora: TMenuItem
+          Caption = 'Flora'
+        end
+        object mnuMainInsertResourcesGem: TMenuItem
+          Caption = 'Gem'
+        end
+        object mnuMainInsertResourcesHumanoid: TMenuItem
+          Caption = '&Humanoid'
+        end
+        object mnuMainInsertResourcesInstrument: TMenuItem
+          Caption = 'Instrument'
+        end
+        object mnuMainInsertResourcesJewelry: TMenuItem
+          Caption = 'Jewelry'
+        end
+        object mnuMainInsertResourcesKit: TMenuItem
+          Caption = 'Kit'
+        end
+        object mnuMainInsertResourcesMonster: TMenuItem
+          Caption = 'Monster'
+        end
+        object mnuMainInsertResourcesNatural: TMenuItem
+          Caption = 'Natural'
+        end
+        object mnuMainInsertResourcesRemains: TMenuItem
+          Caption = 'Remains'
+        end
+        object mnuMainInsertResourcesSpell: TMenuItem
+          Caption = 'Spell'
+        end
+        object mnuMainInsertResourcesTool: TMenuItem
+          Caption = 'Tool'
+        end
+        object mnuMainInsertResourcesTrap: TMenuItem
+          Caption = 'Trap'
+        end
+        object mnuMainInsertResourcesUnnatural: TMenuItem
+          Caption = 'Unnatural'
+        end
+        object mnuMainInsertResourcesVehicle: TMenuItem
+          Caption = 'Vehicle'
+        end
+        object mnuMainInsertResourcesWeapon: TMenuItem
+          Caption = 'Weapon'
+        end
       end
       object mnuMainInsertMonster: TMenuItem
         Caption = '&Monster'
-        ShortCut = 49229
       end
       object mnuMainInsertBeast: TMenuItem
         Caption = '&Beast'
-        ShortCut = 49218
       end
       object mnuMainInsertPuppet: TMenuItem
         Caption = '&Puppet'
-        ShortCut = 49232
         OnClick = mnuMainInsertPuppetClick
       end
       object mnuMainInsertFaction: TMenuItem
         Caption = 'F&action'
-        ShortCut = 49217
         OnClick = mnuMainInsertFactionClick
       end
       object mnuMainInsertPlayer: TMenuItem

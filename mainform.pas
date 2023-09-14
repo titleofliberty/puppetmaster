@@ -24,6 +24,29 @@ type
     btnOutputClear: TButton;
     btnEightBall: TButton;
     btnRumor: TButton;
+    mnuMainInsertResourcesWeapon: TMenuItem;
+    mnuMainInsertResourcesVehicle: TMenuItem;
+    mnuMainInsertResourcesUnnatural: TMenuItem;
+    mnuMainInsertResourcesTrap: TMenuItem;
+    mnuMainInsertResourcesTool: TMenuItem;
+    mnuMainInsertResourcesSpell: TMenuItem;
+    mnuMainInsertResourcesRemains: TMenuItem;
+    mnuMainInsertResourcesNatural: TMenuItem;
+    mnuMainInsertResourcesMonster: TMenuItem;
+    mnuMainInsertResourcesKit: TMenuItem;
+    mnuMainInsertResourcesJewelry: TMenuItem;
+    mnuMainInsertResourcesInstrument: TMenuItem;
+    mnuMainInsertResourcesGem: TMenuItem;
+    mnuMainInsertResourcesFlora: TMenuItem;
+    mnuMainInsertResourcesFauna: TMenuItem;
+    mnuMainInsertResourcesContainer: TMenuItem;
+    mnuMainInsertResourcesConsumable: TMenuItem;
+    mnuMainInsertResourcesCondition: TMenuItem;
+    mnuMainInsertResourcesClothing: TMenuItem;
+    mnuMainInsertResourcesBeast: TMenuItem;
+    mnuMainInsertResourcesArmor: TMenuItem;
+    mnuMainInsertResourcesHumanoid: TMenuItem;
+    mnuMainInsertResources: TMenuItem;
     mnuMainInsertWildernessesRoute: TMenuItem;
     mnuMainInsertWildernessesTract: TMenuItem;
     mnuMainInsertWildernessesWilderness: TMenuItem;
@@ -46,7 +69,6 @@ type
     mnuMainRandomContainer: TMenuItem;
     mnuMainRandomClothing: TMenuItem;
     mnuMainRandomArmor: TMenuItem;
-    mnuMainInsertHumanoid: TMenuItem;
     mnuMainInsertFaction: TMenuItem;
     mnuMainToolsEvent: TMenuItem;
     mnuMainToolsEncounter: TMenuItem;
@@ -1352,6 +1374,8 @@ begin
   msg.Message.Caption := str;
   msg.Color:= $F1D6AE;
   msg.Font.Color := $724F1B;
+  msg.Title.Font.Color := msg.Font.Color;
+  msg.Title.Font.Bold := true;
 
 end;
 
