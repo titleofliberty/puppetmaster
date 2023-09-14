@@ -1,0 +1,16 @@
+Breastplate
+Chain Mail
+Chain Shirt
+Half Plate
+Helm
+Hide
+Leather
+Padded
+Plate
+Ring Mail
+Scale Mail
+Shield
+Splint
+Studded Leather
+Medium Leather
+Heavy Armor

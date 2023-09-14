@@ -6,7 +6,8 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls,
-  ComCtrls, Buttons, Menus, Grids, TreeFilterEdit, puppetmasterlib, htmlcolors;
+  csvdocument, LCLType, ComCtrls, Buttons, Menus, Grids, TreeFilterEdit,
+  puppetmasterlib, htmlcolors;
 
 type
 
@@ -23,10 +24,22 @@ type
     btnOutputClear: TButton;
     btnEightBall: TButton;
     btnRumor: TButton;
+    mnuMainInsertWildernessesRoute: TMenuItem;
+    mnuMainInsertWildernessesTract: TMenuItem;
+    mnuMainInsertWildernessesWilderness: TMenuItem;
+    mnuMainInsertSettlementsSettlement: TMenuItem;
+    mnuMainInsertSettlementsVenue: TMenuItem;
+    mnuMainInsertSettlementsFloor: TMenuItem;
+    mnuMainInsertSettlementsRoom: TMenuItem;
+    mnuMainInsertDungeonsDungeon: TMenuItem;
+    mnuMainInsertDungeonsLevel: TMenuItem;
+    mnuMainInsertDungeonsChamber: TMenuItem;
+    mnuMainInsertSettlements: TMenuItem;
+    mnuMainInsertWildernesses: TMenuItem;
+    mnuMainInsertDungeons: TMenuItem;
+    Separator8: TMenuItem;
+    mnuMainInsertAdventures: TMenuItem;
     mnuMainToolsCondition: TMenuItem;
-    mnuMainInsertFloor: TMenuItem;
-    mnuMainInsertRoute: TMenuItem;
-    mnuMainInsertLevel: TMenuItem;
     mnuMainRandomRemains: TMenuItem;
     mnuMainRandomVehicle: TMenuItem;
     mnuMainRandomJewelry: TMenuItem;
@@ -57,14 +70,9 @@ type
     Separator7: TMenuItem;
     mnuMainInsertBeast: TMenuItem;
     mnuMainInsertMonster: TMenuItem;
-    mnuMainInsertTract: TMenuItem;
-    mnuMainInsertChamber: TMenuItem;
     Separator6: TMenuItem;
-    Separator5: TMenuItem;
-    mnuMainInsertWilderness: TMenuItem;
     mnuMainInsertPuppet: TMenuItem;
     mnuMainInsertPlayer: TMenuItem;
-    mnuMainInsertRoom: TMenuItem;
     mnuMainHelpAbout: TMenuItem;
     mnuMainHelp: TMenuItem;
     mnuMainEditDelete: TMenuItem;
@@ -74,13 +82,9 @@ type
     mnuMainEditCut: TMenuItem;
     mnuMainEdit: TMenuItem;
     mnuMainInsertDiceRoll: TMenuItem;
-    Separator3: TMenuItem;
-    mnuMainInsertVenue: TMenuItem;
     pnlWorkspaceClient: TScrollBox;
     Separator2: TMenuItem;
     mnuMainCampaignsSaveAs: TMenuItem;
-    mnuMainInsertSettlement: TMenuItem;
-    mnuMainInsertDungeon: TMenuItem;
     mnuMainCampaignsExit: TMenuItem;
     dlgOpen: TOpenDialog;
     dlgSave: TSaveDialog;
@@ -107,27 +111,29 @@ type
     txtFilterCampaign: TTreeFilterEdit;
     procedure btnOutputClearClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure mnuMainCampaignsExitClick(Sender: TObject);
     procedure mnuMainCampaignsNewClick(Sender: TObject);
     procedure mnuMainCampaignsOpenClick(Sender: TObject);
     procedure mnuMainCampaignsSaveAsClick(Sender: TObject);
     procedure mnuMainEditDeleteClick(Sender: TObject);
     procedure mnuMainHelpAboutClick(Sender: TObject);
-    procedure mnuMainInsertChamberClick(Sender: TObject);
+    procedure mnuMainInsertAdventuresClick(Sender: TObject);
+    procedure mnuMainInsertDungeonsChamberClick(Sender: TObject);
     procedure mnuMainInsertClick(Sender: TObject);
     procedure mnuMainInsertDiceRollClick(Sender: TObject);
-    procedure mnuMainInsertDungeonClick(Sender: TObject);
+    procedure mnuMainInsertDungeonsDungeonClick(Sender: TObject);
     procedure mnuMainInsertFactionClick(Sender: TObject);
     procedure mnuMainInsertFloorClick(Sender: TObject);
-    procedure mnuMainInsertLevelClick(Sender: TObject);
+    procedure mnuMainInsertDungeonsLevelClick(Sender: TObject);
     procedure mnuMainInsertPlayerClick(Sender: TObject);
     procedure mnuMainInsertPuppetClick(Sender: TObject);
     procedure mnuMainInsertRoomClick(Sender: TObject);
-    procedure mnuMainInsertRouteClick(Sender: TObject);
+    procedure mnuMainInsertWildernessesRouteClick(Sender: TObject);
     procedure mnuMainInsertSettlementClick(Sender: TObject);
-    procedure mnuMainInsertTractClick(Sender: TObject);
+    procedure mnuMainInsertWildernessesTractClick(Sender: TObject);
     procedure mnuMainInsertVenueClick(Sender: TObject);
-    procedure mnuMainInsertWildernessClick(Sender: TObject);
+    procedure mnuMainInsertWildernessesWildernessClick(Sender: TObject);
     procedure mnuMainRandomArmorClick(Sender: TObject);
     procedure mnuMainRandomClothingClick(Sender: TObject);
     procedure mnuMainRandomContainerClick(Sender: TObject);
@@ -156,13 +162,14 @@ type
   private
     FFileName: string;
     procedure CampaignNew;
-    procedure RandomResource(ACaption: string; ANode: TTreeNode; AColor: TColor);
+    procedure RandomResource(ACaption: string; ANode: TTreeNode; AFontColor, ABackColor: TColor);
     procedure PopulateDiceTray;
     procedure PopulateCampaign;
+    procedure RollDice(ADice: TPMLeaf);
     procedure PopulateResourceToCbo(ACbo: TComboBox; AResource: TTreeNode);
     procedure ToggleCampaign(AEnabled: boolean = false);
-    procedure LoadResourceNodes(AParent: TTreeNode; ACategory: string; AArray: TStringArray); overload;
-    procedure LoadResourceNodes(AParent: TTreeNode; ACategory: string; AArray: TPM2DStringArray); overload;
+    procedure LoadResourceNodes(AParent: TTreeNode; ACategory: string; AArray: TStringList); overload;
+    procedure LoadResourceNodes(AParent: TTreeNode; ACategory: string; AArray: TCSVDocument); overload;
     procedure SaveCampaign;
     procedure LoadCampaign;
   public
@@ -200,7 +207,7 @@ var
   nodeWeapons : TTreeNode;
   nodeWildernesses : TTreeNode;
   nodeConditions : TTreeNode;
-
+  nodeAdventures : TTreeNode;
 
 
 implementation
@@ -209,19 +216,232 @@ implementation
 
 uses
   puppetform, diceform, playerform, aboutform, chambertractroomform,
-  titleclassnotesform, simpleform, beastmonsterform;
+  titleclassnotesform, simpleform, beastmonsterform, adventureform,
+  dicerollform;
 
 { TfrmMain }
 
 procedure TfrmMain.FormCreate(Sender: TObject);
+var
+  i : integer;
+  msg: TCardMessage;
+  tbl: TCardTable;
+  lbl: TLabel;
 begin
   Randomize;
 
+  TPMBasicDice := TCSVDocument.Create;
+  TPMBeasts := TCSVDocument.Create;
+  TPMMonsters := TCSVDocument.Create;
+  TPMHumanoids := TCSVDocument.Create;
+  TPMConsumables := TCSVDocument.Create;
+  TPMSpells := TCSVDocument.Create;
+
+  TPMNamesLast := TStringList.Create;
+  TPMNamesFirst := TStringList.Create;
+  TPMSettlementEvents := TStringList.Create;
+  TPMWildernessEvents := TStringList.Create;
+  TPMVerbs := TStringList.Create;
+  TPMRumor := TStringList.Create;
+  TPMKits := TStringList.Create;
+  TPMTools := TStringList.Create;
+  TPMClothing := TStringList.Create;
+  TPMContainers := TStringList.Create;
+  TPMWeapons := TStringList.Create;
+  TPMVehicle := TStringList.Create;
+  TPMJewelry := TStringList.Create;
+  TPMRemains := TStringList.Create;
+  TPMInstruments := TStringList.Create;
+  TPMArmors := TStringList.Create;
+  TPMTraps := TStringList.Create;
+  TPMMounts := TStringList.Create;
+  TPMGems := TStringList.Create;
+  TPMNatural := TStringList.Create;
+  TPMUnnatural := TStringList.Create;
+  TPMFlora := TStringList.Create;
+  TPMFauna := TStringList.Create;
+  TPMConditions := TStringList.Create;
+
+  TPMChamberClasses := TStringList.Create;
+  TPMTractClasses := TStringList.Create;
+  TPMRoomClasses := TStringList.Create;
+  TPMDungeonClasses := TStringList.Create;
+  TPMLevelClasses := TStringList.Create;
+  TPMWildernessClasses := TStringList.Create;
+  TPMRouteClasses := TStringList.Create;
+  TPMSettlementClasses := TStringList.Create;
+  TPMVenueClasses := TStringList.Create;
+  TPMFloorClasses := TStringList.Create;
+  TPMConsumableClasses := TStringList.Create;
+  TPMBeastClasses := TStringList.Create;
+  TPMMonsterClasses := TStringList.Create;
+  TPMHumanoidClasses := TStringList.Create;
+
+  TPMAdventureThemes := TStringList.Create;
+  TPMAdventureGoals := TStringList.Create;
+  TPMAdventureStoryHooks := TStringList.Create;
+  TPMAdventureSettingGenerals := TStringList.Create;
+  TPMAdventureSettingSpecifics := TStringList.Create;
+  TPMAdventureStartPoints := TStringList.Create;
+  TPMAdventureBosses := TStringList.Create;
+  TPMAdventureLieutenants := TStringList.Create;
+  TPMAdventureAllyNeutral := TStringList.Create;
+  TPMAdventurePlots := TStringList.Create;
+  TPMAdventureClimaxes := TStringList.Create;
+  TPMAdventureMonsterEncounters := TStringList.Create;
+  TPMAdventureCharacterEncounters := TStringList.Create;
+  TPMAdventureDeathTraps := TStringList.Create;
+  TPMAdventureChases := TStringList.Create;
+  TPMAdventureOmenProphecys := TStringList.Create;
+  TPMAdventureSecretWeaknesses := TStringList.Create;
+  TPMAdventureSpecialConditions := TStringList.Create;
+  TPMAdventureMoralQuandrys := TStringList.Create;
+  TPMAdventureRedHerrings := TStringList.Create;
+  TPMAdventureCruelTricks := TStringList.Create;
+
+  TPMBasicDice.LoadFromFile('resources\dice-basic.csv');
+  TPMBeasts.LoadFromFile('resources\beasts.csv');
+  TPMMonsters.LoadFromFile('resources\monsters.csv');
+  TPMHumanoids.LoadFromFile('resources\humanoids.csv');
+  TPMConsumables.LoadFromFile('resources\consumables.csv');
+  TPMSpells.LoadFromFile('resources\spells.csv');
+
+  TPMNamesLast.LoadFromFile('resources\names-last.txt');
+  TPMNamesFirst.LoadFromFile('resources\names-first.txt');
+  TPMSettlementEvents.LoadFromFile('resources\events-settlements.txt');
+  TPMWildernessEvents.LoadFromFile('resources\events-wildernesses.txt');
+  TPMVerbs.LoadFromFile('resources\verbs.txt');
+  TPMRumor.LoadFromFile('resources\traits-rumors.txt');
+  TPMKits.LoadFromFile('resources\traits-kits.txt');
+  TPMTools.LoadFromFile('resources\traits-tools.txt');
+  TPMClothing.LoadFromFile('resources\traits-clothings.txt');
+  TPMContainers.LoadFromFile('resources\traits-containers.txt');
+  TPMWeapons.LoadFromFile('resources\traits-weapons.txt');
+  TPMVehicle.LoadFromFile('resources\traits-vehicles.txt');
+  TPMJewelry.LoadFromFile('resources\traits-jewelrys.txt');
+  TPMRemains.LoadFromFile('resources\traits-remains.txt');
+  TPMInstruments.LoadFromFile('resources\traits-instruments.txt');
+  TPMArmors.LoadFromFile('resources\traits-armors.txt');
+  TPMTraps.LoadFromFile('resources\traits-traps.txt');
+  TPMMounts.LoadFromFile('resources\traits-mounts.txt');
+  TPMGems.LoadFromFile('resources\traits-gems.txt');
+  TPMNatural.LoadFromFile('resources\traits-naturals.txt');
+  TPMUnnatural.LoadFromFile('resources\traits-unnaturals.txt');
+  TPMFlora.LoadFromFile('resources\traits-floras.txt');
+  TPMFauna.LoadFromFile('resources\traits-faunas.txt');
+  TPMConditions.LoadFromFile('resources\traits-conditions.txt');
+
+  TPMChamberClasses.LoadFromFile('resources\classes-chambers.txt');
+  TPMTractClasses.LoadFromFile('resources\classes-tracts.txt');
+  TPMRoomClasses.LoadFromFile('resources\classes-rooms.txt');
+  TPMDungeonClasses.LoadFromFile('resources\classes-dungeons.txt');
+  TPMLevelClasses.LoadFromFile('resources\classes-levels.txt');
+  TPMWildernessClasses.LoadFromFile('resources\classes-wildernesses.txt');
+  TPMRouteClasses.LoadFromFile('resources\classes-routes.txt');
+  TPMSettlementClasses.LoadFromFile('resources\classes-settlements.txt');
+  TPMVenueClasses.LoadFromFile('resources\classes-venues.txt');
+  TPMFloorClasses.LoadFromFile('resources\classes-floors.txt');
+  TPMConsumableClasses.LoadFromFile('resources\classes-consumables.txt');
+
+  TPMBeastClasses.LoadFromFile('resources\classes-beasts.txt');
+  TPMMonsterClasses.LoadFromFile('resources\classes-monsters.txt');
+  TPMHumanoidClasses.LoadFromFile('resources\classes-humanoids.txt');
+
+  TPMAdventureThemes.LoadFromFile('resources\adventure-themes.txt');
+  TPMAdventureGoals.LoadFromFile('resources\adventure-goals.txt');
+  TPMAdventureStoryHooks.LoadFromFile('resources\adventure-story-hooks.txt');
+  TPMAdventureSettingGenerals.LoadFromFile('resources\adventure-settings-general.txt');
+  TPMAdventureSettingSpecifics.LoadFromFile('resources\adventure-settings-specific.txt');
+  TPMAdventureStartPoints.LoadFromFile('resources\adventure-start-points.txt');
+  TPMAdventureBosses.LoadFromFile('resources\adventure-bosses.txt');
+  TPMAdventureLieutenants.LoadFromFile('resources\adventure-lieutenants.txt');
+  TPMAdventureAllyNeutral.LoadFromFile('resources\adventure-allys-neutrals.txt');
+  TPMAdventurePlots.LoadFromFile('resources\adventure-plots.txt');
+  TPMAdventureClimaxes.LoadFromFile('resources\adventure-climaxes.txt');
+  TPMAdventureMonsterEncounters.LoadFromFile('resources\adventure-monster-encounters.txt');
+  TPMAdventureCharacterEncounters.LoadFromFile('resources\adventure-character-encounters.txt');
+  TPMAdventureDeathTraps.LoadFromFile('resources\adventure-death-traps.txt');
+  TPMAdventureChases.LoadFromFile('resources\adventure-chases.txt');
+  TPMAdventureOmenProphecys.LoadFromFile('resources\adventure-omen-prophecys.txt');
+  TPMAdventureSecretWeaknesses.LoadFromFile('resources\adventure-secret-weaknesses.txt');
+  TPMAdventureSpecialConditions.LoadFromFile('resources\adventure-special-conditions.txt');
+  TPMAdventureMoralQuandrys.LoadFromFile('resources\adventure-moral-quandrys.txt');
+  TPMAdventureRedHerrings.LoadFromFile('resources\adventure-red-herrings.txt');
+  TPMAdventureCruelTricks.LoadFromFile('resources\adventure-cruel-tricks.txt');
+
   CampaignNew;
+
+  msg := TCardMessage.Create(pnlOutputData);
+  msg.Parent := pnlOutputData;
+  msg.Show;
+  msg.Title.Caption := 'Roll Dice';
+  msg.Message.Caption := '3d6+3: (4 + 2 + 1) = 7 + 3 = 10';
+  msg.Color:= $F1D6AE;
+  msg.Font.Color := $724F1B;
+
+  tbl := TCardTable.Create(pnlOutputData);
+  tbl.Parent := pnlOutputData;
+  tbl.Show;
+  tbl.Title.Caption := 'Table Card';
+  tbl.Table.ChildSizing.ControlsPerLine := 4;
+  tbl.Color:= $EFDAE8;
+  tbl.Font.Color := $6F2C5B;
+  for i := 0 to 11 do
+  begin
+    lbl := TLabel.Create(tbl.Table);
+    lbl.Parent := tbl.Table;
+    lbl.Caption := Format('Lable %d', [i]);
+  end;
 
   FFileName := 'C:\Users\Marion Smith\Desktop\demo.txt';
 
   //ToggleCampaign(false);
+end;
+
+procedure TfrmMain.FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
+var
+  i : integer;
+  frm: TfrmRollDice;
+  leaf, leaf2: TPMLeaf;
+begin
+  if (Key >= VK_F1) and (Key <= VK_F12) then
+  begin
+    case Key of
+      VK_F1: i := 0;
+      VK_F2: i := 1;
+      VK_F3: i := 2;
+      VK_F4: i := 3;
+      VK_F5: i := 4;
+      VK_F6: i := 5;
+      VK_F7: i := 6;
+      VK_F8: i := 7;
+      VK_F9: i := 8;
+      VK_F10: i := 9;
+      VK_F11: i := 10;
+      VK_F12: i := 11;
+    end;
+
+    if i > nodeDiceTray.Count - 1 then exit;
+
+    leaf := TPMLeaf(nodeDiceTray.Items[i].Data);
+    if leaf.GetTrait('Count') = '0' then
+    begin
+      leaf2 := TPMLeaf.Create('Dice');
+      frm := TfrmRollDice.Create(Self);
+      leaf2.SetTrait('Count', '1');
+      leaf2.SetTrait('Die', leaf.GetTrait('Die'));
+      leaf2.SetTrait('Modifier', leaf.GetTrait('Modifier'));
+      frm.Dice := leaf2;
+      if frm.ShowModal = mrOk then
+        RollDice(frm.Dice);
+    end
+    else
+      RollDice(leaf);
+  end
+  else if (Key = 33) then
+    pnlOutput.VertScrollBar.Position := pnlOutput.VertScrollBar.Position - 100
+  else if (Key = 34) then
+    pnlOutput.VertScrollBar.Position := pnlOutput.VertScrollBar.Position + 100;
 end;
 
 procedure TfrmMain.btnOutputClearClick(Sender: TObject);
@@ -289,7 +509,18 @@ begin
   frm.ShowModal;
 end;
 
-procedure TfrmMain.mnuMainInsertChamberClick(Sender: TObject);
+procedure TfrmMain.mnuMainInsertAdventuresClick(Sender: TObject);
+var
+  node: TTreeNode;
+  leaf: TPMLeaf;
+begin
+  leaf := TPMLeaf.Create('Adventure');
+  leaf.OnChange := @LeafChange;
+  node := tvwCampaign.Items.AddChildObject(nodeAdventures, leaf.Title, leaf);
+  node.Selected := true;
+end;
+
+procedure TfrmMain.mnuMainInsertDungeonsChamberClick(Sender: TObject);
 var
   i : integer;
   node: TTreeNode;
@@ -313,21 +544,22 @@ begin
   if Assigned(tvwCampaign.Selected) then
     leaf := TPMLeaf(tvwCampaign.Selected.Data);
 
-  mnuMainInsertLevel.Enabled := (leaf.Category = 'Dungeon') or (leaf.Category = 'Level') or (leaf.Category = 'Chamber') or (leaf.Category = 'Factions') or (leaf.Category = 'Faction');
-  mnuMainInsertChamber.Enabled := (leaf.Category = 'Level') or (leaf.Category = 'Chamber');
+  mnuMainInsertDungeonsLevel.Enabled := (leaf.Category = 'Dungeon') or (leaf.Category = 'Level') or (leaf.Category = 'Chamber') or (leaf.Category = 'Factions') or (leaf.Category = 'Faction');
+  mnuMainInsertDungeonsChamber.Enabled := (leaf.Category = 'Level') or (leaf.Category = 'Chamber');
 
-  mnuMainInsertRoute.Enabled := (leaf.Category = 'Wilderness') or (leaf.Category = 'Route') or (leaf.Category = 'Tract');
-  mnuMainInsertTract.Enabled := (leaf.Category = 'Route') or (leaf.Category = 'Tract');
+  mnuMainInsertWildernessesRoute.Enabled := (leaf.Category = 'Wilderness') or (leaf.Category = 'Route') or (leaf.Category = 'Tract');
+  mnuMainInsertWildernessesTract.Enabled := (leaf.Category = 'Route') or (leaf.Category = 'Tract');
 
-  mnuMainInsertVenue.Enabled := (leaf.Category = 'Settlement') or (leaf.Category = 'Venue');
-  mnuMainInsertFloor.Enabled := (leaf.Category = 'Floor') or (leaf.Category = 'Venue');
-  mnuMainInsertRoom.Enabled := (leaf.Category = 'Floor') or (leaf.Category = 'Room');
+  mnuMainInsertSettlementsVenue.Enabled := (leaf.Category = 'Settlement') or (leaf.Category = 'Venue');
+  mnuMainInsertSettlementsFloor.Enabled := (leaf.Category = 'Floor') or (leaf.Category = 'Venue');
+  mnuMainInsertSettlementsRoom.Enabled := (leaf.Category = 'Floor') or (leaf.Category = 'Room');
 
-  mnuMainInsertFaction.Enabled := (leaf.Category = 'Dungeon') or (leaf.Category <> 'Wilderness') or (leaf.Category <> 'Settlement') and (leaf.Category <> 'Factions') and (leaf.Category <> 'Faction');
+  mnuMainInsertFaction.Enabled := (leaf.Category = 'Dungeon') or (leaf.Category = 'Wilderness') or (leaf.Category = 'Settlement') or (leaf.Category = 'Faction');
   mnuMainInsertMonster.Enabled := (leaf.Category = 'Room') or (leaf.Category = 'Chamber') or (leaf.Category = 'Tract') or (leaf.Category = 'Puppet') or (leaf.Category = 'Player');
   mnuMainInsertBeast.Enabled := (leaf.Category = 'Room') or (leaf.Category = 'Chamber') or (leaf.Category = 'Tract') or (leaf.Category = 'Puppet') or (leaf.Category = 'Player');
   mnuMainInsertPuppet.Enabled := (leaf.Category = 'Room') or (leaf.Category = 'Chamber') or (leaf.Category = 'Tract') or (leaf.Category = 'Puppet') or (leaf.Category = 'Player');
   mnuMainInsertPlayer.Enabled := (leaf.Category = 'Room') or (leaf.Category = 'Chamber') or (leaf.Category = 'Tract') or (leaf.Category = 'Puppet') or (leaf.Category = 'Player');
+
 end;
 
 procedure TfrmMain.mnuMainInsertDiceRollClick(Sender: TObject);
@@ -343,7 +575,7 @@ begin
   //SaveCampaign(FFileName);
 end;
 
-procedure TfrmMain.mnuMainInsertDungeonClick(Sender: TObject);
+procedure TfrmMain.mnuMainInsertDungeonsDungeonClick(Sender: TObject);
 var
   node: TTreeNode;
   leaf: TPMLeaf;
@@ -383,7 +615,7 @@ begin
   node.Selected := true;
 end;
 
-procedure TfrmMain.mnuMainInsertLevelClick(Sender: TObject);
+procedure TfrmMain.mnuMainInsertDungeonsLevelClick(Sender: TObject);
 var
   leaf, slct: TPMLeaf;
   node: TTreeNode;
@@ -453,7 +685,7 @@ begin
   node.Selected := true;
 end;
 
-procedure TfrmMain.mnuMainInsertRouteClick(Sender: TObject);
+procedure TfrmMain.mnuMainInsertWildernessesRouteClick(Sender: TObject);
 var
   leaf, slct: TPMLeaf;
   node : TTreeNode;
@@ -484,7 +716,7 @@ begin
   node.Selected := true;
 end;
 
-procedure TfrmMain.mnuMainInsertTractClick(Sender: TObject);
+procedure TfrmMain.mnuMainInsertWildernessesTractClick(Sender: TObject);
 var
   i: integer;
   node: TTreeNode;
@@ -516,7 +748,7 @@ begin
   node.Selected := true;
 end;
 
-procedure TfrmMain.mnuMainInsertWildernessClick(Sender: TObject);
+procedure TfrmMain.mnuMainInsertWildernessesWildernessClick(Sender: TObject);
 var
   node: TTreeNode;
   leaf: TPMLeaf;
@@ -529,95 +761,107 @@ end;
 
 procedure TfrmMain.mnuMainRandomArmorClick(Sender: TObject);
 begin
-  RandomResource('Armor', nodeArmors, htmlcolors.clHTMLBlack);
+  RandomResource('Armor', nodeArmors, htmlcolors.clHTMLBlack, $F4F4F2);
 end;
 
 procedure TfrmMain.mnuMainRandomClothingClick(Sender: TObject);
 begin
-  RandomResource('Clothing', nodeClothing, htmlcolors.clHTMLMediumPurple);
+  RandomResource('Clothing', nodeClothing, htmlcolors.clHTMLMediumPurple, $EFDAE8);
 end;
 
 procedure TfrmMain.mnuMainRandomContainerClick(Sender: TObject);
 begin
-  RandomResource('Container', nodeContainers, htmlcolors.clHTMLBrown);
+  RandomResource('Container', nodeContainers, htmlcolors.clHTMLBrown, $E6EEFB);
 end;
 
 procedure TfrmMain.mnuMainRandomGemClick(Sender: TObject);
 begin
-  RandomResource('Gem', nodeGems, htmlcolors.clHTMLIndianRed);
+  RandomResource('Gem', nodeGems, $1C247B, $D5D7F2);
 end;
 
 procedure TfrmMain.mnuMainRandomInstrumentClick(Sender: TObject);
 begin
-  RandomResource('Instrument', nodeInstruments, htmlcolors.clHTMLGoldenRod);
+  RandomResource('Instrument', nodeInstruments, $0C649C, $9FE7F9);
 end;
 
 procedure TfrmMain.mnuMainRandomJewelryClick(Sender: TObject);
 begin
-  RandomResource('Jewelry', nodeJewelry, htmlcolors.clHTMLGoldenRod);
+  RandomResource('Jewelry', nodeJewelry, $0C649C, $9FE7F9);
 end;
 
 procedure TfrmMain.mnuMainRandomKitClick(Sender: TObject);
 begin
-  RandomResource('Kit', nodeKits, htmlcolors.clHTMLSaddleBrown);
+  RandomResource('Kit', nodeKits, $003687, $7AB2F0);
 end;
 
 procedure TfrmMain.mnuMainRandomRemainsClick(Sender: TObject);
 begin
-  RandomResource('Remains', nodeRemains, htmlcolors.clHTMLRed);
+  RandomResource('Remains', nodeRemains, $2B39C0, $EAEBF9);
 end;
 
 procedure TfrmMain.mnuMainRandomToolClick(Sender: TObject);
 begin
-  RandomResource('Tool', nodeTools, htmlcolors.clHTMLDarkOrange);
+  RandomResource('Tool', nodeTools, $0054D3, $A7CBF5);
 end;
 
 procedure TfrmMain.mnuMainRandomTrapClick(Sender: TObject);
 begin
-  RandomResource('Trap', nodeTraps, htmlcolors.clHTMLDarkMagenta);
+  RandomResource('Trap', nodeTraps, $8A4476, $EFDAE8);
 end;
 
 procedure TfrmMain.mnuMainRandomVehicleClick(Sender: TObject);
 begin
-  RandomResource('Vehicle', nodeVehicle, htmlcolors.clHTMLMediumPurple);
+  RandomResource('Vehicle', nodeVehicle, $5A234A, $DEB4D2);
 end;
 
 procedure TfrmMain.mnuMainRandomWeaponClick(Sender: TObject);
 begin
-  RandomResource('Weapon', nodeWeapons, htmlcolors.clHTMLDarkSlateGrey);
+  RandomResource('Weapon', nodeWeapons, $503E2C, $BFB6AE);
 end;
 
 procedure TfrmMain.mnuMainToolsConditionClick(Sender: TObject);
+var
+  i: integer;
+  msg: TCardMessage;
 begin
-  RandomResource('Condition', nodeConditions, htmlcolors.clHTMLDarkMagenta);
+  i := Random(nodeConditions.Count);
+
+  msg := TCardMessage.Create(pnlOutputData);
+  msg.Parent := pnlOutputData;
+  msg.Color := $99BBED;
+  msg.Font.Color := $002C6E;
+  msg.Title.Caption := 'Condtion';
+  msg.Message.Caption := nodeConditions.Items[i].Text;
+
 end;
 
 procedure TfrmMain.mnuMainToolsEightClick(Sender: TObject);
 var
   i: integer;
-  lbl: TLabel;
+  msg: TCardMessage;
 begin
   i := Random(4);
-  lbl := TLabel.Create(pnlOutputData);
-  lbl.Parent := pnlOutputData;
-  lbl.Align := alTop;
-  lbl.Font.Color := htmlcolors.clHTMLBlueViolet;
-  lbl.BorderSpacing.Left := 8;
-  lbl.BorderSpacing.Right := 8;
-  lbl.BorderSpacing.Bottom := 16;
+
+  msg := TCardMessage.Create(pnlOutputData);
+  msg.Parent := pnlOutputData;
+  msg.Title.Caption := 'Eight Ball';
+  msg.Align := alTop;
+  msg.Color := $DCD8D5;
+  msg.Font.Color := $463727;
+
   if i = 0 then
-    lbl.Caption := 'Eight Ball: No'
+    msg.Message.Caption := 'No'
   else if i = 1 then
-    lbl.Caption := 'Eight Ball: Maybe'
+    msg.Message.Caption := 'Maybe'
   else
-    lbl.Caption := 'Eight Ball: Yes';
+    msg.Message.Caption := 'Yes';
 end;
 
 procedure TfrmMain.mnuMainToolsMoodClick(Sender: TObject);
 var
   i : integer;
   moods: TStringList;
-  lbl  : TLabel;
+  msg : TCardMessage;
 begin
 
   moods := TStringList.Create;
@@ -657,14 +901,12 @@ begin
   moods.Add('Worried');
 
   i := Random(moods.Count);
-  lbl := TLabel.Create(pnlOutputData);
-  lbl.Parent := pnlOutputData;
-  lbl.Align := alTop;
-  lbl.Font.Color := htmlcolors.clHTMLForestGreen;
-  lbl.BorderSpacing.Left := 8;
-  lbl.BorderSpacing.Right := 8;
-  lbl.BorderSpacing.Bottom := 16;
-  lbl.Caption := 'Mood: ' + moods.Strings[i];
+  msg := TCardMessage.Create(pnlOutputData);
+  msg.Parent := pnlOutputData;
+  msg.Color := $E7ECD0;
+  msg.Font.Color := $325A14;
+  msg.Title.Caption := 'Mood';
+  msg.Message.Caption := moods.Strings[i];
 
 end;
 
@@ -831,10 +1073,12 @@ begin
      (leaf.Category = 'Tract') or
      (leaf.Category = 'Room') then
   begin
+    Screen.Cursor := crHourGlass;
     form := TfrmChamberTractRoom.Create(pnlWorkspaceClient);
     form.Parent := pnlWorkspaceClient;
     TfrmChamberTractRoom(form).Leaf := leaf;
     form.Show;
+    Screen.Cursor := crDefault;
   end
   else if (leaf.Category = 'Puppet') then
   begin
@@ -855,6 +1099,13 @@ begin
     form := TfrmDice.Create(pnlWorkspaceClient);
     form.Parent := pnlWorkspaceClient;
     TfrmDice(form).Dice := leaf;
+    form.Show;
+  end
+  else if (leaf.Category = 'Adventure') then
+  begin
+    form := TfrmAdventure.Create(pnlWorkspaceClient);
+    form.Parent := pnlWorkspaceClient;
+    TfrmAdventure(form).Adventure := leaf;
     form.Show;
   end
   else if (leaf.Category = 'Beast') or
@@ -921,52 +1172,15 @@ end;
 
 procedure TfrmMain.DiceClick(Sender: TObject);
 var
-  lbl : TLabel;
   btn : TButton;
   leaf: TPMLeaf;
   node: TTreeNode;
-  str, rll : string;
-  i, n, t, cnt, die, md  : integer;
 begin
   btn := TButton(Sender);
   node := nodeDiceTray.Items[btn.Tag];
   leaf := TPMLeaf(node.Data);
 
-  cnt := leaf.GetTrait('Count').ToInteger;
-  die := leaf.GetTrait('Die').Replace('d', '').ToInteger;
-  md  := leaf.GetTrait('Modifier').ToInteger;
-
-  str := Format('Dice Roll %dd%d', [cnt, die]);
-  if md <> 0 then str := str + leaf.GetTrait('Modifier');
-  str := str + ': ';
-
-  t := 0;
-  rll := '';
-  for i := 0 to cnt - 1 do
-  begin
-    n := Random(die) + 1;
-    t := t + n;
-    if rll = '' then
-      rll := n.ToString
-    else
-      rll := rll + ', ' + n.ToString;
-  end;
-  t := t + md;
-
-  if md = 0 then
-    str := str + Format('[%s] = %d', [rll, t])
-  else
-    str := str + Format('[%s] %s = %d', [rll, leaf.GetTrait('Modifier'), t]);
-
-  lbl := TLabel.Create(pnlOutputData);
-  lbl.Parent := pnlOutputData;
-  lbl.Align := alTop;
-  lbl.Caption := str;
-  lbl.BorderSpacing.Left := 8;
-  lbl.BorderSpacing.Right := 8;
-  lbl.BorderSpacing.Bottom := 16;
-  lbl.Font.Color := htmlcolors.clHTMLBrown;
-  lbl.BorderSpacing.Bottom := 16;
+  RollDice(leaf);
 end;
 
 procedure TfrmMain.CampaignNew;
@@ -977,6 +1191,7 @@ begin
   tvwCampaign.Items.Clear;
 
   nodeCampaign := tvwCampaign.Items.AddObject(nil, 'Campaign', TPMLeaf.Create('Campaign'));
+  nodeAdventures := tvwCampaign.Items.AddChildObject(nodeCampaign, 'Adventures', TPMLeaf.Create('Adventures'));
   nodeDungeons := tvwCampaign.Items.AddChildObject(nodeCampaign, 'Dungeons', TPMLeaf.Create('Dungeons'));
   nodeWildernesses := tvwCampaign.Items.AddChildObject(nodeCampaign, 'Wildernesses', TPMLeaf.Create('Wildernesses'));
   nodeSettlements := tvwCampaign.Items.AddChildObject(nodeCampaign, 'Settlements', TPMLeaf.Create('Settlements'));
@@ -1007,13 +1222,13 @@ begin
 
   nodeResources.AlphaSort;
 
-  for i := 0 to High(TPMBasicDice) do
+  for i := 0 to TPMBasicDice.RowCount - 1 do
   begin
     leaf := TPMLeaf.Create('Dice');
-    leaf.SetTrait(TPMBasicDice[i, 0]);
-    leaf.SetTrait(TPMBasicDice[i, 1]);
-    leaf.SetTrait(TPMBasicDice[i, 2]);
-    leaf.SetTrait(TPMBasicDice[i, 3]);
+    leaf.SetTrait(TPMBasicDice[0, i]);
+    leaf.SetTrait(TPMBasicDice[1, i]);
+    leaf.SetTrait(TPMBasicDice[2, i]);
+    leaf.SetTrait(TPMBasicDice[3, i]);
     leaf.OnChange := @LeafChange;
     tvwCampaign.Items.AddChildObject(nodeDiceTray, leaf.Title, leaf);
   end;
@@ -1047,18 +1262,16 @@ begin
   nodeCampaign.Expand(false);
 end;
 
-procedure TfrmMain.RandomResource(ACaption: string; ANode: TTreeNode; AColor: TColor);
+procedure TfrmMain.RandomResource(ACaption: string; ANode: TTreeNode; AFontColor, ABackColor: TColor);
 var
-  lbl: TLabel;
+  msg: TCardMessage;
 begin
-  lbl := TLabel.Create(pnlOutputData);
-  lbl.Parent := pnlOutputData;
-  lbl.Align := alTop;
-  lbl.Font.Color := AColor;
-  lbl.BorderSpacing.Left := 8;
-  lbl.BorderSpacing.Right := 8;
-  lbl.BorderSpacing.Bottom := 16;
-  lbl.Caption := Format('%s: %s', [ACaption, ANode.Items[Random(ANode.Count)].Text]) ;
+  msg := TCardMessage.Create(pnlOutputData);
+  msg.Parent := pnlOutputData;
+  msg.Color := ABackColor;
+  msg.Font.Color := AFontColor;
+  msg.Title.Caption := ACaption;
+  msg.Message.Caption := ANode.Items[Random(ANode.Count)].Text;
 end;
 
 procedure TfrmMain.PopulateDiceTray;
@@ -1089,6 +1302,53 @@ begin
   //nodeDiceTray.ImageIndex := ;
 end;
 
+procedure TfrmMain.RollDice(ADice: TPMLeaf);
+var
+  msg: TCardMessage;
+  leaf: TPMLeaf;
+  str, rll : string;
+  i, n, t, cnt, die, md  : integer;
+begin
+
+  if ADice.Category <> 'Dice' then exit;
+
+  cnt := ADice.GetTrait('Count').ToInteger;
+  die := ADice.GetTrait('Die').Replace('d', '').ToInteger;
+  md  := ADice.GetTrait('Modifier').ToInteger;
+
+  if cnt < 1 then cnt := 1;
+
+  str := Format('Roll: %dd%d', [cnt, die]);
+  if md <> 0 then str := str + ADice.GetTrait('Modifier');
+  str := str + ': ';
+
+  t := 0;
+  rll := '';
+  for i := 0 to cnt - 1 do
+  begin
+    n := Random(die) + 1;
+    t := t + n;
+    if rll = '' then
+      rll := n.ToString
+    else
+      rll := rll + ', ' + n.ToString;
+  end;
+  t := t + md;
+
+  if md = 0 then
+    str := str + Format('[%s] = %d', [rll, t])
+  else
+    str := str + Format('[%s] %s = %d', [rll, ADice.GetTrait('Modifier'), t]);
+
+  msg := TCardMessage.Create(pnlOutputData);
+  msg.Parent := pnlOutputData;
+  msg.Title.Caption := 'Dice Roll';
+  msg.Message.Caption := str;
+  msg.Color:= $F1D6AE;
+  msg.Font.Color := $724F1B;
+
+end;
+
 procedure TfrmMain.PopulateResourceToCbo(ACbo: TComboBox; AResource: TTreeNode);
 var
   i : integer;
@@ -1107,13 +1367,13 @@ begin
 end;
 
 procedure TfrmMain.LoadResourceNodes(AParent: TTreeNode; ACategory: string;
-  AArray: TStringArray);
+  AArray: TStringList);
 var
   i: integer;
   leaf: TPMLeaf;
 begin
   if AParent.HasChildren then AParent.DeleteChildren;
-  for i := 0 to High(AArray) do
+  for i := 0 to AArray.Count - 1 do
   begin
     leaf := TPMLeaf.Create(ACategory);
     leaf.SetTrait('Title', AArray[i]);
@@ -1123,17 +1383,17 @@ begin
   AParent.AlphaSort;
 end;
 
-procedure TfrmMain.LoadResourceNodes(AParent: TTreeNode; ACategory: string; AArray: TPM2DStringArray);
+procedure TfrmMain.LoadResourceNodes(AParent: TTreeNode; ACategory: string; AArray: TCSVDocument);
 var
   i, j: integer;
   leaf: TPMLeaf;
 begin
   if AParent.HasChildren then AParent.DeleteChildren;
-  for i := 0 to High(AArray) do
+  for i := 0 to AArray.RowCount-1 do
   begin
     leaf := TPMLeaf.Create(ACategory);
-    for j := 0 to High(AArray[i]) do
-      leaf.SetTrait(AArray[i, j]);
+    for j := 0 to AArray.ColCount[i]-1 do
+      leaf.SetTrait(AArray[j,i]);
     leaf.OnChange := @LeafChange;
     tvwCampaign.Items.AddChildObject(AParent, leaf.Title, leaf);
   end;
@@ -1151,18 +1411,19 @@ begin
   begin
     leaf := TPMLeaf(tvwCampaign.Items[r].Data);
 
-    while grdData.ColCount < (leaf.Traits.Count + 2) do
+    while grdData.ColCount < (leaf.Traits.Count + 3) do
       grdData.ColCount := grdData.ColCount + 1;
 
-    grdData.Cells[0, r] := leaf.Category;
+    grdData.Cells[0, r] := leaf.ID;
+    grdData.Cells[1, r] := leaf.Category;
 
     if r = 0 then
-      grdData.Cells[1, r] := '-1'
+      grdData.Cells[2, r] := '-1'
     else
-      grdData.Cells[1, r] := tvwCampaign.Items[r].Parent.AbsoluteIndex.ToString;
+      grdData.Cells[2, r] := tvwCampaign.Items[r].Parent.AbsoluteIndex.ToString;
 
     for c := 0 to leaf.Traits.Count - 1 do
-      grdData.Cells[c + 2, r] := leaf.GetTrait(c);
+      grdData.Cells[c + 3, r] := leaf.GetTrait(c);
   end;
   grdData.SaveToCSVFile(FFileName);
 end;

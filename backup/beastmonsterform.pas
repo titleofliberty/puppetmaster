@@ -122,7 +122,7 @@ begin
   else if FLeaf.Category = 'Monster' then
     txtClass.Items.AddStrings(TPMMonsterClasses)
   else if FLeaf.Category = 'Humanoid' then
-    txtClass.Items.AddStrings(tpmh);
+    txtClass.Items.AddStrings(TPMHumanoidClasses);
 
   pnlHeader.Caption := FLeaf.Category;
 

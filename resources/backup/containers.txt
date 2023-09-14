@@ -1,0 +1,6 @@
+TPMContainers := [
+'Backpack','Bag','Barrel','Basket','Bow (Jewelry)','Box (Strong)','Box (Wood)',
+'Box (Tin)','Bucket','Cage','Chest','Coffin','Crate','Pouch','Purse','Sack',
+'Saddlebags'
+];
+

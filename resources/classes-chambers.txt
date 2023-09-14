@@ -1,0 +1,65 @@
+Alter
+Anteroom
+Armoury
+Barrack
+Bedroom
+Bedroom (Master)
+Bottlery
+Bower
+Buttery
+Cell
+Cellar (Wine)
+Chapel
+Closet
+Conservatory
+Crypt
+Den
+Dormitory
+Font
+Gallery
+Gallery (Minstrel)
+Greenhouse
+Hall (Banquet)
+Hall (Court)
+Hall (Dance)
+Hall (Dining)
+Hall (Drinking)
+Hall (Great)
+Hall (Guild)
+Hall (Mess)
+Hallway
+Infirmary
+Kitchen
+Laboratory
+Laundry
+Library
+Lobby
+Loft
+Map
+Maze
+Obelisk
+Obervatory
+Office
+Oratory
+Pantry
+Parlor (Game)
+Parlor (Sitting)
+Parlor (Trophy)
+Patio
+Portico
+Reception
+Room (Storage)
+Room (Throne)
+Room (War)
+Salon
+Sanctum
+Shop
+Statue
+Storeroom
+Studio (Musician)
+Studio (Painter)
+Studio (Sculpter)
+Study
+Treasury
+Vault
+Wardrobe

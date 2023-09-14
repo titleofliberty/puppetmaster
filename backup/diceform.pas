@@ -36,6 +36,7 @@ type
   private
     FDice: TPMLeaf;
     procedure SetDice(AValue: TPMLeaf);
+    procedure LockForm;
   public
     property Dice : TPMLeaf read FDice write SetDice;
   end;
@@ -66,11 +67,7 @@ end;
 
 procedure TfrmDice.btnLockedClick(Sender: TObject);
 begin
-  txtTitle.Enabled := not btnLocked.Down;
-  txtCount.Enabled := not btnLocked.Down;
-  txtDie.Enabled := not btnLocked.Down;
-  txtModifier.Enabled := not btnLocked.Down;
-  FDice.SetTrait('Locked', BoolToStr(btnLocked.Down, 'True', 'False'));
+  LockForm;
 end;
 
 procedure TfrmDice.txtDieExit(Sender: TObject);
@@ -109,7 +106,17 @@ begin
   txtCount.Text := FDice.GetTrait('Count');
   txtDie.Text := FDice.GetTrait('Die');
   txtModifier.Text := FDice.GetTrait('Modifier');
-  if FDice.GetTrait('Locked') = 'True' then btnLockedClick(btnLocked);
+  btnLocked.Down := FDice.GetTrait('Locked') = 'True';
+  LockForm;
+end;
+
+procedure TfrmDice.LockForm;
+begin
+  txtTitle.Enabled := not btnLocked.Down;
+  txtCount.Enabled := not btnLocked.Down;
+  txtDie.Enabled := not btnLocked.Down;
+  txtModifier.Enabled := not btnLocked.Down;
+  FDice.SetTrait('Locked', BoolToStr(btnLocked.Down, 'True', 'False'));
 end;
 
 end.

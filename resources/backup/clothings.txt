@@ -1,0 +1,8 @@
+TPMClothing := [
+'Bandana','Belt','Bonnet','Boots','Bowtie','Britches','Cap','Cape','Cloak (Fur)',
+'Cloak (Wool)','Coat (Fur)','Coat (Wool)','Dress','Girdle','Gloves','Gown','Hat',
+'Hood','Hose','Jacket','Kilt','Leggings','Long Coat','Mantle','Neckerchief',
+'Necktie','Poncho','Robes','Sandles','Scarf','Shaw','Skirt','Smock','Surcoat',
+'Sweater','Trousers','Tunic','Vest','Vestments','Waistcoat'
+];
+

@@ -1,0 +1,12 @@
+TPMUnnatural := [
+'Arch','Bridge','Cabin','Campsite','Cannon','Cemetary','Chimney','Cottage','Cross',
+'Fence','Firepit','Graveyard','Mine','Mound','Obelisk','Post','Pylon','Pyramid',
+'Road','Shrine','Sign','Steps','Tablet','Totem','Tower','Treehouse','Wagon Wheel',
+'Wall','Ziggurat','Lean-to','Quarry (Limestone)','Quarry (Sand)','Quarry (Clay)',
+'Quarry (Chalk)','Quarry (Cinder)','Quarry (Coal)','Quarry (Gravel)','Quarry (Granite)',
+'Quarry (Gritstone)','Quarry (Gypsum)','Quarry (Marble)','Quarry (Ores)',
+'Quarry (Quartz)','Quarry (Sandstone)','Quarry (Sandstone)','Quarry (Slate)',
+'Quarry (Travertine)','Canal','Dock','Terrace','Reservoir','Dam','Berm','Bank',
+'Dike','Ditch','Levee','Gate','Ore','Lighthouse'
+];
+

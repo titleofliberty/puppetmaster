@@ -1,0 +1,14 @@
+TPMConditions := [
+'Battered','Beat-Up','Bright','Broken-Down','Crumbling','Crumbly','Crummy',
+'Damaged','Decayed','Decaying','Decrepit','Derelict','Dilapidated','Dingy',
+'Faded','Fallen-In','Filthy','Grimy','Impaired','Injured','Marred',
+'Muddy','Neat','Neglected','Old','Orderly','Organized','Ramshackle','Ratty',
+'Rickety','Ruined','Run-Down','Seedy','Shabby','Shaky','Simple','Sloppy',
+'Slummy','Spotless','Tacky','Tidy','Unimproved','Unkempt','Worn-Out','New',
+'Pristine','Intact','Exquisite','Flawless','Beautiful','Meticulous','Perfect',
+'Polished','Precise','Exact','Satisfactory','Bad','Arranged','Clean','Cluttered',
+'Dirty','Disarranged','Disarrayed','Dishevelled','Disordered','Dusty','Elegant',
+'Hygienic','Immaculate','Messy','Piled','Pillaged','Plundered','Ransacked',
+'Robed','Ruffled','Strewn','Tidy','Untidy'
+];
+

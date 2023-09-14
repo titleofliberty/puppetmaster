@@ -1,0 +1,26 @@
+Arch (Stone)
+Butte
+Cave
+Hill
+Lake
+Mushrooms
+Pond
+River
+Rock
+Rock (Pipes)
+Rock (Prism)
+Rock (Wave)
+Stream
+Stump
+Tree (Enormous)
+Tree (Lightening)
+Tree (Petrified)
+Tree (Haunted)
+Waterfall
+Swamp
+Bog
+Webs
+Silk
+Tree (Felled)
+Volcano
+Gyser

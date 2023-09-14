@@ -86,8 +86,9 @@ object frmDice: TfrmDice
       Width = 189
       AutoSize = False
       ItemHeight = 22
-      ItemIndex = 0
+      ItemIndex = 1
       Items.Strings = (
+        '0'
         '1'
         '2'
         '3'

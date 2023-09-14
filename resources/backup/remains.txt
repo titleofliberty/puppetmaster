@@ -1,0 +1,5 @@
+TPMRemains := [
+'Arm','Blood','Brain','Entrails','Head','Heart','Leg','Liver','Skeleton',
+'Skull','Teeth','Scales','Fang','Claw','Hide','Shell'
+];
+

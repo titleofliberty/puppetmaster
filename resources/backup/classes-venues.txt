@@ -1,0 +1,13 @@
+TPMVenueClasses := [
+'Abbey','Academy','Alchemist','Armourer','Armoury','Backery','Bank','Barber',
+'Barrack','Blacksmith','Bookbinder','Brewery','Bungalow','Butcher','Cabin',
+'Cartographer','Casino','Castle','Cathedral','Chapel','Church','Clubhouse',
+'Cobbler','College','Colosseum','Cottage','Courthouse','Distillery','Farm',
+'Fletcher','Gallery','Garrison','Goldsmith','Guard Tower','Hall (Dance)',
+'Hall (Guild)','Hatter','Hut','Inn','Jail','Keep','Livery','Locksmith','Lodge',
+'Mage Tower','Mansion','Miller','Monastery','Museum','Nunnery','Ranch',
+'Roadhouse','Ropemaker','Sadler','Saloon','School','Scribe','Shanty','Shed',
+'Tailor','Tannery','Tavern','Theater','Tinsmith','Townhall','Warehouse','Weaver',
+'Wheelwright','Winery','Zoo'
+];
+

@@ -1,0 +1,12 @@
+TPMFauna := [
+'Ants','Bat','Bear','Beaver','Bees','Bighorn','Bison','Bullfrog','Butterfly','Cat',
+'Chipmunk','Coyote','Crab','Condor','Crow','Deer','Dog','Dove','Dragonfly','Eagle',
+'Elk','Falcon','Ferret','Firefly','Fox','Frog','Gila Monster','Gecko','Goose','Gopher',
+'Grizzly','Hawk','Hornets','Hummingbird','Iguana','Jackal','Kangaroo','Livestock',
+'Lizard','Mockingbird','Moose','Moth','Mouse','Opossum','Otter','Owl','Porcupine',
+'Pronghorn','Quail','Rabit','Raccon','Rat','Rhinoceros','Roadrunner','Robin',
+'Salamander','Seal','Sheep','Skunk','Snake','Songbird','Spider','Squirrel','Toad',
+'Tortoise','Treefrog','Turtle','Viper','Wasps','Wolf','Woodpecker','Xerocoles',
+'Horse','Mule','Donkey','Ox'
+];
+

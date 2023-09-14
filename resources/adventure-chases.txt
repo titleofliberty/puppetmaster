@@ -1,0 +1,7 @@
+Aerial
+Endurance
+Footrace
+Horseback
+Special Terrain
+Water
+

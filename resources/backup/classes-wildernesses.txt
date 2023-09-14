@@ -1,0 +1,3 @@
+TPMWildernessClasses := ['Costal','Desert','Forest','Hill','Jungle','Mountain',
+'Praire','Swamp','Tundra'];
+

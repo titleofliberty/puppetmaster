@@ -1,0 +1,5 @@
+TPMVehicle := [
+'Canoe','Carriage','Cart','Chariot','Galley','Rowboat','Sailboat','Ship (Sailing)',
+'Sled','Wagon (Covered)','Wagon (Open)','Wagon (Vardo)'
+];
+

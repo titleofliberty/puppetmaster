@@ -1,0 +1,12 @@
+TPMFlora := [
+'Ashe','Cactus','Crop','Elms','Ferns','Grass','Oak','Pine','Vines',
+'Wildflowers','Ivy','Agave','Joshua','Tumbleweed','Maple','Birch','Magnolia','Sweet Gum',
+'Beech','Sumac','Hogweed','Oleander','Foxglove','Monkshood','Baneberry','Larkspur',
+'Nightshade','Poinsettia','Iris','Hemlock','Daffodil','Elderberry','Parsnip','Azaleas',
+'Witch-hazel','Blueberries','Chestnut','Cedar','Fir','Cypress','Juniper','Larch',
+'Redwood','Spruce','Yew','Mangroves','Holly','Dogwood','Swamp Rose','Willow',
+'Buttonbush','Aster','Goldenrod','Sunflower','Clover','Wild Indigo','Moss','Strawberry',
+'Coffee','Cocoa','Banana','Pear','Apple','Blackberry','Cypress','Walnut','Peacan',
+'Potato','Onion','Grape','Almond','Periwinkle','Bush','Garden'
+];
+

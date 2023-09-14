@@ -1,0 +1,13 @@
+TPMWildernessEvents := [
+'animal stampede','tyrant','army encamped','avalanche','battle','beast carcass',
+'besieged settlement','boulder falls','cart passing','structure','distressed npc',
+'druid gathering','earthquake','farmers harvesting crops','flash flood','forest fire',
+'gale winds','hail storm','hunting party','hurricane','interdimensional rift',
+'landslide','lightning strikes','local humanoids having a festival',
+'marauding monster attacking village','market','massed animals','monster carcass',
+'overturned cart','plague (insect / vermin)','refugees','religious pilgrimage',
+'savage raiding party','sinkhole appears','solar eclipse','storm','sudden storm',
+'toll demanded','tree falls','tribal encounter','undead awakening',
+'unmarked settlement','unseasonable weather','volcanic eruption'
+];
+

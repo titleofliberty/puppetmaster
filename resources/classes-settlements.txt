@@ -1,0 +1,5 @@
+Capital
+City
+Encampment
+Hamlet
+Town

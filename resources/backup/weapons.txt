@@ -1,0 +1,8 @@
+TPMWeapons := [
+'Axe','Balista','Battleaxe','Blowgun','Boomerang','Caltrops','Catapult','Club',
+'Flail','Glaive','Greataxe','Greatclub','Greatsword','Halberd','Hammer','Javelin',
+'Knife','Lance','Light Hammer','Longbow','Longsword','Mace','Maul','Morningstar',
+'Needles','Net','Pike','Quarterstaff','Ram','Rapier','Scimitar','Shortbow',
+'Shortsword','Sickle','Sling','Spear','Sword','Trident','War Pick','Whip'
+];
+

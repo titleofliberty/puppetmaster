@@ -1,0 +1,11 @@
+TPMConsumables := [
+['Title:Wand','Class:Wand','Notes:Charges 5.'],
+['Title:Scroll','Class:Scroll','Effect:','Notes:Charges 1.'],
+['Title:Light Bandage','Class:Bandage','Notes:Charges 1. Heals +2. Cannot be used in combat.'],
+['Title:Medium Bandage','Class:Bandage','Notes:Cannot be used in combat. Charges 1, Heals +4.'],
+['Title:Heavy Bandage','Class:Bandage','Notes:Cannot be used in combat. Charges 1, Heals +6.'],
+['Title:Great Healing Potion','Class:Potion','Notes:Can be used in combat. Charges 1, Heals +2.'],
+['Title:Magnificent Healing Potion','Class:Potion','Notes:Can be used in combat. Charges 1, Heals +4.'],
+['Title:Superb Healing Potion','Class:Potion','Note:Can be used in combat. Charges 1, Heals +4.']
+];
+

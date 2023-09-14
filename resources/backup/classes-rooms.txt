@@ -1,0 +1,13 @@
+TPMRoomClasses := [
+'Anteroom','Attic','Barrack','Basement','Bedroom','Bedroom (Master)','Bottlery',
+'Bower','Buttery','Cell','Cellar','Cellar (Wine)','Chapel','Closet','Conservatory',
+'Den','Dormitory','Entry','Foyer','Gallery','Gallery (Minstrel)','Greenhouse',
+'Hall (Banquet)','Hall (Court)','Hall (Dance)','Hall (Dining)','Hall (Drinking)',
+'Hall (Great)','Hall (Guild)','Hall (Mess)','Hallway','Kitchen','Laboratory',
+'Laundry','Library','Lobby','Loft','Obervatory','Office','Oratory','Pantry',
+'Parlor (Game)','Parlor (Sitting)','Parlor (Trophy) ','Patio','Porch','Portico',
+'Reception','Room (Storage)','Room (Throne)','Room (War)','Salon','Sanctum',
+'Shop','Storeroom','Studio (Musician)','Studio (Painter)','Studio (Sculpter)',
+'Study','Treasury','Vault','Ward (Hospital)','Wardrobe'
+];
+

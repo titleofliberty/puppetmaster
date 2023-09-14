@@ -1,0 +1,15 @@
+TPMRumor := [
+'<npc> seeking help to retrieve <goal>','<faction> looking for help with <mission>',
+'<faction> coming to <goal>','<npc> arrived from <settlment>','<faction> settling in <location>',
+'<faction> has left <location>','<npc> hiring to <goal>','Overhear <faction> discussing <event>',
+'<npc> complains about <faction>','<npc> complains about <trend>','<npc> questions why <event>',
+'<npcs> talk about <event>','<npc> planning <event>','<npc> arrived to <goal>',
+'<npc-noble> decrees <goal>','<npc-noble> decrees <event>','<npc-noble> plotting to <goal>',
+'<npc-noble> plotting to <event>','<npc> shares <secret> about <npc>','<wilderness> infested with <monster>',
+'<npc> warns of <npc>','<npc> warns of <event>','<npc> warns of <faction>','<npc> shares <event>',
+'<npc> shares rummor about <location>','<npc> share about <crime>','<npc> gone missing',
+'<faction> gone missing','<npc> seeking revenge on <npc>','<faction> ploting against <faction>',
+'<faction> advising people to <goal>','<npc> operating in the area','Passerby mumbles about <event>',
+'Passerby mumbles about <goal>','Passerby mumbles about <crime>','Passerby mumbles about <faction>'
+];
+

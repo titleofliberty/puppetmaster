@@ -1,0 +1,15 @@
+TPMSettlementEvents := [
+'alefest','amnesty','assassination','busker performance','hero’s return',
+'co-ordinated attack','wizard conference','dimensional disruption','earthquake',
+'election / civic leader change','festival','building fire','flood',
+'freakish weather','graduation ceremony','gridlocked traffic','harvest festival',
+'invading force','large army passing through town','large scale fire',
+'local army returning after recent skirmish','market day','martial law enacted',
+'military conscription','monster invasion','museum exhibition','musical concert',
+'name-giving day celebrations','new building being opened',
+'notable local figure assassinated','official proclamation','orator / storyteller',
+'play performance','plague','procession','procession, royal','protest','public duel',
+'public execution','public holiday','religious rally','revolution','sinkhole',
+'storm','winds','traffic accident','warrior exhibition','wedding','wild magic eruption'
+];
+

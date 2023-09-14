@@ -1,0 +1,7 @@
+TPMKits := [
+'Brewer','Burglar','Calligrapher','Carpenter','Cartographer','Climber','Cobbler',
+'Cooking','Fishing','Forgery','Glassblower','Healer','Herbalism','Jeweler','Leather',
+'Mason','Mess','Navigator','Painter','Potter','Smith','Snowshoes','Soap','Thieves',
+'Tinger','Tingerbox','Weaver','Woodcarver'
+];
+

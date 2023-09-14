@@ -1,5 +1,12 @@
-TPMAdventureBosses := [
-'Agent Provocateur','Advance Agent','Avenger','Conquerer','Corruptor','Destroyer',
-'God of Chance','Lovable Rogue','Organizer','Ravager','Sufferer','Zealot'
-];
-
+Agent Provocateur
+Advance Agent
+Avenger
+Conquerer
+Corruptor
+Destroyer',
+God of Chance
+Lovable Rogue
+Organizer
+Ravager
+Sufferer
+Zealot

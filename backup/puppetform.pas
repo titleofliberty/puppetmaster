@@ -93,6 +93,7 @@ type
     txtSocialStanding: TComboBox;
     txtStrength: TComboBox;
     txtWisdom: TComboBox;
+    procedure btnLockedClick(Sender: TObject);
     procedure btnRollPersonalityClick(Sender: TObject);
     procedure btnRollStatsClick(Sender: TObject);
     procedure btnRollDetailsClick(Sender: TObject);
@@ -366,6 +367,11 @@ begin
   FPuppet.SetTrait('Activity', txtActivity.Text);
   FPuppet.SetTrait('Distraction', txtDistraction.Text);
 
+end;
+
+procedure TfrmPuppet.btnLockedClick(Sender: TObject);
+begin
+  LockForm;
 end;
 
 end.

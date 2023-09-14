@@ -1,0 +1,23 @@
+TPMTools := [
+'Abacus','Alquerque (Game)','Atlas','Ax (Stone)','Backgammon (Game)','Ball Bearings',
+'Bedroll','Blanket','Bobber (Fish)','Bolt','Book (History)','Book (Spell)','Book (Text)',
+'Bottle','Bowl (Stone)','Bowl (Wood)','Bridle','Bucket','Candle','Canteen','Censar',
+'Chain','Chalk','Checkers (Game)','Chess (Game)','Clasp','Cloth','Compass','Crock',
+'Cup (Tin)','Cup (Wood)','Decanter','Dice (Game)','Dominoes (Game)','Flagon','Flask',
+'Flint','Fork','Globe','Go (Game)','Grappling Hook','Hammer','Hammer (Sledge)',
+'Hammer (Stone)','Handaxe','Hasp','Hide','Hinge','Hook (Fish)','Hourglass','Ink',
+'Jar','Jug','Key','Knife','Knife (Stone)','Knucklebones (Game)','Ladder','Lamp (Glass)',
+'Lamp (Hurricane)','Lantern','Latch','Leather','Level','Lock','Magnifying Glass',
+'Majang (Game)','Manacles','Mancala (Game)','Map','Mehen (Game)','Metronome',
+'Mirror (Steel)','Mortise','Mug','Nail','Net','Nine-man Morris (Game)','Oil','Pan',
+'Paper','Parchment','Pestle','Pick (Miner)','Piece (Game)','Pitcher','Pitcher','Piton',
+'Plate (Ceramic)','Plate (Tin)','Plate (Wood)','Playing Cards (Game)','Plumb Line',
+'Pole (Fish)','Pot','Potion','Pulley','Quill','Rasp','Rithmomachia (Game)','Rope',
+'Ruler','Saddle (Exotic)','Saddle (Military)','Saddle (Pack)','Saddle (Riding)',
+'Scales (Weights)','Scroll','Sealing Wax','Senet (Game)','Sexton','Shovel','Sickle',
+'Spikes (Iron)','Spoon','Spyglass','Square','Staff','Stake (Wooden)','Steel','Stein',
+'String','Sundial','Tablet (Wax)','Tafl (Game)','Tent','Torch','Trap (Hunting)',
+'Urn','Vase','Wargong','Watch (Pocket)','Waterskin','Whetstone','Whip','Whistle',
+'Wood'
+];
+

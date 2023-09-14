@@ -1,0 +1,17 @@
+Camel
+Quarter Horse
+Draft Horse
+Warhorse
+Donkey
+Mule
+Elephant
+Hyena
+Dire Wolf
+Dire Boar
+Giant Eagle
+Giant Owl
+Pegasus
+Rhinoceros
+Griffon
+Hippogriff
+Pony

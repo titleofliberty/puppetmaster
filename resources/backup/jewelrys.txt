@@ -1,0 +1,10 @@
+TPMJewelry := [
+'Amulet','Anklet','Armlet','Bangle (Glass)','Bangle (Metal)','Bangle (Wood)',
+'Beads (Prayer)','Beads (Rosary)','Bracelet','Bracelet (Charm)','Bracelets',
+'Brooche','Cameo','Chain, Belly','Chatelaine','Choker','Crown','Cuff Links',
+'Dog Tags','Earring','Hair Pin','Necklace (Beads)','Necklace (Chain)','Necklace (Locket)',
+'Necklace (Medallion)','Necklace (Pearls)','Pendant','Pin','Ring (Finger)',
+'Ring (Puzzle)','Ring (Signet)','Ring (Thumb)','Ring (Toe)','Rope (Prayer)',
+'Tiara','Tie (Bolo)','Torc (Torq)'
+];
+

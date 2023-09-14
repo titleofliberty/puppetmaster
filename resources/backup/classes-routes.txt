@@ -1,0 +1,2 @@
+TPMRouteClasses := ['Trail','Road','Highway'];
+

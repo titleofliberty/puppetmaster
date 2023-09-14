@@ -23,6 +23,7 @@ type
     txtClass: TComboBox;
     txtNotes: TMemo;
     txtTitle: TEdit;
+    procedure btnLockedClick(Sender: TObject);
     procedure txtClassExit(Sender: TObject);
     procedure txtClassKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure txtClassSelect(Sender: TObject);
@@ -55,6 +56,11 @@ end;
 procedure TfrmTitleClassNotes.txtClassExit(Sender: TObject);
 begin
   FLeaf.SetTrait('Class', txtClass.Text);
+end;
+
+procedure TfrmTitleClassNotes.btnLockedClick(Sender: TObject);
+begin
+  LockForm;
 end;
 
 procedure TfrmTitleClassNotes.txtClassKeyUp(Sender: TObject; var Key: Word;

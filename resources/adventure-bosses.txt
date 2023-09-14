@@ -3,7 +3,7 @@ Advance Agent
 Avenger
 Conquerer
 Corruptor
-Destroyer',
+Destroyer
 God of Chance
 Lovable Rogue
 Organizer

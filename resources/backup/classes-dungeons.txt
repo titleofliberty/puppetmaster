@@ -1,0 +1,3 @@
+TPMDungeonClasses := ['Cavern','Crypt','Dungeon','Mine','Sewer','Tumb','Catacombs'];
+
+

@@ -1,0 +1,633 @@
+object frmAdventure: TfrmAdventure
+  Left = 528
+  Height = 875
+  Top = 84
+  Width = 1073
+  Align = alClient
+  AutoSize = True
+  BorderStyle = bsNone
+  Caption = 'Adventure'
+  ChildSizing.LeftRightSpacing = 16
+  ChildSizing.TopBottomSpacing = 16
+  ChildSizing.VerticalSpacing = 8
+  ClientHeight = 875
+  ClientWidth = 1073
+  DesignTimePPI = 120
+  Font.CharSet = ANSI_CHARSET
+  Font.Height = -23
+  Font.Name = 'Courier New'
+  Font.Pitch = fpFixed
+  Font.Quality = fqDraft
+  LCLVersion = '2.2.6.0'
+  object pnlClient: TPanel
+    Left = 16
+    Height = 66
+    Top = 72
+    Width = 1041
+    Align = alTop
+    AutoSize = True
+    BevelOuter = bvNone
+    ChildSizing.HorizontalSpacing = 8
+    ChildSizing.VerticalSpacing = 8
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 2
+    ClientHeight = 66
+    ClientWidth = 1041
+    TabOrder = 0
+    object Label2: TLabel
+      Left = 0
+      Height = 25
+      Top = 0
+      Width = 504
+      Caption = 'Title'
+      ParentColor = False
+    end
+    object Label3: TLabel
+      Left = 512
+      Height = 25
+      Top = 0
+      Width = 529
+      Caption = 'Class'
+      ParentColor = False
+    end
+    object txtTitle: TEdit
+      Left = 0
+      Height = 33
+      Top = 33
+      Width = 504
+      OnExit = txtTitleExit
+      OnKeyUp = txtTitleKeyUp
+      TabOrder = 0
+    end
+    object txtClass: TComboBox
+      Left = 512
+      Height = 33
+      Top = 33
+      Width = 529
+      ItemHeight = 25
+      OnExit = txtClassExit
+      OnKeyUp = txtClassKeyUp
+      OnSelect = txtClassSelect
+      TabOrder = 1
+    end
+  end
+  object pnlHeader: TPanel
+    Left = 16
+    Height = 48
+    Top = 16
+    Width = 1041
+    Align = alTop
+    Alignment = taLeftJustify
+    BevelOuter = bvNone
+    Caption = 'Adventure'
+    ClientHeight = 48
+    ClientWidth = 1041
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -40
+    Font.Name = 'Courier New'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 2
+    object btnLocked: TSpeedButton
+      Left = 993
+      Height = 48
+      Top = 0
+      Width = 48
+      Align = alRight
+      AllowAllUp = True
+      Flat = True
+      Glyph.Data = {
+        36090000424D3609000000000000360000002800000018000000180000000100
+        2000000000000009000064000000640000000000000000000000FFFFFF00FFFF
+        FF00FFFFFF000000003C000000C9000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000C90000003CFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00000000C9000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000C9FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FFFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FFFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF00000095FFFFFF00FFFFFF0000000095000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FFFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF0000009AFFFFFF00FFFFFF000000009A000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FFFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000B6FFFFFF00FFFFFF00000000B6000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FFFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000B6FFFFFF00FFFFFF00000000B6000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FFFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF00000041FFFFFF00FFFFFF0000000041000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FFFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF00000036FFFFFF00FFFFFF0000000036000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FFFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000C30000003600000036000000C3000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FFFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FFFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FFFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FFFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00000000E0000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+        00FF000000FF000000FF000000E0FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00000000FF000000FF000000FFFFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00000000FF0000
+        00FF000000FFFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00000000FF000000FF000000FFFFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00000000FF0000
+        00FF000000FFFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00000000E5000000FF000000FF00000019FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0000000019000000FF0000
+        00FF000000E5FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00000000B0000000FF000000FF00000059FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0000000059000000FF0000
+        00FF000000B0FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF0000000076000000FF000000FF000000E50000
+        0015FFFFFF00FFFFFF00FFFFFF00FFFFFF0000000015000000E5000000FF0000
+        00FF00000076FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF000000000B000000DD000000FF000000FF0000
+        00E500000059000000190000001900000059000000E5000000FF000000FF0000
+        00DD0000000BFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF000000003D000000FD000000FF0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FD0000
+        003DFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF000000003D000000DD0000
+        00FF000000FF000000FF000000FF000000FF000000FF000000DD0000003DFFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF000000000B0000
+        0076000000B0000000E5000000E5000000B0000000760000000BFFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00
+      }
+      GroupIndex = 1
+      OnClick = btnLockedClick
+    end
+  end
+  object Panel1: TPanel
+    Left = 16
+    Height = 63
+    Top = 863
+    Width = 1041
+    Align = alTop
+    BevelOuter = bvNone
+    TabOrder = 3
+  end
+  object Panel2: TPanel
+    Left = 16
+    Height = 545
+    Top = 146
+    Width = 1041
+    Align = alTop
+    AutoSize = True
+    BevelOuter = bvNone
+    ChildSizing.HorizontalSpacing = 8
+    ChildSizing.VerticalSpacing = 8
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 3
+    ClientHeight = 545
+    ClientWidth = 1041
+    TabOrder = 1
+    object Label4: TLabel
+      Left = 0
+      Height = 25
+      Top = 0
+      Width = 314
+      Caption = 'Goal'
+      ParentColor = False
+    end
+    object Label5: TLabel
+      Left = 322
+      Height = 25
+      Top = 0
+      Width = 342
+      Caption = 'Story Hook'
+      ParentColor = False
+    end
+    object Label6: TLabel
+      Left = 672
+      Height = 25
+      Top = 0
+      Width = 369
+      Caption = 'Plot'
+      ParentColor = False
+    end
+    object txtGoal: TComboBox
+      Left = 0
+      Height = 33
+      Top = 33
+      Width = 314
+      ItemHeight = 25
+      OnExit = txtClassExit
+      OnKeyUp = txtClassKeyUp
+      OnSelect = txtClassSelect
+      TabOrder = 0
+    end
+    object txtStoryHook: TComboBox
+      Left = 322
+      Height = 33
+      Top = 33
+      Width = 342
+      ItemHeight = 25
+      OnExit = txtClassExit
+      OnKeyUp = txtClassKeyUp
+      OnSelect = txtClassSelect
+      TabOrder = 1
+    end
+    object txtPlot: TComboBox
+      Left = 672
+      Height = 33
+      Top = 33
+      Width = 369
+      ItemHeight = 25
+      OnExit = txtClassExit
+      OnKeyUp = txtClassKeyUp
+      OnSelect = txtClassSelect
+      TabOrder = 2
+    end
+    object Label7: TLabel
+      Left = 0
+      Height = 25
+      Top = 74
+      Width = 314
+      Caption = 'Climax'
+      ParentColor = False
+    end
+    object Label8: TLabel
+      Left = 322
+      Height = 25
+      Top = 74
+      Width = 342
+      Caption = 'General Setting'
+      ParentColor = False
+    end
+    object Label9: TLabel
+      Left = 672
+      Height = 25
+      Top = 74
+      Width = 369
+      Caption = 'Specific Setting'
+      ParentColor = False
+    end
+    object txtClimax: TComboBox
+      Left = 0
+      Height = 33
+      Top = 107
+      Width = 314
+      ItemHeight = 25
+      OnExit = txtClassExit
+      OnKeyUp = txtClassKeyUp
+      OnSelect = txtClassSelect
+      TabOrder = 3
+    end
+    object txtGeneralSetting: TComboBox
+      Left = 322
+      Height = 33
+      Top = 107
+      Width = 342
+      ItemHeight = 25
+      OnExit = txtClassExit
+      OnKeyUp = txtClassKeyUp
+      OnSelect = txtClassSelect
+      TabOrder = 4
+    end
+    object txtSpecificSetting: TComboBox
+      Left = 672
+      Height = 33
+      Top = 107
+      Width = 369
+      ItemHeight = 25
+      OnExit = txtClassExit
+      OnKeyUp = txtClassKeyUp
+      OnSelect = txtClassSelect
+      TabOrder = 5
+    end
+    object Label10: TLabel
+      Left = 0
+      Height = 25
+      Top = 148
+      Width = 314
+      Caption = 'Master Villian'
+      ParentColor = False
+    end
+    object Label11: TLabel
+      Left = 322
+      Height = 25
+      Top = 148
+      Width = 342
+      Caption = '1st Lieutenant'
+      ParentColor = False
+    end
+    object Label12: TLabel
+      Left = 672
+      Height = 25
+      Top = 148
+      Width = 369
+      Caption = '2nd Lieutenant'
+      ParentColor = False
+    end
+    object txtMasterVillian: TComboBox
+      Left = 0
+      Height = 33
+      Top = 181
+      Width = 314
+      ItemHeight = 25
+      OnExit = txtClassExit
+      OnKeyUp = txtClassKeyUp
+      OnSelect = txtClassSelect
+      TabOrder = 6
+    end
+    object txtLieutenant1: TComboBox
+      Left = 322
+      Height = 33
+      Top = 181
+      Width = 342
+      ItemHeight = 25
+      OnExit = txtClassExit
+      OnKeyUp = txtClassKeyUp
+      OnSelect = txtClassSelect
+      TabOrder = 7
+    end
+    object txtLieutenant2: TComboBox
+      Left = 672
+      Height = 33
+      Top = 181
+      Width = 369
+      ItemHeight = 25
+      OnExit = txtClassExit
+      OnKeyUp = txtClassKeyUp
+      OnSelect = txtClassSelect
+      TabOrder = 8
+    end
+    object Label13: TLabel
+      Left = 0
+      Height = 25
+      Top = 222
+      Width = 314
+      Caption = 'Ally/Neutral'
+      ParentColor = False
+    end
+    object Label14: TLabel
+      Left = 322
+      Height = 25
+      Top = 222
+      Width = 342
+      Caption = 'Monster Encounter'
+      ParentColor = False
+    end
+    object Label15: TLabel
+      Left = 672
+      Height = 25
+      Top = 222
+      Width = 369
+      Caption = 'Character Encounter'
+      ParentColor = False
+    end
+    object txtAllyNeutral: TComboBox
+      Left = 0
+      Height = 33
+      Top = 255
+      Width = 314
+      ItemHeight = 25
+      OnExit = txtClassExit
+      OnKeyUp = txtClassKeyUp
+      OnSelect = txtClassSelect
+      TabOrder = 9
+    end
+    object txtMonsterEncounter: TComboBox
+      Left = 322
+      Height = 33
+      Top = 255
+      Width = 342
+      ItemHeight = 25
+      OnExit = txtClassExit
+      OnKeyUp = txtClassKeyUp
+      OnSelect = txtClassSelect
+      TabOrder = 10
+    end
+    object txtCharacterEncounter: TComboBox
+      Left = 672
+      Height = 33
+      Top = 255
+      Width = 369
+      ItemHeight = 25
+      OnExit = txtClassExit
+      OnKeyUp = txtClassKeyUp
+      OnSelect = txtClassSelect
+      TabOrder = 11
+    end
+    object Label16: TLabel
+      Left = 0
+      Height = 25
+      Top = 296
+      Width = 314
+      Caption = 'Death Trap'
+      ParentColor = False
+    end
+    object Label17: TLabel
+      Left = 322
+      Height = 25
+      Top = 296
+      Width = 342
+      Caption = 'Chase'
+      ParentColor = False
+    end
+    object Label18: TLabel
+      Left = 672
+      Height = 25
+      Top = 296
+      Width = 369
+      Caption = 'Omen/Prophecy'
+      ParentColor = False
+    end
+    object txtDeathTrap: TComboBox
+      Left = 0
+      Height = 33
+      Top = 329
+      Width = 314
+      ItemHeight = 25
+      OnExit = txtClassExit
+      OnKeyUp = txtClassKeyUp
+      OnSelect = txtClassSelect
+      TabOrder = 12
+    end
+    object txtChase: TComboBox
+      Left = 322
+      Height = 33
+      Top = 329
+      Width = 342
+      ItemHeight = 25
+      OnExit = txtClassExit
+      OnKeyUp = txtClassKeyUp
+      OnSelect = txtClassSelect
+      TabOrder = 13
+    end
+    object txtOmenProphecy: TComboBox
+      Left = 672
+      Height = 33
+      Top = 329
+      Width = 369
+      ItemHeight = 25
+      OnExit = txtClassExit
+      OnKeyUp = txtClassKeyUp
+      OnSelect = txtClassSelect
+      TabOrder = 14
+    end
+    object Label19: TLabel
+      Left = 0
+      Height = 25
+      Top = 370
+      Width = 314
+      Caption = 'Secret Weakness'
+      ParentColor = False
+    end
+    object Label20: TLabel
+      Left = 322
+      Height = 25
+      Top = 370
+      Width = 342
+      Caption = 'Special Condition'
+      ParentColor = False
+    end
+    object Label21: TLabel
+      Left = 672
+      Height = 25
+      Top = 370
+      Width = 369
+      Caption = 'Moral Quandry'
+      ParentColor = False
+    end
+    object txtSecretWeakness: TComboBox
+      Left = 0
+      Height = 33
+      Top = 403
+      Width = 314
+      ItemHeight = 25
+      OnExit = txtClassExit
+      OnKeyUp = txtClassKeyUp
+      OnSelect = txtClassSelect
+      TabOrder = 15
+    end
+    object txtSpecialCondition: TComboBox
+      Left = 322
+      Height = 33
+      Top = 403
+      Width = 342
+      ItemHeight = 25
+      OnExit = txtClassExit
+      OnKeyUp = txtClassKeyUp
+      OnSelect = txtClassSelect
+      TabOrder = 16
+    end
+    object txtMoralQuandry: TComboBox
+      Left = 672
+      Height = 33
+      Top = 403
+      Width = 369
+      ItemHeight = 25
+      OnExit = txtClassExit
+      OnKeyUp = txtClassKeyUp
+      OnSelect = txtClassSelect
+      TabOrder = 17
+    end
+    object Label22: TLabel
+      Left = 0
+      Height = 25
+      Top = 444
+      Width = 314
+      Caption = 'Red Herring'
+      ParentColor = False
+    end
+    object Label23: TLabel
+      Left = 322
+      Height = 25
+      Top = 444
+      Width = 342
+      Caption = 'Cruel Trick'
+      ParentColor = False
+    end
+    object Label24: TLabel
+      Left = 672
+      Height = 25
+      Top = 444
+      Width = 369
+      ParentColor = False
+    end
+    object txtRedHerring: TComboBox
+      Left = 0
+      Height = 33
+      Top = 477
+      Width = 314
+      ItemHeight = 25
+      OnExit = txtClassExit
+      OnKeyUp = txtClassKeyUp
+      OnSelect = txtClassSelect
+      TabOrder = 18
+    end
+    object txtCruelTrick: TComboBox
+      Left = 322
+      Height = 33
+      Top = 477
+      Width = 342
+      ItemHeight = 25
+      OnExit = txtClassExit
+      OnKeyUp = txtClassKeyUp
+      OnSelect = txtClassSelect
+      TabOrder = 19
+    end
+    object btnRollAll: TButton
+      Left = 672
+      Height = 35
+      Top = 477
+      Width = 369
+      Caption = 'Roll All'
+      OnClick = btnRollAllClick
+      TabOrder = 20
+    end
+    object Label25: TLabel
+      Left = 0
+      Height = 25
+      Top = 520
+      Width = 314
+      AutoSize = False
+      Caption = '   '
+      ParentColor = False
+    end
+  end
+  object Label1: TLabel
+    Left = 16
+    Height = 25
+    Top = 699
+    Width = 1041
+    Align = alTop
+    Caption = 'Notes'
+    ParentColor = False
+  end
+  object txtNotes: TMemo
+    Left = 16
+    Height = 571
+    Top = 732
+    Width = 1041
+    Align = alTop
+    Constraints.MinHeight = 200
+    OnExit = txtNotesExit
+    OnKeyUp = txtNotesKeyUp
+    ScrollBars = ssVertical
+    TabOrder = 4
+  end
+end

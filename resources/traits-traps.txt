@@ -1,0 +1,36 @@
+Acid
+Arrows
+Automiton
+Autonomous Sentry
+Blades
+Compactor
+Darkness
+Darts
+Doppelganger
+Fire Blasts
+Fog
+Frost
+Illusion
+Invisible Bridge
+Laval
+Lightening
+Locked Doors
+Magnets
+Neddle
+Noxious Gas
+Pit
+Pit (Animal)
+Pit (Attack)
+Poison
+Pressure Plate
+Quick Sand
+Rust
+Sand
+Slide
+Snare
+Spikes
+Teleport
+Time Warp
+Toxic Gas
+Tumble
+Water

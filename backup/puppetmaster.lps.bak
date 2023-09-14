@@ -19,8 +19,10 @@
         <ComponentName Value="frmMain"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <TopLine Value="216"/>
-        <CursorPos X="13" Y="218"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="415"/>
+        <CursorPos X="75" Y="444"/>
+        <FoldState Value=" T46031 T7FD{^ T8kW2C]F3m80}801A pjCoe0B6 pidjL0E9]9XjO03[R4Kk2032]IYj00p2]IMka07[942jF0A4[j5A064 Pj5iR0 T6m904Z PiY/3]F1mE0}201B]gcp8057[p4k006I]=YlV023]9UkB031]9DjP062 piajH076[{F5a0B2 Pi9i30 T0q224016]i0tY43C]ZckF25C[{H5E2L1b"/>
         <UsageCount Value="201"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -28,11 +30,9 @@
       <Unit>
         <Filename Value="puppetmasterlib.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="906"/>
-        <CursorPos X="5" Y="925"/>
-        <FoldState Value=" T4601 T7HCI T8I25]D3jH0N5 PiNj40 T6jI013 T1k00c4 PGiP]M0kG23K"/>
+        <TopLine Value="178"/>
+        <CursorPos X="3" Y="186"/>
         <UsageCount Value="201"/>
         <Loaded Value="True"/>
       </Unit>
@@ -43,7 +43,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
-        <CursorPos Y="15"/>
+        <CursorPos X="46" Y="5"/>
         <FoldState Value=" T4602 T7EF{E T8jH231 T3jY065 pjIja0N1 piZjJ0M]Q1jZ05[Q46]QM2]97k0[,46]713 T0kL237 PiXkf4o"/>
         <UsageCount Value="200"/>
       </Unit>
@@ -78,8 +78,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="21"/>
-        <CursorPos X="20" Y="43"/>
+        <CursorPos X="30" Y="34"/>
         <UsageCount Value="200"/>
       </Unit>
       <Unit>
@@ -101,7 +100,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="163"/>
+        <UsageCount Value="200"/>
       </Unit>
       <Unit>
         <Filename Value="titleclassnotesform.pas"/>
@@ -110,10 +109,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="2"/>
+        <TopLine Value="50"/>
         <CursorPos Y="61"/>
         <FoldState Value=" T4602 T7EOP T8X231 T3i7039 PiIiX0 T1i80211511 PK]IK"/>
-        <UsageCount Value="61"/>
+        <UsageCount Value="103"/>
       </Unit>
       <Unit>
         <Filename Value="beastmonsterform.pas"/>
@@ -122,21 +121,839 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="107"/>
-        <CursorPos X="58" Y="126"/>
-        <FoldState Value=" T4602 T7ELY T8g231 T3iG03711 Pi2iZ0 T1iH02[H5S[G56iM012H"/>
-        <UsageCount Value="47"/>
+        <TopLine Value="10"/>
+        <CursorPos Y="115"/>
+        <FoldState Value=" T4602 T7ELY T8g231 T3iG039 PiNiZ0 T1iH02711 PS[G56iM012~"/>
+        <UsageCount Value="89"/>
       </Unit>
       <Unit>
         <Filename Value="simpleform.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmSimple"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="85"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\adventure-climaxes.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="17" Y="6"/>
+        <UsageCount Value="62"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\adventure-plots.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="19" Y="5"/>
+        <UsageCount Value="62"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\adventure-lieutenants.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="22" Y="13"/>
+        <UsageCount Value="62"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\adventure-bosses.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="10" Y="6"/>
+        <UsageCount Value="62"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\adventure-start-points.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="13" Y="16"/>
+        <UsageCount Value="62"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\adventure-story-hooks.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="17" Y="9"/>
+        <UsageCount Value="62"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\adventure-goals.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="13"/>
+        <UsageCount Value="62"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\adventure-themes.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="8" Y="7"/>
+        <UsageCount Value="62"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\classes-monsters.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="7" Y="12"/>
+        <UsageCount Value="62"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\classes-humanoids.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="7" Y="8"/>
+        <UsageCount Value="62"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\classes-beasts.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="6"/>
+        <UsageCount Value="62"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\classes-consumables.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="5" Y="6"/>
+        <UsageCount Value="62"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\classes-floors.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="4" Y="9"/>
+        <UsageCount Value="62"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\classes-venues.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="48"/>
+        <CursorPos X="4" Y="70"/>
+        <UsageCount Value="60"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\classes-settlements.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="5" Y="5"/>
+        <UsageCount Value="60"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\classes-routes.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="3"/>
+        <UsageCount Value="60"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\classes-wildernesses.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="7" Y="9"/>
+        <UsageCount Value="60"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\classes-levels.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="4" Y="9"/>
+        <UsageCount Value="60"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\classes-dungeons.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="5" Y="7"/>
+        <UsageCount Value="60"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\classes-rooms.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="41"/>
+        <CursorPos X="14" Y="15"/>
+        <UsageCount Value="60"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\classes-tracts.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="25"/>
+        <CursorPos X="9" Y="47"/>
+        <UsageCount Value="60"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\classes-chambers.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="43"/>
+        <CursorPos X="9" Y="64"/>
+        <UsageCount Value="60"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\traits-conditions.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="57"/>
+        <CursorPos X="7" Y="79"/>
+        <UsageCount Value="60"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\verbs.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="363"/>
+        <CursorPos X="6" Y="499"/>
+        <UsageCount Value="58"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\events-wildernesses.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="12"/>
+        <CursorPos X="21" Y="36"/>
+        <UsageCount Value="58"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\events-settlements.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="27"/>
+        <CursorPos X="20" Y="49"/>
+        <UsageCount Value="58"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\names-first.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="161"/>
+        <CursorPos X="39" Y="168"/>
+        <UsageCount Value="52"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\names-last.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="261"/>
+        <CursorPos X="12" Y="351"/>
+        <UsageCount Value="52"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="adventureform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmAdventure"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="190"/>
+        <CursorPos X="66" Y="208"/>
+        <FoldState Value=" T4602 T7EI* T8iZ231 T3kD03711 PiKjQ0 T1kE02[H63[H56kJ01]u0mX23O"/>
+        <UsageCount Value="47"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\adventure-allys-neutrals.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="17" Y="3"/>
+        <UsageCount Value="45"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\adventure-omen-prophecys.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="13" Y="7"/>
+        <UsageCount Value="41"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\adventure-secret-weaknesses.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="21" Y="5"/>
+        <UsageCount Value="41"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\adventure-cruel-tricks.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="18" Y="6"/>
+        <UsageCount Value="39"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="dicerollform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmRollDice"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="90"/>
+        <CursorPos X="25" Y="102"/>
+        <UsageCount Value="37"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\adventure-special-conditions.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="30"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\adventure-character-encounters.txt"/>
+        <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="43"/>
+        <UsageCount Value="30"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\adventure-chases.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="30"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\adventure-death-traps.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="30"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\adventure-monster-encounters.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="30"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\adventure-moral-quandrys.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="30"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\adventure-red-herrings.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="30"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\adventure-settings-general.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="30"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\adventure-settings-specific.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="30"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\beasts.csv"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="30"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\consumables.csv"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="30"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\dice-basic.csv"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="30"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\humanoids.csv"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="30"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\monsters.csv"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="30"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\spells.csv"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="30"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\traits-armors.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="30"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\traits-clothings.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="30"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\traits-containers.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="30"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\traits-faunas.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="30"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\traits-floras.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="30"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\traits-gems.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="30"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\traits-instruments.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="30"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\traits-jewelrys.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="30"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\traits-kits.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="30"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\traits-mounts.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="30"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\traits-naturals.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="30"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\traits-remains.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="30"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\traits-rumors.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="30"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\traits-tools.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="30"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\traits-traps.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="30"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\traits-unnaturals.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="30"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\traits-vehicles.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="30"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\traits-weapons.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="30"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\red-herrings.txt"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="4"/>
+        <UsageCount Value="51"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\special-conditions.txt"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="11" Y="8"/>
+        <UsageCount Value="51"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\death-traps.txt"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="16" Y="10"/>
+        <UsageCount Value="51"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\character-encounters.txt"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="17" Y="13"/>
+        <UsageCount Value="51"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\monster-encounters.txt"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="16" Y="12"/>
+        <UsageCount Value="51"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\adventure-specific-settings.txt"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="6" Y="16"/>
+        <UsageCount Value="51"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\adventure-general-settings.txt"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="13" Y="9"/>
+        <UsageCount Value="51"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\gems.txt"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="47"/>
+        <CursorPos X="10" Y="173"/>
+        <UsageCount Value="49"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\traps.txt"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="6" Y="36"/>
+        <UsageCount Value="49"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\armors.txt"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="12" Y="16"/>
+        <UsageCount Value="49"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\instruments.txt"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="5"/>
+        <UsageCount Value="49"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\remains.txt"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="6" Y="16"/>
+        <UsageCount Value="49"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\jewelrys.txt"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="15"/>
+        <CursorPos X="12" Y="37"/>
+        <UsageCount Value="49"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\vehicles.txt"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="14" Y="12"/>
+        <UsageCount Value="49"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\weapons.txt"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="18"/>
+        <CursorPos X="5" Y="40"/>
+        <UsageCount Value="49"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\containers.txt"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="11" Y="17"/>
+        <UsageCount Value="47"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\clothings.txt"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="10" Y="40"/>
+        <UsageCount Value="47"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\tools.txt"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="115"/>
+        <CursorPos X="5" Y="137"/>
+        <UsageCount Value="47"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\kits.txt"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="6"/>
+        <CursorPos X="11" Y="28"/>
+        <UsageCount Value="47"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\mounts.txt"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="5" Y="17"/>
+        <UsageCount Value="47"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\consumables.txt"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="8"/>
+        <UsageCount Value="47"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\faunas.txt"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="54"/>
+        <CursorPos X="3" Y="76"/>
+        <UsageCount Value="47"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\floras.txt"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="7" Y="74"/>
+        <UsageCount Value="47"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\unnaturals.txt"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="11" Y="60"/>
+        <UsageCount Value="47"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\naturals.txt"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="4"/>
+        <CursorPos X="6" Y="26"/>
+        <UsageCount Value="47"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\rumors.txt"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="14"/>
+        <CursorPos X="33" Y="36"/>
+        <UsageCount Value="47"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\adventure-chase.txt"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="6" Y="6"/>
+        <UsageCount Value="30"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="resources\adventure-moral-quandrys.text"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="7" Y="5"/>
+        <UsageCount Value="30"/>
+        <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
         <Filename Value="settlementform.pas"/>
@@ -147,7 +964,7 @@
         <TopLine Value="122"/>
         <CursorPos Y="137"/>
         <FoldState Value=" T4602 T7EJW T8e231 T3iE03117 Pb]A T1iF02[G5KiG]G6iP013?"/>
-        <UsageCount Value="199"/>
+        <UsageCount Value="196"/>
       </Unit>
       <Unit>
         <Filename Value="venueform.pas"/>
@@ -158,7 +975,7 @@
         <TopLine Value="59"/>
         <CursorPos X="41" Y="107"/>
         <FoldState Value=" T4602 T7EET T8b231 T3iB03A Pi3iK0 T1iC02]FX]EP"/>
-        <UsageCount Value="200"/>
+        <UsageCount Value="197"/>
       </Unit>
       <Unit>
         <Filename Value="dungeonform.pas"/>
@@ -169,7 +986,7 @@
         <TopLine Value="53"/>
         <CursorPos Y="92"/>
         <FoldState Value=" T4602 T7EGM T8U231 T3i403014 PKR0 T1i502013w"/>
-        <UsageCount Value="189"/>
+        <UsageCount Value="186"/>
       </Unit>
       <Unit>
         <Filename Value="wildernessform.pas"/>
@@ -180,7 +997,7 @@
         <TopLine Value="56"/>
         <CursorPos X="37" Y="103"/>
         <FoldState Value=" T4602 T7EJQ T8Y231 T3i803A Pi1iJ0 T1i902]FV]E0"/>
-        <UsageCount Value="183"/>
+        <UsageCount Value="180"/>
       </Unit>
       <Unit>
         <Filename Value="levelform.pas"/>
@@ -191,7 +1008,7 @@
         <TopLine Value="50"/>
         <CursorPos Y="97"/>
         <FoldState Value=" T4602 T7EEP T8X231 T3i7039 PeiC0 T1i802]ES]EH"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="34"/>
       </Unit>
       <Unit>
         <Filename Value="routeform.pas"/>
@@ -202,7 +1019,7 @@
         <TopLine Value="50"/>
         <CursorPos X="36" Y="43"/>
         <FoldState Value=" T4602 T7EEP T8X231 T3i7039 PeiC0 T1i802]ES]EH"/>
-        <UsageCount Value="34"/>
+        <UsageCount Value="31"/>
       </Unit>
       <Unit>
         <Filename Value="roomform.pas"/>
@@ -213,7 +1030,7 @@
         <TopLine Value="72"/>
         <CursorPos X="66" Y="114"/>
         <FoldState Value=" T4602 T7EDW T8e231 T3iE03C PiBiV0 T1iF02]Fc]EE"/>
-        <UsageCount Value="193"/>
+        <UsageCount Value="190"/>
       </Unit>
       <Unit>
         <Filename Value="chamberform.pas"/>
@@ -224,7 +1041,7 @@
         <TopLine Value="90"/>
         <CursorPos X="16" Y="96"/>
         <FoldState Value=" T4602 T7EGu T8iK231 T3jP038 PiRiS0 T1jQ02[F4B[F56k5012n"/>
-        <UsageCount Value="171"/>
+        <UsageCount Value="168"/>
       </Unit>
       <Unit>
         <Filename Value="hazardform.pas"/>
@@ -234,7 +1051,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="39"/>
         <CursorPos X="17" Y="47"/>
-        <UsageCount Value="15"/>
+        <UsageCount Value="12"/>
       </Unit>
       <Unit>
         <Filename Value="traitframe.pas"/>
@@ -242,19 +1059,19 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="5"/>
       </Unit>
       <Unit>
         <Filename Value="settlement-walls.txt"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="39" Y="13"/>
-        <UsageCount Value="17"/>
+        <UsageCount Value="14"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
         <Filename Value="settlement-roofs.txt"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="17"/>
+        <UsageCount Value="14"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -262,28 +1079,20 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="28"/>
         <CursorPos X="9" Y="50"/>
-        <UsageCount Value="16"/>
-        <DefaultSyntaxHighlighter Value="None"/>
-      </Unit>
-      <Unit>
-        <Filename Value="settlement-moods.txt"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="11"/>
-        <CursorPos X="30" Y="17"/>
-        <UsageCount Value="3"/>
+        <UsageCount Value="13"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
         <Filename Value="venue-ceilings.txt"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="6"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
         <Filename Value="settlement-mood.txt"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="7" Y="33"/>
-        <UsageCount Value="12"/>
+        <UsageCount Value="9"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -294,7 +1103,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="5"/>
         <CursorPos X="14" Y="16"/>
-        <UsageCount Value="5"/>
+        <UsageCount Value="2"/>
       </Unit>
       <Unit>
         <Filename Value="campaignsform.pas"/>
@@ -304,34 +1113,34 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="77"/>
         <CursorPos Y="89"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="architecture.txt"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="16" Y="4"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="7"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
         <Filename Value="settlement-adjectives.txt"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="22" Y="4"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="6"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
         <Filename Value="C:\lazarus\lcl\include\treeview.inc"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="45"/>
-        <CursorPos Y="56"/>
-        <UsageCount Value="8"/>
+        <TopLine Value="50"/>
+        <CursorPos Y="61"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="C:\lazarus\lcl\include\control.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="3582"/>
-        <CursorPos X="42" Y="3590"/>
+        <CursorPos Y="3594"/>
         <UsageCount Value="10"/>
       </Unit>
       <Unit>
@@ -340,30 +1149,14 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="3113"/>
         <CursorPos X="15" Y="3108"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="6"/>
       </Unit>
       <Unit>
         <Filename Value="C:\lazarus\fpc\3.2.2\source\rtl\objpas\fgl.pp"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="1651"/>
         <CursorPos Y="1677"/>
-        <UsageCount Value="4"/>
-      </Unit>
-      <Unit>
-        <Filename Value="C:\lazarus\lcl\stdctrls.pp"/>
-        <UnitName Value="StdCtrls"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="275"/>
-        <CursorPos X="3" Y="289"/>
-        <UsageCount Value="3"/>
-      </Unit>
-      <Unit>
-        <Filename Value="C:\lazarus\lcl\controls.pp"/>
-        <UnitName Value="Controls"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="2047"/>
-        <CursorPos X="3" Y="2007"/>
-        <UsageCount Value="3"/>
+        <UsageCount Value="1"/>
       </Unit>
       <Unit>
         <Filename Value="dicetrayform.pas"/>
@@ -372,7 +1165,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="16"/>
         <CursorPos X="50" Y="35"/>
-        <UsageCount Value="15"/>
+        <UsageCount Value="12"/>
       </Unit>
       <Unit>
         <Filename Value="C:\lazarus\lcl\grids.pas"/>
@@ -380,21 +1173,21 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="10118"/>
         <CursorPos Y="10130"/>
-        <UsageCount Value="4"/>
+        <UsageCount Value="1"/>
       </Unit>
       <Unit>
         <Filename Value="C:\lazarus\lcl\interfaces\win32\win32listsl.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="158"/>
         <CursorPos Y="170"/>
-        <UsageCount Value="4"/>
+        <UsageCount Value="1"/>
       </Unit>
       <Unit>
         <Filename Value="C:\lazarus\lcl\include\font.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="912"/>
         <CursorPos Y="926"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="simpleform.lfm"/>
@@ -402,113 +1195,185 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="19"/>
+        <UsageCount Value="16"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\include\application.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1056"/>
+        <CursorPos Y="1066"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\include\wincontrol.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="5424"/>
+        <CursorPos Y="5434"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\lclmessageglue.pas"/>
+        <UnitName Value="LCLMessageGlue"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="108"/>
+        <CursorPos Y="123"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\interfaces\win32\win32callback.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2764"/>
+        <CursorPos Y="2776"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\interfaces\win32\win32wsstdctrls.pp"/>
+        <UnitName Value="Win32WSStdCtrls"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1903"/>
+        <CursorPos Y="1913"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\interfaces\win32\win32object.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="403"/>
+        <CursorPos Y="415"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\extctrls.pp"/>
+        <UnitName Value="ExtCtrls"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1101"/>
+        <CursorPos X="14" Y="1112"/>
+        <UsageCount Value="9"/>
       </Unit>
     </Units>
     <Debugger>
       <Backend Value="{46F8D863-C46A-4513-87F7-05B4F05262FC}"/>
     </Debugger>
-    <JumpHistory HistoryIndex="24">
+    <JumpHistory HistoryIndex="29">
       <Position>
         <Filename Value="mainform.pas"/>
-        <Caret Line="541" Column="31" TopLine="541"/>
+        <Caret Line="384" Column="20" TopLine="373"/>
       </Position>
       <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="573" Column="64" TopLine="571"/>
+        <Filename Value="puppetmasterlib.pas"/>
+        <Caret Line="176" Column="30" TopLine="160"/>
       </Position>
       <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="588" Column="71" TopLine="571"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="538" Column="73" TopLine="536"/>
+        <Filename Value="puppetmasterlib.pas"/>
+        <Caret Line="166" Column="3" TopLine="157"/>
       </Position>
       <Position>
         <Filename Value="mainform.pas"/>
-        <Caret Line="879" Column="15" TopLine="864"/>
+        <Caret Line="377" Column="36" TopLine="374"/>
+      </Position>
+      <Position>
+        <Filename Value="puppetmasterlib.pas"/>
+        <Caret Line="18" Column="21" TopLine="4"/>
       </Position>
       <Position>
         <Filename Value="mainform.pas"/>
-        <Caret Line="1009" Column="15" TopLine="995"/>
+        <Caret Line="377" Column="36" TopLine="354"/>
       </Position>
       <Position>
         <Filename Value="mainform.pas"/>
-        <Caret Line="164" Column="68" TopLine="149"/>
+        <Caret Line="835" Column="24" TopLine="822"/>
       </Position>
       <Position>
         <Filename Value="mainform.pas"/>
-        <Caret Line="1088" Column="28" TopLine="1061"/>
+        <Caret Line="891" Column="23" TopLine="885"/>
       </Position>
       <Position>
         <Filename Value="mainform.pas"/>
-        <Caret Line="997" Column="42" TopLine="205"/>
-      </Position>
-      <Position>
-        <Filename Value="puppetmasterlib.pas"/>
-        <Caret Line="372" TopLine="354"/>
+        <Caret Line="888" Column="16" TopLine="877"/>
       </Position>
       <Position>
         <Filename Value="mainform.pas"/>
-        <Caret Line="981" Column="55" TopLine="976"/>
-      </Position>
-      <Position>
-        <Filename Value="puppetmasterlib.pas"/>
-        <Caret Line="578" TopLine="571"/>
-      </Position>
-      <Position>
-        <Filename Value="puppetmasterlib.pas"/>
-        <Caret Line="792" Column="34" TopLine="776"/>
-      </Position>
-      <Position>
-        <Filename Value="puppetmasterlib.pas"/>
-        <Caret Line="476" TopLine="455"/>
-      </Position>
-      <Position>
-        <Filename Value="puppetmasterlib.pas"/>
-        <Caret Line="333" Column="29" TopLine="316"/>
-      </Position>
-      <Position>
-        <Filename Value="puppetmasterlib.pas"/>
-        <Caret Line="378" Column="26" TopLine="362"/>
-      </Position>
-      <Position>
-        <Filename Value="puppetmasterlib.pas"/>
-        <Caret Line="626" Column="65" TopLine="609"/>
-      </Position>
-      <Position>
-        <Filename Value="puppetmasterlib.pas"/>
-        <Caret Line="622" Column="38" TopLine="609"/>
+        <Caret Line="820" Column="14" TopLine="808"/>
       </Position>
       <Position>
         <Filename Value="mainform.pas"/>
-        <Caret Line="862" Column="35" TopLine="768"/>
+        <Caret Line="165" Column="21" TopLine="153"/>
       </Position>
       <Position>
         <Filename Value="mainform.pas"/>
-        <Caret Line="218" Column="13" TopLine="216"/>
+        <Caret Line="1250" TopLine="1249"/>
       </Position>
       <Position>
-        <Filename Value="puppetmasterlib.pas"/>
-        <Caret Line="611" Column="15" TopLine="598"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="1269" Column="25" TopLine="1160"/>
       </Position>
       <Position>
-        <Filename Value="puppetmasterlib.pas"/>
-        <Caret Line="651" Column="17" TopLine="640"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="1261" Column="80" TopLine="1182"/>
       </Position>
       <Position>
-        <Filename Value="puppetmasterlib.pas"/>
-        <Caret Line="75" Column="20" TopLine="67"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="165" Column="83" TopLine="165"/>
       </Position>
       <Position>
-        <Filename Value="puppetmasterlib.pas"/>
-        <Caret Line="878" Column="25" TopLine="858"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="1266" Column="8" TopLine="1182"/>
       </Position>
       <Position>
-        <Filename Value="puppetmasterlib.pas"/>
-        <Caret Line="94" Column="26" TopLine="73"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="760" Column="70" TopLine="703"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="765" Column="78" TopLine="747"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="770" Column="74" TopLine="759"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="775" Column="38" TopLine="764"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="780" Column="61" TopLine="769"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="785" Column="58" TopLine="774"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="790" Column="51" TopLine="779"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="795" Column="54" TopLine="784"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="800" Column="49" TopLine="789"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="805" Column="49" TopLine="794"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="810" Column="54" TopLine="799"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="815" Column="12" TopLine="804"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="165" Column="25" TopLine="155"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="1261" TopLine="1260"/>
       </Position>
     </JumpHistory>
     <RunParams>
