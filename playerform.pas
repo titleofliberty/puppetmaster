@@ -29,11 +29,11 @@ type
     procedure txtPlayerKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState
       );
   private
-    FPlayer: TPMLeaf;
-    procedure SetPlayer(AValue: TPMLeaf);
+    FPlayer: TLeaf;
+    procedure SetPlayer(AValue: TLeaf);
     procedure LockForm;
   public
-    property Player: TPMLeaf read FPlayer write SetPlayer;
+    property Player: TLeaf read FPlayer write SetPlayer;
   end;
 
 var
@@ -68,7 +68,7 @@ begin
     FPlayer.SetTrait(txt.Name.Replace('txt', ''), txt.Text);
 end;
 
-procedure TfrmPlayer.SetPlayer(AValue: TPMLeaf);
+procedure TfrmPlayer.SetPlayer(AValue: TLeaf);
 begin
   if FPlayer = AValue then exit;
   FPlayer := AValue;

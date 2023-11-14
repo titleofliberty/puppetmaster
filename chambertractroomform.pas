@@ -65,12 +65,12 @@ type
     procedure txtTitleExit(Sender: TObject);
     procedure txtTitleKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
   private
-    FLeaf: TPMLeaf;
-    procedure SetLeaf(AValue: TPMLeaf);
+    FLeaf: TLeaf;
+    procedure SetLeaf(AValue: TLeaf);
     procedure LockForm;
     procedure RollCbo(Cbo: TComboBox; Multiply: integer);
   public
-    property Leaf: TPMLeaf read FLeaf write SetLeaf;
+    property Leaf: TLeaf read FLeaf write SetLeaf;
   end;
 
 var
@@ -164,27 +164,11 @@ begin
     FLeaf.SetTrait('Title', txtTitle.Text);
 end;
 
-procedure TfrmChamberTractRoom.SetLeaf(AValue: TPMLeaf);
+procedure TfrmChamberTractRoom.SetLeaf(AValue: TLeaf);
 begin
 
   if FLeaf = AValue then Exit;
   FLeaf := AValue;
-
-  txtNatural.Items.AddStrings(TPMNatural);
-  txtUnnatural.Items.AddStrings(TPMUnnatural);
-  txtFlora.Items.AddStrings(TPMFlora);
-  txtFauna.Items.AddStrings(TPMFauna);
-  txtTool.Items.AddStrings(TPMTools);
-  txtClothing.Items.AddStrings(TPMClothing);
-  txtKit.Items.AddStrings(TPMKits);
-  txtContainer.Items.AddStrings(TPMContainers);
-  txtWeapon.Items.AddStrings(TPMWeapons);
-  txtVehicle.Items.AddStrings(TPMVehicle);
-  txtJewelry.Items.AddStrings(TPMJewelry);
-  txtRemains.Items.AddStrings(TPMRemains);
-  txtInstrument.Items.AddStrings(TPMInstruments);
-  txtArmour.Items.AddStrings(TPMArmors);
-  txtTrap.Items.AddStrings(TPMTraps);
 
   txtClass.Clear;
   if (FLeaf.Category = 'Chamber') then
@@ -196,24 +180,9 @@ begin
 
   pnlHeader.Caption := FLeaf.Category;
 
-  txtTitle.Text      := FLeaf.GetTrait('Title');
-  txtClass.Text      := FLeaf.GetTrait('Class');
-  txtNatural.Text    := FLeaf.GetTrait('Natural');
-  txtUnnatural.Text  := FLeaf.GetTrait('Manufactured');
-  txtFlora.Text      := FLeaf.GetTrait('Flora');
-  txtFauna.Text      := FLeaf.GetTrait('Fauna');
-  txtTool.Text       := FLeaf.GetTrait('Tool');
-  txtClothing.Text   := FLeaf.GetTrait('Clothing');
-  txtKit.Text        := FLeaf.GetTrait('Kit');
-  txtContainer.Text  := FLeaf.GetTrait('Container');
-  txtWeapon.Text     := FLeaf.GetTrait('Weapon');
-  txtVehicle.Text    := FLeaf.GetTrait('Vehicle');
-  txtJewelry.Text    := FLeaf.GetTrait('Jewelry');
-  txtRemains.Text    := FLeaf.GetTrait('Remains');
-  txtInstrument.Text := FLeaf.GetTrait('Instrument');
-  txtArmour.Text     := FLeaf.GetTrait('Armor');
-  txtTrap.Text       := FLeaf.GetTrait('Trap');
-  btnLocked.Down    := FLeaf.GetTrait('Locked') = 'True';
+  txtTitle.Text  := FLeaf.GetTrait('Title');
+  txtClass.Text  := FLeaf.GetTrait('Class');
+  btnLocked.Down := FLeaf.GetTrait('Locked') = 'True';
   LockForm;
 end;
 
@@ -221,24 +190,7 @@ procedure TfrmChamberTractRoom.LockForm;
 begin
   txtTitle.Enabled := not btnLocked.Down;
   txtClass.Enabled := not btnLocked.Down;
-  txtNatural.Enabled := not btnLocked.Down;
-  txtUnnatural.Enabled := not btnLocked.Down;
-  txtFlora.Enabled := not btnLocked.Down;
-  txtFauna.Enabled := not btnLocked.Down;
-  txtTool.Enabled := not btnLocked.Down;
-  txtClothing.Enabled := not btnLocked.Down;
-  txtInstrument.Enabled := not btnLocked.Down;
-  txtKit.Enabled := not btnLocked.Down;
-  txtContainer.Enabled := not btnLocked.Down;
-  txtWeapon.Enabled := not btnLocked.Down;
-  txtArmour.Enabled := not btnLocked.Down;
-  txtVehicle.Enabled := not btnLocked.Down;
-  txtJewelry.Enabled := not btnLocked.Down;
-  txtRemains.Enabled := not btnLocked.Down;
-  txtTrap.Enabled := not btnLocked.Down;
-
-  btnRollAll.Enabled := not btnLocked.Down;
-  FLeaf.SetTrait('Locked', BoolToStr(btnLocked.Down, 'True', 'False'));
+  FLeaf.Locked := BoolToStr(btnLocked.Down, 'True', 'False');
 end;
 
 procedure TfrmChamberTractRoom.RollCbo(Cbo: TComboBox; Multiply: integer);

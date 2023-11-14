@@ -19,10 +19,9 @@
         <ComponentName Value="frmMain"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
-        <TopLine Value="1356"/>
-        <CursorPos X="42" Y="1377"/>
-        <FoldState Value=" T46031 T7FD}G T8lB2C]F3mU0}86 pidnD0D7]9fjR0E5]9ajJ0AG pj1k20K4 pk2kW0p2]IMka07[942jF0A216 Pjgkd0 T6mV04T]-K=I014 T1ma0}201B]KcpE057 piXk006I];YlV023]9UkB031]9DjP062[{k5H07[{A6Ekf0 T0qO24016]b0te43C]bckF25C[{A5G2L1m"/>
+        <TopLine Value="1278"/>
+        <CursorPos Y="1470"/>
+        <FoldState Value=" T46031 T7FD}G T8lB2C]F3mU0}86 pidnD0D[94ZjJ0B5]9XjD0HE]9Yjc034 pj5jI032[I500p2]IMka0711[T47lJ075 PjBia0 T6mV04Z PiY/K]F1ma0}27]ycnP038]9ekB0C[{F5kR027[I4jX023]%U]R31]9DjP0611[{^5le0A3 PiKiJ0 T0qO247]ZWu543C]XckF25[95pH2L1S"/>
         <UsageCount Value="201"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -31,8 +30,9 @@
         <Filename Value="puppetmasterlib.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="178"/>
-        <CursorPos X="3" Y="186"/>
+        <TopLine Value="52"/>
+        <CursorPos Y="63"/>
+        <FoldState Value=" T4602 T7EB83 PFfA T8F235 T3kM03515 PjKkD0 T1kN02[H64kF]H6mc013V"/>
         <UsageCount Value="201"/>
         <Loaded Value="True"/>
       </Unit>
@@ -42,10 +42,12 @@
         <ComponentName Value="frmPuppet"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="46" Y="5"/>
-        <FoldState Value=" T4602 T7EF{E T8jH231 T3jY065 pjIja0N1 piZjJ0M]Q1jZ05[Q46]QM2]97k0[,46]713 T0kL237 PiXkf4o"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="48"/>
+        <CursorPos X="73" Y="61"/>
+        <FoldState Value=" T4602H"/>
         <UsageCount Value="200"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="diceform.pas"/>
@@ -53,11 +55,13 @@
         <ComponentName Value="frmDice"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="57"/>
-        <CursorPos Y="100"/>
-        <FoldState Value=" T4602 T7EDR T8Z231 T3i903A Pi1iH0 T1iA02]FX]EG"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="44"/>
+        <CursorPos X="9" Y="55"/>
+        <FoldState Value=" T4602 T3iJ038 Pci70 T1iK02]ET]Ev"/>
         <UsageCount Value="200"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="playerform.pas"/>
@@ -66,8 +70,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="49"/>
-        <CursorPos X="12" Y="58"/>
+        <TopLine Value="60"/>
+        <CursorPos X="41" Y="71"/>
         <FoldState Value=" T4602H"/>
         <UsageCount Value="200"/>
       </Unit>
@@ -88,9 +92,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="172"/>
-        <CursorPos X="42" Y="182"/>
-        <FoldState Value=" T4602 T7EPx T8iN241 T3if0b621 PdkU0 T1ig0a[G5MkW]G6k0013="/>
+        <TopLine Value="178"/>
+        <CursorPos X="61" Y="193"/>
+        <FoldState Value=" T4602 T3if0b621 PdjP0 T1ig0a[G5MjR]G6k0013s"/>
         <UsageCount Value="200"/>
       </Unit>
       <Unit>
@@ -109,10 +113,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="50"/>
-        <CursorPos Y="61"/>
-        <FoldState Value=" T4602 T7EOP T8X231 T3i7039 PiIiX0 T1i80211511 PK]IK"/>
-        <UsageCount Value="104"/>
+        <TopLine Value="61"/>
+        <CursorPos X="48" Y="97"/>
+        <FoldState Value=" T4602 T3i70301116 PiAiX0 T1i80203411 PF]IV"/>
+        <UsageCount Value="111"/>
       </Unit>
       <Unit>
         <Filename Value="beastmonsterform.pas"/>
@@ -121,10 +125,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="10"/>
-        <CursorPos Y="115"/>
-        <FoldState Value=" T4602 T7ELY T8g231 T3iG039 PiNiZ0 T1iH02711 PS[G56iM012~"/>
-        <UsageCount Value="90"/>
+        <TopLine Value="59"/>
+        <CursorPos X="45" Y="115"/>
+        <FoldState Value=" T4602 T3iG039 PiNiZ0 T1iH02711 PS[G56iM012b"/>
+        <UsageCount Value="97"/>
       </Unit>
       <Unit>
         <Filename Value="simpleform.pas"/>
@@ -133,14 +137,16 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="86"/>
+        <TopLine Value="63"/>
+        <CursorPos X="31" Y="80"/>
+        <UsageCount Value="93"/>
       </Unit>
       <Unit>
         <Filename Value="resources\adventure-climaxes.txt"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="17" Y="6"/>
-        <UsageCount Value="63"/>
+        <UsageCount Value="70"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -148,7 +154,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="19" Y="5"/>
-        <UsageCount Value="63"/>
+        <UsageCount Value="70"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -156,7 +162,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="22" Y="13"/>
-        <UsageCount Value="63"/>
+        <UsageCount Value="70"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -164,7 +170,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="10" Y="6"/>
-        <UsageCount Value="63"/>
+        <UsageCount Value="70"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -172,7 +178,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="13" Y="16"/>
-        <UsageCount Value="63"/>
+        <UsageCount Value="70"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -180,7 +186,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="17" Y="9"/>
-        <UsageCount Value="63"/>
+        <UsageCount Value="70"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -188,7 +194,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos Y="13"/>
-        <UsageCount Value="63"/>
+        <UsageCount Value="70"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -196,7 +202,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="8" Y="7"/>
-        <UsageCount Value="63"/>
+        <UsageCount Value="70"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -204,7 +210,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="7" Y="12"/>
-        <UsageCount Value="63"/>
+        <UsageCount Value="70"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -212,7 +218,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="7" Y="8"/>
-        <UsageCount Value="63"/>
+        <UsageCount Value="70"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -220,7 +226,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="6"/>
-        <UsageCount Value="63"/>
+        <UsageCount Value="70"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -228,7 +234,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="5" Y="6"/>
-        <UsageCount Value="63"/>
+        <UsageCount Value="70"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -236,7 +242,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="4" Y="9"/>
-        <UsageCount Value="63"/>
+        <UsageCount Value="70"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -245,7 +251,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="48"/>
         <CursorPos X="4" Y="70"/>
-        <UsageCount Value="61"/>
+        <UsageCount Value="68"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -253,7 +259,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="5" Y="5"/>
-        <UsageCount Value="61"/>
+        <UsageCount Value="68"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -261,7 +267,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos Y="3"/>
-        <UsageCount Value="61"/>
+        <UsageCount Value="68"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -269,7 +275,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="7" Y="9"/>
-        <UsageCount Value="61"/>
+        <UsageCount Value="68"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -277,7 +283,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="4" Y="9"/>
-        <UsageCount Value="61"/>
+        <UsageCount Value="68"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -285,7 +291,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="5" Y="7"/>
-        <UsageCount Value="61"/>
+        <UsageCount Value="68"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -294,7 +300,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="41"/>
         <CursorPos X="14" Y="15"/>
-        <UsageCount Value="61"/>
+        <UsageCount Value="68"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -303,7 +309,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="25"/>
         <CursorPos X="9" Y="47"/>
-        <UsageCount Value="61"/>
+        <UsageCount Value="68"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -312,7 +318,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="43"/>
         <CursorPos X="9" Y="64"/>
-        <UsageCount Value="61"/>
+        <UsageCount Value="68"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -321,7 +327,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="57"/>
         <CursorPos X="7" Y="79"/>
-        <UsageCount Value="61"/>
+        <UsageCount Value="68"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -330,7 +336,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="363"/>
         <CursorPos X="6" Y="499"/>
-        <UsageCount Value="59"/>
+        <UsageCount Value="66"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -339,7 +345,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="12"/>
         <CursorPos X="21" Y="36"/>
-        <UsageCount Value="59"/>
+        <UsageCount Value="66"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -348,7 +354,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="27"/>
         <CursorPos X="20" Y="49"/>
-        <UsageCount Value="59"/>
+        <UsageCount Value="66"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -357,7 +363,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="161"/>
         <CursorPos X="39" Y="168"/>
-        <UsageCount Value="53"/>
+        <UsageCount Value="60"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -366,7 +372,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="261"/>
         <CursorPos X="12" Y="351"/>
-        <UsageCount Value="53"/>
+        <UsageCount Value="60"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -375,19 +381,17 @@
         <ComponentName Value="frmAdventure"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="1"/>
-        <TopLine Value="189"/>
-        <CursorPos X="66" Y="208"/>
-        <FoldState Value=" T4602 T7EI* T8iZ231 T3kD03711 PiKjQ0 T1kE02[H63[H56kJ01]u0mX23O"/>
-        <UsageCount Value="48"/>
-        <Loaded Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="186"/>
+        <CursorPos X="47" Y="197"/>
+        <UsageCount Value="55"/>
       </Unit>
       <Unit>
         <Filename Value="resources\adventure-allys-neutrals.txt"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="17" Y="3"/>
-        <UsageCount Value="46"/>
+        <UsageCount Value="53"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -395,7 +399,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="13" Y="7"/>
-        <UsageCount Value="42"/>
+        <UsageCount Value="49"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -403,7 +407,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="21" Y="5"/>
-        <UsageCount Value="42"/>
+        <UsageCount Value="49"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -411,7 +415,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="18" Y="6"/>
-        <UsageCount Value="40"/>
+        <UsageCount Value="47"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -421,15 +425,15 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="90"/>
-        <CursorPos X="25" Y="102"/>
-        <UsageCount Value="38"/>
+        <TopLine Value="96"/>
+        <CursorPos X="41" Y="107"/>
+        <UsageCount Value="45"/>
       </Unit>
       <Unit>
         <Filename Value="resources\adventure-special-conditions.txt"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="38"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -439,7 +443,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="38"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -449,7 +453,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="38"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -459,7 +463,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="38"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -469,7 +473,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="38"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -479,7 +483,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="38"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -489,7 +493,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="38"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -499,7 +503,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="38"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -509,7 +513,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="38"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -519,7 +523,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="38"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -529,17 +533,15 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="38"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
         <Filename Value="resources\dice-basic.csv"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="-1"/>
-        <TopLine Value="-1"/>
-        <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="31"/>
+        <EditorIndex Value="1"/>
+        <UsageCount Value="38"/>
+        <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -549,7 +551,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="38"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -559,7 +561,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="38"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -569,7 +571,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="38"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -579,7 +581,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="38"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -589,7 +591,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="38"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -599,7 +601,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="38"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -609,7 +611,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="38"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -619,7 +621,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="38"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -629,7 +631,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="38"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -639,7 +641,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="38"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -649,7 +651,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="38"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -659,7 +661,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="38"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -669,7 +671,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="38"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -679,7 +681,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="38"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -689,7 +691,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="38"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -699,17 +701,15 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="38"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
         <Filename Value="resources\traits-tools.txt"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <WindowIndex Value="-1"/>
-        <TopLine Value="-1"/>
-        <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="31"/>
+        <CursorPos X="33" Y="6"/>
+        <UsageCount Value="38"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -719,7 +719,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="38"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -729,7 +729,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="38"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -739,7 +739,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="38"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -749,7 +749,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="38"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -1258,123 +1258,123 @@
     <JumpHistory HistoryIndex="29">
       <Position>
         <Filename Value="mainform.pas"/>
-        <Caret Line="800" Column="49" TopLine="789"/>
+        <Caret Line="1103" Column="12" TopLine="1088"/>
       </Position>
       <Position>
         <Filename Value="mainform.pas"/>
-        <Caret Line="805" Column="49" TopLine="794"/>
+        <Caret Line="1204" Column="7" TopLine="1191"/>
       </Position>
       <Position>
         <Filename Value="mainform.pas"/>
-        <Caret Line="810" Column="54" TopLine="799"/>
+        <Caret Line="1217" Column="12" TopLine="1201"/>
       </Position>
       <Position>
         <Filename Value="mainform.pas"/>
-        <Caret Line="815" Column="12" TopLine="804"/>
+        <Caret Line="1225" Column="10" TopLine="1214"/>
       </Position>
       <Position>
         <Filename Value="mainform.pas"/>
-        <Caret Line="165" Column="25" TopLine="155"/>
+        <Caret Line="1229" Column="65" TopLine="1218"/>
       </Position>
       <Position>
         <Filename Value="mainform.pas"/>
-        <Caret Line="1261" TopLine="1260"/>
+        <Caret Line="1257" Column="56" TopLine="1238"/>
       </Position>
       <Position>
         <Filename Value="mainform.pas"/>
-        <Caret Line="1355" Column="42" TopLine="1334"/>
+        <Caret Line="1263" Column="14" TopLine="1252"/>
       </Position>
       <Position>
         <Filename Value="mainform.pas"/>
-        <Caret Line="1356" Column="42" TopLine="1335"/>
+        <Caret Line="1264" Column="26" TopLine="1253"/>
+      </Position>
+      <Position>
+        <Filename Value="puppetmasterlib.pas"/>
+        <Caret Line="89" Column="3" TopLine="78"/>
       </Position>
       <Position>
         <Filename Value="mainform.pas"/>
-        <Caret Line="1355" Column="42" TopLine="1333"/>
+        <Caret Line="1264" Column="27" TopLine="1253"/>
+      </Position>
+      <Position>
+        <Filename Value="puppetmasterlib.pas"/>
+        <Caret Line="84" Column="29" TopLine="74"/>
+      </Position>
+      <Position>
+        <Filename Value="puppetmasterlib.pas"/>
+        <Caret Line="293" Column="28" TopLine="282"/>
       </Position>
       <Position>
         <Filename Value="mainform.pas"/>
-        <Caret Line="1356" Column="42" TopLine="1335"/>
+        <Caret Line="1329" Column="46" TopLine="1314"/>
       </Position>
       <Position>
         <Filename Value="mainform.pas"/>
-        <Caret Line="1357" Column="42" TopLine="1336"/>
+        <Caret Line="1412" Column="10" TopLine="1387"/>
       </Position>
       <Position>
         <Filename Value="mainform.pas"/>
-        <Caret Line="1358" Column="42" TopLine="1337"/>
+        <Caret Line="1417" Column="14" TopLine="1400"/>
       </Position>
       <Position>
         <Filename Value="mainform.pas"/>
-        <Caret Line="1359" Column="42" TopLine="1338"/>
+        <Caret Line="1428" Column="10" TopLine="1414"/>
       </Position>
       <Position>
         <Filename Value="mainform.pas"/>
-        <Caret Line="1360" Column="42" TopLine="1339"/>
+        <Caret Line="1433" Column="14" TopLine="1422"/>
       </Position>
       <Position>
         <Filename Value="mainform.pas"/>
-        <Caret Line="1361" Column="42" TopLine="1340"/>
+        <Caret Line="1445" Column="10" TopLine="1429"/>
       </Position>
       <Position>
         <Filename Value="mainform.pas"/>
-        <Caret Line="1362" Column="42" TopLine="1341"/>
+        <Caret Line="1451" Column="14" TopLine="1440"/>
+      </Position>
+      <Position>
+        <Filename Value="puppetmasterlib.pas"/>
+        <Caret Line="86" Column="35" TopLine="55"/>
+      </Position>
+      <Position>
+        <Filename Value="puppetmasterlib.pas"/>
+        <Caret Line="309" Column="78" TopLine="288"/>
+      </Position>
+      <Position>
+        <Filename Value="puppetmasterlib.pas"/>
+        <Caret Line="312" Column="73" TopLine="297"/>
       </Position>
       <Position>
         <Filename Value="mainform.pas"/>
-        <Caret Line="1363" Column="42" TopLine="1342"/>
+        <Caret Line="1473" Column="10" TopLine="1456"/>
       </Position>
       <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="1364" Column="42" TopLine="1343"/>
+        <Filename Value="puppetmasterlib.pas"/>
+        <Caret Line="61" TopLine="56"/>
       </Position>
       <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="1365" Column="42" TopLine="1344"/>
+        <Filename Value="puppetmasterlib.pas"/>
+        <Caret Line="267" TopLine="255"/>
       </Position>
       <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="1366" Column="42" TopLine="1345"/>
+        <Filename Value="puppetmasterlib.pas"/>
+        <Caret Line="307" TopLine="261"/>
       </Position>
       <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="1367" Column="42" TopLine="1346"/>
+        <Filename Value="puppetmasterlib.pas"/>
+        <Caret Line="63" TopLine="52"/>
       </Position>
       <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="1368" Column="42" TopLine="1347"/>
+        <Filename Value="puppetform.pas"/>
+        <Caret Line="51" Column="43" TopLine="40"/>
       </Position>
       <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="1369" Column="42" TopLine="1348"/>
+        <Filename Value="puppetform.pas"/>
+        <Caret Line="53" Column="56" TopLine="42"/>
       </Position>
       <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="1370" Column="42" TopLine="1349"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="1371" Column="42" TopLine="1350"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="1372" Column="42" TopLine="1351"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="1373" Column="42" TopLine="1352"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="1374" Column="42" TopLine="1353"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="1375" Column="42" TopLine="1354"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="1376" Column="42" TopLine="1355"/>
+        <Filename Value="puppetform.pas"/>
+        <Caret Line="61" Column="73" TopLine="48"/>
       </Position>
     </JumpHistory>
     <RunParams>

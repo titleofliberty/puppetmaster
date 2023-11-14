@@ -61,7 +61,7 @@ type
     mnuMainInsertWildernesses: TMenuItem;
     mnuMainInsertDungeons: TMenuItem;
     Separator8: TMenuItem;
-    mnuMainInsertAdventures: TMenuItem;
+    mnuMainInsertAdventure: TMenuItem;
     mnuMainToolsCondition: TMenuItem;
     mnuMainRandomRemains: TMenuItem;
     mnuMainRandomVehicle: TMenuItem;
@@ -140,7 +140,7 @@ type
     procedure mnuMainCampaignsSaveAsClick(Sender: TObject);
     procedure mnuMainEditDeleteClick(Sender: TObject);
     procedure mnuMainHelpAboutClick(Sender: TObject);
-    procedure mnuMainInsertAdventuresClick(Sender: TObject);
+    procedure mnuMainInsertAdventureClick(Sender: TObject);
     procedure mnuMainInsertDungeonsChamberClick(Sender: TObject);
     procedure mnuMainInsertClick(Sender: TObject);
     procedure mnuMainInsertDiceRollClick(Sender: TObject);
@@ -187,7 +187,7 @@ type
     procedure RandomResource(ACaption: string; ANode: TTreeNode; AFontColor, ABackColor: TColor);
     procedure PopulateDiceTray;
     procedure PopulateCampaign;
-    procedure RollDice(ADice: TPMLeaf);
+    procedure RollDice(ADice: TLeaf);
     procedure PopulateResourceToCbo(ACbo: TComboBox; AResource: TTreeNode);
     procedure ToggleCampaign(AEnabled: boolean = false);
     procedure LoadResourceNodes(AParent: TTreeNode; ACategory: string; AArray: TStringList); overload;
@@ -424,7 +424,7 @@ procedure TfrmMain.FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState)
 var
   i : integer;
   frm: TfrmRollDice;
-  leaf, leaf2: TPMLeaf;
+  leaf, leaf2: TLeaf;
 begin
   if (Key >= VK_F1) and (Key <= VK_F12) then
   begin
@@ -445,10 +445,10 @@ begin
 
     if i > nodeDiceTray.Count - 1 then exit;
 
-    leaf := TPMLeaf(nodeDiceTray.Items[i].Data);
+    leaf := TLeaf(nodeDiceTray.Items[i].Data);
     if leaf.GetTrait('Count') = '0' then
     begin
-      leaf2 := TPMLeaf.Create('Dice');
+      leaf2 := TLeaf.Create('Dice');
       frm := TfrmRollDice.Create(Self);
       leaf2.SetTrait('Count', '1');
       leaf2.SetTrait('Die', leaf.GetTrait('Die'));
@@ -517,10 +517,10 @@ end;
 procedure TfrmMain.mnuMainEditDeleteClick(Sender: TObject);
 var
   node: TTreeNode;
-  leaf: TPMLeaf;
+  leaf: TLeaf;
 begin
   node := tvwCampaign.Selected;
-  leaf := TPMLeaf(node.Data);
+  leaf := TLeaf(node.Data);
   if node.Level > 1 then
     if MessageDlg('Delete Item', 'Do you want to delete ' + node.Text + '?', mtConfirmation, [mbYes, mbNo], 0) = mrYes then
     begin
@@ -537,14 +537,19 @@ begin
   frm.ShowModal;
 end;
 
-procedure TfrmMain.mnuMainInsertAdventuresClick(Sender: TObject);
+procedure TfrmMain.mnuMainInsertAdventureClick(Sender: TObject);
 var
   node: TTreeNode;
-  leaf: TPMLeaf;
+  leaf, selected: TLeaf;
 begin
-  leaf := TPMLeaf.Create('Adventure');
+  if Assigned(tvwCampaign.Selected) then
+    selected := TLeaf(tvwCampaign.Selected.Data);
+  leaf := TLeaf.Create('Adventure');
   leaf.OnChange := @LeafChange;
-  node := tvwCampaign.Items.AddChildObject(nodeAdventures, leaf.Title, leaf);
+  if Assigned(tvwCampaign.Selected) and (selected.Category = 'Adventure') then
+    node := tvwCampaign.Items.AddChildObject(tvwCampaign.Selected, leaf.Title, leaf)
+  else
+    node := tvwCampaign.Items.AddChildObject(nodeAdventures, leaf.Title, leaf);
   node.Selected := true;
 end;
 
@@ -552,11 +557,11 @@ procedure TfrmMain.mnuMainInsertDungeonsChamberClick(Sender: TObject);
 var
   i : integer;
   node: TTreeNode;
-  leaf, slct: TPMLeaf;
+  leaf, slct: TLeaf;
 begin
-  leaf := TPMLeaf.Create('Chamber');
+  leaf := TLeaf.Create('Chamber');
   leaf.OnChange := @LeafChange;
-  slct := TPMLeaf(tvwCampaign.Selected.Data);
+  slct := TLeaf(tvwCampaign.Selected.Data);
   if (slct.Category = 'Level') then
     node := tvwCampaign.Items.AddChildObject(tvwCampaign.Selected, leaf.Title, leaf)
   else if (slct.Category = 'Chamber') then
@@ -566,11 +571,11 @@ end;
 
 procedure TfrmMain.mnuMainInsertClick(Sender: TObject);
 var
-  leaf: TPMLeaf;
+  leaf: TLeaf;
 begin
 
   if Assigned(tvwCampaign.Selected) then
-    leaf := TPMLeaf(tvwCampaign.Selected.Data);
+    leaf := TLeaf(tvwCampaign.Selected.Data);
 
   mnuMainInsertDungeonsLevel.Enabled := (leaf.Category = 'Dungeon') or (leaf.Category = 'Level') or (leaf.Category = 'Chamber') or (leaf.Category = 'Factions') or (leaf.Category = 'Faction');
   mnuMainInsertDungeonsChamber.Enabled := (leaf.Category = 'Level') or (leaf.Category = 'Chamber');
@@ -593,9 +598,9 @@ end;
 procedure TfrmMain.mnuMainInsertDiceRollClick(Sender: TObject);
 var
   node: TTreeNode;
-  leaf : TPMLeaf;
+  leaf : TLeaf;
 begin
-  leaf := TPMLeaf.Create('Dice');
+  leaf := TLeaf.Create('Dice');
   leaf.OnChange := @LeafChange;
   node := tvwCampaign.Items.AddChildObject(nodeDiceTray, leaf.GetTrait('Title'), leaf);
   node.Selected := true;
@@ -606,9 +611,9 @@ end;
 procedure TfrmMain.mnuMainInsertDungeonsDungeonClick(Sender: TObject);
 var
   node: TTreeNode;
-  leaf: TPMLeaf;
+  leaf: TLeaf;
 begin
-  leaf := TPMLeaf.Create('Dungeon');
+  leaf := TLeaf.Create('Dungeon');
   leaf.OnChange := @LeafChange;
   node := tvwCampaign.Items.AddChildObject(nodeDungeons, leaf.Title, leaf);
   node.Selected := true;
@@ -616,11 +621,11 @@ end;
 
 procedure TfrmMain.mnuMainInsertFactionClick(Sender: TObject);
 var
-  leaf, slct : TPMLeaf;
+  leaf, slct : TLeaf;
   node : TTreeNode;
 begin
-  slct := TPMLeaf(tvwCampaign.Selected.Data);
-  leaf := TPMLeaf.Create('Faction');
+  slct := TLeaf(tvwCampaign.Selected.Data);
+  leaf := TLeaf.Create('Faction');
   leaf.OnChange := @LeafChange;
   if (slct.Category = 'Dungeon') or (slct.Category = 'Tract') or (slct.Category = 'Room') then
     node := tvwCampaign.Items.AddChildObject(tvwCampaign.Selected, leaf.Title, leaf);
@@ -629,12 +634,12 @@ end;
 
 procedure TfrmMain.mnuMainInsertFloorClick(Sender: TObject);
 var
-  leaf, slct: TPMLeaf;
+  leaf, slct: TLeaf;
   node: TTreeNode;
 begin
   if not Assigned(tvwCampaign.Selected) then exit;
-  slct := TPMLeaf(tvwCampaign.Selected.Data);
-  leaf := TPMLeaf.Create('Floor');
+  slct := TLeaf(tvwCampaign.Selected.Data);
+  leaf := TLeaf.Create('Floor');
   leaf.OnChange := @LeafChange;
   if slct.Category = 'Venue' then
     node := tvwCampaign.Items.AddChildObject(tvwCampaign.Selected, leaf.Title, leaf)
@@ -645,12 +650,12 @@ end;
 
 procedure TfrmMain.mnuMainInsertDungeonsLevelClick(Sender: TObject);
 var
-  leaf, slct: TPMLeaf;
+  leaf, slct: TLeaf;
   node: TTreeNode;
 begin
   if not Assigned(tvwCampaign.Selected) then exit;
-  leaf := TPMLeaf.Create('Level');
-  slct := TPMLeaf(tvwCampaign.Selected.Data);
+  leaf := TLeaf.Create('Level');
+  slct := TLeaf(tvwCampaign.Selected.Data);
 
   if slct.Category = 'Dungeon' then
     node := tvwCampaign.Items.AddChildObject(tvwCampaign.Selected, leaf.Title, leaf)
@@ -666,13 +671,13 @@ end;
 procedure TfrmMain.mnuMainInsertPlayerClick(Sender: TObject);
 var
   node: TTreeNode;
-  leaf: TPMLeaf;
+  leaf: TLeaf;
 begin
-  leaf := TPMLeaf.Create('Player');
+  leaf := TLeaf.Create('Player');
   leaf.OnChange := @LeafChange;
-  if (TPMLeaf(tvwCampaign.Selected.Data).Category = 'Room') or (TPMLeaf(tvwCampaign.Selected.Data).Category = 'Chamber') or (TPMLeaf(tvwCampaign.Selected.Data).Category = 'Tract') then
+  if (TLeaf(tvwCampaign.Selected.Data).Category = 'Room') or (TLeaf(tvwCampaign.Selected.Data).Category = 'Chamber') or (TLeaf(tvwCampaign.Selected.Data).Category = 'Tract') then
     node := tvwCampaign.Items.AddChildObject(tvwCampaign.Selected, leaf.Title, leaf)
-  else if (TPMLeaf(tvwCampaign.Selected.Data).Category = 'Puppet') or (TPMLeaf(tvwCampaign.Selected.Data).Category = 'Player') then
+  else if (TLeaf(tvwCampaign.Selected.Data).Category = 'Puppet') or (TLeaf(tvwCampaign.Selected.Data).Category = 'Player') then
     node := tvwCampaign.Items.AddObject(tvwCampaign.Selected, leaf.Title, leaf);
 
   if Assigned(node) then
@@ -684,13 +689,13 @@ end;
 procedure TfrmMain.mnuMainInsertPuppetClick(Sender: TObject);
 var
   node: TTreeNode;
-  leaf: TPMLeaf;
+  leaf: TLeaf;
 begin
-  leaf := TPMLeaf.Create('Puppet');
+  leaf := TLeaf.Create('Puppet');
   leaf.OnChange := @LeafChange;
-  if (TPMLeaf(tvwCampaign.Selected.Data).Category = 'Chamber') or (TPMLeaf(tvwCampaign.Selected.Data).Category = 'Tract') or (TPMLeaf(tvwCampaign.Selected.Data).Category = 'Room') then
+  if (TLeaf(tvwCampaign.Selected.Data).Category = 'Chamber') or (TLeaf(tvwCampaign.Selected.Data).Category = 'Tract') or (TLeaf(tvwCampaign.Selected.Data).Category = 'Room') then
     node := tvwCampaign.items.AddChildObject(tvwCampaign.Selected, leaf.Title, leaf)
-  else if (TPMLeaf(tvwCampaign.Selected.Data).Category = 'Puppet') or (TPMLeaf(tvwCampaign.Selected.Data).Category = 'Player') then
+  else if (TLeaf(tvwCampaign.Selected.Data).Category = 'Puppet') or (TLeaf(tvwCampaign.Selected.Data).Category = 'Player') then
     node := tvwCampaign.items.AddObject(tvwCampaign.Selected, leaf.Title, leaf)
   else
     Exit;
@@ -700,13 +705,13 @@ end;
 procedure TfrmMain.mnuMainInsertRoomClick(Sender: TObject);
 var
   node: TTreeNode;
-  leaf: TPMLeaf;
+  leaf: TLeaf;
 begin
-  leaf := TPMLeaf.Create('Room');
+  leaf := TLeaf.Create('Room');
   leaf.OnChange := @LeafChange;
-  if TPMLeaf(tvwCampaign.Selected.Data).Category = 'Floor' then
+  if TLeaf(tvwCampaign.Selected.Data).Category = 'Floor' then
     node := tvwCampaign.items.AddChildObject(tvwCampaign.Selected, leaf.Title, leaf)
-  else if TPMLeaf(tvwCampaign.Selected.Data).Category = 'Room' then
+  else if TLeaf(tvwCampaign.Selected.Data).Category = 'Room' then
     node := tvwCampaign.items.AddChildObject(tvwCampaign.Selected, leaf.Title, leaf)
   else
     Exit;
@@ -715,12 +720,12 @@ end;
 
 procedure TfrmMain.mnuMainInsertWildernessesRouteClick(Sender: TObject);
 var
-  leaf, slct: TPMLeaf;
+  leaf, slct: TLeaf;
   node : TTreeNode;
 begin
   if not Assigned(tvwCampaign.Selected) then exit;
-  slct := TPMLeaf(tvwCampaign.Selected.Data);
-  leaf := TPMLeaf.Create('Route');
+  slct := TLeaf(tvwCampaign.Selected.Data);
+  leaf := TLeaf.Create('Route');
   leaf.OnChange := @LeafChange;
   if (slct.Category = 'Wilderness') then
     node := tvwCampaign.Items.AddChildObject(tvwCampaign.Selected, leaf.Title, leaf)
@@ -735,9 +740,9 @@ end;
 procedure TfrmMain.mnuMainInsertSettlementClick(Sender: TObject);
 var
   node : TTreeNode;
-  leaf : TPMLeaf;
+  leaf : TLeaf;
 begin
-  leaf := TPMLeaf.Create('Settlement');
+  leaf := TLeaf.Create('Settlement');
   leaf.Traits.AddOrSetData('Name', 'Untitled');
   leaf.OnChange := @LeafChange;
   node := tvwCampaign.Items.AddChildObject(nodeSettlements, leaf.Title, leaf);
@@ -748,12 +753,12 @@ procedure TfrmMain.mnuMainInsertWildernessesTractClick(Sender: TObject);
 var
   i: integer;
   node: TTreeNode;
-  leaf, selected, tracts: TPMLeaf;
+  leaf, selected, tracts: TLeaf;
 begin
   if not Assigned(tvwCampaign.Selected) then exit;
-  leaf := TPMLeaf.Create('Tract');
+  leaf := TLeaf.Create('Tract');
   leaf.OnChange := @LeafChange;
-  selected := TPMLeaf(tvwCampaign.Selected.Data);
+  selected := TLeaf(tvwCampaign.Selected.Data);
   if (selected.Category = 'Route') then
     node := tvwCampaign.Items.AddChildObject(tvwCampaign.Selected, leaf.Title, leaf)
   else if (selected.Category = 'Tract') then
@@ -764,13 +769,13 @@ end;
 procedure TfrmMain.mnuMainInsertVenueClick(Sender: TObject);
 var
   node: TTreeNode;
-  leaf: TPMLeaf;
+  leaf: TLeaf;
 begin
-  leaf := TPMLeaf.Create('Venue');
+  leaf := TLeaf.Create('Venue');
   leaf.OnChange := @LeafChange;
-  if TPMLeaf(tvwCampaign.Selected.Data).Category = 'Settlement' then
+  if TLeaf(tvwCampaign.Selected.Data).Category = 'Settlement' then
     node := tvwCampaign.items.AddChildObject(tvwCampaign.Selected, leaf.Title, leaf)
-  else if TPMLeaf(tvwCampaign.Selected.Data).Category = 'Venue' then
+  else if TLeaf(tvwCampaign.Selected.Data).Category = 'Venue' then
     node := tvwCampaign.items.AddObject(tvwCampaign.Selected, leaf.Title, leaf);
 
   node.Selected := true;
@@ -779,9 +784,9 @@ end;
 procedure TfrmMain.mnuMainInsertWildernessesWildernessClick(Sender: TObject);
 var
   node: TTreeNode;
-  leaf: TPMLeaf;
+  leaf: TLeaf;
 begin
-  leaf := TPMLeaf.Create('Wilderness');
+  leaf := TLeaf.Create('Wilderness');
   leaf.OnChange := @LeafChange;
   node := tvwCampaign.Items.AddChildObject(nodeWildernesses, leaf.Title, leaf);
   node.Selected := true;
@@ -859,6 +864,7 @@ begin
   msg.Color := $99BBED;
   msg.Font.Color := $002C6E;
   msg.Title.Caption := 'Condtion';
+  msg.Title.Font.Bold := true;
   msg.Message.Caption := nodeConditions.Items[i].Text;
 
 end;
@@ -873,6 +879,7 @@ begin
   msg := TCardMessage.Create(pnlOutputData);
   msg.Parent := pnlOutputData;
   msg.Title.Caption := 'Eight Ball';
+  msg.Title.Font.Bold := true;
   msg.Align := alTop;
   msg.Color := $DCD8D5;
   msg.Font.Color := $463727;
@@ -934,6 +941,7 @@ begin
   msg.Color := $E7ECD0;
   msg.Font.Color := $325A14;
   msg.Title.Caption := 'Mood';
+  msg.Title.Font.Bold := true;
   msg.Message.Caption := moods.Strings[i];
 
 end;
@@ -952,7 +960,7 @@ procedure TfrmMain.tvwCampaignDragDrop(Sender, Source: TObject; X, Y: Integer);
 var
   tree : TTreeView;
   node : TTreeNode;
-  leaf1, leaf2: TPMLeaf;
+  leaf1, leaf2: TLeaf;
 begin
   tree := TTreeView(Sender);
   node := tree.GetNodeAt(x,y);
@@ -961,8 +969,8 @@ begin
   begin
     if node = nil then exit;
 
-    leaf1 := TPMLeaf(node.data);
-    leaf2 := TPMLeaf(tree.Selected.data);
+    leaf1 := TLeaf(node.data);
+    leaf2 := TLeaf(tree.Selected.data);
 
     if (leaf2.Category = 'Dungeon') then
     begin
@@ -1029,18 +1037,18 @@ procedure TfrmMain.tvwCampaignDragOver(Sender, Source: TObject; X, Y: Integer;
 var
   tree : TTreeView;
   node : TTreeNode;
-  leaf1, leaf2 : TPMLeaf;
+  leaf1, leaf2 : TLeaf;
 begin
   tree  := TTreeView(Sender);
   node  := tree.GetNodeAt(x,y);
 
   if not Assigned(node) then exit;
 
-  leaf1 := TPMLeaf(node.Data);
+  leaf1 := TLeaf(node.Data);
 
   if Assigned(tree.Selected) and (node <> tree.Selected) then
   begin
-    leaf2 := TPMLeaf(tree.Selected.Data);
+    leaf2 := TLeaf(tree.Selected.Data);
     if (leaf2.Category = 'Dungeon') and ((leaf1.Category = 'Dungeons') or (leaf1.Category = 'Dungeon')) then
       Accept := true
     else if (leaf2.Category = 'Level') and ((leaf1.Category = 'Dungeon') or (leaf1.Category = 'Level')) then
@@ -1087,12 +1095,12 @@ end;
 procedure TfrmMain.tvwCampaignSelectionChanged(Sender: TObject);
 var
   form : TForm;
-  leaf : TPMLeaf;
+  leaf : TLeaf;
 begin
 
   if not Assigned(tvwCampaign.Selected) then exit;
 
-  leaf := TPMLeaf(tvwCampaign.Selected.Data);
+  leaf := TLeaf(tvwCampaign.Selected.Data);
 
   while pnlWorkspaceClient.ComponentCount > 0 do
     pnlWorkspaceClient.Components[0].Free;
@@ -1191,9 +1199,9 @@ end;
 
 procedure TfrmMain.LeafChange(Sender: TObject);
 begin
-  tvwCampaign.Selected.Text := TPMLeaf(Sender).Title;
+  tvwCampaign.Selected.Text := TLeaf(Sender).Title;
 
-  if TPMLeaf(Sender).Category = 'Dice' then PopulateDiceTray;
+  if TLeaf(Sender).Category = 'Dice' then PopulateDiceTray;
 
   SaveCampaign;
 end;
@@ -1201,12 +1209,12 @@ end;
 procedure TfrmMain.DiceClick(Sender: TObject);
 var
   btn : TButton;
-  leaf: TPMLeaf;
+  leaf: TLeaf;
   node: TTreeNode;
 begin
   btn := TButton(Sender);
   node := nodeDiceTray.Items[btn.Tag];
-  leaf := TPMLeaf(node.Data);
+  leaf := TLeaf(node.Data);
 
   RollDice(leaf);
 end;
@@ -1214,45 +1222,45 @@ end;
 procedure TfrmMain.CampaignNew;
 var
   i : integer;
-  leaf: TPMLeaf;
+  leaf: TLeaf;
 begin
   tvwCampaign.Items.Clear;
 
-  nodeCampaign := tvwCampaign.Items.AddObject(nil, 'Campaign', TPMLeaf.Create('Campaign'));
-  nodeAdventures := tvwCampaign.Items.AddChildObject(nodeCampaign, 'Adventures', TPMLeaf.Create('Adventures'));
-  nodeDungeons := tvwCampaign.Items.AddChildObject(nodeCampaign, 'Dungeons', TPMLeaf.Create('Dungeons'));
-  nodeWildernesses := tvwCampaign.Items.AddChildObject(nodeCampaign, 'Wildernesses', TPMLeaf.Create('Wildernesses'));
-  nodeSettlements := tvwCampaign.Items.AddChildObject(nodeCampaign, 'Settlements', TPMLeaf.Create('Settlements'));
-  nodeDiceTray := tvwCampaign.Items.AddChildObject(nodeCampaign, 'Dice Tray', TPMLeaf.Create('DiceTray'));
-  nodeResources := tvwCampaign.Items.AddChildObject(nodeCampaign, 'Resources', TPMLeaf.Create('Resources'));
-  nodeBeasts := tvwCampaign.Items.AddChildObject(nodeResources, 'Beasts', TPMLeaf.Create('Beasts'));
-  nodeMonsters := tvwCampaign.Items.AddChildObject(nodeResources, 'Monsters', TPMLeaf.Create('Monsters'));
-  nodeGems := tvwCampaign.Items.AddChildObject(nodeResources, 'Gems', TPMLeaf.Create('Gems'));
-  nodeKits := tvwCampaign.Items.AddChildObject(nodeResources, 'Kits', TPMLeaf.Create('Kits'));
-  nodeTools := tvwCampaign.Items.AddChildObject(nodeResources, 'Tools', TPMLeaf.Create('Tools'));
-  nodeClothing := tvwCampaign.Items.AddChildObject(nodeResources, 'Clothing', TPMLeaf.Create('Clothings'));
-  nodeContainers := tvwCampaign.Items.AddChildObject(nodeResources, 'Containers', TPMLeaf.Create('Containers'));
-  nodeVehicle := tvwCampaign.Items.AddChildObject(nodeResources, 'Vehicles', TPMLeaf.Create('Vehicles'));
-  nodeJewelry := tvwCampaign.Items.AddChildObject(nodeResources, 'Jewelry', TPMLeaf.Create('Jewelrys'));;
-  nodeRemains := tvwCampaign.Items.AddChildObject(nodeResources, 'Remains', TPMLeaf.Create('Remainsx'));
-  nodeInstruments := tvwCampaign.Items.AddChildObject(nodeResources, 'Instruments', TPMLeaf.Create('Instruments'));;
-  nodeArmors := tvwCampaign.Items.AddChildObject(nodeResources, 'Armor', TPMLeaf.Create('Armors'));
-  nodeWeapons := tvwCampaign.Items.AddChildObject(nodeResources, 'Weapons', TPMLeaf.Create('Weapons'));
-  nodeTraps := tvwCampaign.Items.AddChildObject(nodeResources, 'Traps', TPMLeaf.Create('Traps'));
-  nodeHumanoids := tvwCampaign.Items.AddChildObject(nodeResources, 'Humanoids', TPMLeaf.Create('Humanoids'));
-  nodeConsumables := tvwCampaign.Items.AddChildObject(nodeResources, 'Consumables', TPMLeaf.Create('Consumables'));
-  nodeSpells := tvwCampaign.Items.AddChildObject(nodeResources, 'Spells', TPMLeaf.Create('Spells'));
-  nodeNatural := tvwCampaign.Items.AddChildObject(nodeResources, 'Natural', TPMLeaf.Create('Naturals'));
-  nodeUnnatural := tvwCampaign.Items.AddChildObject(nodeResources, 'Unnatural', TPMLeaf.Create('Unnaturals'));
-  nodeFlora := tvwCampaign.Items.AddChildObject(nodeResources, 'Flora', TPMLeaf.Create('Floras'));
-  nodeFauna := tvwCampaign.Items.AddChildObject(nodeResources, 'Fauna', TPMLeaf.Create('Faunas'));
-  nodeConditions := tvwCampaign.Items.AddChildObject(nodeResources, 'Conditions', TPMLeaf.Create('Conditions'));
+  nodeCampaign := tvwCampaign.Items.AddObject(nil, 'Campaign', TLeaf.Create('Campaign'));
+  nodeAdventures := tvwCampaign.Items.AddChildObject(nodeCampaign, 'Adventures', TLeaf.Create('Adventures'));
+  nodeDungeons := tvwCampaign.Items.AddChildObject(nodeCampaign, 'Dungeons', TLeaf.Create('Dungeons'));
+  nodeWildernesses := tvwCampaign.Items.AddChildObject(nodeCampaign, 'Wildernesses', TLeaf.Create('Wildernesses'));
+  nodeSettlements := tvwCampaign.Items.AddChildObject(nodeCampaign, 'Settlements', TLeaf.Create('Settlements'));
+  nodeDiceTray := tvwCampaign.Items.AddChildObject(nodeCampaign, 'Dice Tray', TLeaf.Create('DiceTray'));
+  nodeResources := tvwCampaign.Items.AddChildObject(nodeCampaign, 'Resources', TLeaf.Create('Resources'));
+  nodeBeasts := tvwCampaign.Items.AddChildObject(nodeResources, 'Beasts', TLeaf.Create('Beasts'));
+  nodeMonsters := tvwCampaign.Items.AddChildObject(nodeResources, 'Monsters', TLeaf.Create('Monsters'));
+  nodeGems := tvwCampaign.Items.AddChildObject(nodeResources, 'Gems', TLeaf.Create('Gems'));
+  nodeKits := tvwCampaign.Items.AddChildObject(nodeResources, 'Kits', TLeaf.Create('Kits'));
+  nodeTools := tvwCampaign.Items.AddChildObject(nodeResources, 'Tools', TLeaf.Create('Tools'));
+  nodeClothing := tvwCampaign.Items.AddChildObject(nodeResources, 'Clothing', TLeaf.Create('Clothings'));
+  nodeContainers := tvwCampaign.Items.AddChildObject(nodeResources, 'Containers', TLeaf.Create('Containers'));
+  nodeVehicle := tvwCampaign.Items.AddChildObject(nodeResources, 'Vehicles', TLeaf.Create('Vehicles'));
+  nodeJewelry := tvwCampaign.Items.AddChildObject(nodeResources, 'Jewelry', TLeaf.Create('Jewelrys'));;
+  nodeRemains := tvwCampaign.Items.AddChildObject(nodeResources, 'Remains', TLeaf.Create('Remainsx'));
+  nodeInstruments := tvwCampaign.Items.AddChildObject(nodeResources, 'Instruments', TLeaf.Create('Instruments'));;
+  nodeArmors := tvwCampaign.Items.AddChildObject(nodeResources, 'Armor', TLeaf.Create('Armors'));
+  nodeWeapons := tvwCampaign.Items.AddChildObject(nodeResources, 'Weapons', TLeaf.Create('Weapons'));
+  nodeTraps := tvwCampaign.Items.AddChildObject(nodeResources, 'Traps', TLeaf.Create('Traps'));
+  nodeHumanoids := tvwCampaign.Items.AddChildObject(nodeResources, 'Humanoids', TLeaf.Create('Humanoids'));
+  nodeConsumables := tvwCampaign.Items.AddChildObject(nodeResources, 'Consumables', TLeaf.Create('Consumables'));
+  nodeSpells := tvwCampaign.Items.AddChildObject(nodeResources, 'Spells', TLeaf.Create('Spells'));
+  nodeNatural := tvwCampaign.Items.AddChildObject(nodeResources, 'Natural', TLeaf.Create('Naturals'));
+  nodeUnnatural := tvwCampaign.Items.AddChildObject(nodeResources, 'Unnatural', TLeaf.Create('Unnaturals'));
+  nodeFlora := tvwCampaign.Items.AddChildObject(nodeResources, 'Flora', TLeaf.Create('Floras'));
+  nodeFauna := tvwCampaign.Items.AddChildObject(nodeResources, 'Fauna', TLeaf.Create('Faunas'));
+  nodeConditions := tvwCampaign.Items.AddChildObject(nodeResources, 'Conditions', TLeaf.Create('Conditions'));
 
   nodeResources.AlphaSort;
 
   for i := 0 to TPMBasicDice.RowCount - 1 do
   begin
-    leaf := TPMLeaf.Create('Dice');
+    leaf := TLeaf.Create('Dice');
     leaf.SetTrait(TPMBasicDice[0, i]);
     leaf.SetTrait(TPMBasicDice[1, i]);
     leaf.SetTrait(TPMBasicDice[2, i]);
@@ -1299,6 +1307,7 @@ begin
   msg.Color := ABackColor;
   msg.Font.Color := AFontColor;
   msg.Title.Caption := ACaption;
+  msg.Title.Font.Bold := true;
   msg.Message.Caption := ANode.Items[Random(ANode.Count)].Text;
 end;
 
@@ -1317,7 +1326,7 @@ begin
     node := nodeDiceTray.Items[i];
     btn := TButton.Create(pnlBottom);
     btn.Parent := pnlBottom;
-    btn.Caption := Format('[F%d] %s', [i+1, TPMLeaf(node.Data).Title]);
+    btn.Caption := Format('[F%d] %s', [i+1, TLeaf(node.Data).Title]);
     btn.Align := alLeft;
     btn.AutoSize := true;
     btn.Tag := i;
@@ -1330,10 +1339,10 @@ begin
   //nodeDiceTray.ImageIndex := ;
 end;
 
-procedure TfrmMain.RollDice(ADice: TPMLeaf);
+procedure TfrmMain.RollDice(ADice: TLeaf);
 var
   msg: TCardMessage;
-  leaf: TPMLeaf;
+  leaf: TLeaf;
   str, rll : string;
   i, n, t, cnt, die, md  : integer;
 begin
@@ -1400,12 +1409,12 @@ procedure TfrmMain.LoadResourceNodes(AParent: TTreeNode; ACategory: string;
   AArray: TStringList);
 var
   i: integer;
-  leaf: TPMLeaf;
+  leaf: TLeaf;
 begin
   if AParent.HasChildren then AParent.DeleteChildren;
   for i := 0 to AArray.Count - 1 do
   begin
-    leaf := TPMLeaf.Create(ACategory);
+    leaf := TLeaf.Create(ACategory);
     leaf.SetTrait('Title', AArray[i]);
     leaf.OnChange := @LeafChange;
     tvwCampaign.Items.AddChildObject(AParent, leaf.Title, leaf);
@@ -1416,12 +1425,12 @@ end;
 procedure TfrmMain.LoadResourceNodes(AParent: TTreeNode; ACategory: string; AArray: TCSVDocument);
 var
   i, j: integer;
-  leaf: TPMLeaf;
+  leaf: TLeaf;
 begin
   if AParent.HasChildren then AParent.DeleteChildren;
   for i := 0 to AArray.RowCount-1 do
   begin
-    leaf := TPMLeaf.Create(ACategory);
+    leaf := TLeaf.Create(ACategory);
     for j := 0 to AArray.ColCount[i]-1 do
       leaf.SetTrait(AArray[j,i]);
     leaf.OnChange := @LeafChange;
@@ -1433,13 +1442,13 @@ end;
 procedure TfrmMain.SaveCampaign;
 var
   r, c: integer;
-  leaf: TPMLeaf;
+  leaf: TLeaf;
 begin
   grdData.Clear;
   grdData.RowCount := tvwCampaign.Items.Count;
   for r := 0 to tvwCampaign.Items.Count - 1 do
   begin
-    leaf := TPMLeaf(tvwCampaign.Items[r].Data);
+    leaf := TLeaf(tvwCampaign.Items[r].Data);
 
     while grdData.ColCount < (leaf.Traits.Count + 3) do
       grdData.ColCount := grdData.ColCount + 1;
@@ -1461,7 +1470,7 @@ end;
 procedure TfrmMain.LoadCampaign;
 var
   r, c: integer;
-  leaf: TPMLeaf;
+  leaf: TLeaf;
   node: TTreeNode;
 begin
   tvwCampaign.Items.Clear;
@@ -1470,7 +1479,7 @@ begin
 
   for r := 0 to grdData.RowCount -1 do
   begin
-    leaf := TPMLeaf.Create(grdData.Cells[0, r]);
+    leaf := TLeaf.Create(grdData.Cells[0, r]);
     leaf.Parent := grdData.Cells[1, r];
     for c := 2 to grdData.ColCount - 1 do
     begin

@@ -29,10 +29,11 @@ type
     procedure txtPlayerKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState
       );
   private
-    FPlayer: TPMLeaf;
-    procedure SetPlayer(AValue: TPMLeaf);
+    FPlayer: TLeaf;
+    procedure SetPlayer(AValue: TLeaf);
+    procedure LockForm;
   public
-    property Player: TPMLeaf read FPlayer write SetPlayer;
+    property Player: TLeaf read FPlayer write SetPlayer;
   end;
 
 var
@@ -54,11 +55,7 @@ end;
 
 procedure TfrmPlayer.btnLockedClick(Sender: TObject);
 begin
-  txtPlayer.Enabled := not btnLocked.Down;
-  txtCharacter.Enabled := not btnLocked.Down;
-  txtRace.Enabled := not btnLocked.Down;
-  txtClass.Enabled := not btnLocked.Down;
-  FPlayer.SetTrait('Locked', BoolToStr(btnLocked.Down, 'True', 'False'));
+  LockForm;
 end;
 
 procedure TfrmPlayer.txtPlayerKeyUp(Sender: TObject; var Key: Word;
@@ -80,6 +77,16 @@ begin
   txtRace.Text := FPlayer.GetTrait('Race');
   txtClass.Text := FPlayer.GetTrait('Class');
   btnLocked.Down := FPlayer.GetTrait('Locked') = 'True';
+  LockForm;
+end;
+
+procedure TfrmPlayer.LockForm;
+begin
+  txtPlayer.Enabled := not btnLocked.Down;
+  txtCharacter.Enabled := not btnLocked.Down;
+  txtRace.Enabled := not btnLocked.Down;
+  txtClass.Enabled := not btnLocked.Down;
+  FPlayer.SetTrait('Locked', BoolToStr(btnLocked.Down, 'True', 'False'));
 end;
 
 

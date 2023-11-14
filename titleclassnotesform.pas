@@ -32,11 +32,11 @@ type
     procedure txtTitleExit(Sender: TObject);
     procedure txtTitleKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
   private
-    FLeaf: TPMLeaf;
-    procedure SetLeaf(AValue: TPMLeaf);
+    FLeaf: TLeaf;
+    procedure SetLeaf(AValue: TLeaf);
     procedure LockForm;
   public
-    property Leaf: TPMLeaf read FLeaf write SetLeaf;
+    property Leaf: TLeaf read FLeaf write SetLeaf;
   end;
 
 var
@@ -55,7 +55,7 @@ end;
 
 procedure TfrmTitleClassNotes.txtClassExit(Sender: TObject);
 begin
-  FLeaf.SetTrait('Class', txtClass.Text);
+  FLeaf.Classification := txtClass.Text;
 end;
 
 procedure TfrmTitleClassNotes.btnLockedClick(Sender: TObject);
@@ -67,7 +67,7 @@ procedure TfrmTitleClassNotes.txtClassKeyUp(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
   if Key = VK_RETURN then
-    FLeaf.SetTrait('Class', txtClass.Text);
+    FLeaf.Classification := txtClass.Text;
 end;
 
 procedure TfrmTitleClassNotes.txtClassSelect(Sender: TObject);
@@ -94,7 +94,7 @@ begin
     FLeaf.SetTrait('Title', txtTitle.Text);
 end;
 
-procedure TfrmTitleClassNotes.SetLeaf(AValue: TPMLeaf);
+procedure TfrmTitleClassNotes.SetLeaf(AValue: TLeaf);
 begin
   if FLeaf = AValue then Exit;
   FLeaf := AValue;

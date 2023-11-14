@@ -23,11 +23,11 @@ type
   private
     FCount: integer;
     FModifier: integer;
-    FDice: TPMLeaf;
-    procedure SetDice(AValue: TPMLeaf);
+    FDice: TLeaf;
+    procedure SetDice(AValue: TLeaf);
     procedure DisplayRoll;
   public
-    property Dice: TPMLeaf read FDice write SetDice;
+    property Dice: TLeaf read FDice write SetDice;
   end;
 
 var
@@ -57,7 +57,7 @@ end;
 
 procedure TfrmRollDice.FormCreate(Sender: TObject);
 begin
-  FDice := TPMLeaf.Create('Dice');
+  FDice := TLeaf.Create('Dice');
 end;
 
 procedure TfrmRollDice.FormKeyUp(Sender: TObject; var Key: Word;
@@ -97,7 +97,7 @@ begin
     else if (FDice.GetTrait('Die') = 'd100') and (Key = VK_F7) then
       AdjustCount(1)
     else if (Key = VK_ADD) or (Key = 187) then
-      AdjustModifier(1);
+      AdjustModifier(1)
     else if (Key = VK_SUBTRACT) or (Key = 189) then
       AdjustModifier(-1);
   end;

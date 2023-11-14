@@ -26,11 +26,11 @@ type
     procedure txtTitleExit(Sender: TObject);
     procedure txtTitleKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
   private
-    FLeaf: TPMLeaf;
-    procedure SetLeaf(AValue: TPMLeaf);
+    FLeaf: TLeaf;
+    procedure SetLeaf(AValue: TLeaf);
     procedure LockForm;
   public
-    property Leaf: TPMLeaf read FLeaf write SetLeaf;
+    property Leaf: TLeaf read FLeaf write SetLeaf;
   end;
 
 var
@@ -71,14 +71,14 @@ begin
     FLeaf.SetTrait('Title', txtTitle.Text);
 end;
 
-procedure TfrmSimple.SetLeaf(AValue: TPMLeaf);
+procedure TfrmSimple.SetLeaf(AValue: TLeaf);
 begin
   if FLeaf = AValue then Exit;
   FLeaf := AValue;
 
   pnlHeader.Caption := FLeaf.Category;
-  txtTitle.Text := FLeaf.GetTrait('Title');
-  txtNotes.Text := FLeaf.GetTrait('Notes');
+  txtTitle.Text := FLeaf.Title;
+  txtNotes.Text := FLeaf.Notes;
 
 end;
 

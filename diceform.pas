@@ -34,11 +34,11 @@ type
     procedure txtTitleExit(Sender: TObject);
     procedure txtTitleKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
   private
-    FDice: TPMLeaf;
-    procedure SetDice(AValue: TPMLeaf);
+    FDice: TLeaf;
+    procedure SetDice(AValue: TLeaf);
     procedure LockForm;
   public
-    property Dice : TPMLeaf read FDice write SetDice;
+    property Dice : TLeaf read FDice write SetDice;
   end;
 
 var
@@ -52,7 +52,7 @@ implementation
 
 procedure TfrmDice.txtTitleExit(Sender: TObject);
 begin
-  FDice.SetTrait('Title', txtTitle.Text);
+  FDice.Title := txtTitle.Text;
 end;
 
 procedure TfrmDice.txtCountSelect(Sender: TObject);
@@ -97,7 +97,7 @@ begin
   FDice.SetTrait('Title', txtTitle.Text);
 end;
 
-procedure TfrmDice.SetDice(AValue: TPMLeaf);
+procedure TfrmDice.SetDice(AValue: TLeaf);
 begin
   if AValue.Category <> 'Dice' then Exit;
   if FDice = AValue then Exit;

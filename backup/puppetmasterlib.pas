@@ -6,9 +6,21 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, fgl, csvdocument, StrUtils,
-  StdCtrls, ExtCtrls, htmlcolors;
+  StdCtrls, ExtCtrls, htmlcolors, Buttons;
 
 type
+
+  { TTrait }
+
+  TTrait = class(TPanel)
+  private
+    FDelete: TSpeedButton;
+    FLabel: TLabel;
+    procedure Delete(Sender: TObject);
+  public
+    constructor Create(TheOwner: TComponent); override;
+    property Caption: TLabel read FLabel write FLabel;
+  end;
 
   { TCard }
 
@@ -37,31 +49,33 @@ type
     constructor Create(TheOwner: TControl);
   end;
 
-  TPMTraits = specialize TFPGMap<string, string>;
+  TTraits = specialize TFPGMap<string, string>;
 
-  { TPMLeaf }
+  { TLeaf }
 
-  TPMLeaf = class(TObject)
+  TLeaf = class(TObject)
   private
     FID: string;
     FCategory: string;
     FParent: string;
     FOnChange: TNotifyEvent;
-    FTraits: TPMTraits;
-    function GetTitle: string;
+    FTraits: TTraits;
+    procedure SetLocked(AValue: string);
+    procedure SetNotes(AValue: string);
+    procedure SetTitle(AValue: string);
+    procedure SetClassification(AValue: string);
   public
     constructor Create(ACategory: string); overload;
     constructor Create(AID, ACategory: string); overload;
     property ID: string read FID;
-    property Title: string read GetTitle;
     property Parent: string read FParent write FParent;
     property Category: string read FCategory;
-    property Traits: TPMTraits read FTraits write FTraits;
+    property Traits: TTraits read FTraits write FTraits;
     property OnChange: TNotifyEvent read FOnChange write FOnChange;
-    function  GetTrait(AKey: string): string;
-    function  GetTrait(AIndex: integer): string;
     procedure SetTrait(AKey, AValue: string); overload;
     procedure SetTrait(AKeyValue: string); overload;
+    function GetTrait(AKey: string): string; overload;
+    function GetTrait(AIndex: integer): string; overload;
   end;
 
 var
@@ -137,6 +151,41 @@ var
 
 implementation
 
+{ TTrait }
+
+procedure TTrait.Delete(Sender: TObject);
+begin
+  TSpeedButton(Sender).Parent.Free;
+end;
+
+constructor TTrait.Create(TheOwner: TComponent);
+begin
+  inherited Create(TheOwner);
+
+  Self.AutoSize := true;
+  Self.BevelOuter := bvNone;
+  Self.BorderStyle := bsSingle;
+  Self.BorderSpacing.Around := 8;
+  Self.Constraints.MaxHeight := 48;
+
+  FDelete := TSpeedButton.Create(Self);
+  FDelete.Parent := Self;
+  FDelete.Align := alRight;
+  FDelete.Width := 32;
+  FDelete.Caption := 'X';
+  FDelete.BorderSpacing.Around := 8;
+  FDelete.OnClick := @Delete;
+
+  FLabel := TLabel.Create(Self);
+  FLabel.Parent := Self;
+  FLabel.Align := alClient;
+  FLabel.Layout := tlCenter;
+  FLabel.AutoSize := true;
+  FLabel.WordWrap := false;
+  FLabel.BorderSpacing.Around := 8;
+
+end;
+
 { TCardTable }
 
 constructor TCardTable.Create(TheOwner: TControl);
@@ -182,6 +231,7 @@ begin
   AutoSize := true;
   BevelOuter := bvNone;
   BorderSpacing.Around := 12;
+  Align := alTop;
 
   Title := TLabel.Create(Self);
   Title.Parent := Self;
@@ -202,88 +252,41 @@ begin
 end;
 
 
-{ TPMLeaf }
+{ TLeaf }
 
-function TPMLeaf.GetTitle: string;
-var
-  str: string;
-begin
-
-  if FCategory = 'Player' then
-  begin
-    if GetTrait('Character') <> '' then
-      str := GetTrait('Character')
-    else
-      str := 'Untitled';
-
-    if GetTrait('Player') <> '' then
-      str := str + ' [' + GetTrait('Player') + ']'
-    else
-      str := str + ' [Player Name]';
-  end
-  else if FCategory = 'Puppet' then
-    str := Format('%s %s', [Trim(GetTrait('FirstName')), Trim(GetTrait('LastName'))])
-  else
-    str := Format('%s', [GetTrait('Title')]);
-
-  result := str;
-end;
-
-constructor TPMLeaf.Create(ACategory: string);
+constructor TLeaf.Create(ACategory: string);
 var
   guid: TGuid;
 begin
   CreateGUID(guid);
 
-  FTraits := TPMTraits.Create;
+  FTraits := TTraits.Create;
   FID := guid.ToString(true);
   FCategory := ACategory;
-  FTraits.AddOrSetData('Title', ACategory);
-
-  if FCategory = 'Player' then
-    FTraits.AddOrSetData('Character', 'Untitled Player')
-  else if FCategory = 'Settlement' then
-    FTraits.AddOrSetData('Title', 'Untitled Settlement')
-  else if FCategory = 'Venue' then
-    FTraits.AddOrSetData('Title', 'Untitled Venue')
-  else if FCategory = 'Room' then
-    FTraits.AddOrSetData('Title', 'Untitled Room')
-  else if FCategory = 'Floor' then
-    FTraits.AddOrSetData('Title', 'Untitled Floor')
-  else if FCategory = 'Puppet' then
-  begin
-    FTraits.AddOrSetData('FirstName', 'FirstName');
-    FTraits.AddOrSetData('LastName', 'LastName');
-  end
-  else if FCategory = 'Adventure' then
-    FTraits.AddOrSetData('Title', 'Untitled Adventure')
-  else if FCategory = 'Dungeon' then
-    FTraits.AddOrSetData('Title', 'Untitled Dungeon')
-  else if FCategory = 'Level' then
-    FTraits.AddOrSetData('Title', 'Untitled Level')
-  else if FCategory = 'Chamber' then
-    FTraits.AddOrSetData('Title', 'Untitled Chamber')
-  else if FCategory = 'Wilderness' then
-    FTraits.AddOrSetData('Title', 'Untitled Widlerness')
-  else if FCategory = 'Route' then
-    FTraits.AddOrSetData('Title', 'Untitled Route')
-  else if FCategory = 'Tract' then
-    FTraits.AddOrSetData('Title', 'Untitled Tract')
-  else if FCategory = 'DiceTray' then
-    FTraits.AddOrSetData('Title', 'Dice Tray')
-  else if FCategory = 'Dice' then
-    FTraits.AddOrSetData('Title', 'Untitled Dice')
-  else if FCategory = 'Faction' then
-    FTraits.AddOrSetData('Title', 'Untitled Faction');
+  FTraits.AddOrSetData('Title', Format('Untitled %s', [ACategory]));
 end;
 
-constructor TPMLeaf.Create(AID, ACategory: string);
+constructor TLeaf.Create(AID, ACategory: string);
 begin
   Create(ACategory);
   FID := AID;
 end;
 
-function TPMLeaf.GetTrait(AKey: string): string;
+procedure TLeaf.SetTrait(AKey, AValue: string);
+begin
+  FTraits.AddOrSetData(AKey, AValue);
+  if Assigned(FOnChange) then FOnChange(Self);
+end;
+
+procedure TLeaf.SetTrait(AKeyValue: string);
+var
+  ary: TStringArray;
+begin
+  ary := AKeyValue.Split(':');
+  SetTrait(ary[0], ary[1]);
+end;
+
+function TLeaf.GetTrait(AKey: string): string;
 var
   val: string;
 begin
@@ -292,30 +295,14 @@ begin
   result := val;
 end;
 
-function TPMLeaf.GetTrait(AIndex: integer): string;
+function TLeaf.GetTrait(AIndex: integer): string;
 var
-  str: string;
+  keyval: string;
 begin
-  str := Trim(Format('%s:%s', [FTraits.Keys[AIndex], FTraits.Data[AIndex]]));
-  if str = ':' then str := '';
-  result := str;
-end;
-
-procedure TPMLeaf.SetTrait(AKey, AValue: string);
-begin
-  FTraits.AddOrSetData(AKey, AValue);
-  if Assigned(FOnChange) then FOnChange(Self);
-end;
-
-procedure TPMLeaf.SetTrait(AKeyValue: string);
-var
-  sa: TStringArray;
-  key, val: string;
-begin
-  sa := AKeyValue.Split(':');
-  key := sa[0];
-  val := sa[1];
-  SetTrait(key, val);
+  keyval := '';
+  if (AIndex >= 0) and (AIndex < FTraits.Count) then
+    keyval := Format('%s:%s', [FTraits.Keys[AIndex], FTraits.Data[AIndex]]);
+  result := keyval;
 end;
 
 initialization

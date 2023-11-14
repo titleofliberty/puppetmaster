@@ -522,9 +522,9 @@ object frmMain: TfrmMain
     object mnuMainInsert: TMenuItem
       Caption = '&Insert'
       OnClick = mnuMainInsertClick
-      object mnuMainInsertAdventures: TMenuItem
-        Caption = '&Adve&ntures'
-        OnClick = mnuMainInsertAdventuresClick
+      object mnuMainInsertAdventure: TMenuItem
+        Caption = 'Adve&nture'
+        OnClick = mnuMainInsertAdventureClick
       end
       object Separator8: TMenuItem
         Caption = '-'
@@ -548,17 +548,14 @@ object frmMain: TfrmMain
         Caption = '&Wildernesses'
         object mnuMainInsertWildernessesWilderness: TMenuItem
           Caption = '&Wilderness'
-          ShortCut = 49239
           OnClick = mnuMainInsertWildernessesWildernessClick
         end
         object mnuMainInsertWildernessesRoute: TMenuItem
           Caption = '&Route'
-          ShortCut = 49234
           OnClick = mnuMainInsertWildernessesRouteClick
         end
         object mnuMainInsertWildernessesTract: TMenuItem
           Caption = '&Tract'
-          ShortCut = 49236
           OnClick = mnuMainInsertWildernessesTractClick
         end
       end

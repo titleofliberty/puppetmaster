@@ -1,12 +1,10 @@
 Abacus
 Alquerque (Game)
-Anvil
 Atlas
 Ax (Stone)
 Backgammon (Game)
 Ball Bearings
 Bedroll
-Billows
 Blanket
 Bobber (Fish)
 Bolt
@@ -25,7 +23,6 @@ Chain
 Chalk
 Checkers (Game)
 Chess (Game)
-Chisel
 Clasp
 Cloth
 Compass
@@ -127,7 +124,6 @@ Sundial
 Tablet (Wax)
 Tafl (Game)
 Tent
-Tongs
 Torch
 Trap (Hunting)
 Urn

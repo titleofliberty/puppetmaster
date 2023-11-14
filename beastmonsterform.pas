@@ -41,11 +41,11 @@ type
     procedure txtTitleExit(Sender: TObject);
     procedure txtTitleKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
   private
-    FLeaf: TPMLeaf;
-    procedure SetLeaf(AValue: TPMLeaf);
+    FLeaf: TLeaf;
+    procedure SetLeaf(AValue: TLeaf);
     procedure LockForm;
   public
-    property Leaf: TPMLeaf read FLeaf write SetLeaf;
+    property Leaf: TLeaf read FLeaf write SetLeaf;
   end;
 
 var
@@ -112,7 +112,7 @@ begin
     FLeaf.SetTrait('Title', txtTitle.Text);
 end;
 
-procedure TfrmBeastMonster.SetLeaf(AValue: TPMLeaf);
+procedure TfrmBeastMonster.SetLeaf(AValue: TLeaf);
 begin
   if FLeaf = AValue then Exit;
   FLeaf := AValue;

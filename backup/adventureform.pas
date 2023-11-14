@@ -77,11 +77,11 @@ type
     procedure txtTitleExit(Sender: TObject);
     procedure txtTitleKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
   private
-    FAdventure: TPMLeaf;
-    procedure SetAdventure(AValue: TPMLeaf);
+    FAdventure: TLeaf;
+    procedure SetAdventure(AValue: TLeaf);
     procedure LockForm;
   public
-    property Adventure: TPMLeaf read FAdventure write SetAdventure;
+    property Adventure: TLeaf read FAdventure write SetAdventure;
   end;
 
 var

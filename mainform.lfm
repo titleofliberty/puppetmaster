@@ -522,9 +522,9 @@ object frmMain: TfrmMain
     object mnuMainInsert: TMenuItem
       Caption = '&Insert'
       OnClick = mnuMainInsertClick
-      object mnuMainInsertAdventures: TMenuItem
-        Caption = '&Adve&ntures'
-        OnClick = mnuMainInsertAdventuresClick
+      object mnuMainInsertAdventure: TMenuItem
+        Caption = 'Adve&nture'
+        OnClick = mnuMainInsertAdventureClick
       end
       object Separator8: TMenuItem
         Caption = '-'
