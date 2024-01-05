@@ -55,19 +55,21 @@ type
 
   TLeaf = class(TObject)
   private
+    FClassification: string;
     FID: string;
     FCategory: string;
+    FLocked: string;
     FParent: string;
     FOnChange: TNotifyEvent;
+    FTitle: string;
     FTraits: TTraits;
-    procedure SetLocked(AValue: string);
-    procedure SetNotes(AValue: string);
-    procedure SetTitle(AValue: string);
-    procedure SetClassification(AValue: string);
   public
     constructor Create(ACategory: string); overload;
     constructor Create(AID, ACategory: string); overload;
     property ID: string read FID;
+    property Title: string read FTitle write FTitle;
+    property Locked: string read FLocked write FLocked;
+    property Classification: string read FClassification write FClassification;
     property Parent: string read FParent write FParent;
     property Category: string read FCategory;
     property Traits: TTraits read FTraits write FTraits;

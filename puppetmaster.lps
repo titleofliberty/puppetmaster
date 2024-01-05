@@ -30,9 +30,9 @@
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="51"/>
-        <CursorPos Y="63"/>
-        <FoldState Value=" T4602 T7EB83 PFfA T8F235 T3kM03515 PjKkD0 T1kN02[H64kF]H6mc013V"/>
+        <TopLine Value="70"/>
+        <CursorPos X="51" Y="74"/>
+        <FoldState Value=" T4602 T7EB83 PFfA T8F235 T3kU03515 PjKkD0 T1kV02[H64kF]H6n3013S"/>
         <UsageCount Value="201"/>
         <Loaded Value="True"/>
       </Unit>
@@ -42,7 +42,7 @@
         <ComponentName Value="frmPuppet"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="6"/>
         <TopLine Value="48"/>
         <CursorPos X="73" Y="61"/>
         <UsageCount Value="200"/>
@@ -54,9 +54,9 @@
         <ComponentName Value="frmDice"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="4"/>
-        <TopLine Value="44"/>
-        <CursorPos X="41" Y="55"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="33"/>
+        <CursorPos X="23" Y="41"/>
         <FoldState Value=" T4602 T3iJ038 Pci70 T1iK02]ET]Ev"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
@@ -90,11 +90,12 @@
         <ComponentName Value="frmChamberTractRoom"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="178"/>
-        <CursorPos X="61" Y="193"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="60"/>
+        <CursorPos X="5" Y="68"/>
         <FoldState Value=" T4602 T3if0b621 PdjP0 T1ig0a[G5MjR]G6k0013s"/>
         <UsageCount Value="200"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="..\gizmos\htmlcolors.pas"/>
@@ -111,11 +112,12 @@
         <ComponentName Value="frmTitleClassNotes"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="61"/>
-        <CursorPos X="48" Y="97"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="35"/>
+        <CursorPos X="9" Y="58"/>
         <FoldState Value=" T4602 T3i70301116 PiAiX0 T1i80203411 PF]IV"/>
         <UsageCount Value="111"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="beastmonsterform.pas"/>
@@ -135,10 +137,11 @@
         <ComponentName Value="frmSimple"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="63"/>
-        <CursorPos X="31" Y="80"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="22"/>
+        <CursorPos X="5" Y="29"/>
         <UsageCount Value="93"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="resources\adventure-climaxes.txt"/>
@@ -1257,62 +1260,6 @@
     <JumpHistory HistoryIndex="29">
       <Position>
         <Filename Value="mainform.pas"/>
-        <Caret Line="1204" Column="7" TopLine="1191"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="1217" Column="12" TopLine="1201"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="1225" Column="10" TopLine="1214"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="1229" Column="65" TopLine="1218"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="1257" Column="56" TopLine="1238"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="1263" Column="14" TopLine="1252"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="1264" Column="26" TopLine="1253"/>
-      </Position>
-      <Position>
-        <Filename Value="puppetmasterlib.pas"/>
-        <Caret Line="89" Column="3" TopLine="78"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="1264" Column="27" TopLine="1253"/>
-      </Position>
-      <Position>
-        <Filename Value="puppetmasterlib.pas"/>
-        <Caret Line="84" Column="29" TopLine="74"/>
-      </Position>
-      <Position>
-        <Filename Value="puppetmasterlib.pas"/>
-        <Caret Line="293" Column="28" TopLine="282"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="1329" Column="46" TopLine="1314"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="1412" Column="10" TopLine="1387"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="1417" Column="14" TopLine="1400"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
         <Caret Line="1428" Column="10" TopLine="1414"/>
       </Position>
       <Position>
@@ -1374,6 +1321,62 @@
       <Position>
         <Filename Value="diceform.pas"/>
         <Caret Line="55" Column="9" TopLine="44"/>
+      </Position>
+      <Position>
+        <Filename Value="puppetmasterlib.pas"/>
+        <Caret Line="63" TopLine="44"/>
+      </Position>
+      <Position>
+        <Filename Value="diceform.pas"/>
+        <Caret Line="41" Column="23" TopLine="33"/>
+      </Position>
+      <Position>
+        <Filename Value="puppetmasterlib.pas"/>
+        <Caret Line="69" Column="36" TopLine="59"/>
+      </Position>
+      <Position>
+        <Filename Value="chambertractroomform.pas"/>
+        <Caret Line="193" Column="9" TopLine="59"/>
+      </Position>
+      <Position>
+        <Filename Value="puppetmasterlib.pas"/>
+        <Caret Line="70" Column="55" TopLine="62"/>
+      </Position>
+      <Position>
+        <Filename Value="chambertractroomform.pas"/>
+        <Caret Line="184" Column="24" TopLine="184"/>
+      </Position>
+      <Position>
+        <Filename Value="chambertractroomform.pas"/>
+        <Caret Line="68" Column="5" TopLine="60"/>
+      </Position>
+      <Position>
+        <Filename Value="puppetmasterlib.pas"/>
+        <Caret Line="70" Column="28" TopLine="65"/>
+      </Position>
+      <Position>
+        <Filename Value="titleclassnotesform.pas"/>
+        <Caret Line="58" Column="9" TopLine="35"/>
+      </Position>
+      <Position>
+        <Filename Value="puppetmasterlib.pas"/>
+        <Caret Line="71" Column="80" TopLine="69"/>
+      </Position>
+      <Position>
+        <Filename Value="puppetmasterlib.pas"/>
+        <Caret Line="72" Column="50" TopLine="56"/>
+      </Position>
+      <Position>
+        <Filename Value="simpleform.pas"/>
+        <Caret Line="81" Column="26" TopLine="73"/>
+      </Position>
+      <Position>
+        <Filename Value="simpleform.pas"/>
+        <Caret Line="29" Column="5" TopLine="22"/>
+      </Position>
+      <Position>
+        <Filename Value="puppetmasterlib.pas"/>
+        <Caret Line="74" Column="53" TopLine="71"/>
       </Position>
     </JumpHistory>
     <RunParams>
