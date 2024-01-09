@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, LCLType,
-  ExtCtrls, Buttons, puppetmasterlib;
+  ExtCtrls, Buttons, puppetmasterlib, tagsframe;
 
 type
 
@@ -14,48 +14,15 @@ type
 
   TfrmChamberTractRoom = class(TForm)
     btnLocked: TSpeedButton;
-    btnRollAll: TButton;
     Label1: TLabel;
-    Label11: TLabel;
-    Label13: TLabel;
-    Label14: TLabel;
-    Label15: TLabel;
-    Label16: TLabel;
-    Label17: TLabel;
-    Label18: TLabel;
-    Label19: TLabel;
     Label2: TLabel;
-    Label20: TLabel;
-    Label21: TLabel;
-    Label22: TLabel;
-    Label23: TLabel;
-    Label4: TLabel;
-    Label5: TLabel;
-    Label6: TLabel;
-    Label7: TLabel;
     Label8: TLabel;
     Panel1: TPanel;
-    Panel2: TPanel;
     Panel3: TPanel;
     pnlHeader: TPanel;
-    txtArmour: TComboBox;
     txtClass: TComboBox;
-    txtClothing: TComboBox;
-    txtContainer: TComboBox;
-    txtFauna: TComboBox;
-    txtFlora: TComboBox;
-    txtInstrument: TComboBox;
-    txtJewelry: TComboBox;
-    txtKit: TComboBox;
     txtNotes: TMemo;
-    txtRemains: TComboBox;
     txtTitle: TEdit;
-    txtTool: TComboBox;
-    txtTrap: TComboBox;
-    txtUnnatural: TComboBox;
-    txtNatural: TComboBox;
-    txtVehicle: TComboBox;
-    txtWeapon: TComboBox;
     procedure btnLockedClick(Sender: TObject);
     procedure btnRollAllClick(Sender: TObject);
     procedure txtNaturalExit(Sender: TObject);
@@ -85,39 +52,39 @@ implementation
 procedure TfrmChamberTractRoom.btnRollAllClick(Sender: TObject);
 begin
   txtClass.ItemIndex := Random(txtClass.Items.Count);
-  txtNatural.ItemIndex := Random(txtNatural.Items.Count);
-  txtUnnatural.ItemIndex := Random(txtUnnatural.Items.Count);
-  txtFlora.ItemIndex := Random(txtFlora.Items.Count);
-  txtFauna.ItemIndex := Random(txtFauna.Items.Count);
-
-  RollCbo(txtTool, 5);
-  RollCbo(txtClothing, 5);
-  RollCbo(txtInstrument, 5);
-  RollCbo(txtKit, 9);
-  RollCbo(txtContainer, 5);
-  RollCbo(txtWeapon, 5);
-  RollCbo(txtArmour, 5);
-  RollCbo(txtVehicle, 20);
-  RollCbo(txtJewelry, 5);
-  RollCbo(txtRemains, 9);
-  RollCbo(txtTrap, 8);
-
-  FLeaf.SetTrait('Class', txtClass.Text);
-  FLeaf.SetTrait('Natural', txtNatural.Text);
-  FLeaf.SetTrait('Manufactured', txtUnnatural.Text);
-  FLeaf.SetTrait('Flora', txtFlora.Text);
-  FLeaf.SetTrait('Fauna', txtFauna.Text);
-  FLeaf.SetTrait('Tool', txtTool.Text);
-  FLeaf.SetTrait('Clothing', txtClothing.Text);
-  FLeaf.SetTrait('Kit', txtKit.Text);
-  FLeaf.SetTrait('Container', txtContainer.Text);
-  FLeaf.SetTrait('Weapon', txtWeapon.Text);
-  FLeaf.SetTrait('Vehicle', txtVehicle.Text);
-  FLeaf.SetTrait('Jewelry', txtJewelry.Text);
-  FLeaf.SetTrait('Remains', txtRemains.Text);
-  FLeaf.SetTrait('Instrument', txtInstrument.Text);
-  FLeaf.SetTrait('Armour', txtArmour.Text);
-  FLeaf.SetTrait('Trap', txtTrap.Text);
+  //txtNatural.ItemIndex := Random(txtNatural.Items.Count);
+  //txtUnnatural.ItemIndex := Random(txtUnnatural.Items.Count);
+  //txtFlora.ItemIndex := Random(txtFlora.Items.Count);
+  //txtFauna.ItemIndex := Random(txtFauna.Items.Count);
+  //
+  //RollCbo(txtTool, 5);
+  //RollCbo(txtClothing, 5);
+  //RollCbo(txtInstrument, 5);
+  //RollCbo(txtKit, 9);
+  //RollCbo(txtContainer, 5);
+  //RollCbo(txtWeapon, 5);
+  //RollCbo(txtArmour, 5);
+  //RollCbo(txtVehicle, 20);
+  //RollCbo(txtJewelry, 5);
+  //RollCbo(txtRemains, 9);
+  //RollCbo(txtTrap, 8);
+  //
+  //FLeaf.SetTrait('Class', txtClass.Text);
+  //FLeaf.SetTrait('Natural', txtNatural.Text);
+  //FLeaf.SetTrait('Manufactured', txtUnnatural.Text);
+  //FLeaf.SetTrait('Flora', txtFlora.Text);
+  //FLeaf.SetTrait('Fauna', txtFauna.Text);
+  //FLeaf.SetTrait('Tool', txtTool.Text);
+  //FLeaf.SetTrait('Clothing', txtClothing.Text);
+  //FLeaf.SetTrait('Kit', txtKit.Text);
+  //FLeaf.SetTrait('Container', txtContainer.Text);
+  //FLeaf.SetTrait('Weapon', txtWeapon.Text);
+  //FLeaf.SetTrait('Vehicle', txtVehicle.Text);
+  //FLeaf.SetTrait('Jewelry', txtJewelry.Text);
+  //FLeaf.SetTrait('Remains', txtRemains.Text);
+  //FLeaf.SetTrait('Instrument', txtInstrument.Text);
+  //FLeaf.SetTrait('Armour', txtArmour.Text);
+  //FLeaf.SetTrait('Trap', txtTrap.Text);
 
 end;
 

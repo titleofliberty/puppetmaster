@@ -1,0 +1,62 @@
+object fraTags: TfraTags
+  Left = 0
+  Height = 200
+  Top = 0
+  Width = 420
+  AutoSize = True
+  ClientHeight = 200
+  ClientWidth = 420
+  TabOrder = 0
+  DesignLeft = 256
+  DesignTop = 119
+  object Panel1: TPanel
+    Left = 0
+    Height = 25
+    Top = 0
+    Width = 420
+    Align = alTop
+    AutoSize = True
+    BevelOuter = bvNone
+    ClientHeight = 25
+    ClientWidth = 420
+    TabOrder = 0
+    object btnClear: TButton
+      Left = 345
+      Height = 25
+      Top = 0
+      Width = 75
+      Align = alRight
+      Caption = 'Clear All'
+      Constraints.MinWidth = 75
+      OnClick = btnClearClick
+      TabOrder = 0
+    end
+    object cboTags: TComboBox
+      Left = 0
+      Height = 25
+      Top = 0
+      Width = 337
+      Align = alClient
+      BorderSpacing.Right = 8
+      ItemHeight = 15
+      OnKeyUp = cboTagsKeyUp
+      Sorted = True
+      Style = csSimple
+      TabOrder = 1
+    end
+  end
+  object pnlTags: TFlowPanel
+    Left = 0
+    Height = 167
+    Top = 33
+    Width = 420
+    Align = alClient
+    AutoSize = True
+    BorderSpacing.Top = 8
+    Constraints.MinHeight = 64
+    ControlList = <>
+    FlowLayout = tlTop
+    FlowStyle = fsLeftRightTopBottom
+    TabOrder = 1
+  end
+end

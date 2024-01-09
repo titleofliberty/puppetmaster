@@ -385,6 +385,12 @@
         <Filename Value="resources\traits-weapons.txt"/>
         <IsPartOfProject Value="True"/>
       </Unit>
+      <Unit>
+        <Filename Value="tagsframe.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fraTags"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

@@ -1,420 +1,54 @@
 object frmChamberTractRoom: TfrmChamberTractRoom
-  Left = 428
-  Height = 677
-  Top = 285
-  Width = 972
+  Left = 369
+  Height = 513
+  Top = 110
+  Width = 778
   Align = alClient
   BorderStyle = bsNone
   Caption = 'Chamber Tract Room'
   ChildSizing.LeftRightSpacing = 16
   ChildSizing.TopBottomSpacing = 16
   ChildSizing.VerticalSpacing = 8
-  ClientHeight = 677
-  ClientWidth = 972
-  DesignTimePPI = 120
+  ClientHeight = 513
+  ClientWidth = 778
   Font.CharSet = ANSI_CHARSET
-  Font.Height = -20
+  Font.Height = -16
   Font.Name = 'Courier New'
   Font.Pitch = fpFixed
   Font.Quality = fqDraft
   LCLVersion = '2.2.6.0'
-  object Panel2: TPanel
-    Left = 16
-    Height = 266
-    Top = 143
-    Width = 940
-    Align = alTop
-    AutoSize = True
-    BevelOuter = bvNone
-    ChildSizing.HorizontalSpacing = 8
-    ChildSizing.VerticalSpacing = 8
-    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
-    ChildSizing.Layout = cclLeftToRightThenTopToBottom
-    ChildSizing.ControlsPerLine = 4
-    ClientHeight = 266
-    ClientWidth = 940
-    TabOrder = 0
-    object Label4: TLabel
-      Left = 0
-      Height = 22
-      Top = 0
-      Width = 229
-      AutoSize = False
-      Caption = 'Natural'
-      ParentColor = False
-    end
-    object Label5: TLabel
-      Left = 237
-      Height = 22
-      Top = 0
-      Width = 229
-      AutoSize = False
-      Caption = 'Unnatural'
-      ParentColor = False
-    end
-    object Label6: TLabel
-      Left = 474
-      Height = 22
-      Top = 0
-      Width = 229
-      AutoSize = False
-      Caption = 'Flora'
-      ParentColor = False
-    end
-    object Label7: TLabel
-      Left = 711
-      Height = 22
-      Top = 0
-      Width = 229
-      AutoSize = False
-      Caption = 'Fauna'
-      ParentColor = False
-    end
-    object txtNatural: TComboBox
-      Left = 0
-      Height = 30
-      Top = 30
-      Width = 229
-      AutoSize = False
-      ItemHeight = 22
-      OnExit = txtNaturalExit
-      OnKeyUp = txtNaturalKeyUp
-      OnSelect = txtNaturalSelect
-      TabOrder = 0
-    end
-    object txtUnnatural: TComboBox
-      Left = 237
-      Height = 30
-      Top = 30
-      Width = 229
-      AutoSize = False
-      ItemHeight = 22
-      OnExit = txtNaturalExit
-      OnKeyUp = txtNaturalKeyUp
-      OnSelect = txtNaturalSelect
-      TabOrder = 1
-    end
-    object txtFlora: TComboBox
-      Left = 474
-      Height = 30
-      Top = 30
-      Width = 229
-      AutoSize = False
-      ItemHeight = 22
-      OnExit = txtNaturalExit
-      OnKeyUp = txtNaturalKeyUp
-      OnSelect = txtNaturalSelect
-      TabOrder = 2
-    end
-    object txtFauna: TComboBox
-      Left = 711
-      Height = 30
-      Top = 30
-      Width = 229
-      AutoSize = False
-      ItemHeight = 22
-      OnExit = txtNaturalExit
-      OnKeyUp = txtNaturalKeyUp
-      OnSelect = txtNaturalSelect
-      TabOrder = 3
-    end
-    object Label11: TLabel
-      Left = 0
-      Height = 22
-      Top = 68
-      Width = 229
-      AutoSize = False
-      Caption = 'Tool'
-      ParentColor = False
-    end
-    object Label13: TLabel
-      Left = 237
-      Height = 22
-      Top = 68
-      Width = 229
-      AutoSize = False
-      Caption = 'Clothing'
-      ParentColor = False
-    end
-    object Label14: TLabel
-      Left = 474
-      Height = 22
-      Top = 68
-      Width = 229
-      AutoSize = False
-      Caption = 'Kit'
-      ParentColor = False
-    end
-    object Label15: TLabel
-      Left = 711
-      Height = 22
-      Top = 68
-      Width = 229
-      AutoSize = False
-      Caption = 'Container'
-      ParentColor = False
-    end
-    object txtTool: TComboBox
-      Left = 0
-      Height = 30
-      Top = 98
-      Width = 229
-      AutoSize = False
-      Font.CharSet = ANSI_CHARSET
-      Font.Height = -20
-      Font.Name = 'Courier New'
-      Font.Pitch = fpFixed
-      Font.Quality = fqDraft
-      ItemHeight = 22
-      OnExit = txtNaturalExit
-      OnKeyUp = txtNaturalKeyUp
-      OnSelect = txtNaturalSelect
-      ParentFont = False
-      Sorted = True
-      TabOrder = 7
-    end
-    object txtClothing: TComboBox
-      Left = 237
-      Height = 30
-      Top = 98
-      Width = 229
-      AutoSize = False
-      ItemHeight = 22
-      OnExit = txtNaturalExit
-      OnKeyUp = txtNaturalKeyUp
-      OnSelect = txtNaturalSelect
-      Sorted = True
-      TabOrder = 6
-    end
-    object txtKit: TComboBox
-      Left = 474
-      Height = 30
-      Top = 98
-      Width = 229
-      AutoSize = False
-      ItemHeight = 22
-      OnExit = txtNaturalExit
-      OnKeyUp = txtNaturalKeyUp
-      OnSelect = txtNaturalSelect
-      Sorted = True
-      TabOrder = 5
-    end
-    object txtContainer: TComboBox
-      Left = 711
-      Height = 30
-      Top = 98
-      Width = 229
-      AutoSize = False
-      ItemHeight = 22
-      OnExit = txtNaturalExit
-      OnKeyUp = txtNaturalKeyUp
-      OnSelect = txtNaturalSelect
-      Sorted = True
-      TabOrder = 4
-    end
-    object Label16: TLabel
-      Left = 0
-      Height = 22
-      Top = 136
-      Width = 229
-      AutoSize = False
-      Caption = 'Weapon'
-      ParentColor = False
-    end
-    object Label17: TLabel
-      Left = 237
-      Height = 22
-      Top = 136
-      Width = 229
-      AutoSize = False
-      Caption = 'Vehicle'
-      ParentColor = False
-    end
-    object Label18: TLabel
-      Left = 474
-      Height = 22
-      Top = 136
-      Width = 229
-      AutoSize = False
-      Caption = 'Jewelry'
-      ParentColor = False
-    end
-    object Label19: TLabel
-      Left = 711
-      Height = 22
-      Top = 136
-      Width = 229
-      AutoSize = False
-      Caption = 'Remains'
-      ParentColor = False
-    end
-    object txtWeapon: TComboBox
-      Left = 0
-      Height = 30
-      Top = 166
-      Width = 229
-      AutoSize = False
-      ItemHeight = 22
-      OnExit = txtNaturalExit
-      OnKeyUp = txtNaturalKeyUp
-      OnSelect = txtNaturalSelect
-      Sorted = True
-      TabOrder = 11
-    end
-    object txtVehicle: TComboBox
-      Left = 237
-      Height = 30
-      Top = 166
-      Width = 229
-      AutoSize = False
-      ItemHeight = 22
-      OnExit = txtNaturalExit
-      OnKeyUp = txtNaturalKeyUp
-      OnSelect = txtNaturalSelect
-      Sorted = True
-      TabOrder = 10
-    end
-    object txtJewelry: TComboBox
-      Left = 474
-      Height = 30
-      Top = 166
-      Width = 229
-      AutoSize = False
-      ItemHeight = 22
-      OnExit = txtNaturalExit
-      OnKeyUp = txtNaturalKeyUp
-      OnSelect = txtNaturalSelect
-      Sorted = True
-      TabOrder = 9
-    end
-    object txtRemains: TComboBox
-      Left = 711
-      Height = 30
-      Top = 166
-      Width = 229
-      AutoSize = False
-      ItemHeight = 22
-      OnExit = txtNaturalExit
-      OnKeyUp = txtNaturalKeyUp
-      OnSelect = txtNaturalSelect
-      Sorted = True
-      TabOrder = 8
-    end
-    object Label20: TLabel
-      Left = 0
-      Height = 22
-      Top = 204
-      Width = 229
-      AutoSize = False
-      Caption = 'Instrument'
-      ParentColor = False
-    end
-    object Label21: TLabel
-      Left = 237
-      Height = 22
-      Top = 204
-      Width = 229
-      AutoSize = False
-      Caption = 'Armour'
-      ParentColor = False
-    end
-    object Label22: TLabel
-      Left = 474
-      Height = 22
-      Top = 204
-      Width = 229
-      AutoSize = False
-      Caption = 'Trap'
-      ParentColor = False
-    end
-    object Label23: TLabel
-      Left = 711
-      Height = 22
-      Top = 204
-      Width = 229
-      ParentColor = False
-    end
-    object txtInstrument: TComboBox
-      Left = 0
-      Height = 30
-      Top = 234
-      Width = 229
-      AutoSize = False
-      ItemHeight = 22
-      OnExit = txtNaturalExit
-      OnKeyUp = txtNaturalKeyUp
-      OnSelect = txtNaturalSelect
-      Sorted = True
-      TabOrder = 14
-    end
-    object txtArmour: TComboBox
-      Left = 237
-      Height = 30
-      Top = 234
-      Width = 229
-      AutoSize = False
-      ItemHeight = 22
-      OnExit = txtNaturalExit
-      OnKeyUp = txtNaturalKeyUp
-      OnSelect = txtNaturalSelect
-      Sorted = True
-      TabOrder = 13
-    end
-    object txtTrap: TComboBox
-      Left = 474
-      Height = 30
-      Top = 234
-      Width = 229
-      AutoSize = False
-      ItemHeight = 22
-      OnExit = txtNaturalExit
-      OnKeyUp = txtNaturalKeyUp
-      OnSelect = txtNaturalSelect
-      Sorted = True
-      TabOrder = 12
-    end
-    object btnRollAll: TButton
-      Left = 711
-      Height = 32
-      Top = 234
-      Width = 229
-      Caption = 'Roll All'
-      OnClick = btnRollAllClick
-      TabOrder = 15
-    end
-  end
   object Panel3: TPanel
     Left = 16
-    Height = 63
-    Top = 598
-    Width = 940
+    Height = 50
+    Top = 447
+    Width = 746
     Align = alBottom
     BevelOuter = bvNone
-    TabOrder = 1
+    TabOrder = 0
   end
   object pnlHeader: TPanel
     Left = 16
-    Height = 48
+    Height = 38
     Top = 16
-    Width = 940
+    Width = 746
     Align = alTop
     Alignment = taLeftJustify
     BevelOuter = bvNone
     Caption = 'Tract'
-    ClientHeight = 48
-    ClientWidth = 940
+    ClientHeight = 38
+    ClientWidth = 746
     Font.CharSet = ANSI_CHARSET
-    Font.Height = -40
+    Font.Height = -32
     Font.Name = 'Courier New'
     Font.Pitch = fpFixed
     Font.Quality = fqDraft
     ParentFont = False
-    TabOrder = 2
+    TabOrder = 1
     object btnLocked: TSpeedButton
-      Left = 892
-      Height = 48
+      Left = 708
+      Height = 38
       Top = 0
-      Width = 48
+      Width = 38
       Align = alRight
       AllowAllUp = True
       Flat = True
@@ -500,27 +134,27 @@ object frmChamberTractRoom: TfrmChamberTractRoom
   end
   object Label1: TLabel
     Left = 16
-    Height = 22
-    Top = 417
-    Width = 940
+    Height = 18
+    Top = 120
+    Width = 746
     Align = alTop
     Caption = 'Notes'
     ParentColor = False
   end
   object txtNotes: TMemo
     Left = 16
-    Height = 143
-    Top = 447
-    Width = 940
+    Height = 293
+    Top = 146
+    Width = 746
     Align = alClient
     ScrollBars = ssVertical
-    TabOrder = 3
+    TabOrder = 2
   end
   object Panel1: TPanel
     Left = 16
-    Height = 63
-    Top = 72
-    Width = 940
+    Height = 50
+    Top = 62
+    Width = 746
     Align = alTop
     BevelOuter = bvNone
     ChildSizing.HorizontalSpacing = 8
@@ -528,40 +162,40 @@ object frmChamberTractRoom: TfrmChamberTractRoom
     ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
     ChildSizing.Layout = cclLeftToRightThenTopToBottom
     ChildSizing.ControlsPerLine = 2
-    ClientHeight = 63
-    ClientWidth = 940
-    TabOrder = 4
+    ClientHeight = 50
+    ClientWidth = 746
+    TabOrder = 3
     object Label2: TLabel
       Left = 0
-      Height = 22
+      Height = 18
       Top = 0
-      Width = 454
+      Width = 359
       Caption = 'Title'
       ParentColor = False
     end
     object Label8: TLabel
-      Left = 462
-      Height = 22
+      Left = 367
+      Height = 18
       Top = 0
-      Width = 478
+      Width = 379
       Caption = 'Class'
       ParentColor = False
     end
     object txtTitle: TEdit
       Left = 0
-      Height = 30
-      Top = 30
-      Width = 454
+      Height = 26
+      Top = 26
+      Width = 359
       OnExit = txtTitleExit
       OnKeyUp = txtTitleKeyUp
       TabOrder = 0
     end
     object txtClass: TComboBox
-      Left = 462
-      Height = 30
-      Top = 30
-      Width = 478
-      ItemHeight = 22
+      Left = 367
+      Height = 26
+      Top = 26
+      Width = 379
+      ItemHeight = 18
       OnExit = txtNaturalExit
       OnKeyUp = txtNaturalKeyUp
       OnSelect = txtNaturalSelect

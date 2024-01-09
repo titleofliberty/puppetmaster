@@ -63,7 +63,6 @@ object frmPuppet: TfrmPuppet
       Height = 32
       Top = 30
       Width = 346
-      OnKeyUp = FieldKeyUp
       TabOrder = 1
       Text = 'Abbott'
     end
@@ -89,8 +88,6 @@ object frmPuppet: TfrmPuppet
         'Warlock'
         'Wizard'
       )
-      OnKeyUp = FieldKeyUp
-      OnSelect = FieldSelect
       TabOrder = 2
       Text = 'Barbarian'
     end

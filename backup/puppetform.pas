@@ -58,7 +58,7 @@ procedure TfrmPuppet.LockForm;
 begin
   txtTitle.Enabled := not btnLocked.Down;
   txtClass.Enabled := not btnLocked.Down;
-  FPuppet.Locked := BoolToStr(btnLocked.Down, 'True', 'False');
+  FPuppet.SetTrait('Locked', BoolToStr(btnLocked.Down, 'True', 'False'));
 end;
 
 procedure TfrmPuppet.btnLockedClick(Sender: TObject);
